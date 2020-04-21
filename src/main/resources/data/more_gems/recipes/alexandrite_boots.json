@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "g g",
+    "g g"
+  ],
+  "key": {
+    "g": {
+      "item": "more_gems:alexandrite"
+    }
+  },
+  "result": {
+    "item": "more_gems:alexandrite_boots"
+  }
+}

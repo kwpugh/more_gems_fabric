@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "more_gems:nether_carbonado_ore"
+              "name": "more_gems:corundum_ore"
             },
             {
               "type": "minecraft:item",
@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "more_gems:carbonado"
+              "name": "more_gems:corundum"
             }
           ]
         }

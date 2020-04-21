@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "more_gems",
-  "version": "1.0.3",
+  "version": "1.0.5",
 
   "name": "More Gems",
-  "description": "Adding more gems to the world: ruby, sapphire, amethyst, topaz, and carbonado",
+  "description": "Adding more gems to the world: ruby, sapphire, amethyst, topaz, alexandrite, corundum, and carbonado",
   "authors": [
     "Kevin Pugh"
   ],
@@ -15,7 +15,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/more_gems/textures/item/sapphire.png",
+  "icon": "assets/more_gems/textures/item/alexandrite.png",
 
   "environment": "*",
   "entrypoints": {

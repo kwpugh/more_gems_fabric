@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "more_gems:block/nether_carbonado_ore"
+        "all": "more_gems:block/corundum_block"
     }
 }

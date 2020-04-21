@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " g ",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "g": {
+      "item": "more_gems:corundum"
+    }
+  },
+  "result": {
+    "item": "more_gems:corundum_shovel"
+  }
+}

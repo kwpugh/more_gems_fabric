@@ -13,7 +13,7 @@ import net.minecraft.world.biome.Biome;
 public class MoreGems implements ModInitializer
 {	
 	public static final String MOD_ID = "more_gems";
-	public static final ItemGroup MORE_GEMS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "more_gems_group"), () -> new ItemStack(ContentInit.SAPPHIRE_SWORD));
+	public static final ItemGroup MORE_GEMS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "more_gems_group"), () -> new ItemStack(ContentInit.ALEXANDRITE));
 	
     @Override
     public void onInitialize()
@@ -23,7 +23,6 @@ public class MoreGems implements ModInitializer
     	for (Biome biome : Biome.BIOMES)
 		{
 			OreGen.addGemOres(biome);
-			//OreGen.addNetherGems();
 		}	
     }	
 }

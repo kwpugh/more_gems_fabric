@@ -60,7 +60,41 @@
 	"item.more_gems.amethyst_chestplate": "Amethyst Chestplate",
 	"item.more_gems.amethyst_leggings": "Amethyst Leggings",
 	"item.more_gems.amethyst_boots": "Amethyst Boots",
-					
+
+	"item.more_gems.alexandrite": "Alexandrite",
+	"item.more_gems.alexandrite_ore": "Alexandrite Ore",
+	"block.more_gems.alexandrite_ore": "Alexandrite Ore",
+	"item.more_gems.alexandrite_block": "Alexandrite Block",
+	"block.more_gems.alexandrite_block": "Alexandrite Block",
+		
+	"item.more_gems.alexandrite_sword": "Alexandrite Sword",
+	"item.more_gems.alexandrite_pickaxe": "Alexandrite Pickaxe",
+	"item.more_gems.alexandrite_axe": "Alexandrite Axe",
+	"item.more_gems.alexandrite_shovel": "Alexandrite Shovel",
+	"item.more_gems.alexandrite_hoe": "Alexandrite Hoe",
+		
+	"item.more_gems.alexandrite_helmet": "Alexandrite Helmet",
+	"item.more_gems.alexandrite_chestplate": "Alexandrite Chestplate",
+	"item.more_gems.alexandrite_leggings": "Alexandrite Leggings",
+	"item.more_gems.alexandrite_boots": "Alexandrite Boots",
+
+	"item.more_gems.corundum": "Corundum",
+	"item.more_gems.corundum_ore": "Corundum Ore",
+	"block.more_gems.corundum_ore": "Corundum Ore",
+	"item.more_gems.corundum_block": "Corundum Block",
+	"block.more_gems.corundum_block": "Corundum Block",
+
+	"item.more_gems.corundum_sword": "Corundum Sword",
+	"item.more_gems.corundum_pickaxe": "Corundum Pickaxe",
+	"item.more_gems.corundum_axe": "Corundum Axe",
+	"item.more_gems.corundum_shovel": "Corundum Shovel",
+	"item.more_gems.corundum_hoe": "Corundum Hoe",
+		
+	"item.more_gems.corundum_helmet": "Corundum Helmet",
+	"item.more_gems.corundum_chestplate": "Corundum Chestplate",
+	"item.more_gems.corundum_leggings": "Corundum Leggings",
+	"item.more_gems.corundum_boots": "Corundum Boots",
+						
 	"item.more_gems.topaz": "Topaz",
 	"item.more_gems.topaz_ore": "Topaz Ore",
 	"block.more_gems.topaz_ore": "Topaz Ore",
@@ -94,8 +128,6 @@
 	"item.more_gems.carbonado_chestplate": "Carbonado Chestplate",
 	"item.more_gems.carbonado_leggings": "Carbonado Leggings",
 	"item.more_gems.carbonado_boots": "Carbonado Boots",
-	
-	"block.more_gems.nether_carbonado_ore": "Nether Carbonado Ore",
 			
 	"itemGroup.more_gems.more_gems_group": "More Gems"
 }

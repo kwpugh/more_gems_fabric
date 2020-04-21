@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "g": {
+      "item": "more_gems:alexandrite"
+    }
+  },
+  "result": {
+    "item": "more_gems:alexandrite_pickaxe"
+  }
+}

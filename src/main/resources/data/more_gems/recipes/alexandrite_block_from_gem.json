@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"GGG",
+		"GGG",
+		"GGG"
+	],
+	
+	"key":
+	{
+		"G": { "item": "more_gems:alexandrite" }	
+	},
+	
+	"result": { "item": "more_gems:alexandrite_block" }
+}

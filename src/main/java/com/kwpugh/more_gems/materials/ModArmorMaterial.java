@@ -14,24 +14,43 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Lazy;
 
+/*
+ * Mohs Scale of Hardness
+Diamond -10
+Carbonado - 10
+Ruby - 9
+Sapphire - 9
+Corundum - 9
+Alexandrite - 8.5
+Topaz - 8
+Emerald - 7.5
+Amethyst - 7
+ */
+
 public enum ModArmorMaterial implements ArmorMaterial
 {
-	EMERALD("emerald_", 22, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-		return Ingredient.ofItems(Items.EMERALD);
-		}),
-	RUBY("ruby_", 24, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.RUBY);
-		}),
-	SAPPHIRE("sapphire", 25, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.SAPPHIRE);
-		}),
-	AMETHYST("amethyst",27, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+	AMETHYST("amethyst", 23, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
 		return Ingredient.ofItems(ContentInit.AMETHYST);
 		}),
-	TOPAZ("topaz", 29, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+	EMERALD("emerald_", 25, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+		return Ingredient.ofItems(Items.EMERALD);
+		}),
+	TOPAZ("topaz", 26, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
 		return Ingredient.ofItems(ContentInit.TOPAZ);
 		}),
-	CARBONADO("carbonado", 32, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F, () -> {
+	ALEXANDRITE("alexandrite_", 28, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+		return Ingredient.ofItems(ContentInit.ALEXANDRITE);
+		}),
+	CORUNDUM("corundum", 30, new int[]{2, 5, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.25F, 0.0F, () -> {
+		return Ingredient.ofItems(ContentInit.CORUNDUM);
+		}),
+	SAPPHIRE("sapphire", 30, new int[]{2, 5, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.25F, 0.0F, () -> {
+		return Ingredient.ofItems(ContentInit.SAPPHIRE);
+		}),
+	RUBY("ruby_", 30, new int[]{2, 5, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.5F, 0.0F, () -> {
+		return Ingredient.ofItems(ContentInit.RUBY);
+		}),
+	CARBONADO("carbonado", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.75F, 0.0F, () -> {
 		return Ingredient.ofItems(ContentInit.CARBONADO);
 		});
 

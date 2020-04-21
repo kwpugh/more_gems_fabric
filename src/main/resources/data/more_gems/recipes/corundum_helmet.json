@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "g g",
+    "   "
+  ],
+  "key": {
+    "g": {
+      "item": "more_gems:corundum"
+    }
+  },
+  "result": {
+    "item": "more_gems:corundum_helmet"
+  }
+}
