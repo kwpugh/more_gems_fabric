@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.kwpugh.more_gems.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "MyMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

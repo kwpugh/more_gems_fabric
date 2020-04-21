@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "g g",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:emerald",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "more_gems:emerald_chestplate"
+  }
+}

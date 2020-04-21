@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " g ",
+    " g ",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "g": {
+      "item": "more_gems:carbonado"
+    }
+  },
+  "result": {
+    "item": "more_gems:carbonado_sword"
+  }
+}

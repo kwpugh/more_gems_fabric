@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"GGG",
+		"GGG",
+		"GGG"
+	],
+	
+	"key":
+	{
+		"G": { "item": "more_gems:carbonado" }	
+	},
+	
+	"result": { "item": "more_gems:carbonado_block" }
+}

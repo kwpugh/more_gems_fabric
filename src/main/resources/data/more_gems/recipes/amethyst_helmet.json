@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "g g",
+    "   "
+  ],
+  "key": {
+    "g": {
+      "item": "more_gems:amethyst"
+    }
+  },
+  "result": {
+    "item": "more_gems:amethyst_helmet"
+  }
+}

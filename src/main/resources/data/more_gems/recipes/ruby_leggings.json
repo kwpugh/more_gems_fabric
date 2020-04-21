@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "g g",
+    "g g"
+  ],
+  "key": {
+    "g": {
+      "item": "more_gems:ruby"
+    }
+  },
+  "result": {
+    "item": "more_gems:ruby_leggings"
+  }
+}

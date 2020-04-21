@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "more_gems",
+  "version": "1.0.3",
+
+  "name": "More Gems",
+  "description": "Adding more gems to the world: ruby, sapphire, amethyst, topaz, and carbonado",
+  "authors": [
+    "Kevin Pugh"
+  ],
+  "contact": {
+    "homepage": "",
+    "issues": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/more_gems/textures/item/sapphire.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.kwpugh.more_gems.MoreGems"
+    ]
+  },
+  "mixins": [
+    "more_gems.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

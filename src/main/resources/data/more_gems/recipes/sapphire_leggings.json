@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "g g",
+    "g g"
+  ],
+  "key": {
+    "g": {
+      "item": "more_gems:sapphire"
+    }
+  },
+  "result": {
+    "item": "more_gems:sapphire_leggings"
+  }
+}

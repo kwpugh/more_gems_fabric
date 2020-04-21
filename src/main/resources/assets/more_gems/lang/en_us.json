@@ -1,0 +1,101 @@
+{
+	"item.more_gems.emerald_sword": "Emerald Sword",
+	"item.more_gems.emerald_pickaxe": "Emerald Pickaxe",
+	"item.more_gems.emerald_axe": "Emerald Axe",
+	"item.more_gems.emerald_shovel": "Emerald Shovel",
+	"item.more_gems.emerald_hoe": "Emerald Hoe",
+	
+	"item.more_gems.emerald_helmet": "Emerald Helmet",
+	"item.more_gems.emerald_chestplate": "Emerald Chestplate",
+	"item.more_gems.emerald_leggings": "Emerald Leggings",
+	"item.more_gems.emerald_boots": "Emerald Boots",
+	
+	"item.more_gems.ruby": "Ruby",
+	"item.more_gems.ruby_ore": "Ruby Ore",
+	"block.more_gems.ruby_ore": "Ruby Ore",
+	"item.more_gems.ruby_block": "Ruby Block",
+	"block.more_gems.ruby_block": "Ruby Block",
+
+	"item.more_gems.ruby_sword": "Ruby Sword",
+	"item.more_gems.ruby_pickaxe": "Ruby Pickaxe",
+	"item.more_gems.ruby_axe": "Ruby Axe",
+	"item.more_gems.ruby_shovel": "Ruby Shovel",
+	"item.more_gems.ruby_hoe": "Ruby Hoe",
+
+	"item.more_gems.ruby_helmet": "Ruby Helmet",
+	"item.more_gems.ruby_chestplate": "Ruby Chestplate",
+	"item.more_gems.ruby_leggings": "Ruby Leggings",
+	"item.more_gems.ruby_boots": "Ruby Boots",
+	
+	"item.more_gems.sapphire": "Sapphire",
+	"item.more_gems.sapphire_ore": "Sapphire Ore",
+	"block.more_gems.sapphire_ore": "Sapphire Ore",	
+	"item.more_gems.sapphire_block": "Sapphire Block",
+	"block.more_gems.sapphire_block": "Sapphire Block",
+	
+	"item.more_gems.sapphire_sword": "Sapphire Sword",
+	"item.more_gems.sapphire_pickaxe": "Sapphire Pickaxe",
+	"item.more_gems.sapphire_axe": "Sapphire Axe",
+	"item.more_gems.sapphire_shovel": "Sapphire Shovel",
+	"item.more_gems.sapphire_hoe": "Sapphire Hoe",
+	
+	"item.more_gems.sapphire_helmet": "Sapphire Helmet",
+	"item.more_gems.sapphire_chestplate": "Sapphire Chestplate",
+	"item.more_gems.sapphire_leggings": "Sapphire Leggings",
+	"item.more_gems.sapphire_boots": "Sapphire Boots",
+	
+	"item.more_gems.amethyst": "Amethyst",
+	"item.more_gems.amethyst_ore": "Amethyst Ore",
+	"block.more_gems.amethyst_ore": "Amethyst Ore",
+	"item.more_gems.amethyst_block": "Amethyst block",
+	"block.more_gems.amethyst_block": "Amethyst block",
+
+	"item.more_gems.amethyst_sword": "Amethyst Sword",
+	"item.more_gems.amethyst_pickaxe": "Amethyst Pickaxe",
+	"item.more_gems.amethyst_axe": "Amethyst Axe",
+	"item.more_gems.amethyst_shovel": "Amethyst Shovel",
+	"item.more_gems.amethyst_hoe": "Amethyst Hoe",
+	
+	"item.more_gems.amethyst_helmet": "Amethyst Helmet",
+	"item.more_gems.amethyst_chestplate": "Amethyst Chestplate",
+	"item.more_gems.amethyst_leggings": "Amethyst Leggings",
+	"item.more_gems.amethyst_boots": "Amethyst Boots",
+					
+	"item.more_gems.topaz": "Topaz",
+	"item.more_gems.topaz_ore": "Topaz Ore",
+	"block.more_gems.topaz_ore": "Topaz Ore",
+	"item.more_gems.topaz_block": "Topaz Block",
+	"block.more_gems.topaz_block": "Topaz Block",
+
+	"item.more_gems.topaz_sword": "Topaz Sword",
+	"item.more_gems.topaz_pickaxe": "Topaz Pickaxe",
+	"item.more_gems.topaz_axe": "Topaz Axe",
+	"item.more_gems.topaz_shovel": "Topaz Shovel",
+	"item.more_gems.topaz_hoe": "Topaz Hoe",
+	
+	"item.more_gems.topaz_helmet": "Topaz Helmet",
+	"item.more_gems.topaz_chestplate": "Topaz Chestplate",
+	"item.more_gems.topaz_leggings": "Topaz Leggings",
+	"item.more_gems.topaz_boots": "Topaz Boots",
+	
+	"item.more_gems.carbonado": "Carbonado",
+	"item.more_gems.carbonado_ore": "Carbonado Ore",
+	"block.more_gems.carbonado_ore": "Carbonado Ore",
+	"item.more_gems.carbonado_block": "Carbonado Block",
+	"block.more_gems.carbonado_block": "Carbonado Block",
+		
+	"item.more_gems.carbonado_sword": "Carbonado Sword",
+	"item.more_gems.carbonado_pickaxe": "Carbonado Pickaxe",
+	"item.more_gems.carbonado_axe": "Carbonado Axe",
+	"item.more_gems.carbonado_shovel": "Carbonado Shovel",
+	"item.more_gems.carbonado_hoe": "Carbonado Hoe",
+	
+	"item.more_gems.carbonado_helmet": "Carbonado Helmet",
+	"item.more_gems.carbonado_chestplate": "Carbonado Chestplate",
+	"item.more_gems.carbonado_leggings": "Carbonado Leggings",
+	"item.more_gems.carbonado_boots": "Carbonado Boots",
+	
+	"block.more_gems.nether_carbonado_ore": "Nether Carbonado Ore",
+			
+	"itemGroup.more_gems.more_gems_group": "More Gems"
+}
