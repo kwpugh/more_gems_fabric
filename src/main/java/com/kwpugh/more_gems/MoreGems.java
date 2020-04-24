@@ -15,6 +15,8 @@ public class MoreGems implements ModInitializer
 	public static final String MOD_ID = "more_gems";
 	public static final ItemGroup MORE_GEMS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "more_gems_group"), () -> new ItemStack(ContentInit.ALEXANDRITE));
 	
+	public static final MoreGems INSTANCE = new MoreGems();
+	
     @Override
     public void onInitialize()
     {
@@ -23,6 +25,6 @@ public class MoreGems implements ModInitializer
     	for (Biome biome : Biome.BIOMES)
 		{
 			OreGen.addGemOres(biome);
-		}	
-    }	
+		} 
+    }
 }

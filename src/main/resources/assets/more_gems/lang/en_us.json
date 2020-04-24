@@ -129,5 +129,28 @@
 	"item.more_gems.carbonado_leggings": "Carbonado Leggings",
 	"item.more_gems.carbonado_boots": "Carbonado Boots",
 			
+	"item.more_gems.tourmaline": "Tourmaline",
+	"item.more_gems.tourmaline_ore": "Tourmaline Ore",
+	"block.more_gems.tourmaline_ore": "Tourmaline Ore",
+	"item.more_gems.tourmaline_block": "Tourmaline Block",
+	"block.more_gems.tourmaline_block": "Tourmaline Block",
+
+	"item.more_gems.tourmaline_sword": "Tourmaline Sword",
+	"item.more_gems.tourmaline_pickaxe": "Tourmaline Pickaxe",
+	"item.more_gems.tourmaline_axe": "Tourmaline Axe",
+	"item.more_gems.tourmaline_shovel": "Tourmaline Shovel",
+	"item.more_gems.tourmaline_hoe": "Tourmaline Hoe",
+	
+	"item.more_gems.tourmaline_helmet": "Tourmaline Helmet",
+	"item.more_gems.tourmaline_chestplate": "Tourmaline Chestplate",
+	"item.more_gems.tourmaline_leggings": "Tourmaline Leggings",
+	"item.more_gems.tourmaline_boots": "Tourmaline Boots",
+	
+	"item.more_gems.tourmaline_juju": "Tourmaline JuJu",
+	"item.more_gems.tourmaline_juju.tip1": "Provides Night Vision",
+
+	"item.more_gems.amethyst_juju": "Amethyst JuJu",
+	"item.more_gems.amethyst_juju.tip1": "Provides a little extra speed",
+			
 	"itemGroup.more_gems.more_gems_group": "More Gems"
 }

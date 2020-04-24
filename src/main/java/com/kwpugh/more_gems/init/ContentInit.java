@@ -1,12 +1,14 @@
 package com.kwpugh.more_gems.init;
 
 import com.kwpugh.more_gems.MoreGems;
-import com.kwpugh.more_gems.items.ModArmor;
-import com.kwpugh.more_gems.items.ModAxe;
-import com.kwpugh.more_gems.items.ModHoe;
-import com.kwpugh.more_gems.items.ModPickaxe;
-import com.kwpugh.more_gems.items.ModShovel;
-import com.kwpugh.more_gems.items.ModSword;
+import com.kwpugh.more_gems.items.gear.ModArmor;
+import com.kwpugh.more_gems.items.gear.ModAxe;
+import com.kwpugh.more_gems.items.gear.ModHoe;
+import com.kwpugh.more_gems.items.gear.ModPickaxe;
+import com.kwpugh.more_gems.items.gear.ModShovel;
+import com.kwpugh.more_gems.items.gear.ModSword;
+import com.kwpugh.more_gems.items.juju.ItemAmethystJuju;
+import com.kwpugh.more_gems.items.juju.ItemTourmalineJuju;
 import com.kwpugh.more_gems.materials.ModArmorMaterial;
 import com.kwpugh.more_gems.materials.ModToolMaterial;
 
@@ -26,10 +28,12 @@ Alexandrite - 8.5
 Topaz - 8
 Emerald - 7.5
 Amethyst - 7
+Tourmaline - 6
  */
 
 public class ContentInit
 {
+	public static final BlockBase TOURMALINE_ORE = new BlockBase("tourmaline_ore", 3.0f, 3.0f);
 	public static final BlockBase AMETHYST_ORE = new BlockBase("amethyst_ore", 3.0f, 3.0f);
 	public static final BlockBase TOPAZ_ORE = new BlockBase("topaz_ore", 3.0f, 3.0f);
 	public static final BlockBase ALEXANDRITE_ORE = new BlockBase("alexandrite_ore", 3.0f, 3.0f);
@@ -38,6 +42,7 @@ public class ContentInit
 	public static final BlockBase RUBY_ORE = new BlockBase("ruby_ore", 3.0f, 3.0f);
 	public static final BlockBase CARBONADO_ORE = new BlockBase("carbonado_ore", 3.0f, 3.0f);
 	
+	public static final Item TOURMALINE = registerItem("tourmaline", new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
 	public static final Item AMETHYST = registerItem("amethyst", new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
 	public static final Item TOPAZ = registerItem("topaz", new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
 	public static final Item ALEXANDRITE = registerItem("alexandrite", new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
@@ -46,6 +51,7 @@ public class ContentInit
 	public static final Item RUBY = registerItem("ruby", new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
 	public static final Item CARBONADO = registerItem("carbonado", new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
 	
+	public static final BlockBase TOURMALINE_BLOCK = new BlockBase("tourmaline_block", 3.0f, 3.0f);
 	public static final BlockBase AMETHYST_BLOCK = new BlockBase("amethyst_block", 3.0f, 3.0f);
 	public static final BlockBase TOPAZ_BLOCK = new BlockBase("topaz_block", 3.0f, 3.0f);	
 	public static final BlockBase ALEXANDRITE_BLOCK = new BlockBase("alexandrite_block", 3.0f, 3.0f);
@@ -53,6 +59,12 @@ public class ContentInit
 	public static final BlockBase SAPPHIRE_BLOCK = new BlockBase("sapphire_block", 3.0f, 3.0f);	
 	public static final BlockBase RUBY_BLOCK = new BlockBase("ruby_block", 3.0f, 3.0f);	
 	public static final BlockBase CARBONADO_BLOCK = new BlockBase("carbonado_block", 3.0f, 3.0f);
+
+	public static final Item TOURMALINE_SWORD = registerItem((String)"tourmaline_sword", (Item)(new ModSword(ModToolMaterial.TOURMALINE, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
+	public static final Item TOURMALINE_PICKAXE = registerItem((String)"tourmaline_pickaxe", (Item)(new ModPickaxe(ModToolMaterial.TOURMALINE, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
+	public static final Item TOURMALINE_AXE = registerItem((String)"tourmaline_axe", (Item)(new ModAxe(ModToolMaterial.TOURMALINE, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
+	public static final Item TOURMALINE_SHOVEL = registerItem((String)"tourmaline_shovel", (Item)(new ModShovel(ModToolMaterial.TOURMALINE, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
+	public static final Item TOURMALINE_HOE = registerItem((String)"tourmaline_hoe", (Item)(new ModHoe(ModToolMaterial.TOURMALINE, -3, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 
 	public static final Item AMETHYST_SWORD = registerItem((String)"amethyst_sword", (Item)(new ModSword(ModToolMaterial.AMETHYST, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 	public static final Item AMETHYST_PICKAXE = registerItem((String)"amethyst_pickaxe", (Item)(new ModPickaxe(ModToolMaterial.AMETHYST, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
@@ -102,6 +114,11 @@ public class ContentInit
 	public static final Item CARBONADO_SHOVEL = registerItem((String)"carbonado_shovel", (Item)(new ModShovel(ModToolMaterial.CARBONADO, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 	public static final Item CARBONADO_HOE = registerItem((String)"carbonado_hoe", (Item)(new ModHoe(ModToolMaterial.CARBONADO, -3, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 
+	public static final Item TOURMALINE_HELMET = registerItem((String)"tourmaline_helmet", (Item)(new ModArmor(ModArmorMaterial.TOURMALINE, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
+	public static final Item TOURMALINE_CHESTPLATE = registerItem((String)"tourmaline_chestplate", (Item)(new ModArmor(ModArmorMaterial.TOURMALINE, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
+	public static final Item TOURMALINE_LEGGINGS = registerItem((String)"tourmaline_leggings", (Item)(new ModArmor(ModArmorMaterial.TOURMALINE, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
+	public static final Item TOURMALINE_BOOTS = registerItem((String)"tourmaline_boots", (Item)(new ModArmor(ModArmorMaterial.TOURMALINE, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
+
 	public static final Item AMETHYST_HELMET = registerItem((String)"amethyst_helmet", (Item)(new ModArmor(ModArmorMaterial.AMETHYST, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 	public static final Item AMETHYST_CHESTPLATE = registerItem((String)"amethyst_chestplate", (Item)(new ModArmor(ModArmorMaterial.AMETHYST, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 	public static final Item AMETHYST_LEGGINGS = registerItem((String)"amethyst_leggings", (Item)(new ModArmor(ModArmorMaterial.AMETHYST, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
@@ -142,6 +159,8 @@ public class ContentInit
 	public static final Item CARBONADO_LEGGINGS = registerItem((String)"carbonado_leggings", (Item)(new ModArmor(ModArmorMaterial.CARBONADO, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 	public static final Item CARBONADO_BOOTS = registerItem((String)"carbonado_boots", (Item)(new ModArmor(ModArmorMaterial.CARBONADO, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 
+	public static final Item TOURMALINE_JUJU = registerItem("tourmaline_juju", new ItemTourmalineJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
+	public static final Item AMETHYST_JUJU = registerItem("amethyst_juju", new ItemAmethystJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
 	
 	public static Item registerItem(String name, Item item)
 	{

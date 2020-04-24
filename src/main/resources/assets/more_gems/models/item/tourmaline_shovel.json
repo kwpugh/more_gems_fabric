@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "more_gems:item/tourmaline_shovel"
+    }
+}

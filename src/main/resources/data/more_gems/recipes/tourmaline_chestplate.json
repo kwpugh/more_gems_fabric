@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "g g",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "g": {
+      "item": "more_gems:tourmaline"
+    }
+  },
+  "result": {
+    "item": "more_gems:tourmaline_chestplate"
+  }
+}

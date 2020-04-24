@@ -20,10 +20,14 @@ Alexandrite - 8.5 (1326)
 Topaz - 8 (1248)
 Emerald - 7.5 (1170)
 Amethyst - 7 (1092)
+Tourmaline - 6 (936)
  */
 
 public enum ModToolMaterial implements ToolMaterial
 {
+	TOURMALINE(2, 936, 6.0F, 2.0F, 14, () -> {
+	    return Ingredient.ofItems(ContentInit.TOURMALINE);
+		}),
 	AMETHYST(2, 1092, 6.0F, 2.0F, 14, () -> {
 	    return Ingredient.ofItems(ContentInit.AMETHYST);
 		}),

@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"   ",
+		" B ",
+		"   "
+	],
+	
+	"key":
+	{
+		"B": { "item": "more_gems:tourmaline_block" }	
+	},
+	
+	"result": { "item": "more_gems:tourmaline",
+	"count": 9 }
+}
