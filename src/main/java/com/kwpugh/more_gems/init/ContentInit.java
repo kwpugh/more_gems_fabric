@@ -7,7 +7,14 @@ import com.kwpugh.more_gems.items.gear.ModHoe;
 import com.kwpugh.more_gems.items.gear.ModPickaxe;
 import com.kwpugh.more_gems.items.gear.ModShovel;
 import com.kwpugh.more_gems.items.gear.ModSword;
+import com.kwpugh.more_gems.items.juju.ItemAlexandriteJuju;
 import com.kwpugh.more_gems.items.juju.ItemAmethystJuju;
+import com.kwpugh.more_gems.items.juju.ItemCarbonadoJuju;
+import com.kwpugh.more_gems.items.juju.ItemCorundumJuju;
+import com.kwpugh.more_gems.items.juju.ItemEmeraldJuju;
+import com.kwpugh.more_gems.items.juju.ItemRubyJuju;
+import com.kwpugh.more_gems.items.juju.ItemSapphireJuju;
+import com.kwpugh.more_gems.items.juju.ItemTopazJuju;
 import com.kwpugh.more_gems.items.juju.ItemTourmalineJuju;
 import com.kwpugh.more_gems.materials.ModArmorMaterial;
 import com.kwpugh.more_gems.materials.ModToolMaterial;
@@ -113,7 +120,7 @@ public class ContentInit
 	public static final Item CARBONADO_AXE = registerItem((String)"carbonado_axe", (Item)(new ModAxe(ModToolMaterial.CARBONADO, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 	public static final Item CARBONADO_SHOVEL = registerItem((String)"carbonado_shovel", (Item)(new ModShovel(ModToolMaterial.CARBONADO, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 	public static final Item CARBONADO_HOE = registerItem((String)"carbonado_hoe", (Item)(new ModHoe(ModToolMaterial.CARBONADO, -3, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
-
+	
 	public static final Item TOURMALINE_HELMET = registerItem((String)"tourmaline_helmet", (Item)(new ModArmor(ModArmorMaterial.TOURMALINE, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 	public static final Item TOURMALINE_CHESTPLATE = registerItem((String)"tourmaline_chestplate", (Item)(new ModArmor(ModArmorMaterial.TOURMALINE, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
 	public static final Item TOURMALINE_LEGGINGS = registerItem((String)"tourmaline_leggings", (Item)(new ModArmor(ModArmorMaterial.TOURMALINE, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP))));
@@ -161,6 +168,13 @@ public class ContentInit
 
 	public static final Item TOURMALINE_JUJU = registerItem("tourmaline_juju", new ItemTourmalineJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
 	public static final Item AMETHYST_JUJU = registerItem("amethyst_juju", new ItemAmethystJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
+	public static final Item EMERALD_JUJU = registerItem("emerald_juju", new ItemEmeraldJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
+	public static final Item TOPAZ_JUJU = registerItem("topaz_juju", new ItemTopazJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
+	public static final Item ALEXANDRITE_JUJU = registerItem("alexandrite_juju", new ItemAlexandriteJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
+	public static final Item CORUNDUM_JUJU = registerItem("corundum_juju", new ItemCorundumJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
+	public static final Item SAPPHIRE_JUJU = registerItem("sapphire_juju", new ItemSapphireJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
+	public static final Item RUBY_JUJU = registerItem("ruby_juju", new ItemRubyJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
+	public static final Item CARBONADO_JUJU = registerItem("carbonado_juju", new ItemCarbonadoJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP)));
 	
 	public static Item registerItem(String name, Item item)
 	{

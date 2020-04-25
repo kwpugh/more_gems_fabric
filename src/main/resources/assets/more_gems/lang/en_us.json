@@ -89,6 +89,7 @@
 	"item.more_gems.corundum_axe": "Corundum Axe",
 	"item.more_gems.corundum_shovel": "Corundum Shovel",
 	"item.more_gems.corundum_hoe": "Corundum Hoe",
+	"item.more_gems.corundum_ore_hammer": "Corundum Ore Hammer",
 		
 	"item.more_gems.corundum_helmet": "Corundum Helmet",
 	"item.more_gems.corundum_chestplate": "Corundum Chestplate",
@@ -147,10 +148,31 @@
 	"item.more_gems.tourmaline_boots": "Tourmaline Boots",
 	
 	"item.more_gems.tourmaline_juju": "Tourmaline JuJu",
-	"item.more_gems.tourmaline_juju.tip1": "Provides Night Vision",
+	"item.more_gems.tourmaline_juju.tip1": "See a little better in the darkness",
 
 	"item.more_gems.amethyst_juju": "Amethyst JuJu",
-	"item.more_gems.amethyst_juju.tip1": "Provides a little extra speed",
-			
+	"item.more_gems.amethyst_juju.tip1": "Run a little faster",
+
+	"item.more_gems.emerald_juju": "Emerald JuJu",
+	"item.more_gems.emerald_juju.tip1": "A hero is born",
+	
+	"item.more_gems.topaz_juju": "Topaz JuJu",
+	"item.more_gems.topaz_juju.tip1": "Provides a little protection from fire",
+
+	"item.more_gems.alexandrite_juju": "Alexandrite JuJu",
+	"item.more_gems.alexandrite_juju.tip1": "Allows breathing underwater",
+
+	"item.more_gems.corundum_juju": "Corundum JuJu",
+	"item.more_gems.corundum_juju.tip1": "Fall a little slower",
+
+	"item.more_gems.sapphire_juju": "Sapphire JuJu",
+	"item.more_gems.sapphire_juju.tip1": "Keep your tummy full",
+
+	"item.more_gems.ruby_juju": "Ruby JuJu",
+	"item.more_gems.ruby_juju.tip1": "A little extra strength",
+
+	"item.more_gems.carbonado_juju": "Carbonado JuJu",
+	"item.more_gems.carbonado_juju.tip1": "Swim with the Dolphins",
+									
 	"itemGroup.more_gems.more_gems_group": "More Gems"
 }

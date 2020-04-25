@@ -10,6 +10,9 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
+dependencies {
+    modCompile "me.shedaniel:RoughlyEnoughItems:4.2.0-unstable"
+}
 
 dependencies {
 	//to change the versions see the gradle.properties file
