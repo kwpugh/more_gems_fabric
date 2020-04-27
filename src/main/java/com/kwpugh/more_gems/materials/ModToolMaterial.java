@@ -2,7 +2,7 @@ package com.kwpugh.more_gems.materials;
 
 import java.util.function.Supplier;
 
-import com.kwpugh.more_gems.init.ContentInit;
+import com.kwpugh.more_gems.init.ItemInit;
 
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
@@ -26,31 +26,31 @@ Tourmaline - 6 (936)
 public enum ModToolMaterial implements ToolMaterial
 {
 	TOURMALINE(2, 936, 6.0F, 2.0F, 14, () -> {
-	    return Ingredient.ofItems(ContentInit.TOURMALINE);
+	    return Ingredient.ofItems(ItemInit.TOURMALINE);
 		}),
 	AMETHYST(2, 1092, 6.0F, 2.0F, 14, () -> {
-	    return Ingredient.ofItems(ContentInit.AMETHYST);
+	    return Ingredient.ofItems(ItemInit.AMETHYST);
 		}),
 	EMERALD(2, 1170, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.ofItems(Items.EMERALD);
 		}),
 	TOPAZ(2, 1248, 6.0F, 2.0F, 14, () -> {
-	    return Ingredient.ofItems(ContentInit.TOPAZ);
+	    return Ingredient.ofItems(ItemInit.TOPAZ);
 	    }),
 	ALEXANDRITE(2, 1326, 6.0F, 2.0F, 14, () -> {
-	    return Ingredient.ofItems(ContentInit.ALEXANDRITE);
+	    return Ingredient.ofItems(ItemInit.ALEXANDRITE);
 	    }),
 	CORUNDUM(3, 1404, 6.0F, 2.0F, 14, () -> {
-	    return Ingredient.ofItems(ContentInit.CORUNDUM);
+	    return Ingredient.ofItems(ItemInit.CORUNDUM);
     	}),
 	SAPPHIRE(3, 1404, 6.0F, 2.0F, 14, () -> {
-		return Ingredient.ofItems(ContentInit.SAPPHIRE);
+		return Ingredient.ofItems(ItemInit.SAPPHIRE);
 		}),
 	RUBY(3, 1404, 6.0F, 2.0F, 14, () -> {
-		return Ingredient.ofItems(ContentInit.RUBY);
+		return Ingredient.ofItems(ItemInit.RUBY);
 		}),
 	CARBONADO(3, 1561, 8.0F, 3.0F, 10, () -> {
-	    return Ingredient.ofItems(ContentInit.CARBONADO);
+	    return Ingredient.ofItems(ItemInit.CARBONADO);
 	    });
 
    private final int miningLevel;

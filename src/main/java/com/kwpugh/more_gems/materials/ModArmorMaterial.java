@@ -2,7 +2,7 @@ package com.kwpugh.more_gems.materials;
 
 import java.util.function.Supplier;
 
-import com.kwpugh.more_gems.init.ContentInit;
+import com.kwpugh.more_gems.init.ItemInit;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -31,31 +31,31 @@ Tourmaline -
 public enum ModArmorMaterial implements ArmorMaterial
 {
 	TOURMALINE("tourmaline", 21, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.AMETHYST);
+		return Ingredient.ofItems(ItemInit.TOURMALINE);
 		}),
 	AMETHYST("amethyst", 23, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.AMETHYST);
+		return Ingredient.ofItems(ItemInit.AMETHYST);
 		}),
 	EMERALD("emerald_", 25, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
 		return Ingredient.ofItems(Items.EMERALD);
 		}),
 	TOPAZ("topaz", 26, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.TOPAZ);
+		return Ingredient.ofItems(ItemInit.TOPAZ);
 		}),
 	ALEXANDRITE("alexandrite_", 28, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.ALEXANDRITE);
+		return Ingredient.ofItems(ItemInit.ALEXANDRITE);
 		}),
 	CORUNDUM("corundum", 30, new int[]{2, 5, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.25F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.CORUNDUM);
+		return Ingredient.ofItems(ItemInit.CORUNDUM);
 		}),
 	SAPPHIRE("sapphire", 30, new int[]{2, 5, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.25F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.SAPPHIRE);
+		return Ingredient.ofItems(ItemInit.SAPPHIRE);
 		}),
 	RUBY("ruby_", 30, new int[]{2, 5, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.5F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.RUBY);
+		return Ingredient.ofItems(ItemInit.RUBY);
 		}),
 	CARBONADO("carbonado", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.75F, 0.0F, () -> {
-		return Ingredient.ofItems(ContentInit.CARBONADO);
+		return Ingredient.ofItems(ItemInit.CARBONADO);
 		});
 
 	private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};

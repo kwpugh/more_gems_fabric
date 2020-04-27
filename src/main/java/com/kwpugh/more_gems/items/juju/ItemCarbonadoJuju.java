@@ -32,7 +32,7 @@ public class ItemCarbonadoJuju extends Item
 			player.addStatusEffect(effect2);
 		}
 	}
-	 
+	  
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{

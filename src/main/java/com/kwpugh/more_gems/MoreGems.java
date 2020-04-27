@@ -1,6 +1,7 @@
 package com.kwpugh.more_gems;
 
-import com.kwpugh.more_gems.init.ContentInit;
+import com.kwpugh.more_gems.init.BlockInit;
+import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.world.OreGen;
 
 import net.fabricmc.api.ModInitializer;
@@ -13,14 +14,17 @@ import net.minecraft.world.biome.Biome;
 public class MoreGems implements ModInitializer
 {	
 	public static final String MOD_ID = "more_gems";
-	public static final ItemGroup MORE_GEMS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "more_gems_group"), () -> new ItemStack(ContentInit.ALEXANDRITE));
+	public static final ItemGroup MORE_GEMS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "more_gems_group"), () -> new ItemStack(ItemInit.ALEXANDRITE));
 	
 	public static final MoreGems INSTANCE = new MoreGems();
 	
     @Override
     public void onInitialize()
     {
-        new ContentInit();
+    	BlockInit.registerBlocks();
+    	BlockInit.registerBlockItems();
+    	
+    	ItemInit.registerItems();
         
     	for (Biome biome : Biome.BIOMES)
 		{
