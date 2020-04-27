@@ -1,11 +1,13 @@
 package com.kwpugh.more_gems.init;
 
 import com.kwpugh.more_gems.MoreGems;
+import com.kwpugh.more_gems.blocks.DemoBlockEntity;
 
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -13,6 +15,8 @@ import net.minecraft.util.registry.Registry;
 
 public class BlockInit
 {
+	public static BlockEntityType<DemoBlockEntity> DEMO_BLOCK_ENTITY;
+	
 	public static final Block TOURMALINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block AMETHYST_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block TOPAZ_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
@@ -71,5 +75,11 @@ public class BlockInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_ore"), new BlockItem(CARBONADO_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+	}
+	
+	public static void registerBlockEntities()
+	{
+		 DEMO_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "more_gems:carbonado_block", BlockEntityType.Builder.create(DemoBlockEntity::new, CARBONADO_BLOCK).build(null));
+		 System.out.println("Hit");
 	}
 }
