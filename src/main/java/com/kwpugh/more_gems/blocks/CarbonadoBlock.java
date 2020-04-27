@@ -15,6 +15,6 @@ public class CarbonadoBlock extends Block implements BlockEntityProvider
 	@Override
 	public BlockEntity createBlockEntity(BlockView blockView)
 	{
-		return new DemoBlockEntity();
+		return new CarbonadoBlockEntity();
 	}
 }

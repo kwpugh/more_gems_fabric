@@ -1,7 +1,8 @@
 package com.kwpugh.more_gems.init;
 
 import com.kwpugh.more_gems.MoreGems;
-import com.kwpugh.more_gems.blocks.DemoBlockEntity;
+import com.kwpugh.more_gems.blocks.CarbonadoBlock;
+import com.kwpugh.more_gems.blocks.CarbonadoBlockEntity;
 
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -15,7 +16,7 @@ import net.minecraft.util.registry.Registry;
 
 public class BlockInit
 {
-	public static BlockEntityType<DemoBlockEntity> DEMO_BLOCK_ENTITY;
+	public static BlockEntityType<CarbonadoBlockEntity> CARBONADO_BLOCK_ENTITY;
 	
 	public static final Block TOURMALINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block AMETHYST_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
@@ -33,8 +34,10 @@ public class BlockInit
 	public static final Block CORUNDUM_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block SAPPHIRE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block RUBY_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block CARBONADO_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
+	public static final Block CARBONADO_BLOCK = new CarbonadoBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 
+	
+	
 	public static void registerBlocks()
 	{
 		Registry.register(Registry.BLOCK, new Identifier("more_gems", "tourmaline_ore"), TOURMALINE_ORE);
@@ -79,7 +82,7 @@ public class BlockInit
 	
 	public static void registerBlockEntities()
 	{
-		 DEMO_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "more_gems:carbonado_block", BlockEntityType.Builder.create(DemoBlockEntity::new, CARBONADO_BLOCK).build(null));
+		CARBONADO_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "more_gems:carbonado_block", BlockEntityType.Builder.create(CarbonadoBlockEntity::new, CARBONADO_BLOCK).build(null));
 		 System.out.println("Hit");
 	}
 }
