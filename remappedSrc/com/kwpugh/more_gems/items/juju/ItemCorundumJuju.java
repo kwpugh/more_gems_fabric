@@ -14,17 +14,17 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
-public class ItemAlexandriteJuju extends Item
-{
-	public ItemAlexandriteJuju(Settings settings)
+public class ItemCorundumJuju extends Item
+{	
+	public ItemCorundumJuju(Settings settings)
 	{
 		super(settings);
 	}
-		
+
 	@Override
 	public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected)
 	{
-		StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.WATER_BREATHING, 8, 0, false, false);
+		StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.SLOW_FALLING, 8, 0, false, false);
 		LivingEntity player = (LivingEntity) entity;
 		{
 			player.addStatusEffect(effect);
@@ -34,6 +34,6 @@ public class ItemAlexandriteJuju extends Item
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
-		tooltip.add(new TranslatableText("item.more_gems.alexandrite_juju.tip1").formatted(Formatting.GREEN));
+		tooltip.add(new TranslatableText("item.more_gems.corundum_juju.tip1").method_27692(Formatting.GREEN));
 	} 
 }
