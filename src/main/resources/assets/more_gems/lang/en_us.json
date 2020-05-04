@@ -147,8 +147,28 @@
 	"item.more_gems.tourmaline_leggings": "Tourmaline Leggings",
 	"item.more_gems.tourmaline_boots": "Tourmaline Boots",
 	
+	"item.more_gems.citrine": "Citrine",
+	"item.more_gems.citrine_ore": "Citrine Ore",
+	"block.more_gems.citrine_ore": "Citrine Ore",
+	"item.more_gems.citrine_block": "Citrine Block",
+	"block.more_gems.citrine_block": "Citrine Block",
+	
+	"item.more_gems.citrine_sword": "Citrine Sword",
+	"item.more_gems.citrine_pickaxe": "Citrine Pickaxe",
+	"item.more_gems.citrine_axe": "Citrine Axe",
+	"item.more_gems.citrine_shovel": "Citrine Shovel",
+	"item.more_gems.citrine_hoe": "Citrine Hoe",
+	
+	"item.more_gems.citrine_helmet": "Citrine Helmet",
+	"item.more_gems.citrine_chestplate": "Citrine Chestplate",
+	"item.more_gems.citrine_leggings": "Citrine Leggings",
+	"item.more_gems.citrine_boots": "Citrine Boots",
+
 	"item.more_gems.tourmaline_juju": "Tourmaline JuJu",
 	"item.more_gems.tourmaline_juju.tip1": "See a little better in the darkness",
+			
+	"item.more_gems.citrine_juju": "Citrine JuJu",
+	"item.more_gems.citrine_juju.tip1": "Dig a little faster",
 
 	"item.more_gems.amethyst_juju": "Amethyst JuJu",
 	"item.more_gems.amethyst_juju.tip1": "Run a little faster",

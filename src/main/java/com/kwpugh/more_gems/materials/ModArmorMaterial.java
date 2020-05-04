@@ -25,11 +25,15 @@ Alexandrite - 8.5
 Topaz - 8
 Emerald - 7.5
 Amethyst - 7
-Tourmaline - 
+Tourmaline - 6
+Citrine - 5.5
  */
 
 public enum ModArmorMaterial implements ArmorMaterial
 {
+	CITRINE("citrine_", 16, new int[]{2, 5, 6, 2}, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+		return Ingredient.ofItems(ItemInit.CITRINE);
+		}),
 	TOURMALINE("tourmaline", 21, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
 		return Ingredient.ofItems(ItemInit.TOURMALINE);
 		}),

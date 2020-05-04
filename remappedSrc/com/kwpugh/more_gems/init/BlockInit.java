@@ -13,8 +13,7 @@ import net.minecraft.util.registry.Registry;
 
 public class BlockInit
 {
-	//public static BlockEntityType<CarbonadoBlockEntity> CARBONADO_BLOCK_ENTITY;
-	
+	public static final Block CITRINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block TOURMALINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block AMETHYST_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block TOPAZ_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
@@ -24,6 +23,7 @@ public class BlockInit
 	public static final Block RUBY_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block CARBONADO_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 
+	public static final Block CITRINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block TOURMALINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block AMETHYST_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
 	public static final Block TOPAZ_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
@@ -37,6 +37,7 @@ public class BlockInit
 	
 	public static void registerBlocks()
 	{
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "citrine_ore"), CITRINE_ORE);
 		Registry.register(Registry.BLOCK, new Identifier("more_gems", "tourmaline_ore"), TOURMALINE_ORE);
 		Registry.register(Registry.BLOCK, new Identifier("more_gems", "amethyst_ore"), AMETHYST_ORE);
 		Registry.register(Registry.BLOCK, new Identifier("more_gems", "topaz_ore"), TOPAZ_ORE);
@@ -46,6 +47,7 @@ public class BlockInit
 		Registry.register(Registry.BLOCK, new Identifier("more_gems", "ruby_ore"), RUBY_ORE);
 		Registry.register(Registry.BLOCK, new Identifier("more_gems", "carbonado_ore"), CARBONADO_ORE);
 		
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "citrine_block"), CITRINE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier("more_gems", "tourmaline_block"), TOURMALINE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier("more_gems", "amethyst_block"), AMETHYST_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier("more_gems", "topaz_block"), TOPAZ_BLOCK);
@@ -58,15 +60,7 @@ public class BlockInit
 	
 	public static void registerBlockItems()
 	{
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_block"), new BlockItem(TOURMALINE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_block"), new BlockItem(AMETHYST_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_block"), new BlockItem(TOPAZ_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_block"), new BlockItem(ALEXANDRITE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_block"), new BlockItem(RUBY_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_block"), new BlockItem(CARBONADO_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_ore"), new BlockItem(CITRINE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_ore"), new BlockItem(TOURMALINE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_ore"), new BlockItem(AMETHYST_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_ore"), new BlockItem(TOPAZ_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
@@ -75,10 +69,20 @@ public class BlockInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_ore"), new BlockItem(CARBONADO_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+		
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_block"), new BlockItem(CITRINE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_block"), new BlockItem(TOURMALINE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_block"), new BlockItem(AMETHYST_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_block"), new BlockItem(TOPAZ_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_block"), new BlockItem(ALEXANDRITE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_block"), new BlockItem(RUBY_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_block"), new BlockItem(CARBONADO_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 	}
 	
 	public static void registerBlockEntities()
 	{
-		//CARBONADO_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "more_gems:carbonado_block", BlockEntityType.Builder.create(CarbonadoBlockEntity::new, CARBONADO_BLOCK).build(null));
+		//TBD
 	}
 }

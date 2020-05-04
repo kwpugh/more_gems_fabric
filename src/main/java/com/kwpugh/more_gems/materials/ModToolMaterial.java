@@ -21,10 +21,14 @@ Topaz - 8 (1248)
 Emerald - 7.5 (1170)
 Amethyst - 7 (1092)
 Tourmaline - 6 (936)
+Citrine - 5.5 (858)
  */
 
 public enum ModToolMaterial implements ToolMaterial
 {
+	CITRINE(2, 825, 6.0F, 2.0F, 14, () -> {
+	    return Ingredient.ofItems(ItemInit.CITRINE);
+		}),
 	TOURMALINE(2, 936, 6.0F, 2.0F, 14, () -> {
 	    return Ingredient.ofItems(ItemInit.TOURMALINE);
 		}),

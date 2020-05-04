@@ -23,7 +23,6 @@ public class MoreGems implements ModInitializer
     {
     	BlockInit.registerBlocks();
     	BlockInit.registerBlockItems();
-    	//BlockInit.registerBlockEntities();
     	
     	ItemInit.registerItems();
         
