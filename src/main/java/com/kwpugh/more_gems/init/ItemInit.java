@@ -27,6 +27,8 @@ import net.minecraft.util.registry.Registry;
 
 public class ItemInit
 {
+	static boolean jujuEnable = MoreGems.getConfig().JUJU.jujuEnable;
+	
 	public static final Item CITRINE = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item AMETHYST = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -157,7 +159,7 @@ public class ItemInit
 	public static final Item SAPPHIRE_JUJU = new ItemSapphireJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item RUBY_JUJU = new ItemRubyJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_JUJU = new ItemCarbonadoJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	
+		
 	public static void registerItems()
 	{		 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine"), CITRINE);
@@ -280,15 +282,18 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_leggings"), CARBONADO_LEGGINGS);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_boots"), CARBONADO_BOOTS);
 		
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_juju"), CITRINE_JUJU);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_juju"), TOURMALINE_JUJU);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_juju"), AMETHYST_JUJU);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_juju"), EMERALD_JUJU);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_juju"), TOPAZ_JUJU);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_juju"), ALEXANDRITE_JUJU);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_juju"), CORUNDUM_JUJU);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_juju"), SAPPHIRE_JUJU);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_juju"), RUBY_JUJU);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_juju"), CARBONADO_JUJU);
+		if(jujuEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_juju"), CITRINE_JUJU);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_juju"), TOURMALINE_JUJU);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_juju"), AMETHYST_JUJU);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_juju"), EMERALD_JUJU);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_juju"), TOPAZ_JUJU);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_juju"), ALEXANDRITE_JUJU);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_juju"), CORUNDUM_JUJU);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_juju"), SAPPHIRE_JUJU);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_juju"), RUBY_JUJU);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_juju"), CARBONADO_JUJU);
+		}
 	}
 }

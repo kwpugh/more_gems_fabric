@@ -10,8 +10,8 @@
 	
 	"key":
 	{
-		"G": { "tag": "c:ruby_gem" }	
+		"G": { "item": "more_gems:citrine" }	
 	},
 	
-	"result": { "item": "more_gems:ruby_block" }
+	"result": { "item": "more_gems:citrine_block" }
 }

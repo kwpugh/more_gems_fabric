@@ -10,10 +10,10 @@
       "item": "minecraft:gold_ingot"
     },
     "g": {
-      "tag": "c:ruby_gem"
+      "item": "more_gems:citrine"
     }
   },
   "result": {
-    "item": "more_gems:ruby_juju"
+    "item": "more_gems:citrine_juju"
   }
 }

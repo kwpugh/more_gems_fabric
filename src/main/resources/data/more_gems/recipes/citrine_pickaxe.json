@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "gg ",
+    "ggg",
     " s ",
     " s "
   ],
@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "g": {
-      "tag": "c:ruby_gem"
+      "item": "more_gems:citrine"
     }
   },
   "result": {
-    "item": "more_gems:ruby_hoe"
+    "item": "more_gems:citrine_pickaxe"
   }
 }

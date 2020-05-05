@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ggg",
+    "   ",
     "g g",
     "g g"
   ],
   "key": {
     "g": {
-      "tag": "c:ruby_gem"
+      "item": "more_gems:citrine"
     }
   },
   "result": {
-    "item": "more_gems:ruby_leggings"
+    "item": "more_gems:citrine_boots"
   }
 }

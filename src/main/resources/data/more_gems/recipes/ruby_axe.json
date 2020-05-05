@@ -10,7 +10,7 @@
       "item": "minecraft:stick"
     },
     "g": {
-      "item": "more_gems:ruby"
+      "tag": "c:ruby_gem"
     }
   },
   "result": {
