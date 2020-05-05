@@ -11,7 +11,7 @@ version = project.mod_version
 group = project.maven_group
 
 dependencies {
-    modCompile "me.shedaniel:RoughlyEnoughItems:4.3.1-unstable"
+    modCompile "me.shedaniel:RoughlyEnoughItems:3.6.14"
 }
 
 dependencies {
@@ -27,8 +27,8 @@ dependencies {
 	// You may need to force-disable transitiveness on them.
 	
 	    //Autoconfig
-  	modCompile "me.sargunvohra.mcmods:autoconfig1u:3.0.1-unstable"
-    include "me.sargunvohra.mcmods:autoconfig1u:3.0.1-unstable"
+  	modCompile "me.sargunvohra.mcmods:autoconfig1u:2.0.1"
+    include "me.sargunvohra.mcmods:autoconfig1u:2.0.1"
 }
 
 processResources {

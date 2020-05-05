@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "more_gems",
-  "version": "1.0.14",
+  "version": "1.0.3",
 
   "name": "More Gems",
-  "description": "Adding more gems to the world: tourmaline. ruby, sapphire, amethyst, topaz, alexandrite, corundum, and carbonado",
+  "description": "Adding more gems to the world: citrine, tourmaline, ruby, sapphire, amethyst, topaz, alexandrite, corundum, and carbonado",
   "authors": [
     "Kevin Pugh"
   ],
@@ -30,7 +30,7 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": "1.15.x"
   },
   "suggests": {
     "flamingo": "*"
