@@ -12,61 +12,96 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class OreGen
 {  
-	static boolean citrineEnable = MoreGems.getConfig().ORES.citrine;
-	static boolean tourmalineEnable = MoreGems.getConfig().ORES.tourmaline;
-	static boolean amethystEnable = MoreGems.getConfig().ORES.amethyst;
-	static boolean topazEnable = MoreGems.getConfig().ORES.topaz;
-	static boolean alexandriteEnable = MoreGems.getConfig().ORES.alexandrite;
-	static boolean sapphireEnable = MoreGems.getConfig().ORES.sapphire;
-	static boolean rubyEnable = MoreGems.getConfig().ORES.ruby;
-	static boolean corundumEnable = MoreGems.getConfig().ORES.corundum;
-	static boolean carbonadoEnable = MoreGems.getConfig().ORES.carbonado;
+	static boolean citrineEnable = MoreGems.getConfig().CITRINE.citrine;
+	static int citrineSize = MoreGems.getConfig().CITRINE.citrineSize;
+	static int citrineMinLevel = MoreGems.getConfig().CITRINE.citrineMinLevel;
+	static int citrineMaxLevel = MoreGems.getConfig().CITRINE.citrineMaxLevel;
+	
+	static boolean tourmalineEnable = MoreGems.getConfig().TOURMALINE.tourmaline;
+	static int tourmalineSize = MoreGems.getConfig().TOURMALINE.tourmalineSize;
+	static int tourmalineMinLevel = MoreGems.getConfig().TOURMALINE.tourmalineMinLevel;
+	static int tourmalineMaxLevel = MoreGems.getConfig().TOURMALINE.tourmalineMaxLevel;
+	
+	static boolean amethystEnable = MoreGems.getConfig().AMETHYST.amethyst;
+	static int amethystSize = MoreGems.getConfig().AMETHYST.amethystSize;
+	static int amethystMinLevel = MoreGems.getConfig().AMETHYST.amethystMinLevel;
+	static int amethystMaxLevel = MoreGems.getConfig().AMETHYST.amethystMaxLevel;
+	
+	static boolean topazEnable = MoreGems.getConfig().TOPAZ.topaz;
+	static int topazSize = MoreGems.getConfig().TOPAZ.topazSize;
+	static int topazMinLevel = MoreGems.getConfig().TOPAZ.topazMinLevel;
+	static int topazMaxLevel = MoreGems.getConfig().TOPAZ.topazMaxLevel;
+	
+	static boolean alexandriteEnable = MoreGems.getConfig().ALEXANDRITE.alexandrite;
+	static int alexandriteSize = MoreGems.getConfig().ALEXANDRITE.alexandriteSize;
+	static int alexandriteMinLevel = MoreGems.getConfig().ALEXANDRITE.alexandriteMinLevel;
+	static int alexandriteMaxLevel = MoreGems.getConfig().ALEXANDRITE.alexandriteMaxLevel;
+	
+	static boolean sapphireEnable = MoreGems.getConfig().SAPPHIRE.sapphire;
+	static int sapphireSize = MoreGems.getConfig().SAPPHIRE.sapphireSize;
+	static int sapphireMinLevel = MoreGems.getConfig().SAPPHIRE.sapphireMinLevel;
+	static int sapphireMaxLevel = MoreGems.getConfig().SAPPHIRE.sapphireMaxLevel;
+	
+	static boolean rubyEnable = MoreGems.getConfig().RUBY.ruby;
+	static int rubySize = MoreGems.getConfig().RUBY.rubySize;
+	static int rubyMinLevel = MoreGems.getConfig().RUBY.rubyMinLevel;
+	static int rubyMaxLevel = MoreGems.getConfig().RUBY.rubyMaxLevel;
+	
+	static boolean corundumEnable = MoreGems.getConfig().CORUNDUM.corundum;
+	static int corundumSize = MoreGems.getConfig().CORUNDUM.corundumSize;
+	static int corundumMinLevel = MoreGems.getConfig().CORUNDUM.corundumMinLevel;
+	static int corundumMaxLevel = MoreGems.getConfig().CORUNDUM.corundumMaxLevel;
+	
+	static boolean carbonadoEnable = MoreGems.getConfig().CARBONADO.carbonado;
+	static int carbonadoSize = MoreGems.getConfig().CARBONADO.carbonadoSize;
+	static int carbonadoMinLevel = MoreGems.getConfig().CARBONADO.carbonadoMinLevel;
+	static int carbonadoMaxLevel = MoreGems.getConfig().CARBONADO.carbonadoMaxLevel;
 	
 	public static void addGemOres(Biome biome)
 	{
 		if(citrineEnable)
 		{
-			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.CITRINE_ORE.getDefaultState(), 3)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(45, 0, 0, 60))));
+			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.CITRINE_ORE.getDefaultState(), citrineSize)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(citrineMinLevel, 0, 0, citrineMaxLevel))));
 		}
 		
 		if(tourmalineEnable)
 		{		
-			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.TOURMALINE_ORE.getDefaultState(), 3)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(40, 0, 0, 50))));
+			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.TOURMALINE_ORE.getDefaultState(), tourmalineSize)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(tourmalineMinLevel, 0, 0, tourmalineMaxLevel))));
 		}
 		
 		if(amethystEnable)
 		{
-			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.AMETHYST_ORE.getDefaultState(), 3)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(40, 0, 0, 50))));
+			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.AMETHYST_ORE.getDefaultState(), amethystSize)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(amethystMinLevel, 0, 0, amethystMaxLevel))));
 		}
 		
 		if(topazEnable)
 		{
-			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.TOPAZ_ORE.getDefaultState(), 3)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(40, 0, 0, 50))));		
+			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.TOPAZ_ORE.getDefaultState(), topazSize)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(topazMinLevel, 0, 0, topazMaxLevel))));		
 		}
 		
 		if(alexandriteEnable)
 		{
-			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.ALEXANDRITE_ORE.getDefaultState(), 3)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(30, 0, 0, 40))));
+			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.ALEXANDRITE_ORE.getDefaultState(), alexandriteSize)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(alexandriteMinLevel, 0, 0, alexandriteMaxLevel))));
 		}
 		
 		if(sapphireEnable)
 		{
-			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.SAPPHIRE_ORE.getDefaultState(), 3)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(20, 0, 0, 30))));
+			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.SAPPHIRE_ORE.getDefaultState(), sapphireSize)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(sapphireMinLevel, 0, 0, sapphireMaxLevel))));
 		}
 		
 		if(rubyEnable)
 		{
-			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.RUBY_ORE.getDefaultState(), 3)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(20, 0, 0, 30))));		
+			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.RUBY_ORE.getDefaultState(), rubySize)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(rubyMinLevel, 0, 0, rubyMaxLevel))));		
 		}
 		
 		if(corundumEnable)
 		{
-			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.CORUNDUM_ORE.getDefaultState(), 3)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 20))));		
+			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.CORUNDUM_ORE.getDefaultState(), corundumSize)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(corundumMinLevel, 0, 0, corundumMaxLevel))));		
 		}
 		
 		if(carbonadoEnable)
 		{
-			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.CARBONADO_ORE.getDefaultState(), 5)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(1, 0, 0, 15))));
+			biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, BlockInit.CARBONADO_ORE.getDefaultState(), carbonadoSize)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(carbonadoMinLevel, 0, 0, carbonadoMaxLevel))));
 		}
 	}
 }

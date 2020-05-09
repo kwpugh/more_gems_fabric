@@ -3,6 +3,7 @@ package com.kwpugh.more_gems;
 import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.BlockInit;
 import com.kwpugh.more_gems.init.ItemInit;
+import com.kwpugh.more_gems.world.MoreGemsLootTables;
 import com.kwpugh.more_gems.world.OreGen;
 
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
@@ -35,6 +36,8 @@ public class MoreGems implements ModInitializer
 		{
 			OreGen.addGemOres(biome);
 		} 
+    	
+    	MoreGemsLootTables.init();
     }
     
     public static MoreGemsConfig getConfig()
