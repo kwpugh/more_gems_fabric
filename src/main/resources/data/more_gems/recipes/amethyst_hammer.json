@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "gsg",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "g": {
+      "item": "more_gems:amethyst"
+    }
+  },
+  "result": {
+    "item": "more_gems:amethyst_hammer"
+  }
+}

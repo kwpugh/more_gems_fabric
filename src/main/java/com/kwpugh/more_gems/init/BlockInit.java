@@ -2,9 +2,12 @@ package com.kwpugh.more_gems.init;
 
 import com.kwpugh.more_gems.MoreGems;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricMaterialBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.block.MaterialColor;
 import net.minecraft.block.OreBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,25 +16,26 @@ import net.minecraft.util.registry.Registry;
 
 public class BlockInit
 {
-	public static final Block CITRINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block TOURMALINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block AMETHYST_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block TOPAZ_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block ALEXANDRITE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block CORUNDUM_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block SAPPHIRE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block RUBY_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block CARBONADO_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
+	public static final Block CITRINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block TOURMALINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block AMETHYST_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block TOPAZ_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block ALEXANDRITE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block CORUNDUM_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block SAPPHIRE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block RUBY_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	//public static final Block CARBONADO_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 3).strength(3.0F, 3.0F));
+	public static final Block CARBONADO_ORE = new OreBlock(FabricBlockSettings.of(new FabricMaterialBuilder(MaterialColor.STONE).requiresTool().build()).breakByTool(FabricToolTags.PICKAXES, 3).strength(3.0F, 3.0F));
 
-	public static final Block CITRINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block TOURMALINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block AMETHYST_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block TOPAZ_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block ALEXANDRITE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block CORUNDUM_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block SAPPHIRE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block RUBY_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());
-	public static final Block CARBONADO_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).build());	
+	public static final Block CITRINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block TOURMALINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block AMETHYST_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block TOPAZ_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block ALEXANDRITE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block CORUNDUM_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block SAPPHIRE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block RUBY_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+	public static final Block CARBONADO_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));	
 	
 	static boolean oreBlockEnable = MoreGems.getConfig().ORE_BLOCKS.enableOreBlocks;
 	

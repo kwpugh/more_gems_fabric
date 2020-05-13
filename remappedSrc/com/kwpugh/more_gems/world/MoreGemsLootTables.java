@@ -23,9 +23,9 @@ public class MoreGemsLootTables
 	public static void init()
 	{	
 		FabricLootPoolBuilder CITRINE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.CITRINE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.CITRINE_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(CITRINE_JUJU,
 				new Identifier("minecraft", "chests/desert_pyramid"),
@@ -34,9 +34,9 @@ public class MoreGemsLootTables
 		));
 
 		FabricLootPoolBuilder TOURMALINE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.TOURMALINE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.TOURMALINE_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(TOURMALINE_JUJU,
 				new Identifier("minecraft", "chests/jungle_temple"),
@@ -46,9 +46,9 @@ public class MoreGemsLootTables
 		));
 		
 		FabricLootPoolBuilder AMETHYST_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.AMETHYST_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.AMETHYST_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(AMETHYST_JUJU,
 				new Identifier("minecraft", "chests/simple_dungeon"),
@@ -58,9 +58,9 @@ public class MoreGemsLootTables
 		));
 		
 		FabricLootPoolBuilder EMERALD_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.EMERALD_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.EMERALD_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(EMERALD_JUJU,
 				new Identifier("minecraft", "chests/igloo_chest"),
@@ -71,9 +71,9 @@ public class MoreGemsLootTables
 		));
 		
 		FabricLootPoolBuilder TOPAZ_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.TOPAZ_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.TOPAZ_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(TOPAZ_JUJU,
 				new Identifier("minecraft", "chests/buried_treasure"),
@@ -84,9 +84,9 @@ public class MoreGemsLootTables
 		));
 
 		FabricLootPoolBuilder ALEXANDRITE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.ALEXANDRITE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.ALEXANDRITE_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(ALEXANDRITE_JUJU,
 				new Identifier("minecraft", "chests/buried_treasure"),
@@ -97,9 +97,9 @@ public class MoreGemsLootTables
 		));
 		
 		FabricLootPoolBuilder CORUNDUM_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.CORUNDUM_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.CORUNDUM_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(CORUNDUM_JUJU,
 				new Identifier("minecraft", "chests/nether_bridge"),
@@ -108,9 +108,9 @@ public class MoreGemsLootTables
 		));
 		
 		FabricLootPoolBuilder SAPPHIRE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.SAPPHIRE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.SAPPHIRE_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(SAPPHIRE_JUJU,
 				new Identifier("minecraft", "chests/nether_bridge"),
@@ -118,9 +118,9 @@ public class MoreGemsLootTables
 		));
 		
 		FabricLootPoolBuilder RUBY_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.RUBY_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.RUBY_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(RUBY_JUJU,
 				new Identifier("minecraft", "chests/pillager_outpost"),
@@ -129,9 +129,9 @@ public class MoreGemsLootTables
 		));
 		
 		FabricLootPoolBuilder CARBONADO_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootTableRange.create(1))
-				.with(ItemEntry.builder(ItemInit.CARBONADO_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(0.05F).build());
+				.withRolls(ConstantLootTableRange.create(1))
+				.withEntry(ItemEntry.builder(ItemInit.CARBONADO_JUJU))
+				.withCondition(RandomChanceLootCondition.builder(0.40F).build());
 
 		insert(new LootTableInsert(CARBONADO_JUJU,
 				new Identifier("minecraft", "chests/end_city_treasure"),
@@ -167,7 +167,7 @@ public class MoreGemsLootTables
 
 		public void insert(FabricLootSupplierBuilder supplier)
 		{
-			supplier.pool(lootPool);
+			supplier.withPool(lootPool);
 		}
 	}
 }
