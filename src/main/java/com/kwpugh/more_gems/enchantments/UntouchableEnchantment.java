@@ -55,6 +55,6 @@ public class UntouchableEnchantment extends ThornsEnchantment
 	
 	public static int getDamageAmount(int level, Random random)
 	{
-		return 5;
+		return 10;
 	}	   
 }

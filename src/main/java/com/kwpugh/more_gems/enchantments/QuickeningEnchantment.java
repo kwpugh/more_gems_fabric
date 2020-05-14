@@ -1,16 +1,19 @@
 package com.kwpugh.more_gems.enchantments;
 
+import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
+
 import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.server.world.ServerWorld;
 
-public class RazorSharpnessEnchantment extends DamageEnchantment
+public class QuickeningEnchantment extends DamageEnchantment
 {
-	public RazorSharpnessEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
+
+	public QuickeningEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
 	{
 		super(weight, typeIndex, slots);
 	}
@@ -29,17 +32,16 @@ public class RazorSharpnessEnchantment extends DamageEnchantment
 	
 	@Override
 	public void onTargetDamaged(LivingEntity user, Entity target, int level)
-	{		
+	{
+		ServerWorld world = (ServerWorld) user.world.getWorld();
+		
 	    if(target instanceof LivingEntity)
 	    {
-	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20 * 2 * level, level - 1));
+	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 300, 0));
 	    }
-	    
+	 
+	    PlayerSpecialAbilities.giveQuickening(world, user, 10);
+
 	    super.onTargetDamaged(user, target, level);
 	}
-	
-	public float getAttackDamage(int level, EntityGroup group)
-	{
-		return 7.0F + (float)Math.max(0, level - 1) * 1.5F;
-   }
 }
