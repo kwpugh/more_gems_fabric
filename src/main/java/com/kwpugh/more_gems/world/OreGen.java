@@ -3,6 +3,7 @@ package com.kwpugh.more_gems.world;
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.BlockInit;
 
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.Decorator;

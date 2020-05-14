@@ -1,11 +1,10 @@
-package com.kwpugh.more_gems.world;
+package com.kwpugh.more_gems.init;
 
 import java.util.List;
 
 import org.apache.commons.lang3.ArrayUtils;
 
 import com.google.common.collect.Lists;
-import com.kwpugh.more_gems.init.ItemInit;
 
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.FabricLootSupplierBuilder;
@@ -15,7 +14,7 @@ import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.util.Identifier;
 
-public class MoreGemsLootTables
+public class ModLootTables
 {
 	private static final List<LootTableInsert> INSERTS = Lists.newArrayList();
 

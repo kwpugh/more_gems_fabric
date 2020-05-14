@@ -3,8 +3,9 @@ package com.kwpugh.more_gems;
 import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.BlockInit;
 import com.kwpugh.more_gems.init.ItemInit;
+import com.kwpugh.more_gems.init.ModBiomes;
 import com.kwpugh.more_gems.init.ModEnchantments;
-import com.kwpugh.more_gems.world.MoreGemsLootTables;
+import com.kwpugh.more_gems.init.ModLootTables;
 import com.kwpugh.more_gems.world.OreGen;
 
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
@@ -14,6 +15,7 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 
 public class MoreGems implements ModInitializer
@@ -33,12 +35,16 @@ public class MoreGems implements ModInitializer
     	
     	ItemInit.registerItems();
         
-    	for (Biome biome : Biome.BIOMES)
+    	ModBiomes.registerBiomes();   	
+        
+    	for (Biome biome : Registry.BIOME)
 		{
+    		System.out.println(biome);
+    		
 			OreGen.addGemOres(biome);
 		} 
     	
-    	MoreGemsLootTables.init();
+    	ModLootTables.init();
     	
     	ModEnchantments.registerEnchantments();
     }

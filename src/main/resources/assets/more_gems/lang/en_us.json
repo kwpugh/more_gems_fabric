@@ -208,6 +208,8 @@
 	"enchantment.more_gems.untouchable": "Untouchable",
 	"enchantment.more_gems.shulker_blade": "Shulker Blade",
 	"enchantment.more_gems.quickening": "Quickening",
-									
+		
+	"biome.more_gems.ruby_biome": "Ruby Biome",
+								
 	"itemGroup.more_gems.more_gems_group": "More Gems"
 }
