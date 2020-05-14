@@ -3,7 +3,7 @@ package com.kwpugh.more_gems;
 import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.BlockInit;
 import com.kwpugh.more_gems.init.ItemInit;
-import com.kwpugh.more_gems.init.ModEnchantmentsInit;
+import com.kwpugh.more_gems.init.ModEnchantments;
 import com.kwpugh.more_gems.world.MoreGemsLootTables;
 import com.kwpugh.more_gems.world.OreGen;
 
@@ -40,7 +40,7 @@ public class MoreGems implements ModInitializer
     	
     	MoreGemsLootTables.init();
     	
-    	ModEnchantmentsInit.registerEnchantments();
+    	ModEnchantments.registerEnchantments();
     }
     
     public static MoreGemsConfig getConfig()

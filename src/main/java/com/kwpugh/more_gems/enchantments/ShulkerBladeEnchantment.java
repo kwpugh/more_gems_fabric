@@ -7,9 +7,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
-public class PoisonBladeEnchantment extends DamageEnchantment
+public class ShulkerBladeEnchantment extends DamageEnchantment
 {
-	public PoisonBladeEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
+	public ShulkerBladeEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
 	{
 		super(weight, typeIndex, slots);
 	}
@@ -23,7 +23,7 @@ public class PoisonBladeEnchantment extends DamageEnchantment
 	@Override
 	public int getMaximumLevel()
 	{
-	    return 3;
+	    return 1;
 	}
 	
 	@Override
@@ -31,7 +31,7 @@ public class PoisonBladeEnchantment extends DamageEnchantment
 	{
 	    if(target instanceof LivingEntity)
 	    {
-	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 300 * level, 0));
+	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 600, 0));
 	    }
 	 
 	    super.onTargetDamaged(user, target, level);
