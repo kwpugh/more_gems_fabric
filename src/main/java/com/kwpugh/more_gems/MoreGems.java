@@ -39,8 +39,6 @@ public class MoreGems implements ModInitializer
         
     	for (Biome biome : Registry.BIOME)
 		{
-    		System.out.println(biome);
-    		
 			OreGen.addGemOres(biome);
 		} 
     	

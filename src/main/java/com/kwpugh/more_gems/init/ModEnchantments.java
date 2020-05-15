@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.init;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.QuickeningEnchantment;
 import com.kwpugh.more_gems.enchantments.RazorSharpnessEnchantment;
 import com.kwpugh.more_gems.enchantments.ShulkerBladeEnchantment;
@@ -19,11 +20,31 @@ public class ModEnchantments
 	public static final DamageEnchantment QUICKENING = new QuickeningEnchantment(Enchantment.Rarity.VERY_RARE, 0, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final ThornsEnchantment UNTOUCHABLE = new UntouchableEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.CHEST});
 
+	static boolean enableRazor = MoreGems.getConfig().ENCHANTMENTS.enableRazorSharpness;
+	static boolean enableShulker = MoreGems.getConfig().ENCHANTMENTS.enableShulkerBlade;
+	static boolean enableQuickening = MoreGems.getConfig().ENCHANTMENTS.enableQuickening;
+	static boolean enableUntouchable = MoreGems.getConfig().ENCHANTMENTS.enableUntouchable;
+	
 	public static void registerEnchantments()
 	{
-		Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "razor_sharpness"), RAZOR_SHARPNESS);
-		Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "shulker_blade"), SHULKER_BLADE);
-		Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "quickening"), QUICKENING);
-		Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "untouchable"), UNTOUCHABLE);
+		if(enableRazor)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "razor_sharpness"), RAZOR_SHARPNESS);
+		}
+		
+		if(enableShulker)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "shulker_blade"), SHULKER_BLADE);
+		}
+		
+		if(enableQuickening)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "quickening"), QUICKENING);
+		}
+		
+		if(enableUntouchable)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "untouchable"), UNTOUCHABLE);
+		}
 	}
 }

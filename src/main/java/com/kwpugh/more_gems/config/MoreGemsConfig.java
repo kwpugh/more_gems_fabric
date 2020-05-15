@@ -19,8 +19,13 @@ public class MoreGemsConfig implements ConfigData
 	public Carbonado CARBONADO = new Carbonado();
 	
 	public Juju JUJU = new Juju();
+	
 	public OreBlocks ORE_BLOCKS = new OreBlocks();
-
+	
+	public GemBiomes GEM_BIOMES = new GemBiomes();
+	
+	public Enchantments ENCHANTMENTS = new Enchantments();
+	
 	public static class Citrine
 	{
 		public boolean citrine = true;
@@ -96,10 +101,26 @@ public class MoreGemsConfig implements ConfigData
 	public static class Juju
 	{
 		public boolean jujuEnable = true;
+		public float jujuChance = .02F;
 	}
 	
 	public static class OreBlocks
 	{
 		public boolean enableOreBlocks = true;
-	}	
+	}
+	
+	public static class GemBiomes
+	{
+		public boolean enableGemBiomes = false;
+		public double biomeWeight = 0.15D;
+		public int gemBiomeBonus = 2;
+	}
+	
+	public static class Enchantments
+	{
+		public boolean enableQuickening = false;
+		public boolean enableRazorSharpness = false;
+		public boolean enableShulkerBlade = false;
+		public boolean enableUntouchable = false;
+	}
 }
