@@ -17,15 +17,15 @@ public class MoreGemsConfig implements ConfigData
 	public Ruby RUBY = new Ruby();
 	public Corundum CORUNDUM = new Corundum();
 	public Carbonado CARBONADO = new Carbonado();
-	
+
 	public Juju JUJU = new Juju();
-	
+
 	public OreBlocks ORE_BLOCKS = new OreBlocks();
-	
+
 	public GemBiomes GEM_BIOMES = new GemBiomes();
-	
+
 	public Enchantments ENCHANTMENTS = new Enchantments();
-	
+
 	public static class Citrine
 	{
 		public boolean citrine = true;
@@ -33,9 +33,9 @@ public class MoreGemsConfig implements ConfigData
 		public int citrineMinLevel = 45;
 		public int citrineMaxLevel = 60;
 	}
-	
+
 	public static class Tourmaline
-	{		
+	{
 		public boolean tourmaline = true;
 		public int tourmalineSize = 3;
 		public int tourmalineMinLevel = 40;
@@ -43,7 +43,7 @@ public class MoreGemsConfig implements ConfigData
 	}
 
 	public static class Amethyst
-	{		
+	{
 		public boolean amethyst = true;
 		public int amethystSize = 3;
 		public int amethystMinLevel = 40;
@@ -51,7 +51,7 @@ public class MoreGemsConfig implements ConfigData
 	}
 
 	public static class Topaz
-	{		
+	{
 		public boolean topaz = true;
 		public int topazSize = 3;
 		public int topazMinLevel = 40;
@@ -59,7 +59,7 @@ public class MoreGemsConfig implements ConfigData
 	}
 
 	public static class Alexandrite
-	{		
+	{
 		public boolean alexandrite = true;
 		public int alexandriteSize = 3;
 		public int alexandriteMinLevel = 30;
@@ -67,7 +67,7 @@ public class MoreGemsConfig implements ConfigData
 	}
 
 	public static class Sapphire
-	{		
+	{
 		public boolean sapphire = true;
 		public int sapphireSize = 3;
 		public int sapphireMinLevel = 20;
@@ -75,7 +75,7 @@ public class MoreGemsConfig implements ConfigData
 	}
 
 	public static class Ruby
-	{		
+	{
 		public boolean ruby = true;
 		public int rubySize = 3;
 		public int rubyMinLevel = 20;
@@ -83,44 +83,50 @@ public class MoreGemsConfig implements ConfigData
 	}
 
 	public static class Corundum
-	{		
+	{
 		public boolean corundum = true;
 		public int corundumSize = 3;
 		public int corundumMinLevel = 10;
 		public int corundumMaxLevel = 20;
 	}
-	
+
 	public static class Carbonado
-	{	
+	{
 		public boolean carbonado = true;
 		public int carbonadoSize = 5;
 		public int carbonadoMinLevel = 1;
 		public int carbonadoMaxLevel = 15;
 	}
-	
+
 	public static class Juju
 	{
 		public boolean jujuEnable = true;
 		public float jujuChance = .02F;
 	}
-	
+
 	public static class OreBlocks
 	{
 		public boolean enableOreBlocks = true;
 	}
-	
+
 	public static class GemBiomes
 	{
 		public boolean enableGemBiomes = false;
 		public double biomeWeight = 0.15D;
 		public int gemBiomeBonus = 2;
 	}
-	
+
 	public static class Enchantments
 	{
 		public boolean enableQuickening = false;
 		public boolean enableRazorSharpness = false;
 		public boolean enableShulkerBlade = false;
 		public boolean enableUntouchable = false;
+
+		public float amountHalfHeartsQuickening = 10;
+		public int enemySlownessDurationTicksQuickening = 300;
+		public float razorDamageIncrease = 6.0F;
+		public int untouchableDamage = 7;
+		public int shulkerBladeDurationTicks = 300;
 	}
 }

@@ -2,6 +2,8 @@ package com.kwpugh.more_gems.enchantments;
 
 import java.util.Random;
 
+import com.kwpugh.more_gems.MoreGems;
+
 import net.minecraft.enchantment.ThornsEnchantment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -12,7 +14,8 @@ import net.minecraft.item.ItemStack;
 
 public class UntouchableEnchantment extends ThornsEnchantment
 {
-
+	static int untouchableDamage = MoreGems.getConfig().ENCHANTMENTS.untouchableDamage;
+	
 	public UntouchableEnchantment(Rarity weight, EquipmentSlot[] slotTypes)
 	{
 		super(weight, slotTypes);
@@ -29,7 +32,7 @@ public class UntouchableEnchantment extends ThornsEnchantment
 	{
 	    return 1;
 	}
-	
+
 	@Override
 	public boolean isAcceptableItem(ItemStack stack)
 	{
@@ -55,6 +58,6 @@ public class UntouchableEnchantment extends ThornsEnchantment
 	
 	public static int getDamageAmount(int level, Random random)
 	{
-		return 10;
-	}	   
+		return untouchableDamage;
+	}
 }

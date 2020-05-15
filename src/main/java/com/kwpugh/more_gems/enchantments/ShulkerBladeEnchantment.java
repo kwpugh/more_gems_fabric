@@ -1,5 +1,7 @@
 package com.kwpugh.more_gems.enchantments;
 
+import com.kwpugh.more_gems.MoreGems;
+
 import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -9,6 +11,8 @@ import net.minecraft.entity.effect.StatusEffects;
 
 public class ShulkerBladeEnchantment extends DamageEnchantment
 {
+	static int shulkerBladeDurationTicks = MoreGems.getConfig().ENCHANTMENTS.shulkerBladeDurationTicks;
+	
 	public ShulkerBladeEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
 	{
 		super(weight, typeIndex, slots);
@@ -31,7 +35,7 @@ public class ShulkerBladeEnchantment extends DamageEnchantment
 	{
 	    if(target instanceof LivingEntity)
 	    {
-	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 600, 0));
+	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, shulkerBladeDurationTicks, 0));
 	    }
 	 
 	    super.onTargetDamaged(user, target, level);

@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.enchantments;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
 
 import net.minecraft.enchantment.DamageEnchantment;
@@ -12,6 +13,8 @@ import net.minecraft.server.world.ServerWorld;
 
 public class QuickeningEnchantment extends DamageEnchantment
 {
+	static float amountHalfHeartsQuickening = MoreGems.getConfig().ENCHANTMENTS.amountHalfHeartsQuickening;
+	static int enemySlownessDurationTicks = MoreGems.getConfig().ENCHANTMENTS.enemySlownessDurationTicksQuickening;
 
 	public QuickeningEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
 	{
@@ -37,10 +40,10 @@ public class QuickeningEnchantment extends DamageEnchantment
 		
 	    if(target instanceof LivingEntity)
 	    {
-	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 300, 0));
+	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, enemySlownessDurationTicks, 0));
 	    }
 	 
-	    PlayerSpecialAbilities.giveQuickening(world, user, 10);
+	    PlayerSpecialAbilities.giveQuickening(world, user, amountHalfHeartsQuickening);
 
 	    super.onTargetDamaged(user, target, level);
 	}
