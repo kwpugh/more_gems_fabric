@@ -122,6 +122,7 @@ public class MoreGemsConfig implements ConfigData
 		public boolean enableRazorSharpness = false;
 		public boolean enableShulkerBlade = false;
 		public boolean enableUntouchable = false;
+		public boolean enableFasterObsidian = false;
 
 		public float amountHalfHeartsQuickening = 10;
 		public int enemySlownessDurationTicksQuickening = 300;

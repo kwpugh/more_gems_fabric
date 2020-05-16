@@ -18,7 +18,7 @@ public class ModHammer extends PickaxeItem
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity playerIn)
     {
         if(!playerIn.isSneaking() && playerIn.getMainHandStack().isEffectiveOn(world.getBlockState(pos)))
-    	{     	
+    	{
         	HammerUtil.attemptBreakNeighbors(world, playerIn, 1);
         }
 

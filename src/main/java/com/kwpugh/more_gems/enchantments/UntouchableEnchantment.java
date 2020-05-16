@@ -15,7 +15,7 @@ import net.minecraft.item.ItemStack;
 public class UntouchableEnchantment extends ThornsEnchantment
 {
 	static int untouchableDamage = MoreGems.getConfig().ENCHANTMENTS.untouchableDamage;
-	
+
 	public UntouchableEnchantment(Rarity weight, EquipmentSlot[] slotTypes)
 	{
 		super(weight, slotTypes);
@@ -26,7 +26,7 @@ public class UntouchableEnchantment extends ThornsEnchantment
 	{
 	    return 1;
 	}
-	
+
 	@Override
 	public int getMaximumLevel()
 	{
@@ -38,7 +38,7 @@ public class UntouchableEnchantment extends ThornsEnchantment
 	{
 		return stack.getItem() instanceof ArmorItem ? true : super.isAcceptableItem(stack);
 	}
-	
+
 	public void onUserDamaged(LivingEntity user, Entity attacker, int level)
 	{
 	      Random random = user.getRandom();
@@ -47,15 +47,15 @@ public class UntouchableEnchantment extends ThornsEnchantment
 	         if (attacker != null)
 	         {
 	            attacker.damage(DamageSource.thorns(user), (float)getDamageAmount(level, random));
-	         }	         
+	         }
 	      }
 	   }
-	   
+
 	public static boolean shouldDamageAttacker(int level, Random random)
 	{
 		return true;
 	}
-	
+
 	public static int getDamageAmount(int level, Random random)
 	{
 		return untouchableDamage;

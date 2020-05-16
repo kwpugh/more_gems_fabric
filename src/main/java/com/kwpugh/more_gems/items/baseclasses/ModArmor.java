@@ -1,4 +1,4 @@
-package com.kwpugh.more_gems.items.gear;
+package com.kwpugh.more_gems.items.baseclasses;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
