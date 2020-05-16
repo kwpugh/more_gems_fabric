@@ -19,8 +19,6 @@ public class ModPickaxe extends PickaxeItem
 	{
 		String enchantments = stack.getEnchantments().toString();
 
-		System.out.println(enchantments);
-
 		if(enchantments.contains("faster_obsidian"))
 		{
 			if (state.isOf(Blocks.OBSIDIAN)  || state.isOf(Blocks.CRYING_OBSIDIAN))

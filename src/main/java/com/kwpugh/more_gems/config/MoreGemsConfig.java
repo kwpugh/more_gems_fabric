@@ -113,7 +113,7 @@ public class MoreGemsConfig implements ConfigData
 	{
 		public boolean enableGemBiomes = false;
 		public double biomeWeight = 0.15D;
-		public int gemBiomeBonus = 2;
+		public int gemBiomeBonus = 3;
 	}
 
 	public static class Enchantments
