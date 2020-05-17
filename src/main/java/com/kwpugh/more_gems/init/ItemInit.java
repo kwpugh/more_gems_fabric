@@ -18,7 +18,6 @@ import com.kwpugh.more_gems.items.juju.ItemRubyJuju;
 import com.kwpugh.more_gems.items.juju.ItemSapphireJuju;
 import com.kwpugh.more_gems.items.juju.ItemTopazJuju;
 import com.kwpugh.more_gems.items.juju.ItemTourmalineJuju;
-import com.kwpugh.more_gems.items.tools.CarbonadoPickaxe;
 import com.kwpugh.more_gems.materials.ModArmorMaterial;
 import com.kwpugh.more_gems.materials.ModToolMaterial;
 
@@ -105,7 +104,7 @@ public class ItemInit
 	public static final Item RUBY_HAMMER = new ModHammer(ModToolMaterial.RUBY, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item CARBONADO_SWORD = new ModSword(ModToolMaterial.CARBONADO, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item CARBONADO_PICKAXE = new CarbonadoPickaxe(ModToolMaterial.CARBONADO, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CARBONADO_PICKAXE = new ModPickaxe(ModToolMaterial.CARBONADO, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_AXE = new ModAxe(ModToolMaterial.CARBONADO, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_SHOVEL = new ModShovel(ModToolMaterial.CARBONADO, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_HOE = new ModHoe(ModToolMaterial.CARBONADO, -3, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));

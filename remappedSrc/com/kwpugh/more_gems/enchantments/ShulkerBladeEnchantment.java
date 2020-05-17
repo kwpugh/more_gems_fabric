@@ -4,15 +4,16 @@ import com.kwpugh.more_gems.MoreGems;
 
 import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 
-public class RazorSharpnessEnchantment extends DamageEnchantment
+public class ShulkerBladeEnchantment extends DamageEnchantment
 {
-	static float razorDamageIncrease = MoreGems.getConfig().ENCHANTMENTS.razorDamageIncrease;
-
-	public RazorSharpnessEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
+	static int shulkerBladeDurationTicks = MoreGems.getConfig().ENCHANTMENTS.shulkerBladeDurationTicks;
+	
+	public ShulkerBladeEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
 	{
 		super(weight, typeIndex, slots);
 	}
@@ -22,26 +23,21 @@ public class RazorSharpnessEnchantment extends DamageEnchantment
 	{
 	    return 1;
 	}
-
+	
 	@Override
 	public int getMaximumLevel()
 	{
 	    return 1;
 	}
-
+	
 	@Override
 	public void onTargetDamaged(LivingEntity user, Entity target, int level)
 	{
 	    if(target instanceof LivingEntity)
 	    {
-	        //TBD
+	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, shulkerBladeDurationTicks, 0));
 	    }
-
+	 
 	    super.onTargetDamaged(user, target, level);
 	}
-
-	public float getAttackDamage(int level, EntityGroup group)
-	{
-		return razorDamageIncrease;
-   }
 }
