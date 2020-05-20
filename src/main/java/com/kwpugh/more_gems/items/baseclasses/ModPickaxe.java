@@ -28,6 +28,6 @@ public class ModPickaxe extends PickaxeItem
 		}
 
 		Material material = state.getMaterial();
-		return material != Material.METAL && material != Material.AGGREGATE && material != Material.STONE ? super.getMiningSpeedMultiplier(stack, state) : this.miningSpeed;
+		return material != Material.METAL && material != Material.REPAIR_STATION && material != Material.STONE ? super.getMiningSpeedMultiplier(stack, state) : this.miningSpeed;
 	}
 }

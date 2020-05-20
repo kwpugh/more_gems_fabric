@@ -25,7 +25,7 @@ public class ItemAmethystJuju extends Item
 	{
 		super(settings);
 	}
-		
+
 	@Override
 	public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected)
 	{
@@ -38,7 +38,7 @@ public class ItemAmethystJuju extends Item
 			}
 		}
 	}
-	
+
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
 	{
 		ItemStack itemStack = user.getStackInHand(hand);
@@ -46,16 +46,16 @@ public class ItemAmethystJuju extends Item
 		if (!world.isClient && user.isSneaking())
 		{
 			EnableUtil.changeEnabled(user, hand);
-			user.sendSystemMessage((new TranslatableText("Status changed").formatted(Formatting.GREEN)));
+			user.sendMessage((new TranslatableText("Status changed")), true);
 		}
 
 		return TypedActionResult.success(itemStack);
 	}
-	 
+
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
 		tooltip.add(new TranslatableText("item.more_gems.amethyst_juju.tip1").formatted(Formatting.GREEN));
 		tooltip.add(new TranslatableText("itme.more_gems.enable_status", EnableUtil.isEnabled(itemStack)).formatted(Formatting.GOLD));
-	} 
+	}
 }

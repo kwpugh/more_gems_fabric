@@ -10,9 +10,6 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
-dependencies {
-   modCompile "me.shedaniel:RoughlyEnoughItems:4.3.7-unstable"
-}
 
 dependencies {
 	//to change the versions see the gradle.properties file
@@ -25,10 +22,12 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
-	
-	    //Autoconfig
+
+	//Autoconfig
   	modCompile "me.sargunvohra.mcmods:autoconfig1u:3.0.1-unstable"
     include "me.sargunvohra.mcmods:autoconfig1u:3.0.1-unstable"
+
+    //modCompile "me.shedaniel:RoughlyEnoughItems:4.3.7-unstable"
 }
 
 processResources {

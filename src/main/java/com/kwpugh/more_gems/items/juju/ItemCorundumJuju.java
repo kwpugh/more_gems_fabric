@@ -20,7 +20,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class ItemCorundumJuju extends Item
-{	
+{
 	public ItemCorundumJuju(Settings settings)
 	{
 		super(settings);
@@ -38,7 +38,7 @@ public class ItemCorundumJuju extends Item
 			}
 		}
 	}
-	
+
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
 	{
 		ItemStack itemStack = user.getStackInHand(hand);
@@ -46,16 +46,16 @@ public class ItemCorundumJuju extends Item
 		if (!world.isClient && user.isSneaking())
 		{
 			EnableUtil.changeEnabled(user, hand);
-			user.sendSystemMessage((new TranslatableText("Status changed").formatted(Formatting.GREEN)));
+			user.sendMessage((new TranslatableText("Status changed")), true);
 		}
 
 		return TypedActionResult.success(itemStack);
 	}
-	 
+
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
 		tooltip.add(new TranslatableText("item.more_gems.corundum_juju.tip1").formatted(Formatting.GREEN));
 		tooltip.add(new TranslatableText("itme.more_gems.enable_status", EnableUtil.isEnabled(itemStack)).formatted(Formatting.GOLD));
-	} 
+	}
 }
