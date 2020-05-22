@@ -214,5 +214,8 @@
 
 	"biome.more_gems.ruby_biome": "Ruby Biome",
 
+	"item.more_gems.gembag": "Gem Bag",
+	"container.more_gems.gembag": "Gem Bag",
+
 	"itemGroup.more_gems.more_gems_group": "More Gems"
 }

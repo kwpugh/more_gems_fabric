@@ -7,6 +7,7 @@ import com.kwpugh.more_gems.items.baseclasses.ModHoe;
 import com.kwpugh.more_gems.items.baseclasses.ModPickaxe;
 import com.kwpugh.more_gems.items.baseclasses.ModShovel;
 import com.kwpugh.more_gems.items.baseclasses.ModSword;
+import com.kwpugh.more_gems.items.gembag.GemBase;
 import com.kwpugh.more_gems.items.hammer.ModHammer;
 import com.kwpugh.more_gems.items.juju.ItemAlexandriteJuju;
 import com.kwpugh.more_gems.items.juju.ItemAmethystJuju;
@@ -30,15 +31,15 @@ public class ItemInit
 {
 	static boolean jujuEnable = MoreGems.getConfig().JUJU.jujuEnable;
 
-	public static final Item CITRINE = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item TOURMALINE = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item TOPAZ = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item ALEXANDRITE = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item CORUNDUM = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item SAPPHIRE = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item CARBONADO = new Item((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CITRINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOURMALINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item AMETHYST = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOPAZ = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item ALEXANDRITE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CORUNDUM = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SAPPHIRE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item RUBY = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CARBONADO = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item CITRINE_SWORD = new ModSword(ModToolMaterial.CITRINE, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CITRINE_PICKAXE = new ModPickaxe(ModToolMaterial.CITRINE, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
