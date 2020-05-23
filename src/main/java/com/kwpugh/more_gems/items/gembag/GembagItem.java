@@ -2,7 +2,6 @@ package com.kwpugh.more_gems.items.gembag;
 
 import java.util.List;
 
-import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.ContainerInit;
 
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
@@ -57,6 +56,6 @@ public class GembagItem extends Item
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
-	    tooltip.add(new TranslatableText("item.more_gems.gembag").formatted(Formatting.YELLOW));
+	    tooltip.add(new TranslatableText("item.more_gems.gembag.tip").formatted(Formatting.YELLOW));
 	}
 }

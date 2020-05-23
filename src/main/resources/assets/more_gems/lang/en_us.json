@@ -119,6 +119,7 @@
 	"item.more_gems.corundum_shovel": "Corundum Shovel",
 	"item.more_gems.corundum_hoe": "Corundum Hoe",
 	"item.more_gems.corundum_hammer": "Corundum Hammer",
+	"item.more_gems.corundum_excavator": "Corundum Excavator",
 
 	"item.more_gems.corundum_helmet": "Corundum Helmet",
 	"item.more_gems.corundum_chestplate": "Corundum Chestplate",
@@ -137,6 +138,7 @@
 	"item.more_gems.sapphire_shovel": "Sapphire Shovel",
 	"item.more_gems.sapphire_hoe": "Sapphire Hoe",
 	"item.more_gems.sapphire_hammer": "Sapphire Hammer",
+	"item.more_gems.sapphire_excavator": "Sapphire Excavator",
 
 	"item.more_gems.sapphire_helmet": "Sapphire Helmet",
 	"item.more_gems.sapphire_chestplate": "Sapphire Chestplate",
@@ -155,6 +157,7 @@
 	"item.more_gems.ruby_shovel": "Ruby Shovel",
 	"item.more_gems.ruby_hoe": "Ruby Hoe",
 	"item.more_gems.ruby_hammer": "Ruby Hammer",
+	"item.more_gems.ruby_excavator": "Ruby Excavator",
 
 	"item.more_gems.ruby_helmet": "Ruby Helmet",
 	"item.more_gems.ruby_chestplate": "Ruby Chestplate",
@@ -173,6 +176,7 @@
 	"item.more_gems.carbonado_shovel": "Carbonado Shovel",
 	"item.more_gems.carbonado_hoe": "Carbonado Hoe",
 	"item.more_gems.carbonado_hammer": "Carbonado Hammer",
+	"item.more_gems.carbonado_excavator": "Carbonado Excavator",
 
 	"item.more_gems.carbonado_helmet": "Carbonado Helmet",
 	"item.more_gems.carbonado_chestplate": "Carbonado Chestplate",
@@ -220,6 +224,7 @@
 	"biome.more_gems.ruby_biome": "Ruby Biome",
 
 	"item.more_gems.gembag": "Gem Bag",
+	"item.more_gems.gembag.tip": "Portable storage for your sparkly gems",
 	"container.more_gems.gembag": "Gem Bag",
 
 	"item.more_gems.excavator.general1": "Break blocks in 3x3",

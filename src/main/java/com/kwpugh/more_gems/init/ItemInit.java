@@ -104,6 +104,7 @@ public class ItemInit
 	public static final Item SAPPHIRE_SHOVEL = new ModShovel(ModToolMaterial.SAPPHIRE, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SAPPHIRE_HOE = new ModHoe(ModToolMaterial.SAPPHIRE, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SAPPHIRE_HAMMER = new ModHammer(ModToolMaterial.SAPPHIRE, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SAPPHIRE_EXCAVATOR = new ModExcavator(ModToolMaterial.SAPPHIRE, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item RUBY_SWORD = new ModSword(ModToolMaterial.RUBY, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item RUBY_PICKAXE = new ModPickaxe(ModToolMaterial.RUBY, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -111,6 +112,7 @@ public class ItemInit
 	public static final Item RUBY_SHOVEL = new ModShovel(ModToolMaterial.RUBY, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item RUBY_HOE = new ModHoe(ModToolMaterial.RUBY, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item RUBY_HAMMER = new ModHammer(ModToolMaterial.RUBY, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item RUBY_EXCAVATOR = new ModExcavator(ModToolMaterial.RUBY, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item CARBONADO_SWORD = new ModSword(ModToolMaterial.CARBONADO, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_PICKAXE = new ModPickaxe(ModToolMaterial.CARBONADO, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -118,6 +120,7 @@ public class ItemInit
 	public static final Item CARBONADO_SHOVEL = new ModShovel(ModToolMaterial.CARBONADO, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_HOE = new ModHoe(ModToolMaterial.CARBONADO, -3, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_HAMMER = new ModHammer(ModToolMaterial.CARBONADO, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CARBONADO_EXCAVATOR = new ModExcavator(ModToolMaterial.CARBONADO, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item CITRINE_HELMET = new ModArmor(ModArmorMaterial.CITRINE, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CITRINE_CHESTPLATE = new ModArmor(ModArmorMaterial.CITRINE, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -254,6 +257,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_shovel"), SAPPHIRE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_hoe"), SAPPHIRE_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_hammer"), SAPPHIRE_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_excavator"), SAPPHIRE_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_sword"), RUBY_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_pickaxe"), RUBY_PICKAXE);
@@ -261,6 +265,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_shovel"), RUBY_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_hoe"), RUBY_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_hammer"), RUBY_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_excavator"), RUBY_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_sword"), CARBONADO_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_pickaxe"), CARBONADO_PICKAXE);
@@ -268,6 +273,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_shovel"), CARBONADO_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_hoe"), CARBONADO_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_hammer"), CARBONADO_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_excavator"), CARBONADO_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_helmet"), CITRINE_HELMET);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_chestplate"), CITRINE_CHESTPLATE);
