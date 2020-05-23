@@ -2,6 +2,7 @@ package com.kwpugh.more_gems.items.gembag;
 
 import com.kwpugh.more_gems.init.ContainerInit;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;

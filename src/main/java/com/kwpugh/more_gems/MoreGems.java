@@ -13,6 +13,7 @@ import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -47,6 +48,9 @@ public class MoreGems implements ModInitializer
     	ModLootTables.init();
 
     	ModEnchantments.registerEnchantments();
+
+
+
     }
 
     public static MoreGemsConfig getConfig()

@@ -13,7 +13,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.RayTraceContext;
 import net.minecraft.world.World;
 
-public class HammerUtil
+public class AreaToolUtil
 {
     public static void attemptBreakNeighbors(World world, PlayerEntity playerIn, int radius)
     {

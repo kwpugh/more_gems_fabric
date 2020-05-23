@@ -30,6 +30,7 @@
 	"item.more_gems.tourmaline_shovel": "Tourmaline Shovel",
 	"item.more_gems.tourmaline_hoe": "Tourmaline Hoe",
 	"item.more_gems.tourmaline_hammer": "Tourmaline Hammer",
+	"item.more_gems.tourmaline_excavator": "Tourmaline Excavator",
 
 	"item.more_gems.tourmaline_helmet": "Tourmaline Helmet",
 	"item.more_gems.tourmaline_chestplate": "Tourmaline Chestplate",
@@ -48,6 +49,7 @@
 	"item.more_gems.amethyst_shovel": "Amethyst Shovel",
 	"item.more_gems.amethyst_hoe": "Amethyst Hoe",
 	"item.more_gems.amethyst_hammer": "Amethyst Hammer",
+	"item.more_gems.amethyst_excavator": "Amethyst Excavator",
 
 	"item.more_gems.amethyst_helmet": "Amethyst Helmet",
 	"item.more_gems.amethyst_chestplate": "Amethyst Chestplate",
@@ -60,6 +62,7 @@
 	"item.more_gems.emerald_shovel": "Emerald Shovel",
 	"item.more_gems.emerald_hoe": "Emerald Hoe",
 	"item.more_gems.emerald_hammer": "Emerald Hammer",
+	"item.more_gems.emerald_excavator": "Emerald Excavator",
 
 	"item.more_gems.emerald_helmet": "Emerald Helmet",
 	"item.more_gems.emerald_chestplate": "Emerald Chestplate",
@@ -78,6 +81,7 @@
 	"item.more_gems.topaz_shovel": "Topaz Shovel",
 	"item.more_gems.topaz_hoe": "Topaz Hoe",
 	"item.more_gems.topaz_hammer": "Topaz Hammer",
+	"item.more_gems.topaz_excavator": "Topaz Excavator",
 
 	"item.more_gems.topaz_helmet": "Topaz Helmet",
 	"item.more_gems.topaz_chestplate": "Topaz Chestplate",
@@ -96,6 +100,7 @@
 	"item.more_gems.alexandrite_shovel": "Alexandrite Shovel",
 	"item.more_gems.alexandrite_hoe": "Alexandrite Hoe",
 	"item.more_gems.alexandrite_hammer": "Alexandrite Hammer",
+	"item.more_gems.alexandrite_excavator": "Alexandrite Excavator",
 
 	"item.more_gems.alexandrite_helmet": "Alexandrite Helmet",
 	"item.more_gems.alexandrite_chestplate": "Alexandrite Chestplate",
@@ -216,6 +221,8 @@
 
 	"item.more_gems.gembag": "Gem Bag",
 	"container.more_gems.gembag": "Gem Bag",
+
+	"item.more_gems.excavator.general1": "Break blocks in 3x3",
 
 	"itemGroup.more_gems.more_gems_group": "More Gems"
 }

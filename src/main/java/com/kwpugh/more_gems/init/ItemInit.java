@@ -8,6 +8,7 @@ import com.kwpugh.more_gems.items.baseclasses.ModPickaxe;
 import com.kwpugh.more_gems.items.baseclasses.ModShovel;
 import com.kwpugh.more_gems.items.baseclasses.ModSword;
 import com.kwpugh.more_gems.items.gembag.GemBase;
+import com.kwpugh.more_gems.items.hammer.ModExcavator;
 import com.kwpugh.more_gems.items.hammer.ModHammer;
 import com.kwpugh.more_gems.items.juju.ItemAlexandriteJuju;
 import com.kwpugh.more_gems.items.juju.ItemAmethystJuju;
@@ -47,6 +48,7 @@ public class ItemInit
 	public static final Item CITRINE_SHOVEL = new ModShovel(ModToolMaterial.CITRINE, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CITRINE_HOE = new ModHoe(ModToolMaterial.CITRINE, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CITRINE_HAMMER = new ModHammer(ModToolMaterial.CITRINE, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CITRINE_EXCAVATOR = new ModExcavator(ModToolMaterial.CITRINE, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item TOURMALINE_SWORD = new ModSword(ModToolMaterial.TOURMALINE, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_PICKAXE = new ModPickaxe(ModToolMaterial.TOURMALINE, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -54,6 +56,7 @@ public class ItemInit
 	public static final Item TOURMALINE_SHOVEL = new ModShovel(ModToolMaterial.TOURMALINE, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_HOE = new ModHoe(ModToolMaterial.TOURMALINE, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_HAMMER = new ModHammer(ModToolMaterial.TOURMALINE, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOURMALINE_EXCAVATOR = new ModExcavator(ModToolMaterial.TOURMALINE, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item AMETHYST_SWORD = new ModSword(ModToolMaterial.AMETHYST, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item AMETHYST_PICKAXE = new ModPickaxe(ModToolMaterial.AMETHYST, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -61,6 +64,7 @@ public class ItemInit
 	public static final Item AMETHYST_SHOVEL = new ModShovel(ModToolMaterial.AMETHYST, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item AMETHYST_HOE = new ModHoe(ModToolMaterial.AMETHYST, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item AMETHYST_HAMMER = new ModHammer(ModToolMaterial.AMETHYST, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item AMETHYST_EXCAVATOR = new ModExcavator(ModToolMaterial.AMETHYST, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item EMERALD_SWORD = new ModSword(ModToolMaterial.EMERALD, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item EMERALD_PICKAXE = new ModPickaxe(ModToolMaterial.EMERALD, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -68,6 +72,7 @@ public class ItemInit
 	public static final Item EMERALD_SHOVEL = new ModShovel(ModToolMaterial.EMERALD, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item EMERALD_HOE = new ModHoe(ModToolMaterial.EMERALD, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item EMERALD_HAMMER = new ModHammer(ModToolMaterial.EMERALD, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item EMERALD_EXCAVATOR = new ModExcavator(ModToolMaterial.EMERALD, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item TOPAZ_SWORD = new ModSword(ModToolMaterial.TOPAZ, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_PICKAXE = new ModPickaxe(ModToolMaterial.TOPAZ, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -75,6 +80,7 @@ public class ItemInit
 	public static final Item TOPAZ_SHOVEL = new ModShovel(ModToolMaterial.TOPAZ, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_HOE = new ModHoe(ModToolMaterial.TOPAZ, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_HAMMER = new ModHammer(ModToolMaterial.TOPAZ, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOPAZ_EXCAVATOR = new ModExcavator(ModToolMaterial.TOPAZ, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item ALEXANDRITE_SWORD = new ModSword(ModToolMaterial.ALEXANDRITE, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item ALEXANDRITE_PICKAXE = new ModPickaxe(ModToolMaterial.ALEXANDRITE, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -82,6 +88,7 @@ public class ItemInit
 	public static final Item ALEXANDRITE_SHOVEL = new ModShovel(ModToolMaterial.ALEXANDRITE, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item ALEXANDRITE_HOE = new ModHoe(ModToolMaterial.ALEXANDRITE, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item ALEXANDRITE_HAMMER = new ModHammer(ModToolMaterial.ALEXANDRITE, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item ALEXANDRITE_EXCAVATOR = new ModExcavator(ModToolMaterial.ALEXANDRITE, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item CORUNDUM_SWORD = new ModSword(ModToolMaterial.CORUNDUM, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM_PICKAXE = new ModPickaxe(ModToolMaterial.CORUNDUM, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -89,6 +96,7 @@ public class ItemInit
 	public static final Item CORUNDUM_SHOVEL = new ModShovel(ModToolMaterial.CORUNDUM, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM_HOE = new ModHoe(ModToolMaterial.CORUNDUM, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM_HAMMER = new ModHammer(ModToolMaterial.CORUNDUM, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CORUNDUM_EXCAVATOR = new ModExcavator(ModToolMaterial.CORUNDUM, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item SAPPHIRE_SWORD = new ModSword(ModToolMaterial.SAPPHIRE, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SAPPHIRE_PICKAXE = new ModPickaxe(ModToolMaterial.SAPPHIRE, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -190,6 +198,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_shovel"), CITRINE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_hoe"), CITRINE_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_hammer"), CITRINE_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_excavator"), CITRINE_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_sword"), TOURMALINE_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_pickaxe"), TOURMALINE_PICKAXE);
@@ -197,6 +206,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_shovel"), TOURMALINE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_hoe"), TOURMALINE_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_hammer"), TOURMALINE_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_excavator"), TOURMALINE_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_sword"), AMETHYST_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_pickaxe"), AMETHYST_PICKAXE);
@@ -204,6 +214,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_shovel"), AMETHYST_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_hoe"), AMETHYST_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_hammer"), AMETHYST_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_excavator"), AMETHYST_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_sword"), EMERALD_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_pickaxe"), EMERALD_PICKAXE);
@@ -211,6 +222,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_shovel"), EMERALD_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_hoe"), EMERALD_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_hammer"), EMERALD_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_excavator"), EMERALD_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_sword"), TOPAZ_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_pickaxe"), TOPAZ_PICKAXE);
@@ -218,6 +230,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_shovel"), TOPAZ_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_hoe"), TOPAZ_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_hammer"), TOPAZ_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_excavator"), TOPAZ_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_sword"), ALEXANDRITE_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_pickaxe"), ALEXANDRITE_PICKAXE);
@@ -225,6 +238,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_shovel"), ALEXANDRITE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_hoe"), ALEXANDRITE_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_hammer"), ALEXANDRITE_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_excavator"), ALEXANDRITE_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_sword"), CORUNDUM_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_pickaxe"), CORUNDUM_PICKAXE);
@@ -232,6 +246,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_shovel"), CORUNDUM_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_hoe"), CORUNDUM_HOE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_hammer"), CORUNDUM_HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_excavator"), CORUNDUM_EXCAVATOR);
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_sword"), SAPPHIRE_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_pickaxe"), SAPPHIRE_PICKAXE);
