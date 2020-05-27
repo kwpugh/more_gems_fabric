@@ -1,6 +1,8 @@
 package com.kwpugh.more_gems.init;
 
 import com.kwpugh.more_gems.MoreGems;
+import com.kwpugh.more_gems.items.areatools.ModExcavator;
+import com.kwpugh.more_gems.items.areatools.ModHammer;
 import com.kwpugh.more_gems.items.baseclasses.ModArmor;
 import com.kwpugh.more_gems.items.baseclasses.ModAxe;
 import com.kwpugh.more_gems.items.baseclasses.ModHoe;
@@ -8,8 +10,6 @@ import com.kwpugh.more_gems.items.baseclasses.ModPickaxe;
 import com.kwpugh.more_gems.items.baseclasses.ModShovel;
 import com.kwpugh.more_gems.items.baseclasses.ModSword;
 import com.kwpugh.more_gems.items.gembag.GemBase;
-import com.kwpugh.more_gems.items.hammer.ModExcavator;
-import com.kwpugh.more_gems.items.hammer.ModHammer;
 import com.kwpugh.more_gems.items.juju.ItemAlexandriteJuju;
 import com.kwpugh.more_gems.items.juju.ItemAmethystJuju;
 import com.kwpugh.more_gems.items.juju.ItemCarbonadoJuju;

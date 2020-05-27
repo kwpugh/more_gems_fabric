@@ -44,7 +44,7 @@ public class OrangeGemBiome extends Biome
 	@Environment(EnvType.CLIENT)
 	public int getFoliageColor()
 	{
-		return 10387789;
+		return 7229699;
 	}
 
 	@Environment(EnvType.CLIENT)

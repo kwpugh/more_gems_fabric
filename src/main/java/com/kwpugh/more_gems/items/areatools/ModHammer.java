@@ -1,4 +1,4 @@
-package com.kwpugh.more_gems.items.hammer;
+package com.kwpugh.more_gems.items.areatools;
 
 import java.util.List;
 
