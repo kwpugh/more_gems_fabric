@@ -60,7 +60,10 @@ public enum ModArmorMaterial implements ArmorMaterial
 		}),
 	CARBONADO("carbonado", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.75F, 0.0F, () -> {
 		return Ingredient.ofItems(ItemInit.CARBONADO);
-		});
+		}),
+	SQUIRTLES("squirtles", 40, new int[]{5, 8, 10, 5}, 19, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
+		      return Ingredient.ofItems(Items.NETHERITE_INGOT);
+		   });
 
 	private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
 	private final String name;

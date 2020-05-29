@@ -20,7 +20,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class ItemTourmalineJuju extends Item
-{	
+{
 	public ItemTourmalineJuju(Settings settings)
 	{
 		super(settings);
@@ -28,7 +28,7 @@ public class ItemTourmalineJuju extends Item
 
 	@Override
 	public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected)
-	{		
+	{
 		if(EnableUtil.isEnabled(stack))
 		{
 			StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.NIGHT_VISION, 8, 0, false, false);
@@ -38,7 +38,7 @@ public class ItemTourmalineJuju extends Item
 			}
 		}
 	}
-	
+
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
 	{
 		ItemStack itemStack = user.getStackInHand(hand);
@@ -46,7 +46,7 @@ public class ItemTourmalineJuju extends Item
 		if (!world.isClient && user.isSneaking())
 		{
 			EnableUtil.changeEnabled(user, hand);
-			user.sendSystemMessage((new TranslatableText("Status changed").formatted(Formatting.GREEN)));
+			user.sendMessage((new TranslatableText("Status changed")), true);
 		}
 
 		return TypedActionResult.success(itemStack);
@@ -57,5 +57,5 @@ public class ItemTourmalineJuju extends Item
 	{
 		tooltip.add(new TranslatableText("item.more_gems.tourmaline_juju.tip1").formatted(Formatting.GREEN));
 		tooltip.add(new TranslatableText("itme.more_gems.enable_status", EnableUtil.isEnabled(itemStack)).formatted(Formatting.GOLD));
-	} 
+	}
 }
