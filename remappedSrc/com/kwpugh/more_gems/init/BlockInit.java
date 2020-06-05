@@ -3,8 +3,9 @@ package com.kwpugh.more_gems.init;
 import com.kwpugh.more_gems.MoreGems;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricMaterialBuilder;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.MaterialColor;
@@ -24,8 +25,7 @@ public class BlockInit
 	public static final Block CORUNDUM_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
 	public static final Block SAPPHIRE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
 	public static final Block RUBY_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
-	//public static final Block CARBONADO_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 3).strength(3.0F, 3.0F));
-	public static final Block CARBONADO_ORE = new OreBlock(FabricBlockSettings.of(new FabricMaterialBuilder(MaterialColor.STONE).requiresTool().build()).breakByTool(FabricToolTags.PICKAXES, 3).strength(3.0F, 3.0F));
+	public static final Block CARBONADO_ORE = new OreBlock(FabricBlockSettings.of(new FabricMaterialBuilder(MaterialColor.STONE).build()).breakByTool(FabricToolTags.PICKAXES, 3).method_29292().strength(3.0F, 3.0F));
 
 	public static final Block CITRINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
 	public static final Block TOURMALINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));

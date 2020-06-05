@@ -9,7 +9,7 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
-import net.minecraft.world.biome.DefaultBiomeFeatures;
+import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 
 public class GreenGemBiome extends Biome
@@ -20,7 +20,7 @@ public class GreenGemBiome extends Biome
 	      this.addStructureFeature(DefaultBiomeFeatures.field_24706);
 	      this.addStructureFeature(DefaultBiomeFeatures.field_24687);
 	      DefaultBiomeFeatures.method_28440(this);
-	      this.addStructureFeature(DefaultBiomeFeatures.field_24711);
+	      this.addStructureFeature(DefaultBiomeFeatures.STANDARD_CONFIGURED_RUINED_PORTAL);
 	      DefaultBiomeFeatures.addLandCarvers(this);
 	      DefaultBiomeFeatures.addDefaultLakes(this);
 	      DefaultBiomeFeatures.addDungeons(this);

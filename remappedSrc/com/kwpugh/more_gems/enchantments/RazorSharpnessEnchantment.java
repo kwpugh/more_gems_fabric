@@ -18,13 +18,13 @@ public class RazorSharpnessEnchantment extends DamageEnchantment
 	}
 
 	@Override
-	public int getMinimumPower(int int_1)
+	public int getMinPower(int int_1)
 	{
 	    return 1;
 	}
 
 	@Override
-	public int getMaximumLevel()
+	public int getMaxLevel()
 	{
 	    return 1;
 	}
