@@ -10,7 +10,9 @@
 	
 	"key":
 	{
-		"G": { "item": "more_gems:alexandrite" }	
+		"G": { 
+      "tag": "c:alexandrite"
+		 }	
 	},
 	
 	"result": { "item": "more_gems:alexandrite_block" }

@@ -10,7 +10,9 @@
 	
 	"key":
 	{
-		"G": { "item": "more_gems:corundum" }	
+		"G": { 
+	      "tag": "c:corundum"
+		}	
 	},
 	
 	"result": { "item": "more_gems:corundum_block" }

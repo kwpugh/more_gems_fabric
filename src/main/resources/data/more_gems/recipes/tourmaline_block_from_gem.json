@@ -10,7 +10,9 @@
 	
 	"key":
 	{
-		"G": { "item": "more_gems:tourmaline" }	
+		"G": {
+   		   "tag": "c:tourmaline"
+		 }	
 	},
 	
 	"result": { "item": "more_gems:tourmaline_block" }

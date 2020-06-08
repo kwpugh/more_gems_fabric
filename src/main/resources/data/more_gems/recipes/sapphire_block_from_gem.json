@@ -10,7 +10,9 @@
 	
 	"key":
 	{
-		"G": { "item": "more_gems:sapphire" }	
+		"G": { 
+ 	     "tag": "c:sapphire"
+		 }	
 	},
 	
 	"result": { "item": "more_gems:sapphire_block" }

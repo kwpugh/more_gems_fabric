@@ -27,7 +27,7 @@ dependencies {
   	modCompile "me.sargunvohra.mcmods:autoconfig1u:3.0.1-unstable"
     include "me.sargunvohra.mcmods:autoconfig1u:3.0.1-unstable"
 
-    //modCompile "me.shedaniel:RoughlyEnoughItems:4.3.13-unstable"
+    modCompile "me.shedaniel:RoughlyEnoughItems:4.4.2"
 }
 
 processResources {

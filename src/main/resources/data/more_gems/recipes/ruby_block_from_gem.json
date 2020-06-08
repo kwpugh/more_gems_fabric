@@ -10,7 +10,9 @@
 	
 	"key":
 	{
-		"G": { "tag": "c:ruby" }	
+		"G": {
+		 "tag": "c:ruby"
+		 }	
 	},
 	
 	"result": { "item": "more_gems:ruby_block" }

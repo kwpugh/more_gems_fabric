@@ -10,7 +10,9 @@
 	
 	"key":
 	{
-		"G": { "item": "more_gems:topaz" }	
+		"G": { 
+	      "tag": "c:topaz"
+		 }	
 	},
 	
 	"result": { "item": "more_gems:topaz_block" }

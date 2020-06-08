@@ -10,7 +10,9 @@
 	
 	"key":
 	{
-		"G": { "item": "more_gems:carbonado" }	
+		"G": { 
+    	  "tag": "c:carbonado"
+		 }	
 	},
 	
 	"result": { "item": "more_gems:carbonado_block" }

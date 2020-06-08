@@ -10,7 +10,9 @@
 	
 	"key":
 	{
-		"G": { "item": "more_gems:citrine" }	
+		"G": { 
+	      "tag": "c:citrine"	
+		 }	
 	},
 	
 	"result": { "item": "more_gems:citrine_block" }
