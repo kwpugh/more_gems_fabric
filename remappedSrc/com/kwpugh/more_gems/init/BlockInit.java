@@ -25,7 +25,7 @@ public class BlockInit
 	public static final Block CORUNDUM_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
 	public static final Block SAPPHIRE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
 	public static final Block RUBY_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
-	public static final Block CARBONADO_ORE = new OreBlock(FabricBlockSettings.of(new FabricMaterialBuilder(MaterialColor.STONE).build()).breakByTool(FabricToolTags.PICKAXES, 3).method_29292().strength(3.0F, 3.0F));
+	public static final Block CARBONADO_ORE = new OreBlock(FabricBlockSettings.of(new FabricMaterialBuilder(MaterialColor.STONE).build()).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool().strength(3.0F, 3.0F));
 
 	public static final Block CITRINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
 	public static final Block TOURMALINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));

@@ -12,6 +12,7 @@
 	"item.more_gems.citrine_hoe": "Citrine Hoe",
 	"item.more_gems.citrine_hammer": "Citrine Hammer",
 	"item.more_gems.citrine_excavator": "Citrine Excavator",
+	"item.more_gems.citrine_paxel": "Citrine Paxel",
 
 	"item.more_gems.citrine_helmet": "Citrine Helmet",
 	"item.more_gems.citrine_chestplate": "Citrine Chestplate",
@@ -31,6 +32,7 @@
 	"item.more_gems.tourmaline_hoe": "Tourmaline Hoe",
 	"item.more_gems.tourmaline_hammer": "Tourmaline Hammer",
 	"item.more_gems.tourmaline_excavator": "Tourmaline Excavator",
+	"item.more_gems.tourmaline_paxel": "Tourmaline Paxel",
 
 	"item.more_gems.tourmaline_helmet": "Tourmaline Helmet",
 	"item.more_gems.tourmaline_chestplate": "Tourmaline Chestplate",
@@ -50,6 +52,7 @@
 	"item.more_gems.amethyst_hoe": "Amethyst Hoe",
 	"item.more_gems.amethyst_hammer": "Amethyst Hammer",
 	"item.more_gems.amethyst_excavator": "Amethyst Excavator",
+	"item.more_gems.amethyst_paxel": "Amethyst Paxel",
 
 	"item.more_gems.amethyst_helmet": "Amethyst Helmet",
 	"item.more_gems.amethyst_chestplate": "Amethyst Chestplate",
@@ -63,6 +66,7 @@
 	"item.more_gems.emerald_hoe": "Emerald Hoe",
 	"item.more_gems.emerald_hammer": "Emerald Hammer",
 	"item.more_gems.emerald_excavator": "Emerald Excavator",
+	"item.more_gems.emerald_paxel": "Emerald Paxel",
 
 	"item.more_gems.emerald_helmet": "Emerald Helmet",
 	"item.more_gems.emerald_chestplate": "Emerald Chestplate",
@@ -82,6 +86,7 @@
 	"item.more_gems.topaz_hoe": "Topaz Hoe",
 	"item.more_gems.topaz_hammer": "Topaz Hammer",
 	"item.more_gems.topaz_excavator": "Topaz Excavator",
+	"item.more_gems.topaz_paxel": "Topaz Paxel",
 
 	"item.more_gems.topaz_helmet": "Topaz Helmet",
 	"item.more_gems.topaz_chestplate": "Topaz Chestplate",
@@ -101,6 +106,7 @@
 	"item.more_gems.alexandrite_hoe": "Alexandrite Hoe",
 	"item.more_gems.alexandrite_hammer": "Alexandrite Hammer",
 	"item.more_gems.alexandrite_excavator": "Alexandrite Excavator",
+	"item.more_gems.alexandrite_paxel": "Alexandrite Paxel",
 
 	"item.more_gems.alexandrite_helmet": "Alexandrite Helmet",
 	"item.more_gems.alexandrite_chestplate": "Alexandrite Chestplate",
@@ -120,6 +126,7 @@
 	"item.more_gems.corundum_hoe": "Corundum Hoe",
 	"item.more_gems.corundum_hammer": "Corundum Hammer",
 	"item.more_gems.corundum_excavator": "Corundum Excavator",
+	"item.more_gems.corundum_paxel": "Corundum Paxel",
 
 	"item.more_gems.corundum_helmet": "Corundum Helmet",
 	"item.more_gems.corundum_chestplate": "Corundum Chestplate",
@@ -139,6 +146,7 @@
 	"item.more_gems.sapphire_hoe": "Sapphire Hoe",
 	"item.more_gems.sapphire_hammer": "Sapphire Hammer",
 	"item.more_gems.sapphire_excavator": "Sapphire Excavator",
+	"item.more_gems.sapphire_paxel": "Sapphire Paxel",
 
 	"item.more_gems.sapphire_helmet": "Sapphire Helmet",
 	"item.more_gems.sapphire_chestplate": "Sapphire Chestplate",
@@ -158,6 +166,7 @@
 	"item.more_gems.ruby_hoe": "Ruby Hoe",
 	"item.more_gems.ruby_hammer": "Ruby Hammer",
 	"item.more_gems.ruby_excavator": "Ruby Excavator",
+	"item.more_gems.ruby_paxel": "Ruby Paxel",
 
 	"item.more_gems.ruby_helmet": "Ruby Helmet",
 	"item.more_gems.ruby_chestplate": "Ruby Chestplate",
@@ -177,6 +186,7 @@
 	"item.more_gems.carbonado_hoe": "Carbonado Hoe",
 	"item.more_gems.carbonado_hammer": "Carbonado Hammer",
 	"item.more_gems.carbonado_excavator": "Carbonado Excavator",
+	"item.more_gems.carbonado_paxel": "Carbonado Paxel",
 
 	"item.more_gems.carbonado_helmet": "Carbonado Helmet",
 	"item.more_gems.carbonado_chestplate": "Carbonado Chestplate",
