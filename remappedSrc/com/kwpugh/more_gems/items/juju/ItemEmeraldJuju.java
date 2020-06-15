@@ -30,7 +30,8 @@ public class ItemEmeraldJuju extends Item
 			player.addStatusEffect(effect);
 		}
 	}
-	 
+	   
+	   
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{

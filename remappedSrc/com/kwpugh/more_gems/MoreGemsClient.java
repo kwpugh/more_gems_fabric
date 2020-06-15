@@ -8,7 +8,6 @@ import com.kwpugh.more_gems.items.gembag.GembagScreenHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.client.keybinding.FabricKeyBinding;
 import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.TranslatableText;
@@ -16,8 +15,6 @@ import net.minecraft.text.TranslatableText;
 @Environment(EnvType.CLIENT)
 public class MoreGemsClient implements ClientModInitializer
 {
-	public static FabricKeyBinding corundumJuju;
-
     @Override
     public void onInitializeClient()
     {
