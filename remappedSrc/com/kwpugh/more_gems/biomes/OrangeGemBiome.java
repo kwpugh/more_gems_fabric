@@ -19,7 +19,7 @@ public class OrangeGemBiome extends Biome
 	      super((new Biome.Settings()).configureSurfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_CONFIG).precipitation(Biome.Precipitation.RAIN).category(Biome.Category.PLAINS).depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F).effects((new BiomeEffects.Builder()).waterColor(4159204).waterFogColor(329011).fogColor(12638463).moodSound(BiomeMoodSound.CAVE).build()).parent((String)null).noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F))));
 	      this.addStructureFeature(DefaultBiomeFeatures.PLAINS_VILLAGE);
 	      this.addStructureFeature(DefaultBiomeFeatures.PILLAGER_OUTPOST);
-	      DefaultBiomeFeatures.method_28440(this);
+	      DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
 	      this.addStructureFeature(DefaultBiomeFeatures.STANDARD_RUINED_PORTAL);
 	      DefaultBiomeFeatures.addLandCarvers(this);
 	      DefaultBiomeFeatures.addDefaultLakes(this);
