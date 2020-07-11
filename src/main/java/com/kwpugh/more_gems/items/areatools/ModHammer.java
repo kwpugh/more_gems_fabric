@@ -31,7 +31,7 @@ public class ModHammer extends PickaxeItem
 
         return true;
     }
-
+ 
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
