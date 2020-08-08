@@ -26,7 +26,6 @@ import com.kwpugh.more_gems.materials.ModToolMaterial;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -183,11 +182,6 @@ public class ItemInit
 	public static final Item CARBONADO_CHESTPLATE = new ModArmor(ModArmorMaterial.CARBONADO, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_LEGGINGS = new ModArmor(ModArmorMaterial.CARBONADO, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_BOOTS = new ModArmor(ModArmorMaterial.CARBONADO, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-
-	public static final Item SQUIRTLES_HELMET = new ModArmor(ModArmorMaterial.SQUIRTLES, EquipmentSlot.HEAD, (new Item.Settings()).group(ItemGroup.COMBAT));
-	public static final Item SQUIRTLES_CHESTPLATE = new ModArmor(ModArmorMaterial.SQUIRTLES, EquipmentSlot.CHEST, (new Item.Settings()).group(ItemGroup.COMBAT));
-	public static final Item SQUIRTLES_LEGGINGS = new ModArmor(ModArmorMaterial.SQUIRTLES, EquipmentSlot.LEGS, (new Item.Settings()).group(ItemGroup.COMBAT));
-	public static final Item SQUIRTLES_BOOTS = new ModArmor(ModArmorMaterial.SQUIRTLES, EquipmentSlot.FEET, (new Item.Settings()).group(ItemGroup.COMBAT));
 
 	public static final Item CITRINE_JUJU = new ItemCitrineJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_JUJU = new ItemTourmalineJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -351,11 +345,6 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_chestplate"), CARBONADO_CHESTPLATE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_leggings"), CARBONADO_LEGGINGS);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_boots"), CARBONADO_BOOTS);
-
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "squirtles_helmet"), SQUIRTLES_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "squirtles_chestplate"), SQUIRTLES_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "squirtles_leggings"), SQUIRTLES_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "squirtles_boots"), SQUIRTLES_BOOTS);
 
 		if(jujuEnable)
 		{
