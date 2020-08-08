@@ -24,8 +24,9 @@ public class AreaToolUtil
             for(BlockPos pos : targetBlocks)
             {
             	BlockState state = world.getBlockState(pos);
+            	Float hardness = state.getHardness(world, pos);
 
-        		if(playerIn.getMainHandStack().isEffectiveOn(state))
+            	if(playerIn.isUsingEffectiveTool(state) && (hardness > 0) && (hardness < 50))
             	{              		
         			world.breakBlock(pos, true);
         			

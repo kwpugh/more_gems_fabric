@@ -143,16 +143,6 @@ public class ModLootTables
 					new Identifier("minecraft", "chests/bastion_treasure")
 			));
 
-			FabricLootPoolBuilder SQUIRTLES_CHESTPLATE = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootTableRange.create(1))
-					.with(ItemEntry.builder(ItemInit.SQUIRTLES_CHESTPLATE))
-					.withCondition(RandomChanceLootCondition.builder(0.99F).build());
-
-			insert(new LootTableInsert(SQUIRTLES_CHESTPLATE,
-					new Identifier("minecraft", "chests/end_city_treasure")
-			));
-
-
 
 			LootTableLoadingCallback.EVENT.register(((resourceManager, lootManager, identifier, supplier, lootTableSetter) -> {
 				INSERTS.forEach(i->{

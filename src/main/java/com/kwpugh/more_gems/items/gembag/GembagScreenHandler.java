@@ -35,15 +35,27 @@ public class GembagScreenHandler extends ScreenHandler
 	@Override
 	public ItemStack onSlotClick(int slotId, int clickData, SlotActionType actionType, PlayerEntity playerEntity)
 	{
-		if (slotId >= 0) { // slotId < 0 are used for networking internals
+		if (slotId >= 0) // slotId < 0 are used for networking internals, to avoid array out of range (-999)
+		{
 			ItemStack stack = getSlot(slotId).getStack();
-
-			if (stack.getItem() instanceof GembagItem)
+			
+			if((stack.getItem() instanceof GembagItem)  ||  (actionType == SlotActionType.SWAP || actionType == SlotActionType.QUICK_MOVE))
 			{
 				// Prevent moving bags around
 				return stack;
-			}
+			}			
 		}
+
+// SAVE - OLD LOGIC		
+//		if (slotId >= 0) { // slotId < 0 are used for networking internals
+//			ItemStack stack = getSlot(slotId).getStack();
+//
+//			if (stack.getItem() instanceof GembagItem)
+//			{
+//				// Prevent moving bags around
+//				return stack;
+//			}
+//		}
 
 		return super.onSlotClick(slotId, clickData, actionType, playerEntity);
 	}
