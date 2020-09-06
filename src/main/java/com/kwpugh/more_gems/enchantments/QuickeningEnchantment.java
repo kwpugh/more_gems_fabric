@@ -33,18 +33,18 @@ public class QuickeningEnchantment extends DamageEnchantment
 	    return 1;
 	}
 
-	@Override
-	public void onTargetDamaged(LivingEntity user, Entity target, int level)
-	{
-		ServerWorld world = (ServerWorld) user.world.getWorld();
-
-	    if(target instanceof LivingEntity)
-	    {
-	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, enemySlownessDurationTicks, 0));
-	    }
-
-	    PlayerSpecialAbilities.giveQuickening(world, user, amountHalfHeartsQuickening);
-
-	    super.onTargetDamaged(user, target, level);
-	}
+//	@Override
+//	public void onTargetDamaged(LivingEntity user, Entity target, int level)
+//	{
+//		ServerWorld world = (ServerWorld) user.world.getWorld();
+//
+//	    if(target instanceof LivingEntity)
+//	    {
+//	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, enemySlownessDurationTicks, 0));
+//	    }
+//
+//	    PlayerSpecialAbilities.giveQuickening(world, user, amountHalfHeartsQuickening);
+//
+//	    super.onTargetDamaged(user, target, level);
+//	}
 }

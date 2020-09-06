@@ -37,11 +37,11 @@ public class BlockInit
 	public static final Block RUBY_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
 	public static final Block CARBONADO_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));	
 	
-	static boolean oreBlockEnable = MoreGems.getConfig().ORE_BLOCKS.enableOreBlocks;
+	//static boolean oreBlockEnable = MoreGems.getConfig().ORE_BLOCKS.enableOreBlocks;
 	
 	public static void registerBlocks()
 	{
-		if(oreBlockEnable)
+		//if(oreBlockEnable)
 		{
 			Registry.register(Registry.BLOCK, new Identifier("more_gems", "citrine_ore"), CITRINE_ORE);
 			Registry.register(Registry.BLOCK, new Identifier("more_gems", "tourmaline_ore"), TOURMALINE_ORE);
@@ -67,7 +67,7 @@ public class BlockInit
 	
 	public static void registerBlockItems()
 	{
-		if(oreBlockEnable)
+		//if(oreBlockEnable)
 		{
 			Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_ore"), new BlockItem(CITRINE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_ore"), new BlockItem(TOURMALINE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));

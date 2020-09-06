@@ -39,7 +39,7 @@ public class GembagScreenHandler extends ScreenHandler
 		{
 			ItemStack stack = getSlot(slotId).getStack();
 			
-			if((stack.getItem() instanceof GembagItem)  ||  (actionType == SlotActionType.SWAP || actionType == SlotActionType.QUICK_MOVE))
+			if((stack.getItem() instanceof GembagItem)  ||  (actionType == SlotActionType.SWAP))
 			{
 				// Prevent moving bags around
 				return stack;
