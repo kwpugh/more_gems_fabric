@@ -34,16 +34,16 @@ public class ModExcavator extends ShovelItem
         return EFFECTIVE_BLOCKS.contains(state.getBlock());
     }
 
-    @Override
-    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity playerIn)
-    {
-        if(!playerIn.isSneaking() && playerIn.getMainHandStack().isEffectiveOn(world.getBlockState(pos)))
-    	{
-        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1);
-        }
-
-        return true;
-    }
+//    @Override
+//    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity playerIn)
+//    {
+//        if(!playerIn.isSneaking() && playerIn.getMainHandStack().isEffectiveOn(world.getBlockState(pos)))
+//    	{
+//        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1);
+//        }
+//
+//        return true;
+//    }
 
     static
     {

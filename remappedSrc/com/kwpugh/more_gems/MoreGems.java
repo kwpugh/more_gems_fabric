@@ -4,11 +4,9 @@ import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.BlockInit;
 import com.kwpugh.more_gems.init.ContainerInit;
 import com.kwpugh.more_gems.init.ItemInit;
-import com.kwpugh.more_gems.init.ModBiomes;
 import com.kwpugh.more_gems.init.ModEnchantments;
 import com.kwpugh.more_gems.init.ModLootTables;
-import com.kwpugh.more_gems.world.OreGen;
-
+import com.kwpugh.more_gems.world.ModConfiguredFeatures;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
@@ -16,15 +14,13 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.biome.Biome;
 
 public class MoreGems implements ModInitializer
 {
 	public static final MoreGems INSTANCE = new MoreGems();
 	public static final String MOD_ID = "more_gems";
 	public static final ItemGroup MORE_GEMS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "more_gems_group"), () -> new ItemStack(ItemInit.ALEXANDRITE));
-
+	  
     @Override
     public void onInitialize()
     {
@@ -37,12 +33,7 @@ public class MoreGems implements ModInitializer
 
     	ContainerInit.registerContainer();
 
-    	ModBiomes.registerBiomes();
-
-    	for (Biome biome : Registry.BIOME)
-		{
-			OreGen.addGemOres(biome);
-		}
+    	ModConfiguredFeatures.Features();
 
     	ModLootTables.init();
 

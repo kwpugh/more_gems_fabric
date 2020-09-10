@@ -21,16 +21,16 @@ public class ModHammer extends PickaxeItem
 		super(material, attackDamage, attackSpeed, settings);
 	}
 
-    @Override
-    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity playerIn)
-    {
-        if(!playerIn.isSneaking() && playerIn.getMainHandStack().isEffectiveOn(world.getBlockState(pos)))
-    	{
-        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1);
-        }
-
-        return true;
-    }
+//    @Override
+//    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity playerIn)
+//    {
+//        if(!playerIn.isSneaking() && playerIn.getMainHandStack().isEffectiveOn(world.getBlockState(pos)))
+//    	{
+//        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1);
+//        }
+//
+//        return true;
+//    }
  
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
