@@ -38,6 +38,8 @@ public class MoreGems implements ModInitializer
     	ModLootTables.init();
 
     	ModEnchantments.registerEnchantments();
+    	
+    	//CuriosApi.enqueueSlotType(SlotTypeInfo.BuildScheme.REGISTER, SlotTypePreset.CHARM.getInfoBuilder().size(4).build());
     }
 
     public static MoreGemsConfig getConfig()

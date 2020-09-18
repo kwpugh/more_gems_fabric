@@ -11,6 +11,21 @@ version = project.mod_version
 group = project.maven_group
 
 
+repositories {
+
+	maven {
+		url = "https://maven.theillusivec4.top/"
+	}
+	
+	maven {
+		url = 'https://dl.bintray.com/ladysnake/libs'
+	}
+
+	maven {
+		url = 'https://maven.fabricmc.net/io/github/prospector/modmenu/'
+	}
+}
+
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -27,7 +42,12 @@ dependencies {
   	modCompile "me.sargunvohra.mcmods:autoconfig1u:3.2.2"
     include "me.sargunvohra.mcmods:autoconfig1u:3.2.2"
 
-    //modCompile "me.shedaniel:RoughlyEnoughItems:4.5.1"
+   	modCompile "me.shedaniel:RoughlyEnoughItems:5.4.2"
+   	
+   	//Curios API
+   	modImplementation "top.theillusivec4.curios:curios-fabric:${curios_version}"
+   	modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+	include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 }
 
 processResources {
