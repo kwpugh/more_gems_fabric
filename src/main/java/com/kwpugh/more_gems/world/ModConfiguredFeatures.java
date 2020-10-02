@@ -17,7 +17,5 @@ public class ModConfiguredFeatures
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("more_gems", "ore_ruby_overworld"), OreGen.ORE_RUBY_OVERWORLD );
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("more_gems", "ore_corundum_overworld"), OreGen.ORE_CORUNDUM_OVERWORLD );
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("more_gems", "ore_carbonado_overworld"), OreGen.ORE_CARBONADO_OVERWORLD );
-	}
-
-	
+	}	
 }
