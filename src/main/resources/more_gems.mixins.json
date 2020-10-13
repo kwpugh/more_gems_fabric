@@ -4,10 +4,10 @@
   "package": "com.kwpugh.more_gems.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "DefaultBiomeFeaturesMixin"
   ],
   "client": [
-    "MyMixin",
-    "DefaultBiomeFeaturesMixin"
+    "MyMixin"
   ],
   "injectors": {
     "defaultRequire": 1

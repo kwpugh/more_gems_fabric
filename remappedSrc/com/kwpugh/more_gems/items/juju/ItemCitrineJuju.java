@@ -30,7 +30,7 @@ public class ItemCitrineJuju extends Item
 			player.addStatusEffect(effect);
 		}
 	}
-	 
+	
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
