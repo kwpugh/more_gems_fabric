@@ -44,6 +44,4 @@ public class FasterObsidianEnchantment extends EfficiencyEnchantment
 		}
 
 	}
-
-
 }

@@ -8,7 +8,8 @@ import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
 @Config(name=MoreGems.MOD_ID)
 public class MoreGemsConfig implements ConfigData
 {
-//	public Citrine CITRINE = new Citrine();
+	
+//  public Citrine CITRINE = new Citrine();
 //	public Tourmaline TOURMALINE = new Tourmaline();
 //	public Amethyst AMETHYST = new Amethyst();
 //	public Topaz TOPAZ = new Topaz();
@@ -25,7 +26,7 @@ public class MoreGemsConfig implements ConfigData
 //	public GemBiomes GEM_BIOMES = new GemBiomes();
 
 	public Enchantments ENCHANTMENTS = new Enchantments();
-
+	
 //	public static class Citrine
 //	{
 //		public boolean citrine = true;

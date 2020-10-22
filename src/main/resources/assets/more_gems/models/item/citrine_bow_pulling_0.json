@@ -1,0 +1,6 @@
+{
+    "parent": "more_gems:item/citrine_bow",
+    "textures": {
+        "layer0": "more_gems:item/citrine_bow_pulling_0"
+    }
+}

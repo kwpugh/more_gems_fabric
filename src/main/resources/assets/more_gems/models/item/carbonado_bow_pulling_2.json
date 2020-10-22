@@ -1,0 +1,6 @@
+{
+    "parent": "more_gems:item/carbonado_bow",
+    "textures": {
+        "layer0": "more_gems:item/carbonado_bow_pulling_2"
+    }
+}

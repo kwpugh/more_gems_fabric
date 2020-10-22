@@ -1,0 +1,6 @@
+{
+    "parent": "more_gems:item/topaz_bow",
+    "textures": {
+        "layer0": "more_gems:item/topaz_bow_pulling_2"
+    }
+}

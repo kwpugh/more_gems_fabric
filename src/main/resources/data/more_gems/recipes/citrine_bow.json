@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " gs",
+    "g s",
+    " gs"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:string"
+    },
+    "g": {
+      "tag": "c:citrine"
+    }
+  },
+  "result": {
+    "item": "more_gems:citrine_bow"
+  }
+}

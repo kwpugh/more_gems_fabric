@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " gs",
+    "g s",
+    " gs"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:string"
+    },
+    "g": {
+      "tag": "c:carbonado"
+    }
+  },
+  "result": {
+    "item": "more_gems:carbonado_bow"
+  }
+}
