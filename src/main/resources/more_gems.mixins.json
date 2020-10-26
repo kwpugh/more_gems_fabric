@@ -7,7 +7,6 @@
     "DefaultBiomeFeaturesMixin"
   ],
   "client": [
-    "MyMixin"
   ],
   "injectors": {
     "defaultRequire": 1
