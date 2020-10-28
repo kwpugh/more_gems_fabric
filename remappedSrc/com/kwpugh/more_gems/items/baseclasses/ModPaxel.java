@@ -1,13 +1,14 @@
 package com.kwpugh.more_gems.items.baseclasses;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
-import com.google.common.collect.ImmutableMap.Builder;
-
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Consumer;
+
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableMap.Builder;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -30,7 +31,7 @@ import net.minecraft.world.World;
 
 @SuppressWarnings({ "rawtypes", "unchecked" })
 public class ModPaxel extends MiningToolItem
-{
+{	
 	static 
 	{
 		AXE_BLOCKS = Sets.newHashSet(new Material[]{Material.WOOD, Material.NETHER_WOOD, Material.PLANT, Material.REPLACEABLE_PLANT, Material.BAMBOO, Material.GOURD});
@@ -72,9 +73,9 @@ public class ModPaxel extends MiningToolItem
 	{
 		super(attackDamage, attackSpeed, material, EFFECTIVE_BLOCKS, settings);
 	}
-
+	
 	public boolean isEffectiveOn(BlockState state) // Mining level checks for pickaxe functionality
-	{	   
+	{
 		int i = this.getMaterial().getMiningLevel();
 		
 		if (!state.isOf(Blocks.OBSIDIAN) && !state.isOf(Blocks.CRYING_OBSIDIAN) && !state.isOf(Blocks.NETHERITE_BLOCK) && !state.isOf(Blocks.RESPAWN_ANCHOR) && !state.isOf(Blocks.ANCIENT_DEBRIS))
