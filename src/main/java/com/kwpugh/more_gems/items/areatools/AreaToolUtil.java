@@ -3,6 +3,7 @@ package com.kwpugh.more_gems.items.areatools;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.hit.BlockHitResult;
@@ -15,6 +16,8 @@ import net.minecraft.world.World;
 
 public class AreaToolUtil
 {
+	static Block block;
+	
     public static void attemptBreakNeighbors(World world, PlayerEntity playerIn, int radius)
     {
         if(!world.isClient)
@@ -27,13 +30,13 @@ public class AreaToolUtil
             	Float hardness = state.getHardness(world, pos);
 
             	if(playerIn.isUsingEffectiveTool(state) && (hardness > 0) && (hardness < 50))
-            	{              		
-        			world.breakBlock(pos, true);
-        			
-        			if(world.breakBlock(pos, true))
-        			{
-        				playerIn.inventory.getMainHandStack().damage(1, playerIn, player -> { });
-        			}
+            	{
+					world.breakBlock(pos, true);
+					
+					if(world.breakBlock(pos, true))
+					{
+						playerIn.inventory.getMainHandStack().damage(1, playerIn, player -> { });
+					}     		
                	}                             
             }
         }
