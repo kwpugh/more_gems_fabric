@@ -20,7 +20,8 @@ public class OreGen
 			  0, // min y level
 			  70))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(20); // number of veins per chunk		
+
 
 	public static ConfiguredFeature<?, ?> ORE_TOURMALINE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -98,7 +99,7 @@ public class OreGen
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.CORUNDUM_ORE.getDefaultState(),
-			  4)) // vein size
+			  3)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
 			  0, // min y level
@@ -110,7 +111,7 @@ public class OreGen
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.CARBONADO_ORE.getDefaultState(),
-			  4)) // vein size
+			  3)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
 			  0, // min y level

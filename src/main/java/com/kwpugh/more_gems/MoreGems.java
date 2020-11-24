@@ -7,6 +7,7 @@ import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.init.ModEnchantments;
 import com.kwpugh.more_gems.init.ModLootTables;
 import com.kwpugh.more_gems.world.ModConfiguredFeatures;
+
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
@@ -39,7 +40,8 @@ public class MoreGems implements ModInitializer
 
     	ModEnchantments.registerEnchantments();
     	
-    	//CuriosApi.enqueueSlotType(SlotTypeInfo.BuildScheme.REGISTER, SlotTypePreset.CHARM.getInfoBuilder().size(4).build());
+    	//CuriosApi.enqueueSlotType(SlotTypeInfo.BuildScheme.REGISTER, SlotTypePreset.CHARM.getInfoBuilder().size(4).build());	
+    	
     }
 
     public static MoreGemsConfig getConfig()
