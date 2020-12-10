@@ -1,6 +1,7 @@
 {
    "replace": false,
    "values": [
+     "more_gems:emerald_shovel",
      "more_gems:citrine_shovel",
      "more_gems:tourmaline_shovel",
      "more_gems:amethyst_shovel",
@@ -10,6 +11,7 @@
      "more_gems:sapphire_shovel",
      "more_gems:ruby_shovel",
      "more_gems:carbonado_shovel",
+     "more_gems:emerald_excavator",
      "more_gems:citrine_excavator",
      "more_gems:tourmaline_excavator",
      "more_gems:amethyst_excavator",
