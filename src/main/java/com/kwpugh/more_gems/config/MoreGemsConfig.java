@@ -12,6 +12,8 @@ public class MoreGemsConfig implements ConfigData
 
 	public Enchantments ENCHANTMENTS = new Enchantments();
 
+	public ExtraTools EXTRA_TOOLS = new ExtraTools();
+	
 	public static class Juju
 	{
 		public boolean jujuEnable = true;
@@ -31,5 +33,10 @@ public class MoreGemsConfig implements ConfigData
 		public float razorDamageIncrease = 6.0F;
 		public int untouchableDamage = 7;
 		public int shulkerBladeDurationTicks = 300;
+	}
+	
+	public static class ExtraTools
+	{
+		public boolean extraToolsEnable = true;
 	}
 }

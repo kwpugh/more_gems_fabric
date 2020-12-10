@@ -9,8 +9,8 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class OreGen
-{	
-	public static ConfiguredFeature<?, ?> ORE_CITRINE_OVERWORLD = Feature.ORE
+{
+	public static final ConfiguredFeature<?, ?> ORE_CITRINE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.CITRINE_ORE.getDefaultState(),
@@ -20,7 +20,7 @@ public class OreGen
 			  0, // min y level
 			  70))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk		
+			.repeat(12); // number of veins per chunk		
 
 
 	public static ConfiguredFeature<?, ?> ORE_TOURMALINE_OVERWORLD = Feature.ORE
@@ -33,7 +33,7 @@ public class OreGen
 			  0, // min y level
 			  70))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(12); // number of veins per chunk
 	
 	public static ConfiguredFeature<?, ?> ORE_AMETHYST_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -45,7 +45,7 @@ public class OreGen
 			  0, // min y level
 			  60))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(12); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_TOPAZ_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -57,7 +57,7 @@ public class OreGen
 			  0, // min y level
 			  60))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(12); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_ALEXANDRITE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -69,7 +69,7 @@ public class OreGen
 			  0, // min y level
 			  60))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(12); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -81,7 +81,7 @@ public class OreGen
 			  0, // min y level
 			  30))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(12); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_RUBY_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -93,7 +93,7 @@ public class OreGen
 			  0, // min y level
 			  30))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(12); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_CORUNDUM_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -105,7 +105,7 @@ public class OreGen
 			  0, // min y level
 			  20))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(12); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -117,5 +117,5 @@ public class OreGen
 			  0, // min y level
 			  15))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk	
+			.repeat(12); // number of veins per chunk	
 }

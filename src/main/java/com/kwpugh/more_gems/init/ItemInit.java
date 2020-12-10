@@ -33,7 +33,8 @@ import net.minecraft.util.registry.Registry;
 public class ItemInit
 {
 	static boolean jujuEnable = MoreGems.getConfig().JUJU.jujuEnable;
-
+	static boolean extraToolsEnable = MoreGems.getConfig().EXTRA_TOOLS.extraToolsEnable;
+	
 	public static final Item CITRINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item AMETHYST = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -223,19 +224,27 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_axe"), CITRINE_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_shovel"), CITRINE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_hoe"), CITRINE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_hammer"), CITRINE_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_excavator"), CITRINE_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_paxel"), CITRINE_PAXEL);
-
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_hammer"), CITRINE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_excavator"), CITRINE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_paxel"), CITRINE_PAXEL);		
+		}
+	
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_sword"), TOURMALINE_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_bow"), TOURMALINE_BOW);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_pickaxe"), TOURMALINE_PICKAXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_axe"), TOURMALINE_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_shovel"), TOURMALINE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_hoe"), TOURMALINE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_hammer"), TOURMALINE_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_excavator"), TOURMALINE_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_paxel"), TOURMALINE_PAXEL);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_hammer"), TOURMALINE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_excavator"), TOURMALINE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_paxel"), TOURMALINE_PAXEL);	
+		}
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_sword"), AMETHYST_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_bow"), AMETHYST_BOW);
@@ -243,9 +252,13 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_axe"), AMETHYST_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_shovel"), AMETHYST_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_hoe"), AMETHYST_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_hammer"), AMETHYST_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_excavator"), AMETHYST_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_paxel"), AMETHYST_PAXEL);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_hammer"), AMETHYST_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_excavator"), AMETHYST_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_paxel"), AMETHYST_PAXEL);	
+		}
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_sword"), EMERALD_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_bow"), EMERALD_BOW);
@@ -253,9 +266,13 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_axe"), EMERALD_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_shovel"), EMERALD_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_hoe"), EMERALD_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_hammer"), EMERALD_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_excavator"), EMERALD_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_paxel"), EMERALD_PAXEL);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_hammer"), EMERALD_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_excavator"), EMERALD_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_paxel"), EMERALD_PAXEL);	
+		}
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_sword"), TOPAZ_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_bow"), TOPAZ_BOW);
@@ -263,9 +280,13 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_axe"), TOPAZ_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_shovel"), TOPAZ_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_hoe"), TOPAZ_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_hammer"), TOPAZ_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_excavator"), TOPAZ_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_paxel"), TOPAZ_PAXEL);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_hammer"), TOPAZ_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_excavator"), TOPAZ_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_paxel"), TOPAZ_PAXEL);	
+		}
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_sword"), ALEXANDRITE_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_bow"), ALEXANDRITE_BOW);
@@ -273,9 +294,13 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_axe"), ALEXANDRITE_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_shovel"), ALEXANDRITE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_hoe"), ALEXANDRITE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_hammer"), ALEXANDRITE_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_excavator"), ALEXANDRITE_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_paxel"), ALEXANDRITE_PAXEL);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_hammer"), ALEXANDRITE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_excavator"), ALEXANDRITE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_paxel"), ALEXANDRITE_PAXEL);	
+		}
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_sword"), CORUNDUM_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_bow"), CORUNDUM_BOW);
@@ -283,9 +308,13 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_axe"), CORUNDUM_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_shovel"), CORUNDUM_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_hoe"), CORUNDUM_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_hammer"), CORUNDUM_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_excavator"), CORUNDUM_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_paxel"), CORUNDUM_PAXEL);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_hammer"), CORUNDUM_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_excavator"), CORUNDUM_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_paxel"), CORUNDUM_PAXEL);	
+		}
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_sword"), SAPPHIRE_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_bow"), SAPPHIRE_BOW);
@@ -293,9 +322,13 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_axe"), SAPPHIRE_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_shovel"), SAPPHIRE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_hoe"), SAPPHIRE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_hammer"), SAPPHIRE_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_excavator"), SAPPHIRE_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_paxel"), SAPPHIRE_PAXEL);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_hammer"), SAPPHIRE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_excavator"), SAPPHIRE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_paxel"), SAPPHIRE_PAXEL);	
+		}
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_sword"), RUBY_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_bow"), RUBY_BOW);
@@ -303,9 +336,13 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_axe"), RUBY_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_shovel"), RUBY_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_hoe"), RUBY_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_hammer"), RUBY_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_excavator"), RUBY_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_paxel"), RUBY_PAXEL);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_hammer"), RUBY_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_excavator"), RUBY_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_paxel"), RUBY_PAXEL);	
+		}
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_sword"), CARBONADO_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_bow"), CARBONADO_BOW);
@@ -313,9 +350,13 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_axe"), CARBONADO_AXE);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_shovel"), CARBONADO_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_hoe"), CARBONADO_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_hammer"), CARBONADO_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_excavator"), CARBONADO_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_paxel"), CARBONADO_PAXEL);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_hammer"), CARBONADO_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_excavator"), CARBONADO_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_paxel"), CARBONADO_PAXEL);	
+		}
 
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_helmet"), CITRINE_HELMET);
 		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_chestplate"), CITRINE_CHESTPLATE);
