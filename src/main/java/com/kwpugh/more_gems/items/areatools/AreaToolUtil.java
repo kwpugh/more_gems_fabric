@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.BlockWithEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
@@ -27,16 +29,15 @@ public class AreaToolUtil
             for(BlockPos pos : targetBlocks)
             {
             	BlockState state = world.getBlockState(pos);
+            	Block block = state.getBlock();
             	Float hardness = state.getHardness(world, pos);
 
             	if(playerIn.isUsingEffectiveTool(state) && (hardness > 0) && (hardness < 50))
             	{
-					world.breakBlock(pos, true);
-					
-					if(world.breakBlock(pos, true))
+            		if(!(block instanceof BlockWithEntity) || !block.hasBlockEntity()  || !(block instanceof BlockEntityProvider))
 					{
-						playerIn.inventory.getMainHandStack().damage(1, playerIn, player -> { });
-					}     		
+					  world.breakBlock(pos, true);   		
+					}
                	}                             
             }
         }
