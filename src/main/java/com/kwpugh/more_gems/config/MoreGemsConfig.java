@@ -9,11 +9,9 @@ import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
 public class MoreGemsConfig implements ConfigData
 {	
 	public Juju JUJU = new Juju();
-
 	public Enchantments ENCHANTMENTS = new Enchantments();
-
 	public ExtraTools EXTRA_TOOLS = new ExtraTools();
-	
+
 	public static class Juju
 	{
 		public boolean jujuEnable = true;

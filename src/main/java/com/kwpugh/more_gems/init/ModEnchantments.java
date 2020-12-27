@@ -23,12 +23,12 @@ public class ModEnchantments
 	public static final ThornsEnchantment UNTOUCHABLE = new UntouchableEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.CHEST});
 	public static final EfficiencyEnchantment FASTER_OBSIDIAN = new FasterObsidianEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
-	static boolean enableRazor = MoreGems.getConfig().ENCHANTMENTS.enableRazorSharpness;
-	static boolean enableShulker = MoreGems.getConfig().ENCHANTMENTS.enableShulkerBlade;
-	static boolean enableQuickening = MoreGems.getConfig().ENCHANTMENTS.enableQuickening;
-	static boolean enableUntouchable = MoreGems.getConfig().ENCHANTMENTS.enableUntouchable;
-	static boolean enableFasterObsidian = MoreGems.getConfig().ENCHANTMENTS.enableFasterObsidian;
-
+	static boolean enableRazor = MoreGems.CONFIG.GENERAL.enableRazorSharpness;			
+	static boolean enableShulker = MoreGems.CONFIG.GENERAL.enableShulkerBlade;
+	static boolean enableQuickening = MoreGems.CONFIG.GENERAL.enableQuickening;
+	static boolean enableUntouchable = MoreGems.CONFIG.GENERAL.enableUntouchable;
+	static boolean enableFasterObsidian = MoreGems.CONFIG.GENERAL.enableFasterObsidian;
+	
 	public static void registerEnchantments()
 	{
 		if(enableRazor)

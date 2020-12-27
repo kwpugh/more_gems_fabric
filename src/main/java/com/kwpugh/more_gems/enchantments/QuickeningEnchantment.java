@@ -13,9 +13,9 @@ import net.minecraft.server.world.ServerWorld;
 
 public class QuickeningEnchantment extends DamageEnchantment
 {
-	static float amountHalfHeartsQuickening = MoreGems.getConfig().ENCHANTMENTS.amountHalfHeartsQuickening;
-	static int enemySlownessDurationTicks = MoreGems.getConfig().ENCHANTMENTS.enemySlownessDurationTicksQuickening;
-
+	static float amountHalfHeartsQuickening = MoreGems.CONFIG.GENERAL.amountHalfHeartsQuickening;
+	static int enemySlownessDurationTicks = MoreGems.CONFIG.GENERAL.enemySlownessDurationTicksQuickening;
+	
 	public QuickeningEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
 	{
 		super(weight, typeIndex, slots);

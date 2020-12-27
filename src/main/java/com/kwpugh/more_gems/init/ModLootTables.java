@@ -17,9 +17,9 @@ import net.minecraft.util.Identifier;
 
 public class ModLootTables
 {
-	static float jujuChance = MoreGems.getConfig().JUJU.jujuChance;
-	static boolean jujuenable = MoreGems.getConfig().JUJU.jujuEnable;
-
+	static float jujuChance = MoreGems.CONFIG.GENERAL.jujuChance;
+	static boolean jujuenable = MoreGems.CONFIG.GENERAL.jujuEnable;
+	
 	private static final List<LootTableInsert> INSERTS = Lists.newArrayList();
 
 	public static void init()

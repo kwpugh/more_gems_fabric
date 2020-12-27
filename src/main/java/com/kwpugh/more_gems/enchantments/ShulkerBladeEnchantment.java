@@ -11,7 +11,7 @@ import net.minecraft.entity.effect.StatusEffects;
 
 public class ShulkerBladeEnchantment extends DamageEnchantment
 {
-	static int shulkerBladeDurationTicks = MoreGems.getConfig().ENCHANTMENTS.shulkerBladeDurationTicks;
+	static int shulkerBladeDurationTicks = MoreGems.CONFIG.GENERAL.shulkerBladeDurationTicks;
 	
 	public ShulkerBladeEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
 	{

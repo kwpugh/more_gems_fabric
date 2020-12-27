@@ -36,33 +36,30 @@ public class BlockInit
 	public static final Block SAPPHIRE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
 	public static final Block RUBY_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
 	public static final Block CARBONADO_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));	
-	
-	//static boolean oreBlockEnable = MoreGems.getConfig().ORE_BLOCKS.enableOreBlocks;
-	
+
 	public static void registerBlocks()
 	{
-		//if(oreBlockEnable)
-		{
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "citrine_ore"), CITRINE_ORE);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "tourmaline_ore"), TOURMALINE_ORE);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "amethyst_ore"), AMETHYST_ORE);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "topaz_ore"), TOPAZ_ORE);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "alexandrite_ore"), ALEXANDRITE_ORE);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "corundum_ore"), CORUNDUM_ORE);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "sapphire_ore"), SAPPHIRE_ORE);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "ruby_ore"), RUBY_ORE);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "carbonado_ore"), CARBONADO_ORE);
-			
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "citrine_block"), CITRINE_BLOCK);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "tourmaline_block"), TOURMALINE_BLOCK);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "amethyst_block"), AMETHYST_BLOCK);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "topaz_block"), TOPAZ_BLOCK);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "alexandrite_block"), ALEXANDRITE_BLOCK);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "corundum_block"), CORUNDUM_BLOCK);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "sapphire_block"), SAPPHIRE_BLOCK);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "ruby_block"), RUBY_BLOCK);
-			Registry.register(Registry.BLOCK, new Identifier("more_gems", "carbonado_block"), CARBONADO_BLOCK);
-		}
+
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "citrine_ore"), CITRINE_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "tourmaline_ore"), TOURMALINE_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "amethyst_ore"), AMETHYST_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "topaz_ore"), TOPAZ_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "alexandrite_ore"), ALEXANDRITE_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "corundum_ore"), CORUNDUM_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "sapphire_ore"), SAPPHIRE_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "ruby_ore"), RUBY_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "carbonado_ore"), CARBONADO_ORE);
+		
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "citrine_block"), CITRINE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "tourmaline_block"), TOURMALINE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "amethyst_block"), AMETHYST_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "topaz_block"), TOPAZ_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "alexandrite_block"), ALEXANDRITE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "corundum_block"), CORUNDUM_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "sapphire_block"), SAPPHIRE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "ruby_block"), RUBY_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("more_gems", "carbonado_block"), CARBONADO_BLOCK);
+		
 	}
 	
 	public static void registerBlockItems()
