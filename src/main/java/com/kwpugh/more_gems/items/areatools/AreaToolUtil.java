@@ -20,7 +20,7 @@ public class AreaToolUtil
 {
 	static Block block;
 	
-    public static void attemptBreakNeighbors(World world, PlayerEntity playerIn, int radius)
+    public static void attemptBreakNeighbors(World world, PlayerEntity playerIn, int radius, String type)
     {
         if(!world.isClient)
         {
@@ -32,13 +32,38 @@ public class AreaToolUtil
             	Block block = state.getBlock();
             	Float hardness = state.getHardness(world, pos);
 
-            	if(playerIn.isUsingEffectiveTool(state) && (hardness > 0) && (hardness < 50))
+            	if(type == "hammer" && state.isToolRequired())
             	{
-            		if(!(block instanceof BlockWithEntity) || !block.hasBlockEntity()  || !(block instanceof BlockEntityProvider))
-					{
-					  world.breakBlock(pos, true);   		
-					}
-               	}                             
+            		if(playerIn.isUsingEffectiveTool(state))
+            		{
+            			if(!block.hasBlockEntity() || 
+                				!(block instanceof BlockWithEntity) || 
+                				!(block instanceof BlockEntityProvider))
+                		{
+                			world.breakBlock(pos, true); 
+                		}
+            		}          		
+            	}
+             	
+            	if(type == "excavator")
+            	{
+            		if(playerIn.isUsingEffectiveTool(state))
+            		{
+            			if(!block.hasBlockEntity() || 
+                				!(block instanceof BlockWithEntity) || 
+                				!(block instanceof BlockEntityProvider))
+                		{
+                			world.breakBlock(pos, true); 
+                		}
+            		}           		
+            	} 
+//            	if(playerIn.isUsingEffectiveTool(state) && (hardness > 0) && (hardness < 50))
+//            	{
+//            		if(!(block instanceof BlockWithEntity) || !block.hasBlockEntity()  || !(block instanceof BlockEntityProvider))
+//					{
+//					  world.breakBlock(pos, true);   		
+//					}
+//               	}                             
             }
         }
     }
