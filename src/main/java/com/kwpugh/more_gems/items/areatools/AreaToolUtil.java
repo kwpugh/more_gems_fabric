@@ -56,14 +56,7 @@ public class AreaToolUtil
                 			world.breakBlock(pos, true); 
                 		}
             		}           		
-            	} 
-//            	if(playerIn.isUsingEffectiveTool(state) && (hardness > 0) && (hardness < 50))
-//            	{
-//            		if(!(block instanceof BlockWithEntity) || !block.hasBlockEntity()  || !(block instanceof BlockEntityProvider))
-//					{
-//					  world.breakBlock(pos, true);   		
-//					}
-//               	}                             
+            	}                           
             }
         }
     }
