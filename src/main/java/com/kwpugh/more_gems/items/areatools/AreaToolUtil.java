@@ -32,7 +32,7 @@ public class AreaToolUtil
             	Block block = state.getBlock();
             	Float hardness = state.getHardness(world, pos);
 
-            	if(type == "hammer" && state.isToolRequired())
+            	if(type == "hammer" && state.isToolRequired() && hardness < 50.0F)
             	{
             		if(playerIn.isUsingEffectiveTool(state))
             		{

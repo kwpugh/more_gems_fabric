@@ -22,7 +22,7 @@ public class ModLootTables
 	
 	private static final List<LootTableInsert> INSERTS = Lists.newArrayList();
 
-	public static void init()
+	public static void registerLoot()
 	{
 		if(jujuenable)
 		{

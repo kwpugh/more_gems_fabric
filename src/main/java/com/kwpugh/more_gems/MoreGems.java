@@ -1,6 +1,6 @@
 package com.kwpugh.more_gems;
 
-import com.kwpugh.more_gems.config.MoreGemsConfig2;
+import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.BlockInit;
 import com.kwpugh.more_gems.init.ContainerInit;
 import com.kwpugh.more_gems.init.ItemInit;
@@ -22,22 +22,17 @@ public class MoreGems implements ModInitializer
 	public static final MoreGems INSTANCE = new MoreGems();
 	public static final String MOD_ID = "more_gems";
 	public static final ItemGroup MORE_GEMS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "more_gems_group"), () -> new ItemStack(ItemInit.ALEXANDRITE));
-	public static final MoreGemsConfig2 CONFIG = AutoConfig.register(MoreGemsConfig2.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new)).getConfig();
+	public static final MoreGemsConfig CONFIG = AutoConfig.register(MoreGemsConfig.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new)).getConfig();
 
     @Override
     public void onInitialize()
     {
     	BlockInit.registerBlocks();
     	BlockInit.registerBlockItems();
-
     	ItemInit.registerItems();
-
     	ContainerInit.registerContainer();
-
     	ModConfiguredFeatures.Features();
-
-    	ModLootTables.init();
-
+    	ModLootTables.registerLoot ();
     	ModEnchantments.registerEnchantments();
     	
     	//CuriosApi.enqueueSlotType(SlotTypeInfo.BuildScheme.REGISTER, SlotTypePreset.CHARM.getInfoBuilder().size(4).build());		

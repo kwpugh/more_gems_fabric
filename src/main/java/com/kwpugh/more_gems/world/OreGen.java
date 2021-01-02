@@ -1,7 +1,7 @@
 package com.kwpugh.more_gems.world;
 
 import com.kwpugh.more_gems.MoreGems;
-import com.kwpugh.more_gems.config.MoreGemsConfig2;
+import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.BlockInit;
 
 import net.minecraft.world.gen.decorator.Decorator;
@@ -12,7 +12,7 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class OreGen
 {
-	public static final MoreGemsConfig2.Ores CONFIG = MoreGems.CONFIG.ORES;
+	public static final MoreGemsConfig.Ores CONFIG = MoreGems.CONFIG.ORES;
 	
 	public static final ConfiguredFeature<?, ?> ORE_CITRINE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(

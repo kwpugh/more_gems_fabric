@@ -1,7 +1,7 @@
 package com.kwpugh.more_gems.world;
 
 import com.kwpugh.more_gems.MoreGems;
-import com.kwpugh.more_gems.config.MoreGemsConfig2;
+import com.kwpugh.more_gems.config.MoreGemsConfig;
 
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -9,7 +9,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModConfiguredFeatures
 {
-	public static final MoreGemsConfig2.Ores CONFIG2 = MoreGems.CONFIG.ORES;
+	public static final MoreGemsConfig.Ores CONFIG2 = MoreGems.CONFIG.ORES;
 	
 	public static void Features()
 	{
