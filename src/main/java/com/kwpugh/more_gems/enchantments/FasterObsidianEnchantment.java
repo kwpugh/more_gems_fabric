@@ -34,7 +34,15 @@ public class FasterObsidianEnchantment extends EfficiencyEnchantment
 		if(pickaxe == ItemInit.CORUNDUM_PICKAXE ||
 				pickaxe == ItemInit.SAPPHIRE_PICKAXE ||
 				pickaxe == ItemInit.RUBY_PICKAXE ||
-				pickaxe == ItemInit.CARBONADO_PICKAXE)
+				pickaxe == ItemInit.CARBONADO_PICKAXE ||
+				pickaxe == ItemInit.CORUNDUM_PAXEL || 
+				pickaxe == ItemInit.SAPPHIRE_PAXEL ||
+				pickaxe == ItemInit.RUBY_PAXEL ||
+				pickaxe == ItemInit.CARBONADO_PAXEL ||
+				pickaxe == ItemInit.CORUNDUM_HAMMER ||
+				pickaxe == ItemInit.SAPPHIRE_HAMMER ||
+				pickaxe == ItemInit.RUBY_HAMMER ||
+				pickaxe == ItemInit.CARBONADO_HAMMER)
 		{
 			return this.type.isAcceptableItem(stack.getItem());
 		}

@@ -15,7 +15,7 @@ import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.util.Identifier;
 
-public class ModLootTables
+public class LootTableInit
 {
 	static float jujuChance = MoreGems.CONFIG.GENERAL.jujuChance;
 	static boolean jujuenable = MoreGems.CONFIG.GENERAL.jujuEnable;

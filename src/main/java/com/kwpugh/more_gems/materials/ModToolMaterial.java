@@ -71,7 +71,7 @@ public enum ModToolMaterial implements ToolMaterial
       this.miningSpeed = miningSpeed;
       this.attackDamage = attackDamage;
       this.enchantability = enchantibility;
-      this.repairIngredient = new Lazy(repairIngredient);
+      this.repairIngredient = new Lazy<Ingredient>(repairIngredient);
    }
 
    public int getDurability()

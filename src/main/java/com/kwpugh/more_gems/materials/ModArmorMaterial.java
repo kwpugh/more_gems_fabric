@@ -81,7 +81,7 @@ public enum ModArmorMaterial implements ArmorMaterial
 		this.equipSound = equipSound;
 		this.toughness = toughness;
 		this.knockbackResistance = knockbackResistance;
-		this.repairIngredientSupplier = new Lazy(supplier);
+		this.repairIngredientSupplier = new Lazy<Ingredient>(supplier);
 	}
 
 	public int getDurability(EquipmentSlot slot)

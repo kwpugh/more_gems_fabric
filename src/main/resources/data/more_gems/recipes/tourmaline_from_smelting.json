@@ -1,0 +1,7 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": { "item": "more_gems:tourmaline_ore" },
+	"result": "more_gems:tourmaline",
+	"experience": 3.0,
+	"cookingtime": 100
+}

@@ -39,7 +39,7 @@ public class ModExcavator extends ShovelItem
     {
         if(!playerIn.isSneaking() && playerIn.getMainHandStack().isEffectiveOn(world.getBlockState(pos)))
     	{
-        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1, "excavator");
+        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1, "excavator", false);
         }
 
         return true;

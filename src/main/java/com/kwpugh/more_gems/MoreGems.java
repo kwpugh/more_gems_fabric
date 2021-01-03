@@ -4,8 +4,8 @@ import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.BlockInit;
 import com.kwpugh.more_gems.init.ContainerInit;
 import com.kwpugh.more_gems.init.ItemInit;
-import com.kwpugh.more_gems.init.ModEnchantments;
-import com.kwpugh.more_gems.init.ModLootTables;
+import com.kwpugh.more_gems.init.EnchantmentInnit;
+import com.kwpugh.more_gems.init.LootTableInit;
 import com.kwpugh.more_gems.world.ModConfiguredFeatures;
 
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
@@ -32,8 +32,8 @@ public class MoreGems implements ModInitializer
     	ItemInit.registerItems();
     	ContainerInit.registerContainer();
     	ModConfiguredFeatures.Features();
-    	ModLootTables.registerLoot ();
-    	ModEnchantments.registerEnchantments();
+    	LootTableInit.registerLoot ();
+    	EnchantmentInnit.registerEnchantments();
     	
     	//CuriosApi.enqueueSlotType(SlotTypeInfo.BuildScheme.REGISTER, SlotTypePreset.CHARM.getInfoBuilder().size(4).build());		
     }
