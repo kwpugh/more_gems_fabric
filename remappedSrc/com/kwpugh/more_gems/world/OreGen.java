@@ -1,5 +1,7 @@
 package com.kwpugh.more_gems.world;
 
+import com.kwpugh.more_gems.MoreGems;
+import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.BlockInit;
 
 import net.minecraft.world.gen.decorator.Decorator;
@@ -9,112 +11,115 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class OreGen
-{	
-	public static ConfiguredFeature<?, ?> ORE_CITRINE_OVERWORLD = Feature.ORE
+{
+	public static final MoreGemsConfig.Ores CONFIG = MoreGems.CONFIG.ORES;
+	
+	public static final ConfiguredFeature<?, ?> ORE_CITRINE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.CITRINE_ORE.getDefaultState(),
-			  4)) // vein size
+			 CONFIG.citrineVeinSize)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
-			  0, // min y level
-			  70))) // max y level
+			  CONFIG.citrineMinLevel, // min y level
+			  CONFIG.citrineMaxLevel))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(CONFIG.citrinePerChunk); // number of veins per chunk		
+
 
 	public static ConfiguredFeature<?, ?> ORE_TOURMALINE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.TOURMALINE_ORE.getDefaultState(),
-			  4)) // vein size
+			  CONFIG.tourmalineVeinSize)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
-			  0, // min y level
-			  70))) // max y level
+			  CONFIG.tourmalineMinLevel, // min y level
+			  CONFIG.tourmalineMaxLevel))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(CONFIG.tourmalinePerChunk); // number of veins per chunk
 	
 	public static ConfiguredFeature<?, ?> ORE_AMETHYST_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.AMETHYST_ORE.getDefaultState(),
-			  4)) // vein size
+			  CONFIG.amethystVeinSize)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
-			  0, // min y level
-			  60))) // max y level
+			  CONFIG.amethystMinLevel, // min y level
+			  CONFIG.amethystMaxLevel))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(CONFIG.amethystPerChunk); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_TOPAZ_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.TOPAZ_ORE.getDefaultState(),
-			  4)) // vein size
+			  CONFIG.topazVeinSize)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
-			  0, // min y level
-			  60))) // max y level
+			  CONFIG.topazMinLevel, // min y level
+			  CONFIG.topazMaxLevel))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(CONFIG.topazPerChunk); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_ALEXANDRITE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.ALEXANDRITE_ORE.getDefaultState(),
-			  4)) // vein size
+			  CONFIG.alexandriteVeinSize)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
-			  0, // min y level
-			  60))) // max y level
+			  CONFIG.alexandriteMinLevel, // min y level
+			  CONFIG.alexandriteMaxLevel))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(CONFIG.alexandritePerChunk); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.SAPPHIRE_ORE.getDefaultState(),
-			  4)) // vein size
+			  CONFIG.sapphireVeinSize)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
-			  0, // min y level
-			  30))) // max y level
+			  CONFIG.sapphireMinLevel, // min y level
+			  CONFIG.sapphireMaxLevel))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(CONFIG.sapphirePerChunk); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_RUBY_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.RUBY_ORE.getDefaultState(),
-			  4)) // vein size
+			  CONFIG.rubyVeinSize)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
-			  0, // min y level
-			  30))) // max y level
+			  CONFIG.rubyMinLevel, // min y level
+			  CONFIG.rubyMaxLevel))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(CONFIG.rubyPerChunk); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_CORUNDUM_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.CORUNDUM_ORE.getDefaultState(),
-			  4)) // vein size
+			  CONFIG.conrundumVeinSize)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
-			  0, // min y level
-			  20))) // max y level
+			  CONFIG.conrundumMinLevel, // min y level
+			  CONFIG.conrundumMaxLevel))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk
+			.repeat(CONFIG.conrundumPerChunk); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 			  OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 			  BlockInit.CARBONADO_ORE.getDefaultState(),
-			  4)) // vein size
+			  CONFIG.carbonadoVeinSize)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 			  0, // bottom offset
-			  0, // min y level
-			  15))) // max y level
+			  CONFIG.carbonadoMinLevel, // min y level
+			  CONFIG.carbonadoMaxLevel))) // max y level
 			.spreadHorizontally()
-			.repeat(20); // number of veins per chunk	
+			.repeat(CONFIG.carbonadoPerChunk); // number of veins per chunk	
 }

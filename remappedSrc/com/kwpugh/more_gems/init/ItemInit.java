@@ -32,8 +32,9 @@ import net.minecraft.util.registry.Registry;
 
 public class ItemInit
 {
-	static boolean jujuEnable = MoreGems.getConfig().JUJU.jujuEnable;
-
+	static boolean jujuEnable = MoreGems.CONFIG.GENERAL.jujuEnable;
+	static boolean extraToolsEnable = MoreGems.CONFIG.GENERAL.extraToolsEnable;
+	
 	public static final Item CITRINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item AMETHYST = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -194,191 +195,231 @@ public class ItemInit
 	public static final Item CARBONADO_LEGGINGS = new ModArmor(ModArmorMaterial.CARBONADO, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_BOOTS = new ModArmor(ModArmorMaterial.CARBONADO, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
-	public static final Item CITRINE_JUJU = new ItemCitrineJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item TOURMALINE_JUJU = new ItemTourmalineJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_JUJU = new ItemAmethystJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_JUJU = new ItemEmeraldJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item TOPAZ_JUJU = new ItemTopazJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item ALEXANDRITE_JUJU = new ItemAlexandriteJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item CORUNDUM_JUJU = new ItemCorundumJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item SAPPHIRE_JUJU = new ItemSapphireJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_JUJU = new ItemRubyJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item CARBONADO_JUJU = new ItemCarbonadoJuju((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CITRINE_JUJU = new ItemCitrineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOURMALINE_JUJU = new ItemTourmalineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item AMETHYST_JUJU = new ItemAmethystJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item EMERALD_JUJU = new ItemEmeraldJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOPAZ_JUJU = new ItemTopazJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item ALEXANDRITE_JUJU = new ItemAlexandriteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CORUNDUM_JUJU = new ItemCorundumJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SAPPHIRE_JUJU = new ItemSapphireJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item RUBY_JUJU = new ItemRubyJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CARBONADO_JUJU = new ItemCarbonadoJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static void registerItems()
 	{
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine"), CITRINE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline"), TOURMALINE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst"), AMETHYST);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz"), TOPAZ);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite"), ALEXANDRITE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum"), CORUNDUM);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire"), SAPPHIRE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby"), RUBY);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado"), CARBONADO);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine"), CITRINE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline"), TOURMALINE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst"), AMETHYST);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz"), TOPAZ);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite"), ALEXANDRITE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum"), CORUNDUM);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire"), SAPPHIRE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby"), RUBY);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado"), CARBONADO);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_sword"), CITRINE_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_bow"), CITRINE_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_pickaxe"), CITRINE_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_axe"), CITRINE_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_shovel"), CITRINE_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_hoe"), CITRINE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_hammer"), CITRINE_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_excavator"), CITRINE_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_paxel"), CITRINE_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_sword"), CITRINE_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_bow"), CITRINE_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_pickaxe"), CITRINE_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_axe"), CITRINE_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_shovel"), CITRINE_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_hoe"), CITRINE_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_hammer"), CITRINE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_excavator"), CITRINE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_paxel"), CITRINE_PAXEL);		
+		}
+	
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_sword"), TOURMALINE_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_bow"), TOURMALINE_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_pickaxe"), TOURMALINE_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_axe"), TOURMALINE_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_shovel"), TOURMALINE_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_hoe"), TOURMALINE_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_hammer"), TOURMALINE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_excavator"), TOURMALINE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_paxel"), TOURMALINE_PAXEL);	
+		}
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_sword"), TOURMALINE_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_bow"), TOURMALINE_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_pickaxe"), TOURMALINE_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_axe"), TOURMALINE_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_shovel"), TOURMALINE_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_hoe"), TOURMALINE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_hammer"), TOURMALINE_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_excavator"), TOURMALINE_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_paxel"), TOURMALINE_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_sword"), AMETHYST_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_bow"), AMETHYST_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_pickaxe"), AMETHYST_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_axe"), AMETHYST_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_shovel"), AMETHYST_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_hoe"), AMETHYST_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_hammer"), AMETHYST_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_excavator"), AMETHYST_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_paxel"), AMETHYST_PAXEL);	
+		}
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_sword"), AMETHYST_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_bow"), AMETHYST_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_pickaxe"), AMETHYST_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_axe"), AMETHYST_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_shovel"), AMETHYST_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_hoe"), AMETHYST_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_hammer"), AMETHYST_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_excavator"), AMETHYST_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_paxel"), AMETHYST_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_sword"), EMERALD_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_bow"), EMERALD_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_pickaxe"), EMERALD_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_axe"), EMERALD_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_shovel"), EMERALD_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_hoe"), EMERALD_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_hammer"), EMERALD_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_excavator"), EMERALD_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_paxel"), EMERALD_PAXEL);	
+		}
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_sword"), EMERALD_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_bow"), EMERALD_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_pickaxe"), EMERALD_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_axe"), EMERALD_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_shovel"), EMERALD_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_hoe"), EMERALD_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_hammer"), EMERALD_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_excavator"), EMERALD_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_paxel"), EMERALD_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_sword"), TOPAZ_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_bow"), TOPAZ_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_pickaxe"), TOPAZ_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_axe"), TOPAZ_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_shovel"), TOPAZ_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_hoe"), TOPAZ_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_hammer"), TOPAZ_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_excavator"), TOPAZ_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_paxel"), TOPAZ_PAXEL);	
+		}
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_sword"), TOPAZ_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_bow"), TOPAZ_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_pickaxe"), TOPAZ_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_axe"), TOPAZ_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_shovel"), TOPAZ_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_hoe"), TOPAZ_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_hammer"), TOPAZ_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_excavator"), TOPAZ_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_paxel"), TOPAZ_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_sword"), ALEXANDRITE_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_bow"), ALEXANDRITE_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_pickaxe"), ALEXANDRITE_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_axe"), ALEXANDRITE_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_shovel"), ALEXANDRITE_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_hoe"), ALEXANDRITE_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_hammer"), ALEXANDRITE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_excavator"), ALEXANDRITE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_paxel"), ALEXANDRITE_PAXEL);	
+		}
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_sword"), ALEXANDRITE_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_bow"), ALEXANDRITE_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_pickaxe"), ALEXANDRITE_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_axe"), ALEXANDRITE_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_shovel"), ALEXANDRITE_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_hoe"), ALEXANDRITE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_hammer"), ALEXANDRITE_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_excavator"), ALEXANDRITE_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_paxel"), ALEXANDRITE_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_sword"), CORUNDUM_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_bow"), CORUNDUM_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_pickaxe"), CORUNDUM_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_axe"), CORUNDUM_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_shovel"), CORUNDUM_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_hoe"), CORUNDUM_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_hammer"), CORUNDUM_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_excavator"), CORUNDUM_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_paxel"), CORUNDUM_PAXEL);	
+		}
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_sword"), CORUNDUM_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_bow"), CORUNDUM_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_pickaxe"), CORUNDUM_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_axe"), CORUNDUM_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_shovel"), CORUNDUM_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_hoe"), CORUNDUM_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_hammer"), CORUNDUM_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_excavator"), CORUNDUM_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_paxel"), CORUNDUM_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_sword"), SAPPHIRE_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_bow"), SAPPHIRE_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_pickaxe"), SAPPHIRE_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_axe"), SAPPHIRE_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_shovel"), SAPPHIRE_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_hoe"), SAPPHIRE_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_hammer"), SAPPHIRE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_excavator"), SAPPHIRE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_paxel"), SAPPHIRE_PAXEL);	
+		}
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_sword"), SAPPHIRE_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_bow"), SAPPHIRE_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_pickaxe"), SAPPHIRE_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_axe"), SAPPHIRE_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_shovel"), SAPPHIRE_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_hoe"), SAPPHIRE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_hammer"), SAPPHIRE_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_excavator"), SAPPHIRE_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_paxel"), SAPPHIRE_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_sword"), RUBY_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_bow"), RUBY_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_pickaxe"), RUBY_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_axe"), RUBY_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_shovel"), RUBY_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_hoe"), RUBY_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_hammer"), RUBY_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_excavator"), RUBY_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_paxel"), RUBY_PAXEL);	
+		}
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_sword"), RUBY_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_bow"), RUBY_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_pickaxe"), RUBY_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_axe"), RUBY_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_shovel"), RUBY_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_hoe"), RUBY_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_hammer"), RUBY_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_excavator"), RUBY_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_paxel"), RUBY_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_sword"), CARBONADO_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_bow"), CARBONADO_BOW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_pickaxe"), CARBONADO_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_axe"), CARBONADO_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_shovel"), CARBONADO_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_hoe"), CARBONADO_HOE);
+		
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_hammer"), CARBONADO_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_excavator"), CARBONADO_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_paxel"), CARBONADO_PAXEL);	
+		}
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_sword"), CARBONADO_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_bow"), CARBONADO_BOW);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_pickaxe"), CARBONADO_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_axe"), CARBONADO_AXE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_shovel"), CARBONADO_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_hoe"), CARBONADO_HOE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_hammer"), CARBONADO_HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_excavator"), CARBONADO_EXCAVATOR);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_paxel"), CARBONADO_PAXEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_helmet"), CITRINE_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_chestplate"), CITRINE_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_leggings"), CITRINE_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_boots"), CITRINE_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_helmet"), CITRINE_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_chestplate"), CITRINE_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_leggings"), CITRINE_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_boots"), CITRINE_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_helmet"), TOURMALINE_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_chestplate"), TOURMALINE_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_leggings"), TOURMALINE_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_boots"), TOURMALINE_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_helmet"), TOURMALINE_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_chestplate"), TOURMALINE_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_leggings"), TOURMALINE_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_boots"), TOURMALINE_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_helmet"), AMETHYST_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_chestplate"), AMETHYST_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_leggings"), AMETHYST_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_boots"), AMETHYST_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_helmet"), AMETHYST_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_chestplate"), AMETHYST_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_leggings"), AMETHYST_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_boots"), AMETHYST_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_helmet"), EMERALD_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_chestplate"), EMERALD_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_leggings"), EMERALD_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_boots"), EMERALD_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_helmet"), EMERALD_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_chestplate"), EMERALD_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_leggings"), EMERALD_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_boots"), EMERALD_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_helmet"), TOPAZ_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_chestplate"), TOPAZ_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_leggings"), TOPAZ_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_boots"), TOPAZ_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_helmet"), TOPAZ_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_chestplate"), TOPAZ_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_leggings"), TOPAZ_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_boots"), TOPAZ_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_helmet"), ALEXANDRITE_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_chestplate"), ALEXANDRITE_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_leggings"), ALEXANDRITE_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_boots"), ALEXANDRITE_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_helmet"), ALEXANDRITE_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_chestplate"), ALEXANDRITE_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_leggings"), ALEXANDRITE_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_boots"), ALEXANDRITE_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_helmet"), CORUNDUM_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_chestplate"), CORUNDUM_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_leggings"), CORUNDUM_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_boots"), CORUNDUM_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_helmet"), CORUNDUM_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_chestplate"), CORUNDUM_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_leggings"), CORUNDUM_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_boots"), CORUNDUM_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_helmet"), SAPPHIRE_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_chestplate"), SAPPHIRE_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_leggings"), SAPPHIRE_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_boots"), SAPPHIRE_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_helmet"), SAPPHIRE_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_chestplate"), SAPPHIRE_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_leggings"), SAPPHIRE_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_boots"), SAPPHIRE_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_helmet"), RUBY_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_chestplate"), RUBY_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_leggings"), RUBY_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_boots"), RUBY_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_helmet"), RUBY_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_chestplate"), RUBY_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_leggings"), RUBY_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_boots"), RUBY_BOOTS);
-
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_helmet"), CARBONADO_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_chestplate"), CARBONADO_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_leggings"), CARBONADO_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_boots"), CARBONADO_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_helmet"), CARBONADO_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_chestplate"), CARBONADO_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_leggings"), CARBONADO_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_boots"), CARBONADO_BOOTS);
 
 		if(jujuEnable)
 		{
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "citrine_juju"), CITRINE_JUJU);
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "tourmaline_juju"), TOURMALINE_JUJU);
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "amethyst_juju"), AMETHYST_JUJU);
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "emerald_juju"), EMERALD_JUJU);
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "topaz_juju"), TOPAZ_JUJU);
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "alexandrite_juju"), ALEXANDRITE_JUJU);
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "corundum_juju"), CORUNDUM_JUJU);
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "sapphire_juju"), SAPPHIRE_JUJU);
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "ruby_juju"), RUBY_JUJU);
-			Registry.register(Registry.ITEM, new Identifier("more_gems", "carbonado_juju"), CARBONADO_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_juju"), CITRINE_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_juju"), TOURMALINE_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_juju"), AMETHYST_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_juju"), EMERALD_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_juju"), TOPAZ_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_juju"), ALEXANDRITE_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_juju"), CORUNDUM_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_juju"), SAPPHIRE_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_juju"), RUBY_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_juju"), CARBONADO_JUJU);
 		}
 	}
 }

@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.kwpugh.more_gems.init.ModEnchantments;
+import com.kwpugh.more_gems.init.EnchantmentInnit;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -34,7 +34,7 @@ public abstract class PlayerEntityMixin extends LivingEntity
 
         Map<Enchantment, Integer> enchantments = EnchantmentHelper.get(self.getMainHandStack());
 
-        if (enchantments.containsKey(ModEnchantments.QUICKENING))
+        if (enchantments.containsKey(EnchantmentInnit.QUICKENING))
         {
         	addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 20, 0));
         	addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 20, 0));

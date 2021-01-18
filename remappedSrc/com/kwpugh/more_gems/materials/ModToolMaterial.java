@@ -25,7 +25,7 @@ Citrine - 5.5 (858)
  */
 
 public enum ModToolMaterial implements ToolMaterial
-{
+{	
 	CITRINE(2, 825, 6.0F, 2.0F, 14, () -> {
 	    return Ingredient.ofItems(ItemInit.CITRINE);
 		}),
@@ -56,7 +56,7 @@ public enum ModToolMaterial implements ToolMaterial
 	CARBONADO(3, 1561, 8.0F, 3.0F, 10, () -> {
 	    return Ingredient.ofItems(ItemInit.CARBONADO);
 	    });
-
+	
    private final int miningLevel;
    private final int itemDurability;
    private final float miningSpeed;
@@ -71,7 +71,7 @@ public enum ModToolMaterial implements ToolMaterial
       this.miningSpeed = miningSpeed;
       this.attackDamage = attackDamage;
       this.enchantability = enchantibility;
-      this.repairIngredient = new Lazy(repairIngredient);
+      this.repairIngredient = new Lazy<Ingredient>(repairIngredient);
    }
 
    public int getDurability()

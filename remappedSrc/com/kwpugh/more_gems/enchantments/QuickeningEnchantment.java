@@ -13,9 +13,9 @@ import net.minecraft.server.world.ServerWorld;
 
 public class QuickeningEnchantment extends DamageEnchantment
 {
-	static float amountHalfHeartsQuickening = MoreGems.getConfig().ENCHANTMENTS.amountHalfHeartsQuickening;
-	static int enemySlownessDurationTicks = MoreGems.getConfig().ENCHANTMENTS.enemySlownessDurationTicksQuickening;
-
+	static float amountHalfHeartsQuickening = MoreGems.CONFIG.GENERAL.amountHalfHeartsQuickening;
+	static int enemySlownessDurationTicks = MoreGems.CONFIG.GENERAL.enemySlownessDurationTicksQuickening;
+	
 	public QuickeningEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
 	{
 		super(weight, typeIndex, slots);
@@ -33,18 +33,18 @@ public class QuickeningEnchantment extends DamageEnchantment
 	    return 1;
 	}
 
-//	@Override
-//	public void onTargetDamaged(LivingEntity user, Entity target, int level)
-//	{
-//		ServerWorld world = (ServerWorld) user.world.getWorld();
-//
-//	    if(target instanceof LivingEntity)
-//	    {
-//	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, enemySlownessDurationTicks, 0));
-//	    }
-//
-//	    PlayerSpecialAbilities.giveQuickening(world, user, amountHalfHeartsQuickening);
-//
-//	    super.onTargetDamaged(user, target, level);
-//	}
+	@Override
+	public void onTargetDamaged(LivingEntity user, Entity target, int level)
+	{
+		ServerWorld world = (ServerWorld) user.getEntityWorld();
+
+	    if(target instanceof LivingEntity)
+	    {
+	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, enemySlownessDurationTicks, 0));
+	    }
+
+	    PlayerSpecialAbilities.giveQuickening(world, user, amountHalfHeartsQuickening);
+
+	    super.onTargetDamaged(user, target, level);
+	}
 }

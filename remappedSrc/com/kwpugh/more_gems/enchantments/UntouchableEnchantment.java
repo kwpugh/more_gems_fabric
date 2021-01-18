@@ -14,8 +14,8 @@ import net.minecraft.item.ItemStack;
 
 public class UntouchableEnchantment extends ThornsEnchantment
 {
-	static int untouchableDamage = MoreGems.getConfig().ENCHANTMENTS.untouchableDamage;
-
+	static int untouchableDamage = MoreGems.CONFIG.GENERAL.untouchableDamage;
+	
 	public UntouchableEnchantment(Rarity weight, EquipmentSlot[] slotTypes)
 	{
 		super(weight, slotTypes);

@@ -8,6 +8,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMap.Builder;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
+import com.kwpugh.more_gems.items.areatools.ObsidianBreaking;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -190,18 +191,23 @@ public class ModPaxel extends MiningToolItem
 		}
 	}
 
+	// Needed to override mining speed if Faster Obsidian enchant is present
+	@Override
 	public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) 
 	{
 		Material material = state.getMaterial();
-	   
-		if(AXE_BLOCKS.contains(material) || material == Material.METAL || material == Material.REPAIR_STATION || material == Material.STONE)
+		
+		if(ObsidianBreaking.fastAtObsidian(state, stack))
+		{
+			return ObsidianBreaking.fastObsidianSpeed();
+		}
+		else if(AXE_BLOCKS.contains(material) || material == Material.METAL || material == Material.REPAIR_STATION || material == Material.STONE)
 		{
 			return this.miningSpeed;
 		}
-		else
-		{
-			return super.getMiningSpeedMultiplier(stack, state);
-		}
+	
+		return material != Material.METAL && material != Material.REPAIR_STATION && material != Material.STONE ? super.getMiningSpeedMultiplier(stack, state) : this.miningSpeed;
+		
 	}
 }
 

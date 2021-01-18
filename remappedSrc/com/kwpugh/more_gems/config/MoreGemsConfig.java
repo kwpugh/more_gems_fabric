@@ -1,134 +1,127 @@
 package com.kwpugh.more_gems.config;
 
-import com.kwpugh.more_gems.MoreGems;
-
 import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
+import me.sargunvohra.mcmods.autoconfig1u.serializer.PartitioningSerializer;
+import me.sargunvohra.mcmods.autoconfig1u.shadowed.blue.endless.jankson.Comment;
 
-@Config(name=MoreGems.MOD_ID)
-public class MoreGemsConfig implements ConfigData
+@Config(name = "more_gems")
+public class MoreGemsConfig extends PartitioningSerializer.GlobalData 
 {
-	
-//  public Citrine CITRINE = new Citrine();
-//	public Tourmaline TOURMALINE = new Tourmaline();
-//	public Amethyst AMETHYST = new Amethyst();
-//	public Topaz TOPAZ = new Topaz();
-//	public Alexandrite ALEXANDRITE = new Alexandrite();
-//	public Sapphire SAPPHIRE = new Sapphire();
-//	public Ruby RUBY = new Ruby();
-//	public Corundum CORUNDUM = new Corundum();
-//	public Carbonado CARBONADO = new Carbonado();
+    public Ores ORES = new Ores();
+    public General GENERAL = new General();
+    
+    @Config(name = "ores")
+    public static class Ores implements ConfigData 
+    {
+	    @Comment("***********************"
+	    		+"\nCitrine Ores"
+	    		+"\n***********************") 
+	    public boolean citrineEnable = true;
+	    public int citrineVeinSize = 4;
+    	public int citrineMinLevel = 0;
+    	public int citrineMaxLevel = 70;
+    	public int citrinePerChunk = 12;
+    	
+        @Comment("***********************"
+	    		+"\nTourmaline Ores"
+	    		+"\n***********************")
+        public boolean tourmalineEnable = true;
+        public int tourmalineVeinSize = 4;
+      	public int tourmalineMinLevel = 0;
+    	public int tourmalineMaxLevel = 70;
+    	public int tourmalinePerChunk = 12;
+    	
+        @Comment("***********************"
+	    		+"\nAmethyst Ores"
+	    		+"\n***********************")
+        public boolean amethystEnable = true;
+        public int amethystVeinSize = 4;
+      	public int amethystMinLevel = 0;
+    	public int amethystMaxLevel = 60;
+    	public int amethystPerChunk = 12;
+    	
+        @Comment("***********************"
+	    		+"\nTopaz Ores"
+	    		+"\n***********************")
+        public boolean topazEnable = true;
+        public int topazVeinSize = 4;
+      	public int topazMinLevel = 0;
+    	public int topazMaxLevel = 60;
+    	public int topazPerChunk = 12;
 
-	public Juju JUJU = new Juju();
+        @Comment("***********************"
+	    		+"\nAlexandrite Ores"
+	    		+"\n***********************")
+        public boolean alexandriteEnable = true;
+        public int alexandriteVeinSize = 4;
+      	public int alexandriteMinLevel = 0;
+    	public int alexandriteMaxLevel = 60;
+    	public int alexandritePerChunk = 12;
 
-//	public OreBlocks ORE_BLOCKS = new OreBlocks();
-//
-//	public GemBiomes GEM_BIOMES = new GemBiomes();
-
-	public Enchantments ENCHANTMENTS = new Enchantments();
-	
-//	public static class Citrine
-//	{
-//		public boolean citrine = true;
-//		public int citrineSize = 3;
-//		public int citrineMinLevel = 45;
-//		public int citrineMaxLevel = 60;
-//	}
-//
-//	public static class Tourmaline
-//	{
-//		public boolean tourmaline = true;
-//		public int tourmalineSize = 3;
-//		public int tourmalineMinLevel = 40;
-//		public int tourmalineMaxLevel = 50;
-//	}
-//
-//	public static class Amethyst
-//	{
-//		public boolean amethyst = true;
-//		public int amethystSize = 3;
-//		public int amethystMinLevel = 40;
-//		public int amethystMaxLevel = 50;
-//	}
-//
-//	public static class Topaz
-//	{
-//		public boolean topaz = true;
-//		public int topazSize = 3;
-//		public int topazMinLevel = 40;
-//		public int topazMaxLevel = 50;
-//	}
-//
-//	public static class Alexandrite
-//	{
-//		public boolean alexandrite = true;
-//		public int alexandriteSize = 3;
-//		public int alexandriteMinLevel = 30;
-//		public int alexandriteMaxLevel = 40;
-//	}
-//
-//	public static class Sapphire
-//	{
-//		public boolean sapphire = true;
-//		public int sapphireSize = 3;
-//		public int sapphireMinLevel = 20;
-//		public int sapphireMaxLevel = 30;
-//	}
-//
-//	public static class Ruby
-//	{
-//		public boolean ruby = true;
-//		public int rubySize = 3;
-//		public int rubyMinLevel = 20;
-//		public int rubyMaxLevel = 30;
-//	}
-//
-//	public static class Corundum
-//	{
-//		public boolean corundum = true;
-//		public int corundumSize = 3;
-//		public int corundumMinLevel = 10;
-//		public int corundumMaxLevel = 20;
-//	}
-//
-//	public static class Carbonado
-//	{
-//		public boolean carbonado = true;
-//		public int carbonadoSize = 5;
-//		public int carbonadoMinLevel = 1;
-//		public int carbonadoMaxLevel = 15;
-//	}
-
-	public static class Juju
-	{
+        @Comment("***********************"
+ 	    		+"\nSapphire Ores"
+ 	    		+"\n***********************")
+        public boolean sapphireEnable = true;
+        public int sapphireVeinSize = 4;
+       	public int sapphireMinLevel = 0;
+     	public int sapphireMaxLevel = 30;
+     	public int sapphirePerChunk = 12;
+     	   	
+        @Comment("***********************"
+ 	    		+"\nRuby Ores"
+ 	    		+"\n***********************")
+        public boolean rubyEnable = true;
+        public int rubyVeinSize = 4;
+       	public int rubyMinLevel = 0;
+     	public int rubyMaxLevel = 30;
+     	public int rubyPerChunk = 12;
+     	
+        @Comment("***********************"
+ 	    		+"\nCorundum Ores"
+ 	    		+"\n***********************")
+        public boolean conrundumEnable = true;
+        public int conrundumVeinSize = 3;
+       	public int conrundumMinLevel = 0;
+     	public int conrundumMaxLevel = 20;
+     	public int conrundumPerChunk = 12;
+     	
+        @Comment("***********************"
+ 	    		+"\nCarbonado Ores"
+ 	    		+"\n***********************")
+        public boolean carbonadoEnable = true;
+        public int carbonadoVeinSize = 3;
+       	public int carbonadoMinLevel = 0;
+     	public int carbonadoMaxLevel = 15;
+     	public int carbonadoPerChunk = 12;
+    }
+    
+    @Config(name = "general")
+	public static class General implements ConfigData
+	{       
+    	@Comment("********"
+    			+"\nJuju"
+    			+"\n********")
 		public boolean jujuEnable = true;
 		public float jujuChance = .02F;
-	}
-
-//	public static class OreBlocks
-//	{
-//		public boolean enableOreBlocks = true;
-//	}
-//
-//	public static class GemBiomes
-//	{
-//		public boolean enableGemBiomes = false;
-//		public double biomeWeight = 0.15D;
-//		public int gemBiomeBonus = 3;
-//	}
-
-	public static class Enchantments
-	{
+		
+		@Comment("***************"
+				+"\nEnchantments"
+				+"\n***************")
 		public boolean enableQuickening = false;
 		public boolean enableRazorSharpness = false;
 		public boolean enableShulkerBlade = false;
 		public boolean enableUntouchable = false;
 		public boolean enableFasterObsidian = false;
-
 		public float amountHalfHeartsQuickening = 10;
 		public int enemySlownessDurationTicksQuickening = 300;
 		public float razorDamageIncrease = 6.0F;
 		public int untouchableDamage = 7;
 		public int shulkerBladeDurationTicks = 300;
+		
+		@Comment("********************************"
+				+"\nPaxels, Hammers, & Excavators"
+				+"\n********************************") 
+		public boolean extraToolsEnable = true;
 	}
 }
