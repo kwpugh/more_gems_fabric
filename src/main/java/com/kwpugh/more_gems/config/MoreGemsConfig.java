@@ -99,6 +99,11 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     @Config(name = "general")
 	public static class General implements ConfigData
 	{       
+       	@Comment("********"
+    			+"\nGemBag"
+    			+"\n********")
+		public boolean gembagEnable = true;
+		
     	@Comment("********"
     			+"\nJuju"
     			+"\n********")
@@ -123,5 +128,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nPaxels, Hammers, & Excavators"
 				+"\n********************************") 
 		public boolean extraToolsEnable = true;
+		public boolean bowsEnable = true;
 	}
 }

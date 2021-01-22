@@ -19,16 +19,21 @@ public class ContainerInit
 	public static final String GEMBAG_TRANSLATION_KEY = Util.createTranslationKey("container", GEMBAG_IDENTIFIER);
 	public static final Item GEMBAG = new GembagItem((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 
+	static boolean enableGembag = MoreGems.CONFIG.GENERAL.gembagEnable;
+	
 	public static void registerContainer()
-	{
-        ContainerProviderRegistry.INSTANCE.registerFactory(GEMBAG_IDENTIFIER, ((syncId, identifier, player, buf) -> {
-            final ItemStack stack = buf.readItemStack();
-            final Hand hand = buf.readInt() == 0 ? Hand.MAIN_HAND : Hand.OFF_HAND;
-            final GembagInventoryInterface inventory = GembagItem.getInventory(stack, hand, player);
+	{		
+		if(enableGembag)
+		{
+	        ContainerProviderRegistry.INSTANCE.registerFactory(GEMBAG_IDENTIFIER, ((syncId, identifier, player, buf) -> {
+	            final ItemStack stack = buf.readItemStack();
+	            final Hand hand = buf.readInt() == 0 ? Hand.MAIN_HAND : Hand.OFF_HAND;
+	            final GembagInventoryInterface inventory = GembagItem.getInventory(stack, hand, player);
 
-            return new GembagScreenHandler(syncId, player.inventory, inventory.getInventory(), inventory.getInventoryWidth(), inventory.getInventoryHeight(), hand);
-        }));
+	            return new GembagScreenHandler(syncId, player.inventory, inventory.getInventory(), inventory.getInventoryWidth(), inventory.getInventoryHeight(), hand);
+	        }));
 
-        Registry.register(Registry.ITEM, GEMBAG_IDENTIFIER, GEMBAG);
+	        Registry.register(Registry.ITEM, GEMBAG_IDENTIFIER, GEMBAG);			
+		}
 	}
 }
