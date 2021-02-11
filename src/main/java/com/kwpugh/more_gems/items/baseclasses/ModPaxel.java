@@ -74,7 +74,8 @@ public class ModPaxel extends MiningToolItem
 	{
 		super(attackDamage, attackSpeed, material, EFFECTIVE_BLOCKS, settings);
 	}
-	
+
+	@Override
 	public boolean isEffectiveOn(BlockState state) // Mining level checks for pickaxe functionality
 	{
 		int i = this.getMaterial().getMiningLevel();
