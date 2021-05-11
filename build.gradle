@@ -47,6 +47,8 @@ dependencies {
    	//Curios API
    	modImplementation "top.theillusivec4.curios:curios-fabric:${curios_version}"
    	modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+	modImplementation "io.github.onyxstudios.Cardinal-Components-API:<MODULE>:<VERSION>"
+	include "io.github.onyxstudios.Cardinal-Components-API:<MODULE>:<VERSION>"
 	include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 }
 
