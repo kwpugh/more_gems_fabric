@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.5-SNAPSHOT'
+	id 'fabric-loom' version '0.7-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -39,10 +39,10 @@ dependencies {
 	// You may need to force-disable transitiveness on them.
 
 	//Autoconfig
-  	modCompile "me.sargunvohra.mcmods:autoconfig1u:3.2.2"
-    include "me.sargunvohra.mcmods:autoconfig1u:3.2.2"
+  	modCompile "me.sargunvohra.mcmods:autoconfig1u:3.3.1"
+    include "me.sargunvohra.mcmods:autoconfig1u:3.3.1"
 
-   	modCompile "me.shedaniel:RoughlyEnoughItems:5.4.2"
+   	modCompile "me.shedaniel:RoughlyEnoughItems:v5.11.218"
    	
    	//Curios API
    	modImplementation "top.theillusivec4.curios:curios-fabric:${curios_version}"
