@@ -42,7 +42,7 @@ dependencies {
   	modCompile "me.sargunvohra.mcmods:autoconfig1u:3.2.2"
     include "me.sargunvohra.mcmods:autoconfig1u:3.2.2"
 
-   	modCompile "me.shedaniel:RoughlyEnoughItems:v5.11.218"
+   	modCompile "me.shedaniel:RoughlyEnoughItems:v5.4.2"
    	
    	//Curios API
    	modImplementation "top.theillusivec4.curios:curios-fabric:${curios_version}"
