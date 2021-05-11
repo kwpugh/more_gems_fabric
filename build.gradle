@@ -47,12 +47,12 @@ dependencies {
    	//Curios API
    	modImplementation "top.theillusivec4.curios:curios-fabric:${curios_version}"
    	modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
-	modImplementation "io.github.onyxstudios.Cardinal-Components-API:base:2.8.2"
-	include "io.github.onyxstudios.Cardinal-Components-API:base:2.8.2"
-	modImplementation "io.github.onyxstudios.Cardinal-Components-API:entity:2.8.2"
-	include "io.github.onyxstudios.Cardinal-Components-API:entity:2.8.2"
-	modImplementation "io.github.onyxstudios.Cardinal-Components-API:item:2.8.2"
-	include "io.github.onyxstudios.Cardinal-Components-API:item:2.8.2"
+	modImplementation "io.github.onyxstudios.Cardinal-Components-API.cardinal-components-base:cardinal-components-base:2.8.2"
+	include "io.github.onyxstudios.Cardinal-Components-API.cardinal-components-base:cardinal-components-base:2.8.2"
+	modImplementation "io.github.onyxstudios.Cardinal-Components-API.cardinal-components-entity:cardinal-components-entity:2.8.2"
+	include "io.github.onyxstudios.Cardinal-Components-API.cardinal-components-entity:cardinal-components-entity:2.8.2"
+	modImplementation "io.github.onyxstudios.Cardinal-Components-API.cardinal-components-item:cardinal-components-item:2.8.2"
+	include "io.github.onyxstudios.Cardinal-Components-API.cardinal-components-item:cardinal-components-item:2.8.2"
 	include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 }
 
