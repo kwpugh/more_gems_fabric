@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " gg",
+    " sg",
+    "s  "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "g": {
+      "tag": "c:sapphire"
+    }
+  },
+  "result": {
+    "item": "more_gems:sapphire_excavator"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "wgw",
+    "gcg",
+    "wgw"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:chest"
+    },
+    "g": {
+      "tag": "c:gems"
+    },
+    "w": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "result": {
+    "item": "more_gems:gembag"
+  }
+}

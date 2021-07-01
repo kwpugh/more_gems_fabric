@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " g ",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "g": {
+      "tag": "c:alexandrite"
+    }
+  },
+  "result": {
+    "item": "more_gems:alexandrite_shovel"
+  }
+}

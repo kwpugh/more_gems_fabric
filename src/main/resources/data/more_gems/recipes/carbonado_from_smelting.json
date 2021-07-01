@@ -1,0 +1,7 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": { "item": "more_gems:carbonado_ore" },
+	"result": "more_gems:carbonado",
+	"experience": 3.0,
+	"cookingtime": 100
+}

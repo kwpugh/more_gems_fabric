@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "g g",
+    "g g"
+  ],
+  "key": {
+    "g": {
+      "tag": "c:topaz"
+    }
+  },
+  "result": {
+    "item": "more_gems:topaz_leggings"
+  }
+}

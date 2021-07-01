@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "gsg",
+    " s "
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:emerald"
+    },
+    "s": {
+      "item": "minecraft:stick",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "more_gems:emerald_hammer"
+  }
+}

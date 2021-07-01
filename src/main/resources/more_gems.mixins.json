@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.kwpugh.more_gems.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "DefaultBiomeFeaturesMixin",
+    "PlayerEntityMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

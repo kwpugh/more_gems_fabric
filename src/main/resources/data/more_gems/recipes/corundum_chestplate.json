@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "g g",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "g": {
+      "tag": "c:corundum"
+    }
+  },
+  "result": {
+    "item": "more_gems:corundum_chestplate"
+  }
+}

@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"GGG",
+		"GGG",
+		"GGG"
+	],
+	
+	"key":
+	{
+		"G": { 
+	      "tag": "c:citrine"	
+		 }	
+	},
+	
+	"result": { "item": "more_gems:citrine_block" }
+}
