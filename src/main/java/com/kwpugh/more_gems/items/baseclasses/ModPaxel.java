@@ -69,7 +69,7 @@ public class ModPaxel extends MiningToolItem
 				{
 					Material material = state.getMaterial();
 
-					return material == Material.STONE || material == Material.METAL || material == Material.REPAIR_STATION || state.isOf(Blocks.NETHER_GOLD_ORE) || state.isOf(Blocks.AMETHYST_BLOCK);
+					return material == Material.STONE || material == Material.SNOW_BLOCK || material == Material.METAL || material == Material.REPAIR_STATION || state.isOf(Blocks.NETHER_GOLD_ORE) || state.isOf(Blocks.AMETHYST_BLOCK);
 	            } 
 				else 
 				{
