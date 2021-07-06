@@ -252,7 +252,10 @@
 	"item.more_gems.gembag.tip": "Portable storage for your sparkly gems",
 	"container.more_gems.gembag": "Gem Bag",
 
-	"item.more_gems.excavator.general1": "Break blocks in 3x3",
+	"item.more_gems.excavator.tip1": "A 3x3 Shovel",
+	"item.more_gems.hammer.tip1": "A 3x3 Pickaxe",
+	"item.more_gems.paxel.tip1": "Combines an Axe, Shovel, and Pickaxe",
+	"item.more_gems.treeaxe.tip1": "Will attempt to bring whole tree down",
 
 	"itemGroup.more_gems.more_gems_group": "More Gems"
 }

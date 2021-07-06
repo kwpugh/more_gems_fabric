@@ -22,7 +22,7 @@ public class MoreGems implements ModInitializer
     @Override
     public void onInitialize()
     {
-		TagInit.registerTags();
+		//TagInit.registerTags();
     	BlockInit.registerBlocks();
     	BlockInit.registerBlockItems();
     	ItemInit.registerItems();
