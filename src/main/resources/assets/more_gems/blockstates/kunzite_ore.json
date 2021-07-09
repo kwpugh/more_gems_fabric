@@ -1,5 +1,6 @@
 {
     "variants": {
-        "": { "model": "more_gems:block/kunzite_ore",}
+        "": { "model": "more_gems:block/kunzite_ore"
+        }
     }
 }
