@@ -8,12 +8,12 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
-public class AmethystArmorMaterial implements ArmorMaterial
+public class KunziteArmorMaterial implements ArmorMaterial
 {
-    private static int durabilityMultiplier = MoreGems.CONFIG.GENERAL.amethystDurabilityMultiplier;
-    private static int enchantability = MoreGems.CONFIG.GENERAL.amethystArmorEnchantability;
-    private static float toughness = MoreGems.CONFIG.GENERAL.amethystToughness;
-    private static float knochback = MoreGems.CONFIG.GENERAL.amethystKnockbackResistance;
+    private static int durabilityMultiplier = MoreGems.CONFIG.GENERAL.kunziteDurabilityMultiplier;
+    private static int enchantability = MoreGems.CONFIG.GENERAL.kunziteArmorEnchantability;
+    private static float toughness = MoreGems.CONFIG.GENERAL.kunziteToughness;
+    private static float knochback = MoreGems.CONFIG.GENERAL.kunziteKnockbackResistance;
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 6, 2};
@@ -45,13 +45,13 @@ public class AmethystArmorMaterial implements ArmorMaterial
     @Override
     public Ingredient getRepairIngredient()
     {
-        return Ingredient.ofItems(ItemInit.AMETHYST);
+        return Ingredient.ofItems(ItemInit.KUNZITE);
     }
 
     @Override
     public String getName()
     {
-        return "amethyst";
+        return "kunzite";
     }
 
     @Override

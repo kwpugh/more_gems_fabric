@@ -19,7 +19,7 @@ public class OreGen
 
 	static int citrineMaxLevel = CONFIG.citrineMaxLevel;
 	static int tourmalineMaxLevel = CONFIG.tourmalineMaxLevel;
-	static int amethystMaxLevel = CONFIG.amethystMaxLevel;
+	static int kunziteMaxLevel = CONFIG.kunziteMaxLevel;
 	static int topazMaxLevel = CONFIG.topazMaxLevel;
 	static int alexandriteMaxLevel = CONFIG.alexandriteMaxLevel;
 	static int sapphireMaxLevel = CONFIG.sapphireMaxLevel;
@@ -48,15 +48,15 @@ public class OreGen
 			.spreadHorizontally()
 			.repeat(CONFIG.tourmalinePerChunk); // number of veins per chunk
 
-	public static ConfiguredFeature<?, ?> ORE_AMETHYST_OVERWORLD = Feature.ORE
+	public static ConfiguredFeature<?, ?> ORE_KUNZITE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.AMETHYST_ORE.getDefaultState(),
-					CONFIG.amethystVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(amethystMaxLevel))
+					BlockInit.KUNZITE_ORE.getDefaultState(),
+					CONFIG.kunziteVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(kunziteMaxLevel))
 			//.averageDepth(YOffset.fixed(30), (20))
 			.spreadHorizontally()
-			.repeat(CONFIG.amethystPerChunk); // number of veins per chunk
+			.repeat(CONFIG.kunzitePerChunk); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_TOPAZ_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(

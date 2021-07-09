@@ -31,12 +31,12 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     	public int tourmalinePerChunk = 12;
     	
         @Comment("***********************"
-	    		+"\nAmethyst Ores"
+	    		+"\nKUNZITE Ores"
 	    		+"\n***********************")
-        public boolean amethystEnable = true;
-        public int amethystVeinSize = 4;
-    	public int amethystMaxLevel = 60;
-    	public int amethystPerChunk = 12;
+        public boolean kunziteEnable = true;
+        public int kunziteVeinSize = 4;
+    	public int kunziteMaxLevel = 60;
+    	public int kunzitePerChunk = 12;
     	
         @Comment("***********************"
 	    		+"\nTopaz Ores"
@@ -175,24 +175,24 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+ "\n"
 				+ "\n"
 				+ "******************************"
-				+ "\nAMETHYST TOOL MATERIAL"
+				+ "\nKUNZITE TOOL MATERIAL"
 				+ "\n******************************")
-		public int amethystDurability = 1092;
-		public float amethystMiningSpeed = 6.0F;
-		public float amethystAttackDamage = 2.0F;
-		public int amethystMiningLevel = 2;
-		public int amethystEnchantability = 14;
+		public int kunziteDurability = 1092;
+		public float kunziteMiningSpeed = 6.0F;
+		public float kunziteAttackDamage = 2.0F;
+		public int kunziteMiningLevel = 2;
+		public int kunziteEnchantability = 14;
 
 		@Comment("\n"
 				+ "\n"
 				+ "\n"
 				+ "******************************"
-				+ "\nAMETHYST ARMOR MATERIAL"
+				+ "\nKUNZITE ARMOR MATERIAL"
 				+ "\n******************************")
-		public int amethystDurabilityMultiplier = 23;
-		public int amethystArmorEnchantability = 9;
-		public float amethystToughness = 0.0F;
-		public float amethystKnockbackResistance = 0.0F;
+		public int kunziteDurabilityMultiplier = 23;
+		public int kunziteArmorEnchantability = 9;
+		public float kunziteToughness = 0.0F;
+		public float kunziteKnockbackResistance = 0.0F;
 
 		@Comment("\n"
 				+ "\n"

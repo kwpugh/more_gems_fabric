@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "more_gems:amethyst_ore"
+              "name": "more_gems:kunzite_ore"
             },
             {
               "type": "minecraft:item",
@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "more_gems:amethyst"
+              "name": "more_gems:kunzite"
             }
           ]
         }

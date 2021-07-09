@@ -17,7 +17,7 @@ public class BlockInit
 {
 	public static final Block CITRINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
 	public static final Block TOURMALINE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
-	public static final Block AMETHYST_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
+	public static final Block KUNZITE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
 	public static final Block TOPAZ_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
 	public static final Block ALEXANDRITE_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
 	public static final Block CORUNDUM_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
@@ -27,7 +27,7 @@ public class BlockInit
 
 	public static final Block CITRINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
 	public static final Block TOURMALINE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
-	public static final Block AMETHYST_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
+	public static final Block KUNZITE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
 	public static final Block TOPAZ_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
 	public static final Block ALEXANDRITE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
 	public static final Block CORUNDUM_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().strength(2.0F, 2.0F));
@@ -40,7 +40,7 @@ public class BlockInit
 
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "citrine_ore"), CITRINE_ORE);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "tourmaline_ore"), TOURMALINE_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "amethyst_ore"), AMETHYST_ORE);
+		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "kunzite_ore"), KUNZITE_ORE);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "topaz_ore"), TOPAZ_ORE);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_ore"), ALEXANDRITE_ORE);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_ore"), CORUNDUM_ORE);
@@ -50,7 +50,7 @@ public class BlockInit
 		
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "citrine_block"), CITRINE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "tourmaline_block"), TOURMALINE_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "amethyst_block"), AMETHYST_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "kunzite_block"), KUNZITE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "topaz_block"), TOPAZ_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_block"), ALEXANDRITE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_block"), CORUNDUM_BLOCK);
@@ -66,7 +66,7 @@ public class BlockInit
 		{
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_ore"), new BlockItem(CITRINE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_ore"), new BlockItem(TOURMALINE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_ore"), new BlockItem(AMETHYST_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_ore"), new BlockItem(KUNZITE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_ore"), new BlockItem(TOPAZ_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_ore"), new BlockItem(CORUNDUM_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
@@ -76,7 +76,7 @@ public class BlockInit
 			
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_block"), new BlockItem(CITRINE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_block"), new BlockItem(TOURMALINE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_block"), new BlockItem(AMETHYST_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_block"), new BlockItem(KUNZITE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_block"), new BlockItem(TOPAZ_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_block"), new BlockItem(ALEXANDRITE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));

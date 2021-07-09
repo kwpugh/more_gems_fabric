@@ -24,9 +24,9 @@ public class ModConfiguredFeatures
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MoreGems.MOD_ID, "ore_tourmaline_overworld"), OreGen.ORE_TOURMALINE_OVERWORLD );
 		}
 		
-		if(CONFIG2.amethystEnable)
+		if(CONFIG2.kunziteEnable)
 		{
-			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MoreGems.MOD_ID, "ore_amethyst_overworld"), OreGen.ORE_AMETHYST_OVERWORLD );
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MoreGems.MOD_ID, "ore_kunzite_overworld"), OreGen.ORE_KUNZITE_OVERWORLD );
 		}
 		
 		if(CONFIG2.topazEnable)

@@ -5,13 +5,13 @@ import com.kwpugh.more_gems.init.ItemInit;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class AmethystToolMaterial implements ToolMaterial
+public class KunziteToolMaterial implements ToolMaterial
 {
-    private static int durability = MoreGems.CONFIG.GENERAL.amethystDurability;
-    private static float miningSpeed = MoreGems.CONFIG.GENERAL.amethystMiningSpeed;
-    private static float attackDamage = MoreGems.CONFIG.GENERAL.amethystAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.amethystMiningLevel;
-    private static int enchantability = MoreGems.CONFIG.GENERAL.amethystEnchantability;
+    private static int durability = MoreGems.CONFIG.GENERAL.kunziteDurability;
+    private static float miningSpeed = MoreGems.CONFIG.GENERAL.kunziteMiningSpeed;
+    private static float attackDamage = MoreGems.CONFIG.GENERAL.kunziteAttackDamage;
+    private static int miningLevel = MoreGems.CONFIG.GENERAL.kunziteMiningLevel;
+    private static int enchantability = MoreGems.CONFIG.GENERAL.kunziteEnchantability;
 
     @Override
     public int getDurability()
@@ -46,6 +46,6 @@ public class AmethystToolMaterial implements ToolMaterial
     @Override
     public Ingredient getRepairIngredient()
     {
-        return Ingredient.ofItems(ItemInit.AMETHYST);
+        return Ingredient.ofItems(ItemInit.KUNZITE);
     }
 }

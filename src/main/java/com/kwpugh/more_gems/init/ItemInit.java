@@ -6,7 +6,7 @@ import com.kwpugh.more_gems.items.areatools.NewHammer;
 import com.kwpugh.more_gems.items.baseclasses.*;
 import com.kwpugh.more_gems.items.gembag.GemBase;
 import com.kwpugh.more_gems.items.juju.ItemAlexandriteJuju;
-import com.kwpugh.more_gems.items.juju.ItemAmethystJuju;
+import com.kwpugh.more_gems.items.juju.ItemKunziteJuju;
 import com.kwpugh.more_gems.items.juju.ItemCarbonadoJuju;
 import com.kwpugh.more_gems.items.juju.ItemCitrineJuju;
 import com.kwpugh.more_gems.items.juju.ItemCorundumJuju;
@@ -32,7 +32,7 @@ public class ItemInit
 
 	static int citrineBow = MoreGems.CONFIG.GENERAL.citrineDurability;
 	static int tourmalineBow = MoreGems.CONFIG.GENERAL.tourmalineDurability;
-	static int amethystBow = MoreGems.CONFIG.GENERAL.amethystDurability;
+	static int kunziteBow = MoreGems.CONFIG.GENERAL.kunziteDurability;
 	static int topazBow = MoreGems.CONFIG.GENERAL.topazDurability;
 	static int emeraldBow = MoreGems.CONFIG.GENERAL.emeraldDurability;
 	static int alexandriteBow = MoreGems.CONFIG.GENERAL.alexandriteDurability;
@@ -45,8 +45,8 @@ public class ItemInit
 	public static final ArmorMaterial CITRINE_ARMOR_MATERIAL = new CitrineArmorMaterial();
 	public static final ToolMaterial TOURMALINE_TOOL_MATERIAL = new TourmalineToolMaterial();
 	public static final ArmorMaterial TOURMALINE_ARMOR_MATERIAL = new TourmalineArmorMaterial();
-	public static final ToolMaterial AMETHYST_TOOL_MATERIAL = new AmethystToolMaterial();
-	public static final ArmorMaterial AMETHYST_ARMOR_MATERIAL = new AmethystArmorMaterial();
+	public static final ToolMaterial KUNZITE_TOOL_MATERIAL = new KunziteToolMaterial();
+	public static final ArmorMaterial KUNZITE_ARMOR_MATERIAL = new KunziteArmorMaterial();
 	public static final ToolMaterial TOPAZ_TOOL_MATERIAL = new TopazToolMaterial();
 	public static final ArmorMaterial TOPAZ_ARMOR_MATERIAL = new TopazArmorMaterial();
 	public static final ToolMaterial EMERALD_TOOL_MATERIAL = new EmeraldToolMaterial();
@@ -64,7 +64,7 @@ public class ItemInit
 
 	public static final Item CITRINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item ALEXANDRITE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -92,15 +92,15 @@ public class ItemInit
 	public static final Item TOURMALINE_EXCAVATOR = new NewExcavator(TOURMALINE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_PAXEL = new NewPaxel(TOURMALINE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	
-	public static final Item AMETHYST_SWORD = new ModSword(AMETHYST_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_BOW = new ModBow((new Item.Settings()).maxDamage(amethystBow).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_PICKAXE = new ModPickaxe(AMETHYST_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_AXE = new ModAxe(AMETHYST_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_SHOVEL = new ModShovel(AMETHYST_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_HOE = new ModHoe(AMETHYST_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_HAMMER = new NewHammer(AMETHYST_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_EXCAVATOR = new NewExcavator(AMETHYST_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_PAXEL = new NewPaxel(AMETHYST_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_SWORD = new ModSword(KUNZITE_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_BOW = new ModBow((new Item.Settings()).maxDamage(kunziteBow).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_PICKAXE = new ModPickaxe(KUNZITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_AXE = new ModAxe(KUNZITE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_SHOVEL = new ModShovel(KUNZITE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_HOE = new ModHoe(KUNZITE_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_HAMMER = new NewHammer(KUNZITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_EXCAVATOR = new NewExcavator(KUNZITE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_PAXEL = new NewPaxel(KUNZITE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	
 	public static final Item EMERALD_SWORD = new ModSword(EMERALD_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item EMERALD_BOW = new ModBow((new Item.Settings()).maxDamage(emeraldBow).group(MoreGems.MORE_GEMS_GROUP));
@@ -182,10 +182,10 @@ public class ItemInit
 	public static final Item TOURMALINE_LEGGINGS = new ModArmor(TOURMALINE_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_BOOTS = new ModArmor(TOURMALINE_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
-	public static final Item AMETHYST_HELMET = new ModArmor(AMETHYST_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_CHESTPLATE = new ModArmor(AMETHYST_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_LEGGINGS = new ModArmor(AMETHYST_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_BOOTS = new ModArmor(AMETHYST_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_HELMET = new ModArmor(KUNZITE_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_CHESTPLATE = new ModArmor(KUNZITE_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_LEGGINGS = new ModArmor(KUNZITE_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_BOOTS = new ModArmor(KUNZITE_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item EMERALD_HELMET = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item EMERALD_CHESTPLATE = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -224,7 +224,7 @@ public class ItemInit
 
 	public static final Item CITRINE_JUJU = new ItemCitrineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_JUJU = new ItemTourmalineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item AMETHYST_JUJU = new ItemAmethystJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_JUJU = new ItemKunziteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item EMERALD_JUJU = new ItemEmeraldJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_JUJU = new ItemTopazJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item ALEXANDRITE_JUJU = new ItemAlexandriteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
@@ -237,7 +237,7 @@ public class ItemInit
 	{
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine"), CITRINE);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline"), TOURMALINE);
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst"), AMETHYST);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite"), KUNZITE);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz"), TOPAZ);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite"), ALEXANDRITE);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum"), CORUNDUM);
@@ -283,23 +283,23 @@ public class ItemInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_paxel"), TOURMALINE_PAXEL);	
 		}
 
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_sword"), AMETHYST_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_sword"), KUNZITE_SWORD);
 		
 		if(enableBows)
 		{	
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_bow"), AMETHYST_BOW);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_bow"), KUNZITE_BOW);
 		}
 		
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_pickaxe"), AMETHYST_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_axe"), AMETHYST_AXE);
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_shovel"), AMETHYST_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_hoe"), AMETHYST_HOE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_pickaxe"), KUNZITE_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_axe"), KUNZITE_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_shovel"), KUNZITE_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_hoe"), KUNZITE_HOE);
 		
 		if(extraToolsEnable)
 		{
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_hammer"), AMETHYST_HAMMER);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_excavator"), AMETHYST_EXCAVATOR);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_paxel"), AMETHYST_PAXEL);	
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_hammer"), KUNZITE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_excavator"), KUNZITE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_paxel"), KUNZITE_PAXEL);
 		}
 
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_sword"), EMERALD_SWORD);
@@ -445,10 +445,10 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_leggings"), TOURMALINE_LEGGINGS);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_boots"), TOURMALINE_BOOTS);
 
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_helmet"), AMETHYST_HELMET);
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_chestplate"), AMETHYST_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_leggings"), AMETHYST_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_boots"), AMETHYST_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_helmet"), KUNZITE_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_chestplate"), KUNZITE_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_leggings"), KUNZITE_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_boots"), KUNZITE_BOOTS);
 
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_helmet"), EMERALD_HELMET);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_chestplate"), EMERALD_CHESTPLATE);
@@ -489,7 +489,7 @@ public class ItemInit
 		{
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_juju"), CITRINE_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_juju"), TOURMALINE_JUJU);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "amethyst_juju"), AMETHYST_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_juju"), KUNZITE_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_juju"), EMERALD_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_juju"), TOPAZ_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_juju"), ALEXANDRITE_JUJU);

@@ -20,7 +20,7 @@ public class DefaultBiomeFeaturesMixin
   {
     builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, OreGen.ORE_CITRINE_OVERWORLD);
     builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, OreGen.ORE_TOURMALINE_OVERWORLD);
-    builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, OreGen.ORE_AMETHYST_OVERWORLD);
+    builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, OreGen.ORE_KUNZITE_OVERWORLD);
     builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, OreGen.ORE_TOPAZ_OVERWORLD);
     builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, OreGen.ORE_ALEXANDRITE_OVERWORLD);
     builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, OreGen.ORE_SAPPHIRE_OVERWORLD);

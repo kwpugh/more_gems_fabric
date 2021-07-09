@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "more_gems:block/amethyst_ore"
+        "all": "more_gems:block/kunzite_block"
     }
 }

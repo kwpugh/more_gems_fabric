@@ -49,12 +49,12 @@ public class LootTableInit
 					new Identifier("minecraft", "gameplay/fishing/treasure")
 			));
 
-			FabricLootPoolBuilder AMETHYST_JUJU = FabricLootPoolBuilder.builder()
+			FabricLootPoolBuilder KUNZITE_JUJU = FabricLootPoolBuilder.builder()
 					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.AMETHYST_JUJU))
+					.with(ItemEntry.builder(ItemInit.KUNZITE_JUJU))
 					.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
 
-			insert(new LootTableInsert(AMETHYST_JUJU,
+			insert(new LootTableInsert(KUNZITE_JUJU,
 					new Identifier("minecraft", "chests/simple_dungeon"),
 					new Identifier("minecraft", "chests/underwater_ruin_big"),
 					new Identifier("minecraft", "chests/underwater_ruin_small"),

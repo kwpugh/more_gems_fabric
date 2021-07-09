@@ -10,7 +10,7 @@
       "required": false
     },
     {
-      "id": "more_gems:amethyst_pickaxe",
+      "id": "more_gems:kunzite_pickaxe",
       "required": false
     },
     {
@@ -50,7 +50,7 @@
       "required": false
     },
     {
-      "id": "more_gems:amethyst_hammer",
+      "id": "more_gems:kunzite_hammer",
       "required": false
     },
     {
@@ -90,7 +90,7 @@
       "required": false
     },
     {
-      "id":  "more_gems:amethyst_paxel",
+      "id":  "more_gems:kunzite_paxel",
       "required": false
     },
     {
