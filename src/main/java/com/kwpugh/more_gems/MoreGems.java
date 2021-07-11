@@ -2,8 +2,8 @@ package com.kwpugh.more_gems;
 
 import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.*;
-import com.kwpugh.more_gems.world.ModConfiguredFeatures;
 
+import com.kwpugh.more_gems.world.OreGeneration;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
@@ -22,12 +22,11 @@ public class MoreGems implements ModInitializer
     @Override
     public void onInitialize()
     {
-		//TagInit.registerTags();
     	BlockInit.registerBlocks();
     	BlockInit.registerBlockItems();
     	ItemInit.registerItems();
     	ContainerInit.registerContainer();
-    	ModConfiguredFeatures.Features();
+		OreGeneration.intit();
     	LootTableInit.registerLoot ();
     	EnchantmentInnit.registerEnchantments();
     }
