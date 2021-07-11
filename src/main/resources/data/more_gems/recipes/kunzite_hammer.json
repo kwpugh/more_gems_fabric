@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "gsg",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "g": {
+      "tag": "c:kunzite"
+    }
+  },
+  "result": {
+    "item": "more_gems:kunzite_hammer"
+  }
+}
