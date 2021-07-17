@@ -5,7 +5,9 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "DefaultBiomeFeaturesMixin",
-    "PlayerEntityMixin"
+    "PlayerEntityMixin",
+    "ItemMixin",
+    "LivingEntityMixin"
   ],
   "client": [
   ],

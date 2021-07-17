@@ -115,6 +115,8 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableShulkerBlade = true;
 		public boolean enableUntouchable = true;
 		public boolean enableFasterObsidian = true;
+		public boolean enableBlinking = true;
+		public boolean enableWisdom = true;
 		public float amountYellowHeartsQuickening = 10;
 		public int durationQuickening = 40;
 		public int strengthLevelQuickening = 1;
@@ -124,8 +126,12 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public float razorDamageIncrease = 6.0F;
 		public int untouchableDamage = 7;
 		public int shulkerBladeDurationTicks = 300;
+		public int wisdomExperienceMultiplier = 5;
 		
 		@Comment("********************************"
+				+ "\n"
+				+ "\n"
+				+ "******************************"
 				+"\nBows, Paxels, Hammers, & Excavators"
 				+"\n********************************") 
 		public boolean extraToolsEnable = true;

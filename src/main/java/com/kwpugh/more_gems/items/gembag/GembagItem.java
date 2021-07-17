@@ -40,17 +40,17 @@ public class GembagItem extends Item
 
     public static GembagInventory getInventory(ItemStack stack, Hand hand, PlayerEntity player)
     {
-        if(!stack.hasTag())
+        if(!stack.hasNbt())
         {
-            stack.setTag(new NbtCompound());
+            stack.setNbt(new NbtCompound());
         }
 
-        if(!stack.getTag().contains("gembag"))
+        if(!stack.getNbt().contains("gembag"))
         {
-            stack.getTag().put("gembag", new NbtCompound());
+            stack.getNbt().put("gembag", new NbtCompound());
         }
 
-        return new GembagInventory(stack.getTag().getCompound("gembag"), hand, player);
+        return new GembagInventory(stack.getNbt().getCompound("gembag"), hand, player);
     }
 
 	@Override

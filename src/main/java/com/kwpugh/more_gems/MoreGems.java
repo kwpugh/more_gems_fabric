@@ -28,6 +28,6 @@ public class MoreGems implements ModInitializer
     	ContainerInit.registerContainer();
 		OreGeneration.intit();
     	LootTableInit.registerLoot ();
-    	EnchantmentInnit.registerEnchantments();
+    	EnchantmentInit.registerEnchantments();
     }
 }

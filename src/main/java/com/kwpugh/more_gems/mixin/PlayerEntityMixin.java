@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.kwpugh.more_gems.init.EnchantmentInnit;
+import com.kwpugh.more_gems.init.EnchantmentInit;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -33,7 +33,7 @@ public abstract class PlayerEntityMixin extends LivingEntity
 
         Map<Enchantment, Integer> enchantments = EnchantmentHelper.get(self.getMainHandStack());
 
-        if (enchantments.containsKey(EnchantmentInnit.QUICKENING))
+        if (enchantments.containsKey(EnchantmentInit.QUICKENING))
         {
             PlayerSpecialAbilities.giveQuickening(world, self, target_1);
         }

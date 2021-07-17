@@ -124,12 +124,12 @@ public class GembagInventory implements Inventory, GembagInventoryInterface
     {
         Inventory.super.onClose(player);
 
-        if(!player.getStackInHand(hand).hasTag())
+        if(!player.getStackInHand(hand).hasNbt())
         {
-            player.getStackInHand(hand).setTag(new NbtCompound());
+            player.getStackInHand(hand).setNbt(new NbtCompound());
         }
 
-        player.getStackInHand(hand).getTag().put("gembag", toTag());
+        player.getStackInHand(hand).getNbt().put("gembag", toTag());
         player.playSound(SoundEvents.BLOCK_WOOL_PLACE, SoundCategory.PLAYERS, 1f, 1f);
     }
 }

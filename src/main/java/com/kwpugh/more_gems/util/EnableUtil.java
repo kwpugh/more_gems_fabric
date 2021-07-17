@@ -9,7 +9,7 @@ public class EnableUtil
 {
     public static boolean isEnabled(ItemStack stack)
     {
-        return stack.hasTag() && stack.getTag().getBoolean("IsEnabled");
+        return stack.hasNbt() && stack.getNbt().getBoolean("IsEnabled");
     }
 
     public static void changeEnabled(PlayerEntity player, Hand hand)
@@ -19,11 +19,11 @@ public class EnableUtil
 
     public static void changeEnabled(ItemStack stack)
     {
-        if(!stack.hasTag())
+        if(!stack.hasNbt())
         {
-            stack.setTag(new NbtCompound());
+            stack.setNbt(new NbtCompound());
         }
         boolean isEnabled = isEnabled(stack);
-        stack.getTag().putBoolean("IsEnabled", !isEnabled);
+        stack.getNbt().putBoolean("IsEnabled", !isEnabled);
     }
 }
