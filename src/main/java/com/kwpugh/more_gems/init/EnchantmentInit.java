@@ -20,6 +20,7 @@ public class EnchantmentInit
 	public static final EfficiencyEnchantment FASTER_OBSIDIAN = new FasterObsidianEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment BLINKING = new BlinkingEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment WISDOM = new WisdomEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+	public static final DamageEnchantment STUPIFY = new StupifyEnchantment(Enchantment.Rarity.VERY_RARE, 0, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
 	static boolean enableRazor = MoreGems.CONFIG.GENERAL.enableRazorSharpness;			
 	static boolean enableShulker = MoreGems.CONFIG.GENERAL.enableShulkerBlade;
@@ -28,6 +29,7 @@ public class EnchantmentInit
 	static boolean enableFasterObsidian = MoreGems.CONFIG.GENERAL.enableFasterObsidian;
 	static boolean enableBlinking = MoreGems.CONFIG.GENERAL.enableBlinking;
 	static boolean enableWisdom = MoreGems.CONFIG.GENERAL.enableWisdom;
+	static boolean enableStupify = MoreGems.CONFIG.GENERAL.enableStupify;
 
 	public static void registerEnchantments()
 	{
@@ -64,6 +66,11 @@ public class EnchantmentInit
 		if(enableWisdom)
 		{
 			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "wisdom"), WISDOM);
+		}
+
+		if(enableStupify)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "stupify"), STUPIFY);
 		}
 	}
 }

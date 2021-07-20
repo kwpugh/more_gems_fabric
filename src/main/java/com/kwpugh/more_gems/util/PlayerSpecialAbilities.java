@@ -6,8 +6,10 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
@@ -18,6 +20,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.Map;
+import java.util.Random;
 
 public class PlayerSpecialAbilities
 {
@@ -28,6 +31,29 @@ public class PlayerSpecialAbilities
 	static int enemySlownessDurationTicks = MoreGems.CONFIG.GENERAL.enemySlownessDurationTicksQuickening;
 	static int slownessLevel = MoreGems.CONFIG.GENERAL.slownessLevelQuickening;
 	static int wisdomMultiplier = MoreGems.CONFIG.GENERAL.wisdomExperienceMultiplier;
+
+	public static void stupifyEnemy(Entity target, int level)
+	{
+		Random random = new Random();
+		World world = target.getEntityWorld();
+
+		if(!world.isClient)
+		{
+			if(target instanceof HostileEntity &&
+					!(target instanceof WitherEntity))
+			{
+				double r = random.nextDouble();
+				if (r <= (.20 * level))
+				{
+					((HostileEntity) target).setAiDisabled(true);
+				}
+				else
+				{
+					((HostileEntity) target).setAiDisabled(false);
+				}
+			}
+		}
+	}
 
 	// Used for Wisdom enchantment on swords
 	public static void giveWisdom(ItemStack stack, PlayerEntity attackingPlayer)

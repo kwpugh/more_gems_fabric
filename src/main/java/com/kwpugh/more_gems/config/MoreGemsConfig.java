@@ -117,6 +117,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableFasterObsidian = true;
 		public boolean enableBlinking = true;
 		public boolean enableWisdom = true;
+		public boolean enableStupify = true;
 		public float amountYellowHeartsQuickening = 10;
 		public int durationQuickening = 40;
 		public int strengthLevelQuickening = 1;
