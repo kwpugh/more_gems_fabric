@@ -11,9 +11,9 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class NewHammer extends Hammer
+public class ModHammer extends Hammer
 {
-    public NewHammer(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings)
+    public ModHammer(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings)
     {
         super(material, attackDamage, attackSpeed, settings);
     }
