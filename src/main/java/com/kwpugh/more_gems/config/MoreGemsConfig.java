@@ -14,12 +14,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     @Config(name = "ores")
     public static class Ores implements ConfigData 
     {
-		@Comment("***********************"
-				+"\nCave and Cliffs"
-				+"\nDatapack OreGen"
-				+"\n***********************")
-		public boolean enableCAC = false;
-
 	    @Comment("***********************"
 	    		+"\nCitrine Ores"
 	    		+"\n***********************") 

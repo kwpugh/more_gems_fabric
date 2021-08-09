@@ -1,6 +1,5 @@
 package com.kwpugh.more_gems;
 
-
 import com.kwpugh.more_gems.init.ContainerInit;
 import com.kwpugh.more_gems.items.gembag.GembagClientScreen;
 import com.kwpugh.more_gems.items.gembag.GembagScreenHandler;
