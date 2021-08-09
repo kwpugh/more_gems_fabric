@@ -1,15 +1,45 @@
 {
    "replace": false,
    "values": [
-     "more_gems:emerald_sword",
-     "more_gems:citrine_sword",
-     "more_gems:tourmaline_sword",
-     "more_gems:kunzite_sword",
-     "more_gems:topaz_sword",
-     "more_gems:alexandrite_sword",
-     "more_gems:corundum_sword",
-     "more_gems:sapphire_sword",
-     "more_gems:ruby_sword",
-     "more_gems:carbonado_sword"
+     {
+       "id": "more_gems:emerald_sword",
+       "required": false
+     },
+     {
+       "id": "more_gems:citrine_sword",
+       "required": false
+     },
+     {
+       "id":  "more_gems:tourmaline_sword",
+       "required": false
+     },
+     {
+       "id": "more_gems:topaz_sword",
+       "required": false
+     },
+     {
+       "id": "more_gems:alexandrite_sword",
+       "required": false
+     },
+     {
+       "id": "more_gems:kunzite_sword",
+       "required": false
+     },
+     {
+       "id": "more_gems:corundum_sword",
+       "required": false
+     },
+     {
+       "id": "more_gems:sapphire_sword",
+       "required": false
+     },
+     {
+       "id": "more_gems:ruby_sword",
+       "required": false
+     },
+     {
+       "id": "more_gems:carbonado_sword",
+       "required": false
+     }
    ]
  } 

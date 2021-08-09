@@ -1,25 +1,85 @@
 {
    "replace": false,
    "values": [
-     "more_gems:emerald_shovel",
-     "more_gems:citrine_shovel",
-     "more_gems:tourmaline_shovel",
-     "more_gems:kunzite_shovel",
-     "more_gems:topaz_shovel",
-     "more_gems:alexandrite_shovel",
-     "more_gems:corundum_shovel",
-     "more_gems:sapphire_shovel",
-     "more_gems:ruby_shovel",
-     "more_gems:carbonado_shovel",
-     "more_gems:emerald_excavator",
-     "more_gems:citrine_excavator",
-     "more_gems:tourmaline_excavator",
-     "more_gems:kunzite_excavator",
-     "more_gems:topaz_excavator",
-     "more_gems:alexandrite_excavator",
-     "more_gems:corundum_excavator",
-     "more_gems:sapphire_excavator",
-     "more_gems:ruby_excavator",
-     "more_gems:carbonado_excavator"
+     {
+       "id": "more_gems:emerald_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:citrine_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:tourmaline_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:kunzite_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:topaz_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:alexandrite_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:corundum_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:sapphire_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:ruby_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:carbonado_shovel",
+       "required": false
+     },
+     {
+       "id": "more_gems:emerald_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:citrine_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:tourmaline_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:kunzite_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:topaz_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:alexandrite_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:corundum_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:sapphire_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:ruby_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:carbonado_excavator",
+       "required": false
+     }
    ]
  } 

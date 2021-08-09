@@ -1,15 +1,45 @@
 {
    "replace": false,
    "values": [
-     "more_gems:emerald_hoe",
-     "more_gems:citrine_hoe",
-     "more_gems:tourmaline_hoe",
-     "more_gems:kunzite_hoe",
-     "more_gems:topaz_hoe",
-     "more_gems:alexandrite_hoe",
-     "more_gems:corundum_hoe",
-     "more_gems:sapphire_hoe",
-     "more_gems:ruby_hoe",
-     "more_gems:carbonado_hoe"
+     {
+       "id": "more_gems:emerald_hoe",
+       "required": false
+     },
+     {
+       "id": "more_gems:citrine_hoe",
+       "required": false
+     },
+     {
+       "id": "more_gems:tourmaline_hoe",
+       "required": false
+     },
+     {
+       "id": "more_gems:kunzite_hoe",
+       "required": false
+     },
+     {
+       "id": "more_gems:topaz_hoe",
+       "required": false
+     },
+     {
+       "id": "more_gems:alexandrite_hoe",
+       "required": false
+     },
+     {
+       "id": "more_gems:corundum_hoe",
+       "required": false
+     },
+     {
+       "id": "more_gems:sapphire_hoe",
+       "required": false
+     },
+     {
+       "id": "more_gems:ruby_hoe",
+       "required": false
+     },
+     {
+       "id": "more_gems:carbonado_hoe",
+       "required": false
+     }
    ]
  } 
