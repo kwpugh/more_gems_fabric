@@ -14,6 +14,21 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     @Config(name = "ores")
     public static class Ores implements ConfigData 
     {
+		@Comment("***********************"
+				+"\nGem Biomes"
+				+"\n& Ore Settings"
+				+"\n***********************")
+		public boolean enableCarbonadoBiome = true;
+		public double carbonadoBiomeWeight = 0.5;
+		public int carbonadoBiomeVeinSize = 12;
+		public int carbonadoBiomeMaxLevel = 25;
+		public int carbonadoBiomePerChunk = 20;
+		public boolean enableRubyBiome = true;
+		public double rubyBiomeWeight = 0.5;
+		public int rubyBiomeVeinSize = 12;
+		public int rubyBiomeMaxLevel = 35;
+		public int rubyBiomePerChunk = 20;
+
 	    @Comment("***********************"
 	    		+"\nCitrine Ores"
 	    		+"\n***********************") 

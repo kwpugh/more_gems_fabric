@@ -1,6 +1,8 @@
 package com.kwpugh.more_gems.world;
 
 import com.kwpugh.more_gems.MoreGems;
+import com.kwpugh.more_gems.biomes.CarbonadoBiome;
+import com.kwpugh.more_gems.biomes.RubyBiome;
 import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.BlockInit;
 
@@ -23,23 +25,13 @@ public class OreGen
 {
 	public static final MoreGemsConfig.Ores CONFIG = MoreGems.CONFIG.ORES;
 
-	static int citrineMaxLevel = CONFIG.citrineMaxLevel;
-	static int tourmalineMaxLevel = CONFIG.tourmalineMaxLevel;
-	static int kunziteMaxLevel = CONFIG.kunziteMaxLevel;
-	static int topazMaxLevel = CONFIG.topazMaxLevel;
-	static int alexandriteMaxLevel = CONFIG.alexandriteMaxLevel;
-	static int sapphireMaxLevel = CONFIG.sapphireMaxLevel;
-	static int rubyMaxLevel = CONFIG.rubyMaxLevel;
-	static int corundumMaxLevel = CONFIG.conrundumMaxLevel;
-	static int carbonadoMaxLevel = CONFIG.carbonadoMaxLevel;
-
 	public static final ConfiguredFeature<?, ?> ORE_CITRINE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES,
 					BlockInit.CITRINE_ORE.getDefaultState(),
 					CONFIG.citrineVeinSize)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(citrineMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.citrineMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.citrinePerChunk); // number of veins per chunk
 
@@ -49,7 +41,7 @@ public class OreGen
 					BlockInit.TOURMALINE_ORE.getDefaultState(),
 					CONFIG.tourmalineVeinSize)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(tourmalineMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.tourmalineMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.tourmalinePerChunk); // number of veins per chunk
 
@@ -59,7 +51,7 @@ public class OreGen
 					BlockInit.KUNZITE_ORE.getDefaultState(),
 					CONFIG.kunziteVeinSize)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(kunziteMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.kunziteMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.kunzitePerChunk); // number of veins per chunk
 
@@ -69,7 +61,7 @@ public class OreGen
 					BlockInit.TOPAZ_ORE.getDefaultState(),
 					CONFIG.topazVeinSize)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(topazMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.topazMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.topazPerChunk); // number of veins per chunk
 
@@ -79,7 +71,7 @@ public class OreGen
 					BlockInit.ALEXANDRITE_ORE.getDefaultState(),
 					CONFIG.alexandriteVeinSize)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(alexandriteMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.alexandriteMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.alexandritePerChunk); // number of veins per chunk
 
@@ -89,7 +81,7 @@ public class OreGen
 					BlockInit.SAPPHIRE_ORE.getDefaultState(),
 					CONFIG.sapphireVeinSize)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(sapphireMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.sapphireMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.sapphirePerChunk); // number of veins per chunk
 
@@ -99,7 +91,7 @@ public class OreGen
 					BlockInit.RUBY_ORE.getDefaultState(),
 					CONFIG.rubyVeinSize)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(rubyMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.rubyMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.rubyPerChunk); // number of veins per chunk
 
@@ -109,7 +101,7 @@ public class OreGen
 					BlockInit.CORUNDUM_ORE.getDefaultState(),
 					CONFIG.conrundumVeinSize)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(corundumMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.conrundumMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.conrundumPerChunk); // number of veins per chunk
 
@@ -119,12 +111,32 @@ public class OreGen
 					BlockInit.CARBONADO_ORE.getDefaultState(),
 					CONFIG.carbonadoVeinSize)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(carbonadoMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.carbonadoMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.carbonadoPerChunk); // number of veins per chunk
 
+	// Special settings for custom biome
+	public static ConfiguredFeature<?, ?> ORE_CARBONADO_BIOME = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES,
+					BlockInit.CARBONADO_ORE.getDefaultState(),
+					CONFIG.carbonadoBiomeVeinSize)) // vein size
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.carbonadoBiomeMaxLevel)))) // Inclusive min and max height
+			.spreadHorizontally()
+			.repeat(CONFIG.carbonadoBiomePerChunk); // number of veins per chunk
 
-	public static final MoreGemsConfig.Ores CONFIG2 = MoreGems.CONFIG.ORES;
+	// Special settings for custom biome
+	public static ConfiguredFeature<?, ?> ORE_RUBY_BIOME = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES,
+					BlockInit.RUBY_ORE.getDefaultState(),
+					CONFIG.rubyBiomeVeinSize)) // vein size
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.rubyBiomeMaxLevel)))) // Inclusive min and max height
+			.spreadHorizontally()
+			.repeat(CONFIG.rubyBiomeVeinSize); // number of veins per chunk
+
 
 	public static void Features()
 	{
@@ -198,6 +210,22 @@ public class OreGen
 					new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld"));
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreCarbonadoOverworld.getValue(), ORE_CARBONADO_OVERWORLD);
 			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoOverworld);
+		}
+
+		if(CONFIG.enableRubyBiome)
+		{
+			RegistryKey<ConfiguredFeature<?, ?>> oreRubyBiome = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+					new Identifier(MoreGems.MOD_ID, "ore_ruby_biome"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreRubyBiome.getValue(), ORE_RUBY_BIOME);
+			BiomeModifications.addFeature(BiomeSelectors.includeByKey(RubyBiome.RUBY_KEY), GenerationStep.Feature.UNDERGROUND_ORES, oreRubyBiome);
+		}
+
+		if(CONFIG.enableCarbonadoBiome)
+		{
+			RegistryKey<ConfiguredFeature<?, ?>> oreCarbonadoBiome = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+					new Identifier(MoreGems.MOD_ID, "ore_carbonado_biome"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreCarbonadoBiome.getValue(), ORE_CARBONADO_BIOME);
+			BiomeModifications.addFeature(BiomeSelectors.includeByKey(CarbonadoBiome.CARBONADO_KEY), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoBiome);
 		}
 	}
 }
