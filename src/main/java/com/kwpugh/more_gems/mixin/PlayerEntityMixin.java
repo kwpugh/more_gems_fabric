@@ -3,6 +3,8 @@ package com.kwpugh.more_gems.mixin;
 import java.util.Map;
 
 import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.damage.DamageSource;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,6 +19,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity
@@ -27,7 +30,7 @@ public abstract class PlayerEntityMixin extends LivingEntity
     }
 
     @Inject(method = "attack", at = @At(value = "HEAD"))
-    private void attack(Entity target_1, CallbackInfo ci)
+    private void attackQuickening(Entity target_1, CallbackInfo ci)
     {
         PlayerEntity self = ((PlayerEntity) (Object) this);
 
@@ -37,5 +40,23 @@ public abstract class PlayerEntityMixin extends LivingEntity
         {
             PlayerSpecialAbilities.giveQuickening(world, self, target_1);
         }
+    }
+
+    @Inject(at = @At(value="HEAD"), method = "damage", cancellable = true)
+    private void damageVoidEscape(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
+    {
+        PlayerEntity self = (PlayerEntity) (Object) this;
+
+        if(EnchantmentHelper.getLevel(EnchantmentInit.VOID_ESCAPE, self.getEquippedStack(EquipmentSlot.FEET)) > 0)
+        {
+            self.fallDistance = 0.0F;
+
+            if(source.isOutOfWorld())
+            {
+                PlayerSpecialAbilities.giveVoidEscape(world, self);
+                cir.setReturnValue(false);
+            }
+        }
+
     }
 }

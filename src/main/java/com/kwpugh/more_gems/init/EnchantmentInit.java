@@ -19,6 +19,7 @@ public class EnchantmentInit
 	public static final ThornsEnchantment UNTOUCHABLE = new UntouchableEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.CHEST});
 	public static final EfficiencyEnchantment FASTER_OBSIDIAN = new FasterObsidianEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment BLINKING = new BlinkingEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+	public static final Enchantment VOID_ESCAPE = new VoidEscapeEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.FEET});
 	public static final Enchantment WISDOM = new WisdomEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final DamageEnchantment STUPIFY = new StupifyEnchantment(Enchantment.Rarity.VERY_RARE, 0, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
@@ -30,47 +31,53 @@ public class EnchantmentInit
 	static boolean enableBlinking = MoreGems.CONFIG.GENERAL.enableBlinking;
 	static boolean enableWisdom = MoreGems.CONFIG.GENERAL.enableWisdom;
 	static boolean enableStupify = MoreGems.CONFIG.GENERAL.enableStupify;
+	static boolean enableVoidEscape = MoreGems.CONFIG.GENERAL.enableVoidEscape;
 
 	public static void registerEnchantments()
 	{
 		if(enableRazor)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "razor_sharpness"), RAZOR_SHARPNESS);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "razor_sharpness"), RAZOR_SHARPNESS);
 		}
 
 		if(enableShulker)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "shulker_blade"), SHULKER_BLADE);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "shulker_blade"), SHULKER_BLADE);
 		}
 
 		if(enableQuickening)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "quickening"), QUICKENING);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "quickening"), QUICKENING);
 		}
 
 		if(enableUntouchable)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "untouchable"), UNTOUCHABLE);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "untouchable"), UNTOUCHABLE);
 		}
 
 		if(enableFasterObsidian)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "faster_obsidian"), FASTER_OBSIDIAN);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "faster_obsidian"), FASTER_OBSIDIAN);
 		}
 
 		if(enableBlinking)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "blinking"), BLINKING);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "blinking"), BLINKING);
 		}
 
 		if(enableWisdom)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "wisdom"), WISDOM);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "wisdom"), WISDOM);
 		}
 
 		if(enableStupify)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier("more_gems", "stupify"), STUPIFY);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stupify"), STUPIFY);
+		}
+
+		if(enableVoidEscape)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "void_escape"), VOID_ESCAPE);
 		}
 	}
 }
