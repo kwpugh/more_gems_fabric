@@ -103,7 +103,6 @@ public class PlayerSpecialAbilities
 		}
 	}
 
-
 	public static void giveVoidEscape(World world, PlayerEntity player)
 	{
 		if(player.hasVehicle())
