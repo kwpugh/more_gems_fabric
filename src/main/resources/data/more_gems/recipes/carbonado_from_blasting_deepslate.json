@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": { "item": "more_gems:carbonado_ore_deepslate" },
+  "result": "more_gems:carbonado",
+  "experience": 3.0,
+  "cookingtime": 100
+}

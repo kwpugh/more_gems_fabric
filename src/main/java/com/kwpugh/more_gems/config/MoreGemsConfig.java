@@ -34,7 +34,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************") 
 	    public boolean citrineEnable = true;
 	    public int citrineVeinSize = 4;
-    	public int citrineMaxLevel = 70;
+    	public int citrineMaxLevel = 110;
     	public int citrinePerChunk = 12;
     	
         @Comment("***********************"
@@ -42,7 +42,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************")
         public boolean tourmalineEnable = true;
         public int tourmalineVeinSize = 4;
-    	public int tourmalineMaxLevel = 70;
+    	public int tourmalineMaxLevel = 80;
     	public int tourmalinePerChunk = 12;
     	
         @Comment("***********************"
@@ -50,7 +50,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************")
         public boolean kunziteEnable = true;
         public int kunziteVeinSize = 4;
-    	public int kunziteMaxLevel = 60;
+    	public int kunziteMaxLevel = 70;
     	public int kunzitePerChunk = 12;
     	
         @Comment("***********************"
@@ -69,12 +69,20 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     	public int alexandriteMaxLevel = 60;
     	public int alexandritePerChunk = 12;
 
+		@Comment("***********************"
+				+"\nCorundum Ores"
+				+"\n***********************")
+		public boolean conrundumEnable = true;
+		public int conrundumVeinSize = 3;
+		public int conrundumMaxLevel = 20;
+		public int conrundumPerChunk = 12;
+
         @Comment("***********************"
  	    		+"\nSapphire Ores"
  	    		+"\n***********************")
         public boolean sapphireEnable = true;
         public int sapphireVeinSize = 4;
-     	public int sapphireMaxLevel = 30;
+     	public int sapphireMaxLevel = 10;
      	public int sapphirePerChunk = 12;
      	   	
         @Comment("***********************"
@@ -82,23 +90,15 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\n***********************")
         public boolean rubyEnable = true;
         public int rubyVeinSize = 4;
-     	public int rubyMaxLevel = 30;
+     	public int rubyMaxLevel = 10;
      	public int rubyPerChunk = 12;
-     	
-        @Comment("***********************"
- 	    		+"\nCorundum Ores"
- 	    		+"\n***********************")
-        public boolean conrundumEnable = true;
-        public int conrundumVeinSize = 3;
-     	public int conrundumMaxLevel = 20;
-     	public int conrundumPerChunk = 12;
      	
         @Comment("***********************"
  	    		+"\nCarbonado Ores"
  	    		+"\n***********************")
         public boolean carbonadoEnable = true;
         public int carbonadoVeinSize = 3;
-     	public int carbonadoMaxLevel = 15;
+     	public int carbonadoMaxLevel = 5;
      	public int carbonadoPerChunk = 12;
     }
     

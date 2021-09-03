@@ -143,6 +143,8 @@
 	"item.more_gems.sapphire": "Sapphire",
 	"item.more_gems.sapphire_ore": "Sapphire Ore",
 	"block.more_gems.sapphire_ore": "Sapphire Ore",
+	"item.more_gems.sapphire_ore_deepslate": "Deepslate Sapphire Ore",
+	"block.more_gems.sapphire_ore_deepslate": "Deepslate Sapphire Ore",
 	"item.more_gems.sapphire_block": "Sapphire Block",
 	"block.more_gems.sapphire_block": "Sapphire Block",
 
@@ -164,6 +166,8 @@
 	"item.more_gems.ruby": "Ruby",
 	"item.more_gems.ruby_ore": "Ruby Ore",
 	"block.more_gems.ruby_ore": "Ruby Ore",
+	"item.more_gems.ruby_ore_deepslate": "Deepslate Ruby Ore",
+	"block.more_gems.ruby_ore_deepslate": "Deepslate Ruby Ore",
 	"item.more_gems.ruby_block": "Ruby Block",
 	"block.more_gems.ruby_block": "Ruby Block",
 
@@ -185,6 +189,8 @@
 	"item.more_gems.carbonado": "Carbonado",
 	"item.more_gems.carbonado_ore": "Carbonado Ore",
 	"block.more_gems.carbonado_ore": "Carbonado Ore",
+	"item.more_gems.carbonado_ore_deepslate": "Deepslate Carbonado Ore",
+	"block.more_gems.carbonado_ore_deepslate": "Deepslate Carbonado Ore",
 	"item.more_gems.carbonado_block": "Carbonado Block",
 	"block.more_gems.carbonado_block": "Carbonado Block",
 
