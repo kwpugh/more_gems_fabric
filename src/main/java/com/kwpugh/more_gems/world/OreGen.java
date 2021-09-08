@@ -49,6 +49,16 @@ public class OreGen
 			.spreadHorizontally()
 			.repeat(CONFIG.kunzitePerChunk); // number of veins per chunk
 
+	// NETHER
+	public static ConfiguredFeature<?, ?> ORE_KUNZITE_NETHER = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_NETHER,
+					BlockInit.KUNZITE_ORE_NETHER.getDefaultState(),
+					CONFIG.kunziteVeinSizeNether)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(CONFIG.kunziteMaxLevelNether))
+			.spreadHorizontally()
+			.repeat(CONFIG.kunzitePerChunkNether); // number of veins per chunk
+
 	public static ConfiguredFeature<?, ?> ORE_TOPAZ_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES,
@@ -69,6 +79,16 @@ public class OreGen
 			.spreadHorizontally()
 			.repeat(CONFIG.alexandritePerChunk); // number of veins per chunk
 
+	// NETHER
+	public static ConfiguredFeature<?, ?> ORE_ALEXANDRITE_NETHER = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_NETHER,
+					BlockInit.ALEXANDRITE_ORE_NETHER.getDefaultState(),
+					CONFIG.alexandriteVeinSizeNether)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(CONFIG.alexandriteMaxLevelNether))
+			.spreadHorizontally()
+			.repeat(CONFIG.alexandritePerChunkNether); // number of veins per chunk
+
 	public static ConfiguredFeature<?, ?> ORE_CORUNDUM_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES,
@@ -78,6 +98,16 @@ public class OreGen
 					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.conrundumMaxLevel)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(CONFIG.conrundumPerChunk); // number of veins per chunk
+
+	// NETHER
+	public static ConfiguredFeature<?, ?> ORE_CORUNDUM_NETHER = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_NETHER,
+					BlockInit.CORUNDUM_ORE_NETHER.getDefaultState(),
+					CONFIG.conrundumVeinSizeNether)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(CONFIG.conrundumMaxLevelNether))
+			.spreadHorizontally()
+			.repeat(CONFIG.conrundumPerChunkNether); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -94,11 +124,11 @@ public class OreGen
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES,
 					BlockInit.CARBONADO_ORE_DEEPSLATE.getDefaultState(),
-					CONFIG.sapphireVeinSize + 3)) // vein size
+					CONFIG.sapphireVeinSizeDeepslate)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(CONFIG.sapphireMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(CONFIG.sapphireMaxLevelDeepslate)))) // Inclusive min and max height
 			.spreadHorizontally()
-			.repeat(CONFIG.sapphirePerChunk); // number of veins per chunk
+			.repeat(CONFIG.sapphirePerChunkDeepslate); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_RUBY_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -115,11 +145,11 @@ public class OreGen
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES,
 					BlockInit.RUBY_ORE_DEEPSLATE.getDefaultState(),
-					CONFIG.rubyVeinSize + 3)) // vein size
+					CONFIG.rubyVeinSizeDeepslate)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(CONFIG.rubyMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(CONFIG.rubyMaxLevelDeepslate)))) // Inclusive min and max height
 			.spreadHorizontally()
-			.repeat(CONFIG.rubyPerChunk); // number of veins per chunk
+			.repeat(CONFIG.rubyPerChunkDeepslate); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -136,17 +166,15 @@ public class OreGen
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES,
 					BlockInit.CARBONADO_ORE_DEEPSLATE.getDefaultState(),
-					CONFIG.carbonadoVeinSize + 3)) // vein size
+					CONFIG.carbonadoVeinSizeDeepslate)) // vein size
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(CONFIG.carbonadoMaxLevel)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(CONFIG.carbonadoMaxLevelDeepslate)))) // Inclusive min and max height
 			.spreadHorizontally()
-			.repeat(CONFIG.carbonadoPerChunk); // number of veins per chunk
+			.repeat(CONFIG.carbonadoPerChunkDeepslate); // number of veins per chunk
 
 
 	public static void Features()
 	{
-
-
 		if(CONFIG.citrineEnable)
 		{
 			RegistryKey<ConfiguredFeature<?, ?>> oreCitrineOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
@@ -168,6 +196,14 @@ public class OreGen
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreKunziteOverworld.getValue(), ORE_KUNZITE_OVERWORLD);
 		}
 
+		if(CONFIG.kunziteEnableNether)
+		{
+			// NETHER
+			RegistryKey<ConfiguredFeature<?, ?>> oreKunziteNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+					new Identifier(MoreGems.MOD_ID, "ore_kunzite_nether"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreKunziteNether.getValue(), ORE_KUNZITE_NETHER);
+		}
+
 		if(CONFIG.topazEnable)
 		{
 			RegistryKey<ConfiguredFeature<?, ?>> oreTopazOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
@@ -182,6 +218,14 @@ public class OreGen
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAlexandriteOverworld.getValue(), ORE_ALEXANDRITE_OVERWORLD);
 		}
 
+		if(CONFIG.alexandriteEnableNether)
+		{
+			// NETHER
+			RegistryKey<ConfiguredFeature<?, ?>> oreAlexandriteNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+					new Identifier(MoreGems.MOD_ID, "alexandrite_ore_nether"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAlexandriteNether.getValue(), ORE_ALEXANDRITE_NETHER);
+		}
+
 		if(CONFIG.conrundumEnable)
 		{
 			RegistryKey<ConfiguredFeature<?, ?>> oreCorundumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
@@ -189,12 +233,23 @@ public class OreGen
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreCorundumOverworld.getValue(), ORE_CORUNDUM_OVERWORLD);
 		}
 
+		if(CONFIG.conrundumEnableNether)
+		{
+			// NETHER
+			RegistryKey<ConfiguredFeature<?, ?>> oreCorundumNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+					new Identifier(MoreGems.MOD_ID, "ore_corundum_nether"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreCorundumNether.getValue(), ORE_CORUNDUM_NETHER);
+		}
+
 		if(CONFIG.sapphireEnable)
 		{
 			RegistryKey<ConfiguredFeature<?, ?>> oreSapphireOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 					new Identifier(MoreGems.MOD_ID, "ore_sapphire_overworld"));
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSapphireOverworld.getValue(), ORE_SAPPHIRE_OVERWORLD);
+		}
 
+		if(CONFIG.sapphireEnableDeepslate)
+		{
 			// DEEPSLATE
 			RegistryKey<ConfiguredFeature<?, ?>> oreSapphireOverworldDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 					new Identifier(MoreGems.MOD_ID, "ore_sapphire_overworld_deepslate"));
@@ -206,11 +261,15 @@ public class OreGen
 			RegistryKey<ConfiguredFeature<?, ?>> oreRubyOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 					new Identifier(MoreGems.MOD_ID, "ore_ruby_overworld"));
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreRubyOverworld.getValue(), ORE_RUBY_OVERWORLD);
+		}
 
+		if(CONFIG.rubyEnableDeepslate)
+		{
 			//DEEPSLATE
 			RegistryKey<ConfiguredFeature<?, ?>> oreRubyOverworldDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 					new Identifier(MoreGems.MOD_ID, "ore_ruby_overworld_deepslate"));
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreRubyOverworldDeepslate.getValue(), ORE_RUBY_OVERWORLD_DEEPSLATE);
+
 		}
 
 		if(CONFIG.carbonadoEnable)
@@ -218,7 +277,10 @@ public class OreGen
 			RegistryKey<ConfiguredFeature<?, ?>> oreCarbonadoOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 					new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld"));
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreCarbonadoOverworld.getValue(), ORE_CARBONADO_OVERWORLD);
+		}
 
+		if(CONFIG.carbonadoEnableDeepslate)
+		{
 			// DEEPSLATE
 			RegistryKey<ConfiguredFeature<?, ?>> oreCarbonadoOverworldDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 					new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld_deepslate"));

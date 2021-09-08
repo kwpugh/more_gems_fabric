@@ -14,21 +14,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     @Config(name = "ores")
     public static class Ores implements ConfigData 
     {
-		@Comment("***********************"
-				+"\nGem Biomes"
-				+"\n& Ore Settings"
-				+"\n***********************")
-		public boolean enableCarbonadoBiome = true;
-		public double carbonadoBiomeWeight = 0.5;
-		public int carbonadoBiomeVeinSize = 12;
-		public int carbonadoBiomeMaxLevel = 25;
-		public int carbonadoBiomePerChunk = 20;
-		public boolean enableRubyBiome = true;
-		public double rubyBiomeWeight = 0.5;
-		public int rubyBiomeVeinSize = 12;
-		public int rubyBiomeMaxLevel = 35;
-		public int rubyBiomePerChunk = 20;
-
 	    @Comment("***********************"
 	    		+"\nCitrine Ores"
 	    		+"\n***********************") 
@@ -46,13 +31,21 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     	public int tourmalinePerChunk = 12;
     	
         @Comment("***********************"
-	    		+"\nKUNZITE Ores"
+	    		+"\nKunzite Ores"
 	    		+"\n***********************")
         public boolean kunziteEnable = true;
         public int kunziteVeinSize = 4;
     	public int kunziteMaxLevel = 70;
     	public int kunzitePerChunk = 12;
-    	
+
+		@Comment("***********************"
+				+"\nNether Kunzite Ores"
+				+"\n***********************")
+		public boolean kunziteEnableNether = true;
+		public int kunziteVeinSizeNether = 4;
+		public int kunziteMaxLevelNether = 200;
+		public int kunzitePerChunkNether = 12;
+
         @Comment("***********************"
 	    		+"\nTopaz Ores"
 	    		+"\n***********************")
@@ -70,12 +63,28 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     	public int alexandritePerChunk = 12;
 
 		@Comment("***********************"
+				+"\nNether Alexandrite Ores"
+				+"\n***********************")
+		public boolean alexandriteEnableNether = true;
+		public int alexandriteVeinSizeNether = 4;
+		public int alexandriteMaxLevelNether = 200;
+		public int alexandritePerChunkNether = 12;
+
+		@Comment("***********************"
 				+"\nCorundum Ores"
 				+"\n***********************")
 		public boolean conrundumEnable = true;
 		public int conrundumVeinSize = 3;
 		public int conrundumMaxLevel = 20;
 		public int conrundumPerChunk = 12;
+
+		@Comment("***********************"
+				+"\nNether Corundum Ores"
+				+"\n***********************")
+		public boolean conrundumEnableNether = true;
+		public int conrundumVeinSizeNether = 3;
+		public int conrundumMaxLevelNether = 70;
+		public int conrundumPerChunkNether = 12;
 
         @Comment("***********************"
  	    		+"\nSapphire Ores"
@@ -84,7 +93,15 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
         public int sapphireVeinSize = 4;
      	public int sapphireMaxLevel = 10;
      	public int sapphirePerChunk = 12;
-     	   	
+
+		@Comment("***********************"
+				+"\nDeepslate Sapphire Ores"
+				+"\n***********************")
+		public boolean sapphireEnableDeepslate = true;
+		public int sapphireVeinSizeDeepslate = 4;
+		public int sapphireMaxLevelDeepslate = 0;
+		public int sapphirePerChunkDeepslate = 12;
+
         @Comment("***********************"
  	    		+"\nRuby Ores"
  	    		+"\n***********************")
@@ -92,7 +109,15 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
         public int rubyVeinSize = 4;
      	public int rubyMaxLevel = 10;
      	public int rubyPerChunk = 12;
-     	
+
+		@Comment("***********************"
+				+"\nDeepslate Ruby Ores"
+				+"\n***********************")
+		public boolean rubyEnableDeepslate = true;
+		public int rubyVeinSizeDeepslate = 4;
+		public int rubyMaxLevelDeepslate = 0;
+		public int rubyPerChunkDeepslate = 12;
+
         @Comment("***********************"
  	    		+"\nCarbonado Ores"
  	    		+"\n***********************")
@@ -100,6 +125,14 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
         public int carbonadoVeinSize = 3;
      	public int carbonadoMaxLevel = 5;
      	public int carbonadoPerChunk = 12;
+
+		@Comment("***********************"
+				+"\nDeepslate Carbonado Ores"
+				+"\n***********************")
+		public boolean carbonadoEnableDeepslate = true;
+		public int carbonadoVeinSizeDeepslate = 3;
+		public int carbonadoMaxLevelDeepslate = 0;
+		public int carbonadoPerChunkDeepslate = 12;
     }
     
     @Config(name = "general")

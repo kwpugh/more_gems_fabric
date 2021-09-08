@@ -44,6 +44,8 @@
 	"item.more_gems.kunzite": "Kunzite",
 	"item.more_gems.kunzite_ore": "Kunzite Ore",
 	"block.more_gems.kunzite_ore": "Kunzite Ore",
+	"item.more_gems.kunzite_ore_nether": "Nether Kunzite Ore",
+	"block.more_gems.kunzite_ore_nether": "Nether Kunzite Ore",
 	"item.more_gems.kunzite_block": "Kunzite block",
 	"block.more_gems.kunzite_block": "Kunzite block",
 
@@ -80,6 +82,8 @@
 	"item.more_gems.topaz": "Topaz",
 	"item.more_gems.topaz_ore": "Topaz Ore",
 	"block.more_gems.topaz_ore": "Topaz Ore",
+	"item.more_gems.topaz_ore_nether": "Nether Topaz Ore",
+	"block.more_gems.topaz_ore_nether": "Nether Topaz Ore",
 	"item.more_gems.topaz_block": "Topaz Block",
 	"block.more_gems.topaz_block": "Topaz Block",
 
@@ -101,6 +105,8 @@
 	"item.more_gems.alexandrite": "Alexandrite",
 	"item.more_gems.alexandrite_ore": "Alexandrite Ore",
 	"block.more_gems.alexandrite_ore": "Alexandrite Ore",
+	"item.more_gems.alexandrite_ore_nether": "Nether Alexandrite Ore",
+	"block.more_gems.alexandrite_ore_nether": "Nether Alexandrite Ore",
 	"item.more_gems.alexandrite_block": "Alexandrite Block",
 	"block.more_gems.alexandrite_block": "Alexandrite Block",
 
@@ -122,6 +128,8 @@
 	"item.more_gems.corundum": "Corundum",
 	"item.more_gems.corundum_ore": "Corundum Ore",
 	"block.more_gems.corundum_ore": "Corundum Ore",
+	"item.more_gems.corundum_ore_nether": "Nether Corundum Ore",
+	"block.more_gems.corundum_ore_nether": "Nether Corundum Ore",
 	"item.more_gems.corundum_block": "Corundum Block",
 	"block.more_gems.corundum_block": "Corundum Block",
 
