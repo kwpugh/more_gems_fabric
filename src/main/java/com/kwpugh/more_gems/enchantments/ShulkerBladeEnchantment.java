@@ -3,19 +3,21 @@ package com.kwpugh.more_gems.enchantments;
 import com.kwpugh.more_gems.MoreGems;
 
 import net.minecraft.enchantment.DamageEnchantment;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
-public class ShulkerBladeEnchantment extends DamageEnchantment
+public class ShulkerBladeEnchantment extends Enchantment
 {
 	static int shulkerBladeDurationTicks = MoreGems.CONFIG.GENERAL.shulkerBladeDurationTicks;
-	
-	public ShulkerBladeEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
+
+	public ShulkerBladeEnchantment(Enchantment.Rarity rarity, EquipmentSlot[] equipmentSlots)
 	{
-		super(weight, typeIndex, slots);
+		super(rarity, EnchantmentTarget.WEAPON, equipmentSlots);
 	}
 
 	@Override

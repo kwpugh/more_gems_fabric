@@ -3,18 +3,20 @@ package com.kwpugh.more_gems.enchantments;
 import com.kwpugh.more_gems.MoreGems;
 
 import net.minecraft.enchantment.DamageEnchantment;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 
-public class RazorSharpnessEnchantment extends DamageEnchantment
+public class RazorSharpnessEnchantment extends Enchantment
 {
 	static float razorDamageIncrease = MoreGems.CONFIG.GENERAL.razorDamageIncrease;
-	
-	public RazorSharpnessEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
+
+	public RazorSharpnessEnchantment(Enchantment.Rarity rarity, EquipmentSlot[] equipmentSlots)
 	{
-		super(weight, typeIndex, slots);
+		super(rarity, EnchantmentTarget.WEAPON, equipmentSlots);
 	}
 
 	@Override
