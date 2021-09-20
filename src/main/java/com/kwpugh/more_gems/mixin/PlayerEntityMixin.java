@@ -42,7 +42,7 @@ public abstract class PlayerEntityMixin extends LivingEntity
         }
     }
 
-    @Inject(at = @At(value="HEAD"), method = "damage", cancellable = true)
+    @Inject(method = "damage", at = @At(value="HEAD"), cancellable = true)
     private void damageVoidEscape(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
     {
         PlayerEntity self = (PlayerEntity) (Object) this;

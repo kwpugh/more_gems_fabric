@@ -15,6 +15,7 @@ import com.kwpugh.more_gems.items.juju.ItemRubyJuju;
 import com.kwpugh.more_gems.items.juju.ItemSapphireJuju;
 import com.kwpugh.more_gems.items.juju.ItemTopazJuju;
 import com.kwpugh.more_gems.items.juju.ItemTourmalineJuju;
+import com.kwpugh.more_gems.items.special.CarbonadoGildedArmor;
 import com.kwpugh.more_gems.materials.*;
 
 import net.minecraft.entity.EquipmentSlot;
@@ -61,6 +62,7 @@ public class ItemInit
 	public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new RubyArmorMaterial();
 	public static final ToolMaterial CARBONADO_TOOL_MATERIAL = new CarbonadoToolMaterial();
 	public static final ArmorMaterial CARBONADO_ARMOR_MATERIAL = new CarbonadoArmorMaterial();
+	public static final ArmorMaterial CARBONADO_GILDED_ARMOR_MATERIAL = new CarbonadoGildedArmorMaterial();
 
 	public static final Item CITRINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -219,6 +221,7 @@ public class ItemInit
 
 	public static final Item CARBONADO_HELMET = new ModArmor(CARBONADO_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_CHESTPLATE = new ModArmor(CARBONADO_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CARBONADO_CHESTPLATE_GILDED = new CarbonadoGildedArmor(CARBONADO_GILDED_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_LEGGINGS = new ModArmor(CARBONADO_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_BOOTS = new ModArmor(CARBONADO_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
@@ -482,6 +485,7 @@ public class ItemInit
 
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_helmet"), CARBONADO_HELMET);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_chestplate"), CARBONADO_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_chestplate_gilded"), CARBONADO_CHESTPLATE_GILDED);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_leggings"), CARBONADO_LEGGINGS);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_boots"), CARBONADO_BOOTS);
 

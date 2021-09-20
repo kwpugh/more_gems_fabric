@@ -118,7 +118,7 @@ public class PlayerSpecialAbilities
 		}
 	}
 
-	// Effects for Quickening Enchantment called my mixin
+	// Effects for Quickening Enchantment called by mixin
 	public static void giveQuickening(World world, LivingEntity player, Entity target)
 	{
 		if(!world.isClient)

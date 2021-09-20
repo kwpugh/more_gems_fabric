@@ -214,6 +214,8 @@
 
 	"item.more_gems.carbonado_helmet": "Carbonado Helmet",
 	"item.more_gems.carbonado_chestplate": "Carbonado Chestplate",
+	"item.more_gems.carbonado_chestplate_gilded": "Gilded Carbonado Chestplate",
+	"item.more_gems.carbonado_chestplate_gilded.tip1": "Protects against Piglin",
 	"item.more_gems.carbonado_leggings": "Carbonado Leggings",
 	"item.more_gems.carbonado_boots": "Carbonado Boots",
 
