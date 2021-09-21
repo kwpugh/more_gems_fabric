@@ -40,6 +40,10 @@
      {
        "id": "more_gems:carbonado_hoe",
        "required": false
+     },
+     {
+       "id": "more_gems:moissanite_hoe",
+       "required": false
      }
    ]
  } 

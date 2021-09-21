@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "g g",
+    "g g"
+  ],
+  "key": {
+    "g": {
+      "tag": "c:moissanite"
+    }
+  },
+  "result": {
+    "item": "more_gems:moissanite_boots"
+  }
+}

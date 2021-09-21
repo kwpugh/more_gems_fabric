@@ -5,16 +5,7 @@ import com.kwpugh.more_gems.items.areatools.ModExcavator;
 import com.kwpugh.more_gems.items.areatools.ModHammer;
 import com.kwpugh.more_gems.items.baseclasses.*;
 import com.kwpugh.more_gems.items.gembag.GemBase;
-import com.kwpugh.more_gems.items.juju.ItemAlexandriteJuju;
-import com.kwpugh.more_gems.items.juju.ItemKunziteJuju;
-import com.kwpugh.more_gems.items.juju.ItemCarbonadoJuju;
-import com.kwpugh.more_gems.items.juju.ItemCitrineJuju;
-import com.kwpugh.more_gems.items.juju.ItemCorundumJuju;
-import com.kwpugh.more_gems.items.juju.ItemEmeraldJuju;
-import com.kwpugh.more_gems.items.juju.ItemRubyJuju;
-import com.kwpugh.more_gems.items.juju.ItemSapphireJuju;
-import com.kwpugh.more_gems.items.juju.ItemTopazJuju;
-import com.kwpugh.more_gems.items.juju.ItemTourmalineJuju;
+import com.kwpugh.more_gems.items.juju.*;
 import com.kwpugh.more_gems.items.special.CarbonadoGildedArmor;
 import com.kwpugh.more_gems.materials.*;
 
@@ -41,6 +32,7 @@ public class ItemInit
 	static int sapphireBow = MoreGems.CONFIG.GENERAL.sapphireDurability;
 	static int rubyBow = MoreGems.CONFIG.GENERAL.rubyDurability;
 	static int carbonadoBow = MoreGems.CONFIG.GENERAL.carbonadoDurability;
+	static int moissaniteBow = MoreGems.CONFIG.GENERAL.moissaniteDurability;
 
 	public static final ToolMaterial CITRINE_TOOL_MATERIAL = new CitrineToolMaterial();
 	public static final ArmorMaterial CITRINE_ARMOR_MATERIAL = new CitrineArmorMaterial();
@@ -63,6 +55,8 @@ public class ItemInit
 	public static final ToolMaterial CARBONADO_TOOL_MATERIAL = new CarbonadoToolMaterial();
 	public static final ArmorMaterial CARBONADO_ARMOR_MATERIAL = new CarbonadoArmorMaterial();
 	public static final ArmorMaterial CARBONADO_GILDED_ARMOR_MATERIAL = new CarbonadoGildedArmorMaterial();
+	public static final ToolMaterial MOISSANITE_TOOL_MATERIAL = new MoissaniteToolMaterial();
+	public static final ArmorMaterial MOISSANITE_ARMOR_MATERIAL = new MoissaniteArmorMaterial();
 
 	public static final Item CITRINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -73,6 +67,7 @@ public class ItemInit
 	public static final Item SAPPHIRE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item RUBY = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item CITRINE_SWORD = new ModSword(CITRINE_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CITRINE_BOW = new ModBow((new Item.Settings()).maxDamage(citrineBow).group(MoreGems.MORE_GEMS_GROUP));
@@ -173,7 +168,17 @@ public class ItemInit
 	public static final Item CARBONADO_HAMMER = new ModHammer(CARBONADO_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_EXCAVATOR = new ModExcavator(CARBONADO_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_PAXEL = new ModPaxel(CARBONADO_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	
+
+	public static final Item MOISSANITE_SWORD = new ModSword(MOISSANITE_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_BOW = new ModBow((new Item.Settings()).maxDamage(moissaniteBow).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_PICKAXE = new ModPickaxe(MOISSANITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_AXE = new ModAxe(MOISSANITE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_SHOVEL = new ModShovel(MOISSANITE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_HOE = new ModHoe(MOISSANITE_TOOL_MATERIAL, -3, 0.0F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_HAMMER = new ModHammer(MOISSANITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_EXCAVATOR = new ModExcavator(MOISSANITE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_PAXEL = new ModPaxel(MOISSANITE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+
 	public static final Item CITRINE_HELMET = new ModArmor(CITRINE_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CITRINE_CHESTPLATE = new ModArmor(CITRINE_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CITRINE_LEGGINGS = new ModArmor(CITRINE_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -225,6 +230,11 @@ public class ItemInit
 	public static final Item CARBONADO_LEGGINGS = new ModArmor(CARBONADO_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_BOOTS = new ModArmor(CARBONADO_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
+	public static final Item MOISSANITE_HELMET = new ModArmor(MOISSANITE_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_CHESTPLATE = new ModArmor(MOISSANITE_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_LEGGINGS = new ModArmor(MOISSANITE_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_BOOTS = new ModArmor(MOISSANITE_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+
 	public static final Item CITRINE_JUJU = new ItemCitrineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_JUJU = new ItemTourmalineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item KUNZITE_JUJU = new ItemKunziteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
@@ -235,6 +245,7 @@ public class ItemInit
 	public static final Item SAPPHIRE_JUJU = new ItemSapphireJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item RUBY_JUJU = new ItemRubyJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_JUJU = new ItemCarbonadoJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_JUJU = new ItemMoissaniteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static void registerItems()
 	{
@@ -247,6 +258,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire"), SAPPHIRE);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby"), RUBY);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado"), CARBONADO);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite"), MOISSANITE);
 
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_sword"), CITRINE_SWORD);
 		
@@ -438,6 +450,25 @@ public class ItemInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_paxel"), CARBONADO_PAXEL);	
 		}
 
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_sword"), MOISSANITE_SWORD);
+
+		if(enableBows)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_bow"), MOISSANITE_BOW);
+		}
+
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_pickaxe"), MOISSANITE_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_axe"), MOISSANITE_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_shovel"), MOISSANITE_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_hoe"), MOISSANITE_HOE);
+
+		if(extraToolsEnable)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_hammer"), MOISSANITE_HAMMER);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_excavator"), MOISSANITE_EXCAVATOR);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_paxel"), MOISSANITE_PAXEL);
+		}
+
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_helmet"), CITRINE_HELMET);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_chestplate"), CITRINE_CHESTPLATE);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_leggings"), CITRINE_LEGGINGS);
@@ -489,6 +520,11 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_leggings"), CARBONADO_LEGGINGS);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_boots"), CARBONADO_BOOTS);
 
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_helmet"), MOISSANITE_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_chestplate"), MOISSANITE_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_leggings"), MOISSANITE_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_boots"), MOISSANITE_BOOTS);
+
 		if(jujuEnable)
 		{
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_juju"), CITRINE_JUJU);
@@ -501,6 +537,7 @@ public class ItemInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_juju"), SAPPHIRE_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_juju"), RUBY_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_juju"), CARBONADO_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_juju"), MOISSANITE_JUJU);
 		}
 	}
 }

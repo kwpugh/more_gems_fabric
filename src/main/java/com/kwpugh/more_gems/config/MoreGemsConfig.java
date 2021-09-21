@@ -133,6 +133,15 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int carbonadoVeinSizeDeepslate = 3;
 		public int carbonadoMaxLevelDeepslate = 0;
 		public int carbonadoPerChunkDeepslate = 12;
+
+		@Comment("***********************"
+				+"\nMoissanite Ores"
+				+"\n***********************")
+		public boolean moissaniteEnable = true;
+		public int moissaniteVeinSize = 3;
+		public int moissaniteMaxLevel = 25;
+		public int moissanitePerChunk = 12;
+		public int moissaniteHighMaxLevel = 128;
     }
     
     @Config(name = "general")
@@ -410,5 +419,28 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int carbonadoArmorEnchantability = 10;
 		public float carbonadoToughness = 0.75F;
 		public float carbonadoKnockbackResistance = 0.25F;
+
+		@Comment("\n"
+				+ "\n"
+				+ "\n"
+				+ "******************************"
+				+ "\nMOISSANITE TOOL MATERIAL"
+				+ "\n******************************")
+		public int moissaniteDurability = 2031;
+		public float moissaniteMiningSpeed = 8.0F;
+		public float moissaniteAttackDamage = 4.0F;
+		public int moissaniteMiningLevel = 3;
+		public int moissaniteEnchantability = 24;
+
+		@Comment("\n"
+				+ "\n"
+				+ "\n"
+				+ "******************************"
+				+ "\nMOISSANITE ARMOR MATERIAL"
+				+ "\n******************************")
+		public int moissaniteDurabilityMultiplier = 33;
+		public int moissaniteArmorEnchantability = 10;
+		public float moissaniteToughness = 0.75F;
+		public float moissaniteKnockbackResistance = 0.25F;
 	}
 }

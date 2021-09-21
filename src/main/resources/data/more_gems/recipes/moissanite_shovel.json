@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " g ",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "g": {
+      "tag": "c:moissanite"
+    }
+  },
+  "result": {
+    "item": "more_gems:moissanite_shovel"
+  }
+}

@@ -172,6 +172,27 @@ public class OreGen
 			.spreadHorizontally()
 			.repeat(CONFIG.carbonadoPerChunkDeepslate); // number of veins per chunk
 
+	// Low vein
+	public static ConfiguredFeature<?, ?> ORE_MOISSANITE_NETHER = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_NETHER,
+					BlockInit.MOISSANITE_ORE.getDefaultState(),
+					CONFIG.moissaniteVeinSize)) // vein size
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(CONFIG.moissaniteMaxLevel)))) // Inclusive min and max height
+			.spreadHorizontally()
+			.repeat(CONFIG.moissanitePerChunk); // number of veins per chunk
+
+	// High vein
+	public static ConfiguredFeature<?, ?> ORE_MOISSANITE_NETHER_HIGH = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_NETHER,
+					BlockInit.MOISSANITE_ORE.getDefaultState(),
+					CONFIG.moissaniteVeinSize)) // vein size
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(98), YOffset.fixed(CONFIG.moissaniteHighMaxLevel)))) // Inclusive min and max height
+			.spreadHorizontally()
+			.repeat(CONFIG.moissanitePerChunk); // number of veins per chunk
 
 	public static void Features()
 	{
@@ -285,6 +306,17 @@ public class OreGen
 			RegistryKey<ConfiguredFeature<?, ?>> oreCarbonadoOverworldDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 					new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld_deepslate"));
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreCarbonadoOverworldDeepslate.getValue(), ORE_CARBONADO_OVERWORLD_DEEPSLATE);
+		}
+
+		if(CONFIG.moissaniteEnable)
+		{
+			RegistryKey<ConfiguredFeature<?, ?>> oreMoissaniteNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+					new Identifier(MoreGems.MOD_ID, "ore_moissanite_nether"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreMoissaniteNether.getValue(), ORE_MOISSANITE_NETHER);
+
+			RegistryKey<ConfiguredFeature<?, ?>> oreMoissaniteNetherHigh = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+					new Identifier(MoreGems.MOD_ID, "ore_moissanite_nether_high"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreMoissaniteNetherHigh.getValue(), ORE_MOISSANITE_NETHER_HIGH);
 		}
 	}
 }

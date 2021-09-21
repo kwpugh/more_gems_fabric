@@ -42,6 +42,10 @@
        "required": false
      },
      {
+       "id": "more_gems:moissanite_shovel",
+       "required": false
+     },
+     {
        "id": "more_gems:emerald_excavator",
        "required": false
      },
@@ -79,6 +83,54 @@
      },
      {
        "id": "more_gems:carbonado_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:moissanite_excavator",
+       "required": false
+     },
+     {
+       "id": "more_gems:citrine_paxel",
+       "required": false
+     },
+     {
+       "id": "more_gems:tourmaline_paxel",
+       "required": false
+     },
+     {
+       "id":  "more_gems:kunzite_paxel",
+       "required": false
+     },
+     {
+       "id": "more_gems:emerald_paxel",
+       "required": false
+     },
+     {
+       "id": "more_gems:topaz_paxel",
+       "required": false
+     },
+     {
+       "id": "more_gems:alexandrite_paxel",
+       "required": false
+     },
+     {
+       "id": "more_gems:corundum_paxel",
+       "required": false
+     },
+     {
+       "id": "more_gems:sapphire_paxel",
+       "required": false
+     },
+     {
+       "id": "more_gems:ruby_paxel",
+       "required": false
+     },
+     {
+       "id": "more_gems:carbonado_paxel",
+       "required": false
+     },
+     {
+       "id": "more_gems:moissanite_paxel",
        "required": false
      }
    ]

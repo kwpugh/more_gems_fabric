@@ -18,7 +18,8 @@ public abstract class PiglinBrainMixin
     {
         ItemStack itemStack = player.getEquippedStack(EquipmentSlot.CHEST);
 
-        if (itemStack.getItem() == ItemInit.CARBONADO_CHESTPLATE_GILDED)
+        if (itemStack.getItem() == ItemInit.CARBONADO_CHESTPLATE_GILDED ||
+                itemStack.getItem() == ItemInit.MOISSANITE_CHESTPLATE)
         {
             cir.setReturnValue(true);
         }
