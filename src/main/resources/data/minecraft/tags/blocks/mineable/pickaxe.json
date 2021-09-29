@@ -1,0 +1,85 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "more_gems:citrine_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:ruby_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:citrine_block",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_block",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_block",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_block",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_block",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_block",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_block",
+      "required": false
+    },
+    {
+      "id": "more_gems:ruby_block",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_block",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_block",
+      "required": false
+    }
+  ]
+}

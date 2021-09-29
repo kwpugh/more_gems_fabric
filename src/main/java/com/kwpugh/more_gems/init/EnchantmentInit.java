@@ -3,10 +3,7 @@ package com.kwpugh.more_gems.init;
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.*;
 
-import net.minecraft.enchantment.DamageEnchantment;
-import net.minecraft.enchantment.EfficiencyEnchantment;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.ThornsEnchantment;
+import net.minecraft.enchantment.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -22,6 +19,7 @@ public class EnchantmentInit
 	public static final Enchantment VOID_ESCAPE = new VoidEscapeEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.FEET});
 	public static final Enchantment WISDOM = new WisdomEnchantment(Enchantment.Rarity.VERY_RARE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final DamageEnchantment STUPIFY = new StupifyEnchantment(Enchantment.Rarity.VERY_RARE, 0, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+	public static final Enchantment CREEPERLESS = new CreeperlessEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
 
 	static boolean enableRazor = MoreGems.CONFIG.GENERAL.enableRazorSharpness;			
 	static boolean enableShulker = MoreGems.CONFIG.GENERAL.enableShulkerBlade;
@@ -32,6 +30,7 @@ public class EnchantmentInit
 	static boolean enableWisdom = MoreGems.CONFIG.GENERAL.enableWisdom;
 	static boolean enableStupify = MoreGems.CONFIG.GENERAL.enableStupify;
 	static boolean enableVoidEscape = MoreGems.CONFIG.GENERAL.enableVoidEscape;
+	static boolean enableCreeperless = MoreGems.CONFIG.GENERAL.enableCreeperless;
 
 	public static void registerEnchantments()
 	{
@@ -78,6 +77,11 @@ public class EnchantmentInit
 		if(enableVoidEscape)
 		{
 			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "void_escape"), VOID_ESCAPE);
+		}
+
+		if(enableCreeperless)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "creeperless"), CREEPERLESS);
 		}
 	}
 }

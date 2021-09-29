@@ -170,6 +170,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableWisdom = true;
 		public boolean enableStupify = true;
 		public boolean enableVoidEscape = true;
+		public boolean enableCreeperless = true;
 		public float amountYellowHeartsQuickening = 10;
 		public int durationQuickening = 40;
 		public int strengthLevelQuickening = 1;

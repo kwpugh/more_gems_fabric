@@ -8,7 +8,8 @@
     "PlayerEntityMixin",
     "ItemMixin",
     "LivingEntityMixin",
-    "PiglinBrainMixin"
+    "PiglinBrainMixin",
+    "CreeperEntityMixin"
   ],
   "client": [
   ],
