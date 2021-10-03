@@ -2,6 +2,8 @@ package com.kwpugh.more_gems.util;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.EnchantmentInit;
+import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.MagmaBlock;
 import net.minecraft.block.Material;
@@ -124,8 +126,6 @@ public class PlayerSpecialAbilities
 	{
 		if(!world.isClient)
 		{
-			System.out.println("call from special abilities");
-
 			// Slow down the enemy
 			if(target instanceof LivingEntity)
 			{
@@ -195,4 +195,24 @@ public class PlayerSpecialAbilities
 			}
 		}
 	}
+
+//	public static void giveLavaClearView(World world, PlayerEntity player)
+//	{
+//		GlStateManager
+//
+//		if(!world.isClient) return;
+//
+//		if(player.isInLava())
+//		{
+//			RenderSystem.setShaderFogStart(0.01F);
+//		}
+//		else
+//		{
+//			RenderSystem.setShaderFogEnd(2.0F);
+//		}
+//
+//		System.out.println("shader colors: " + RenderSystem.getShaderFogColor());
+//		System.out.println("fog start:" + RenderSystem.getShaderFogStart());
+//		System.out.println("fog end: " + RenderSystem.getShaderFogEnd());
+//	}
 }

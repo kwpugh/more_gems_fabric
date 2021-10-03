@@ -2,6 +2,9 @@ package com.kwpugh.more_gems.items.baseclasses;
 
 import com.kwpugh.pugh_tools.Tools.Paxel;
 
+import com.kwpugh.pugh_tools.util.ObsidianBreaking;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Material;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -18,6 +21,19 @@ public class ModPaxel extends Paxel
     public ModPaxel(ToolMaterial material, float attackDamage, float attackSpeed, Item.Settings settings)
     {
         super(material, attackDamage, attackSpeed, settings);
+    }
+
+    @Override
+    public float getMiningSpeedMultiplier(ItemStack stack, BlockState state)
+    {
+        Material material = state.getMaterial();
+
+        if(ObsidianBreaking.fastAtObsidian(state, stack))
+        {
+            return ObsidianBreaking.fastObsidianSpeed();
+        }
+
+        return material != Material.METAL && material != Material.REPAIR_STATION && material != Material.STONE ? super.getMiningSpeedMultiplier(stack, state) : this.miningSpeed;
     }
 
     @Override

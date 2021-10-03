@@ -57,6 +57,5 @@ public abstract class PlayerEntityMixin extends LivingEntity
                 cir.setReturnValue(false);
             }
         }
-
     }
 }
