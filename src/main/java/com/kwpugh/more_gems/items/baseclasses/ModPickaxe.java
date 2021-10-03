@@ -1,6 +1,6 @@
 package com.kwpugh.more_gems.items.baseclasses;
 
-import com.kwpugh.pugh_tools.util.ObsidianBreaking;
+import com.kwpugh.more_gems.util.ObsidianBreaking;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.item.ItemStack;

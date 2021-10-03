@@ -1,8 +1,8 @@
 package com.kwpugh.more_gems.items.baseclasses;
 
+import com.kwpugh.more_gems.util.ObsidianBreaking;
 import com.kwpugh.pugh_tools.Tools.Paxel;
 
-import com.kwpugh.pugh_tools.util.ObsidianBreaking;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.client.item.TooltipContext;

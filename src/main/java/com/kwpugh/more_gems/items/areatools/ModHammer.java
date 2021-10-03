@@ -1,7 +1,7 @@
 package com.kwpugh.more_gems.items.areatools;
 
+import com.kwpugh.more_gems.util.ObsidianBreaking;
 import com.kwpugh.pugh_tools.Tools.Hammer;
-import com.kwpugh.pugh_tools.util.ObsidianBreaking;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.client.item.TooltipContext;
