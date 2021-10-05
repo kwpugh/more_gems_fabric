@@ -19,7 +19,7 @@ public class BackgroundRendererMixin
     {
         Entity entity = camera.getFocusedEntity();
 
-        if (entity instanceof ClientPlayerEntity)
+        if (entity instanceof ClientPlayerEntity && entity.isInLava())
         {
             if (EnchantmentHelper.getLevel(EnchantmentInit.LAVA_VIEW, ((ClientPlayerEntity) entity).getEquippedStack(EquipmentSlot.HEAD)) > 0)
             {
