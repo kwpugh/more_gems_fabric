@@ -6,15 +6,21 @@ import net.minecraft.entity.EquipmentSlot;
 
 public class CreeperlessEnchantment extends Enchantment
 {
-    public CreeperlessEnchantment(Enchantment.Rarity weight, EnchantmentTarget digger, EquipmentSlot... slotTypes)
+    public CreeperlessEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
     {
-        super(weight, EnchantmentTarget.ARMOR_LEGS, slotTypes);
+        super(rarity, enchantmentTarget, equipmentSlots);
     }
 
     @Override
-    public int getMinPower(int int_1)
+    public int getMinPower(int level)
     {
-        return 1;
+        return 10 * (level - 1);
+    }
+
+    @Override
+    public int getMaxPower(int level)
+    {
+        return super.getMinPower(level) + 50;
     }
 
     @Override

@@ -1,19 +1,26 @@
 package com.kwpugh.more_gems.enchantments;
 
-import net.minecraft.enchantment.DamageEnchantment;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 
-public class QuickeningEnchantment extends DamageEnchantment
+public class QuickeningEnchantment extends Enchantment
 {
-	public QuickeningEnchantment(Rarity weight, int typeIndex, EquipmentSlot[] slots)
+	public QuickeningEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
 	{
-		super(weight, typeIndex, slots);
+		super(rarity, enchantmentTarget, equipmentSlots);
 	}
 
 	@Override
-	public int getMinPower(int int_1)
+	public int getMinPower(int level)
 	{
-	    return 1;
+		return 10 * (level - 1);
+	}
+
+	@Override
+	public int getMaxPower(int level)
+	{
+		return super.getMinPower(level) + 50;
 	}
 
 	@Override

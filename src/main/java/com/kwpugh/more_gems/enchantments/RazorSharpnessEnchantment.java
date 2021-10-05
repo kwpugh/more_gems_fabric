@@ -2,7 +2,6 @@ package com.kwpugh.more_gems.enchantments;
 
 import com.kwpugh.more_gems.MoreGems;
 
-import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
@@ -14,21 +13,27 @@ public class RazorSharpnessEnchantment extends Enchantment
 {
 	static float razorDamageIncrease = MoreGems.CONFIG.GENERAL.razorDamageIncrease;
 
-	public RazorSharpnessEnchantment(Enchantment.Rarity rarity, EquipmentSlot[] equipmentSlots)
+	public RazorSharpnessEnchantment(Enchantment.Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
 	{
-		super(rarity, EnchantmentTarget.WEAPON, equipmentSlots);
+		super(rarity, enchantmentTarget, equipmentSlots);
 	}
 
 	@Override
-	public int getMinPower(int int_1)
+	public int getMinPower(int level)
 	{
-	    return 1;
+		return 10 * (level - 1);
+	}
+
+	@Override
+	public int getMaxPower(int level)
+	{
+		return super.getMinPower(level) + 50;
 	}
 
 	@Override
 	public int getMaxLevel()
 	{
-	    return 1;
+		return 1;
 	}
 
 	@Override
@@ -36,7 +41,7 @@ public class RazorSharpnessEnchantment extends Enchantment
 	{
 	    if(target instanceof LivingEntity)
 	    {
-	        //TBD
+	        //TBD, maybe poison?
 	    }
 
 	    super.onTargetDamaged(user, target, level);

@@ -1,10 +1,9 @@
 package com.kwpugh.more_gems.enchantments;
 
 import java.util.Random;
-
 import com.kwpugh.more_gems.MoreGems;
-
-import net.minecraft.enchantment.ThornsEnchantment;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -12,25 +11,31 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 
-public class UntouchableEnchantment extends ThornsEnchantment
+public class UntouchableEnchantment extends Enchantment
 {
 	static int untouchableDamage = MoreGems.CONFIG.GENERAL.untouchableDamage;
 	
-	public UntouchableEnchantment(Rarity weight, EquipmentSlot[] slotTypes)
+	public UntouchableEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
 	{
-		super(weight, slotTypes);
+		super(rarity, enchantmentTarget, equipmentSlots);
 	}
 
 	@Override
-	public int getMinPower(int int_1)
+	public int getMinPower(int level)
 	{
-	    return 1;
+		return 10 * (level - 1);
+	}
+
+	@Override
+	public int getMaxPower(int level)
+	{
+		return super.getMinPower(level) + 50;
 	}
 
 	@Override
 	public int getMaxLevel()
 	{
-	    return 1;
+	    return 3;
 	}
 
 	@Override

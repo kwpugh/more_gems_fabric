@@ -4,9 +4,9 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 
-public class VoidEscapeEnchantment extends Enchantment
+public class LavaViewEnchantment extends Enchantment
 {
-    public VoidEscapeEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
+    public LavaViewEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
     {
         super(rarity, enchantmentTarget, equipmentSlots);
     }

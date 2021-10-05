@@ -2,22 +2,29 @@ package com.kwpugh.more_gems.enchantments;
 
 import com.kwpugh.more_gems.init.ItemInit;
 
-import net.minecraft.enchantment.EfficiencyEnchantment;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class FasterObsidianEnchantment extends EfficiencyEnchantment
+public class FasterObsidianEnchantment extends Enchantment
 {
-	public FasterObsidianEnchantment(Rarity weight, EquipmentSlot[] slotTypes)
+	public FasterObsidianEnchantment(Rarity weight, EnchantmentTarget enchantmentTarget, EquipmentSlot[] slotTypes)
 	{
-		super(weight, slotTypes);
+		super(weight, enchantmentTarget, slotTypes);
 	}
 
 	@Override
-	public int getMinPower(int int_1)
+	public int getMinPower(int level)
 	{
-	    return 1;
+		return 10 * (level - 1);
+	}
+
+	@Override
+	public int getMaxPower(int level)
+	{
+		return super.getMinPower(level) + 50;
 	}
 
 	@Override

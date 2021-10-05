@@ -171,6 +171,9 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableStupify = true;
 		public boolean enableVoidEscape = true;
 		public boolean enableCreeperless = true;
+		public boolean enableFloating = true;
+		public boolean enableLightning = true;
+		public boolean enableLavaView = true;
 		public float amountYellowHeartsQuickening = 10;
 		public int durationQuickening = 40;
 		public int strengthLevelQuickening = 1;
@@ -181,6 +184,8 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int untouchableDamage = 7;
 		public int shulkerBladeDurationTicks = 300;
 		public int wisdomExperienceMultiplier = 5;
+		public float lightningChance = 0.10F;
+		public int floatingBaseDuration = 80;
 		
 		@Comment("********************************"
 				+ "\n"

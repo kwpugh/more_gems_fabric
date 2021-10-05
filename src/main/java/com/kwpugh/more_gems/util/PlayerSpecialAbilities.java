@@ -2,11 +2,7 @@ package com.kwpugh.more_gems.util;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.EnchantmentInit;
-import com.mojang.blaze3d.platform.GlStateManager;
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.MagmaBlock;
-import net.minecraft.block.Material;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -17,7 +13,6 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
@@ -25,7 +20,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.Chunk;
 
 import java.util.Map;
 import java.util.Random;
@@ -108,6 +102,8 @@ public class PlayerSpecialAbilities
 
 	public static void giveVoidEscape(World world, PlayerEntity player)
 	{
+		if(world.isClient) return;
+
 		if(player.hasVehicle())
 		{
 			player.stopRiding();
@@ -169,6 +165,8 @@ public class PlayerSpecialAbilities
 	// Restores health while in fire/flame
 	public static void givePhoenixEffect(World world, PlayerEntity player)
 	{
+		if(world.isClient) return;
+
 		BlockPos pos = player.getBlockPos();
 		BlockPos down = pos.down();
 
@@ -195,24 +193,4 @@ public class PlayerSpecialAbilities
 			}
 		}
 	}
-
-//	public static void giveLavaClearView(World world, PlayerEntity player)
-//	{
-//		GlStateManager
-//
-//		if(!world.isClient) return;
-//
-//		if(player.isInLava())
-//		{
-//			RenderSystem.setShaderFogStart(0.01F);
-//		}
-//		else
-//		{
-//			RenderSystem.setShaderFogEnd(2.0F);
-//		}
-//
-//		System.out.println("shader colors: " + RenderSystem.getShaderFogColor());
-//		System.out.println("fog start:" + RenderSystem.getShaderFogStart());
-//		System.out.println("fog end: " + RenderSystem.getShaderFogEnd());
-//	}
 }
