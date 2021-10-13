@@ -19,11 +19,21 @@ public class LootTableInit
 {
 	static float jujuChance = MoreGems.CONFIG.GENERAL.jujuChance;
 	static boolean jujuenable = MoreGems.CONFIG.GENERAL.jujuEnable;
-	
+	static float treasueBagChance = MoreGems.CONFIG.GENERAL.treasureBagChance;
+
 	private static final List<LootTableInsert> INSERTS = Lists.newArrayList();
 
 	public static void registerLoot()
 	{
+		FabricLootPoolBuilder TREASURE_BAG = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.TREASURE_BAG))
+				.withCondition(RandomChanceLootCondition.builder(treasueBagChance).build());
+
+		insert(new LootTableInsert(TREASURE_BAG,
+				new Identifier("minecraft", "chests/desert_pyramid")
+		));
+
 		if(jujuenable)
 		{
 			FabricLootPoolBuilder CITRINE_JUJU = FabricLootPoolBuilder.builder()

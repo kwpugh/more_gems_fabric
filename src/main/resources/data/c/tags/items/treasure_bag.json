@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:diamond",
+    "minecraft:emerald",
+    "minecraft:slime_ball",
+    "minecraft:gunpowder",
+    "minecraft:iron_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:ender_pearl",
+    "minecraft:quartz"
+  ]
+}

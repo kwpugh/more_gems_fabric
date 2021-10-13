@@ -157,6 +157,8 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     			+"\n********")
 		public boolean jujuEnable = true;
 		public float jujuChance = .02F;
+		public boolean enableTreasureBag = true;
+		public float treasureBagChance = .02F;
 		
 		@Comment("***************"
 				+"\nEnchantments"

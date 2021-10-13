@@ -28,5 +28,6 @@ public class MoreGems implements ModInitializer
 		OreGen.Features();
 		LootTableInit.registerLoot();
 		EnchantmentInit.registerEnchantments();
+		TagInit.registerTags();
 	}
 }

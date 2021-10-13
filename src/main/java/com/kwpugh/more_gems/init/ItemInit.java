@@ -7,6 +7,7 @@ import com.kwpugh.more_gems.items.baseclasses.*;
 import com.kwpugh.more_gems.items.gembag.GemBase;
 import com.kwpugh.more_gems.items.juju.*;
 import com.kwpugh.more_gems.items.special.CarbonadoGildedArmor;
+import com.kwpugh.more_gems.items.special.TreasureBag;
 import com.kwpugh.more_gems.materials.*;
 
 import net.minecraft.entity.EquipmentSlot;
@@ -19,6 +20,7 @@ import net.minecraft.util.registry.Registry;
 public class ItemInit
 {
 	static boolean jujuEnable = MoreGems.CONFIG.GENERAL.jujuEnable;
+	static boolean enableTreasureBag = MoreGems.CONFIG.GENERAL.enableTreasureBag;
 	static boolean extraToolsEnable = MoreGems.CONFIG.GENERAL.extraToolsEnable;
 	static boolean enableBows = MoreGems.CONFIG.GENERAL.bowsEnable;
 
@@ -246,6 +248,8 @@ public class ItemInit
 	public static final Item RUBY_JUJU = new ItemRubyJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_JUJU = new ItemCarbonadoJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item MOISSANITE_JUJU = new ItemMoissaniteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+
+	public static final Item TREASURE_BAG = new TreasureBag((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static void registerItems()
 	{
@@ -538,6 +542,11 @@ public class ItemInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_juju"), RUBY_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_juju"), CARBONADO_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_juju"), MOISSANITE_JUJU);
+		}
+
+		if(enableTreasureBag)
+		{
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "treasure_bag"), TREASURE_BAG);
 		}
 	}
 }
