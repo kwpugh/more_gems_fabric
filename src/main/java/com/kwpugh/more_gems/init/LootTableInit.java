@@ -31,7 +31,8 @@ public class LootTableInit
 				.withCondition(RandomChanceLootCondition.builder(treasueBagChance).build());
 
 		insert(new LootTableInsert(TREASURE_BAG,
-				new Identifier("minecraft", "chests/desert_pyramid")
+				new Identifier("minecraft", "chests/desert_pyramid"),
+				new Identifier("minecraft", "chests/jungle_temple")
 		));
 
 		if(jujuenable)

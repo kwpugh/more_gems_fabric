@@ -33,7 +33,6 @@ public class TreasureBag extends Item
     Random random = new Random();
 
     private static final EnchantmentLevelEntry SILK_TOUCH = new EnchantmentLevelEntry(Enchantments.SILK_TOUCH, 1);
-    private static final EnchantmentLevelEntry INFINITY = new EnchantmentLevelEntry(Enchantments.INFINITY, 1);
     private static final EnchantmentLevelEntry BLINKING = new EnchantmentLevelEntry(EnchantmentInit.BLINKING, 1);
     private static final EnchantmentLevelEntry CREEPERLESS = new EnchantmentLevelEntry(EnchantmentInit.CREEPERLESS, 1);
     private static final EnchantmentLevelEntry FASTER_OBSIDIAN = new EnchantmentLevelEntry(EnchantmentInit.FASTER_OBSIDIAN, 1);
@@ -62,31 +61,30 @@ public class TreasureBag extends Item
         if (!world.isClient)
         {
             // Build a list of enchantments
-            List<EnchantmentLevelEntry> entryList = new ArrayList<>();
-            entryList.add(SILK_TOUCH);
-            entryList.add(INFINITY);
-            entryList.add(BLINKING);
-            entryList.add(CREEPERLESS);
-            entryList.add(FASTER_OBSIDIAN);
-            entryList.add(FLOATING1);
-            entryList.add(FLOATING2);
-            entryList.add(LAVA_VIEW);
-            entryList.add(LIGHTNING);
-            entryList.add(QUICKENING);
-            entryList.add(RAZOR_SHARPNESS);
-            entryList.add(SHULKER_BLADE);
-            entryList.add(STUPIFY);
-            entryList.add(UNTOUCHABLE1);
-            entryList.add(UNTOUCHABLE2);
-            entryList.add(UNTOUCHABLE3);
-            entryList.add(VOID_ESCAPE);
-            entryList.add(WISDOM1);
-            entryList.add(WISDOM2);
-            entryList.add(WISDOM3);
+            List<EnchantmentLevelEntry> enchantmentList = new ArrayList<>();
+            enchantmentList.add(SILK_TOUCH);
+            enchantmentList.add(BLINKING);
+            enchantmentList.add(CREEPERLESS);
+            enchantmentList.add(FASTER_OBSIDIAN);
+            enchantmentList.add(FLOATING1);
+            enchantmentList.add(FLOATING2);
+            enchantmentList.add(LAVA_VIEW);
+            enchantmentList.add(LIGHTNING);
+            enchantmentList.add(QUICKENING);
+            enchantmentList.add(RAZOR_SHARPNESS);
+            enchantmentList.add(SHULKER_BLADE);
+            enchantmentList.add(STUPIFY);
+            enchantmentList.add(UNTOUCHABLE1);
+            enchantmentList.add(UNTOUCHABLE2);
+            enchantmentList.add(UNTOUCHABLE3);
+            enchantmentList.add(VOID_ESCAPE);
+            enchantmentList.add(WISDOM1);
+            enchantmentList.add(WISDOM2);
+            enchantmentList.add(WISDOM3);
 
             // Pick a random enchant from list
-            int randomIndex = random.nextInt(entryList.size());
-            EnchantmentLevelEntry randomElement = entryList.get(randomIndex);
+            int randomIndex = random.nextInt(enchantmentList.size());
+            EnchantmentLevelEntry randomElement = enchantmentList.get(randomIndex);
 
             // Create a new book and give it the picked enchantment
             ItemStack book = new ItemStack(Items.ENCHANTED_BOOK);
