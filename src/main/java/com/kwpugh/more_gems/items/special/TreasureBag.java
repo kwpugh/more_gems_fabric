@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.EnchantmentInit;
 import com.kwpugh.more_gems.init.TagInit;
 
@@ -60,42 +61,49 @@ public class TreasureBag extends Item
 
         if (!world.isClient)
         {
-            // Build a list of enchantments
-            List<EnchantmentLevelEntry> enchantmentList = new ArrayList<>();
-            enchantmentList.add(SILK_TOUCH);
-            enchantmentList.add(BLINKING);
-            enchantmentList.add(CREEPERLESS);
-            enchantmentList.add(FASTER_OBSIDIAN);
-            enchantmentList.add(FLOATING1);
-            enchantmentList.add(FLOATING2);
-            enchantmentList.add(LAVA_VIEW);
-            enchantmentList.add(LIGHTNING);
-            enchantmentList.add(QUICKENING);
-            enchantmentList.add(RAZOR_SHARPNESS);
-            enchantmentList.add(SHULKER_BLADE);
-            enchantmentList.add(STUPIFY);
-            enchantmentList.add(UNTOUCHABLE1);
-            enchantmentList.add(UNTOUCHABLE2);
-            enchantmentList.add(UNTOUCHABLE3);
-            enchantmentList.add(VOID_ESCAPE);
-            enchantmentList.add(WISDOM1);
-            enchantmentList.add(WISDOM2);
-            enchantmentList.add(WISDOM3);
+            // Random items from treasure_bag.json
+            for(int i = 0; i < 2; i++)
+            {
+                ItemStack treasure = TagInit.TREASURE_BAG.getRandom(random).getDefaultStack();
+                world.spawnEntity(new ItemEntity(world, player.getX(), player.getY(), player.getZ(), treasure));
+            }
 
-            // Pick a random enchant from list
-            int randomIndex = random.nextInt(enchantmentList.size());
-            EnchantmentLevelEntry randomElement = enchantmentList.get(randomIndex);
+            // Random enchanted book
+            if(MoreGems.CONFIG.GENERAL.enableEnchantedBookDrop)
+            {
+                // Build a list of enchantments
+                List<EnchantmentLevelEntry> enchantmentList = new ArrayList<>();
+                enchantmentList.add(SILK_TOUCH);
+                enchantmentList.add(BLINKING);
+                enchantmentList.add(CREEPERLESS);
+                enchantmentList.add(FASTER_OBSIDIAN);
+                enchantmentList.add(FLOATING1);
+                enchantmentList.add(FLOATING2);
+                enchantmentList.add(LAVA_VIEW);
+                enchantmentList.add(LIGHTNING);
+                enchantmentList.add(QUICKENING);
+                enchantmentList.add(RAZOR_SHARPNESS);
+                enchantmentList.add(SHULKER_BLADE);
+                enchantmentList.add(STUPIFY);
+                enchantmentList.add(UNTOUCHABLE1);
+                enchantmentList.add(UNTOUCHABLE2);
+                enchantmentList.add(UNTOUCHABLE3);
+                enchantmentList.add(VOID_ESCAPE);
+                enchantmentList.add(WISDOM1);
+                enchantmentList.add(WISDOM2);
+                enchantmentList.add(WISDOM3);
 
-            // Create a new book and give it the picked enchantment
-            ItemStack book = new ItemStack(Items.ENCHANTED_BOOK);
-            EnchantedBookItem.addEnchantment(book, randomElement);
+                // Pick a random enchant from list
+                int randomIndex = random.nextInt(enchantmentList.size());
+                EnchantmentLevelEntry randomElement = enchantmentList.get(randomIndex);
 
-            // Pick a random item from the treasure_bag.json, using a json allows for additions via datapacks
-            ItemStack treasure = TagInit.TREASURE_BAG.getRandom(random).getDefaultStack();
+                // Create a new book and give it the picked enchantment
+                ItemStack book = new ItemStack(Items.ENCHANTED_BOOK);
+                EnchantedBookItem.addEnchantment(book, randomElement);
 
-            // Spawn the enchant book and the random treasure item
-            world.spawnEntity(new ItemEntity(world, player.getX(), player.getY(), player.getZ(), book));
-            world.spawnEntity(new ItemEntity(world, player.getX(), player.getY(), player.getZ(), treasure));
+                // Spawn the enchanted book
+                world.spawnEntity(new ItemEntity(world, player.getX(), player.getY(), player.getZ(), book));
+            }
 
             // Remove the treasure bag in hand
             mainHandStack.decrement(1);

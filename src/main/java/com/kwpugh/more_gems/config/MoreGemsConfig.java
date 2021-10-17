@@ -163,6 +163,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\n********")
 		public boolean enableTreasureBag = true;
 		public float treasureBagChance = .015F;
+		public boolean enableEnchantedBookDrop = true;
 
 		@Comment("***************"
 				+"\nEnchantments"
