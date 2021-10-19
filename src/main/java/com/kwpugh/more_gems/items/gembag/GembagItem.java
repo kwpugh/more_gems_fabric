@@ -25,6 +25,12 @@ public class GembagItem extends Item
     }
 
     @Override
+    public boolean canBeNested()
+    {
+        return false;
+    }
+
+    @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
     {
         if(!world.isClient)
