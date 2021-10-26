@@ -162,7 +162,8 @@ public class PlayerSpecialAbilities
 		}
 	}
 
-	// Restores health while in fire/flame
+	// Restores health while in lava, float over magma blocks
+	// Works with EntityMixinPhoenix
 	public static void givePhoenixEffect(World world, PlayerEntity player)
 	{
 		if(world.isClient) return;
@@ -179,15 +180,12 @@ public class PlayerSpecialAbilities
 			player.setNoGravity(false);
 		}
 
-		if(player.isOnFire() ||
-				player.isInLava())
+		if(player.isInLava())
 		{
-			StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 8, 0, false, false);
 			StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 8, 0, false, false);
 			StatusEffectInstance effect3 = new StatusEffectInstance(StatusEffects.SATURATION, 8, 0, false, false);
 
 			{
-				player.addStatusEffect(effect);
 				player.addStatusEffect(effect2);
 				player.addStatusEffect(effect3);
 			}

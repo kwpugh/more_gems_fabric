@@ -254,7 +254,7 @@
 	"item.more_gems.emerald_juju.tip1": "A hero is born",
 
 	"item.more_gems.topaz_juju": "Topaz JuJu",
-	"item.more_gems.topaz_juju.tip1": "Provides a little protection from fire",
+	"item.more_gems.topaz_juju.tip1": "Provides protection from fire/lava",
 
 	"item.more_gems.alexandrite_juju": "Alexandrite JuJu",
 	"item.more_gems.alexandrite_juju.tip1": "Allows breathing underwater",
@@ -272,8 +272,8 @@
 	"item.more_gems.carbonado_juju.tip1": "Swim with the Dolphins",
 
 	"item.more_gems.moissanite_juju": "Moissanite JuJu",
-	"item.more_gems.moissanite_juju.tip1": "Restore health in fire &",
-	"item.more_gems.moissanite_juju.tip2": "walk on magma blocks",
+	"item.more_gems.moissanite_juju.tip1": "Fireproof, restore health in lava &",
+	"item.more_gems.moissanite_juju.tip2": "float on magma blocks",
 
 	"item.more_gems.treasure_bag": "Treasure Bag",
 	"item.more_gems.treasure_bag.tip1": "Right-click for a prize",

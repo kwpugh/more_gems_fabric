@@ -14,27 +14,26 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
-public class ItemEmeraldJuju extends Item
-{
-	public ItemEmeraldJuju(Settings settings)
+public class SaturationSapphireJuju extends Item
+{	
+	public SaturationSapphireJuju(Settings settings)
 	{
 		super(settings);
 	}
-		
+
 	@Override
 	public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected)
 	{
-		StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, 8, 0, false, false);
+		StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.SATURATION, 8, 0, false, false);
 		LivingEntity player = (LivingEntity) entity;
 		{
-			player.addStatusEffect(effect);
+			player.addStatusEffect(effect2);
 		}
 	}
-	   
-	   
+	 
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
-		tooltip.add(new TranslatableText("item.more_gems.emerald_juju.tip1").formatted(Formatting.GREEN));
+		tooltip.add(new TranslatableText("item.more_gems.sapphire_juju.tip1").formatted(Formatting.GREEN));
 	} 
 }

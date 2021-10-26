@@ -4,12 +4,14 @@
   "package": "com.kwpugh.more_gems.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "CreeperEntityMixin",
     "DefaultBiomeFeaturesMixin",
-    "PlayerEntityMixin",
+    "EntityMixinFire",
     "ItemMixin",
     "LivingEntityMixin",
+    "LivingEntityMixinBreathing",
     "PiglinBrainMixin",
-    "CreeperEntityMixin"
+    "PlayerEntityMixin"
   ],
   "client": [
     "BackgroundRendererMixin"

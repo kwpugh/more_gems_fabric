@@ -1,12 +1,12 @@
 package com.kwpugh.more_gems.items.juju;
 
-import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
+import java.util.List;
+
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -14,11 +14,9 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
-import java.util.List;
-
-public class ItemMoissaniteJuju extends Item
-{
-	public ItemMoissaniteJuju(Settings settings)
+public class StrengthRubyJuju extends Item
+{	
+	public StrengthRubyJuju(Settings settings)
 	{
 		super(settings);
 	}
@@ -26,17 +24,16 @@ public class ItemMoissaniteJuju extends Item
 	@Override
 	public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected)
 	{
-		if(entity instanceof PlayerEntity)
+		StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.STRENGTH, 8, 2, false, false);
+		LivingEntity player = (LivingEntity) entity;
 		{
-			PlayerEntity player = (PlayerEntity) entity;
-			PlayerSpecialAbilities.givePhoenixEffect(world, player);
+			player.addStatusEffect(effect);
 		}
 	}
-	  
+	 
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
-		tooltip.add(new TranslatableText("item.more_gems.moissanite_juju.tip1").formatted(Formatting.GREEN));
-		tooltip.add(new TranslatableText("item.more_gems.moissanite_juju.tip2").formatted(Formatting.GREEN));
+		tooltip.add(new TranslatableText("item.more_gems.ruby_juju.tip1").formatted(Formatting.GREEN));
 	} 
 }

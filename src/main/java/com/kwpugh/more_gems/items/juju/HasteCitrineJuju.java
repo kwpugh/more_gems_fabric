@@ -14,9 +14,9 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
-public class ItemSapphireJuju extends Item
+public class HasteCitrineJuju extends Item
 {	
-	public ItemSapphireJuju(Settings settings)
+	public HasteCitrineJuju(Settings settings)
 	{
 		super(settings);
 	}
@@ -24,16 +24,16 @@ public class ItemSapphireJuju extends Item
 	@Override
 	public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected)
 	{
-		StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.SATURATION, 8, 0, false, false);
+		StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.HASTE, 8, 1, false, false);
 		LivingEntity player = (LivingEntity) entity;
 		{
-			player.addStatusEffect(effect2);
+			player.addStatusEffect(effect);
 		}
 	}
-	 
+	
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
-		tooltip.add(new TranslatableText("item.more_gems.sapphire_juju.tip1").formatted(Formatting.GREEN));
+		tooltip.add(new TranslatableText("item.more_gems.citrine_juju.tip1").formatted(Formatting.GREEN));
 	} 
 }

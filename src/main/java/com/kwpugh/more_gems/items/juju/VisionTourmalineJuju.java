@@ -19,9 +19,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class ItemTourmalineJuju extends Item
+public class VisionTourmalineJuju extends Item
 {
-	public ItemTourmalineJuju(Settings settings)
+	public VisionTourmalineJuju(Settings settings)
 	{
 		super(settings);
 	}

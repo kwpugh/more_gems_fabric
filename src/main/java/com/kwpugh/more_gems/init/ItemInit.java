@@ -237,17 +237,17 @@ public class ItemInit
 	public static final Item MOISSANITE_LEGGINGS = new ModArmor(MOISSANITE_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item MOISSANITE_BOOTS = new ModArmor(MOISSANITE_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
 
-	public static final Item CITRINE_JUJU = new ItemCitrineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item TOURMALINE_JUJU = new ItemTourmalineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item KUNZITE_JUJU = new ItemKunziteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_JUJU = new ItemEmeraldJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item TOPAZ_JUJU = new ItemTopazJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item ALEXANDRITE_JUJU = new ItemAlexandriteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item CORUNDUM_JUJU = new ItemCorundumJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item SAPPHIRE_JUJU = new ItemSapphireJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_JUJU = new ItemRubyJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item CARBONADO_JUJU = new ItemCarbonadoJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item MOISSANITE_JUJU = new ItemMoissaniteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CITRINE_JUJU = new HasteCitrineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOURMALINE_JUJU = new VisionTourmalineJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_JUJU = new SpeedKunziteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item EMERALD_JUJU = new HeroEmeraldJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOPAZ_JUJU = new FireTopazJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item ALEXANDRITE_JUJU = new BreathingAlexandriteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CORUNDUM_JUJU = new FallingCorundumJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SAPPHIRE_JUJU = new SaturationSapphireJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item RUBY_JUJU = new StrengthRubyJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CARBONADO_JUJU = new ConduitCarbonadoJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_JUJU = new PhoenixMoissaniteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item TREASURE_BAG = new TreasureBag((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 

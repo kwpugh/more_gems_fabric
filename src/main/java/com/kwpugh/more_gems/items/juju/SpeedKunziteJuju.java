@@ -19,9 +19,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class ItemCorundumJuju extends Item
+public class SpeedKunziteJuju extends Item
 {
-	public ItemCorundumJuju(Settings settings)
+	public SpeedKunziteJuju(Settings settings)
 	{
 		super(settings);
 	}
@@ -31,7 +31,7 @@ public class ItemCorundumJuju extends Item
 	{
 		if(EnableUtil.isEnabled(stack))
 		{
-			StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.SLOW_FALLING, 8, 0, false, false);
+			StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.SPEED, 8, 1, false, false);
 			LivingEntity player = (LivingEntity) entity;
 			{
 				player.addStatusEffect(effect);
@@ -55,7 +55,7 @@ public class ItemCorundumJuju extends Item
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
-		tooltip.add(new TranslatableText("item.more_gems.corundum_juju.tip1").formatted(Formatting.GREEN));
+		tooltip.add(new TranslatableText("item.more_gems.kunzite_juju.tip1").formatted(Formatting.GREEN));
 		tooltip.add(new TranslatableText("item.more_gems.juju.tip").formatted(Formatting.BLUE));
 		tooltip.add(new TranslatableText("itme.more_gems.enable_status", EnableUtil.isEnabled(itemStack)).formatted(Formatting.GOLD));
 	}
