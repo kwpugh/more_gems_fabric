@@ -2,7 +2,6 @@ package com.kwpugh.more_gems.util;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.EnchantmentInit;
-import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -17,7 +16,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
@@ -118,7 +116,7 @@ public class PlayerSpecialAbilities
 	}
 
 	// Effects for Quickening Enchantment called my mixin
-	public static void giveQuickening(World world, LivingEntity player, Entity target)
+	public static void giveQuickening(World world, LivingEntity player, Entity target, int level)
 	{
 		if(!world.isClient)
 		{
@@ -129,9 +127,9 @@ public class PlayerSpecialAbilities
 			}
 
 			// Juice up the player
-			StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.STRENGTH, duration, strengthLevel, false, false);
-			StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, duration, 0, false, false);
-			StatusEffectInstance effect3 = new StatusEffectInstance(StatusEffects.SPEED, duration, speedLevel, false, false);
+			StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.STRENGTH, duration * level, strengthLevel, false, false);
+			StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, duration * level, 0, false, false);
+			StatusEffectInstance effect3 = new StatusEffectInstance(StatusEffects.SPEED, duration * level, speedLevel, false, false);
 
 			player.addStatusEffect(effect);
 			player.addStatusEffect(effect2);
@@ -167,18 +165,6 @@ public class PlayerSpecialAbilities
 	public static void givePhoenixEffect(World world, PlayerEntity player)
 	{
 		if(world.isClient) return;
-
-		BlockPos pos = player.getBlockPos();
-		BlockPos down = pos.down();
-
-		if(world.getBlockState(down).getBlock() == Blocks.MAGMA_BLOCK)
-		{
-			player.setNoGravity(true);
-		}
-		else
-		{
-			player.setNoGravity(false);
-		}
 
 		if(player.isInLava())
 		{

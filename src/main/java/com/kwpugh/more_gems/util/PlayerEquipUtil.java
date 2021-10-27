@@ -1,22 +1,23 @@
 package com.kwpugh.more_gems.util;
 
-import com.kwpugh.more_gems.init.ItemInit;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public final class PlayerEquipUtil
 {
-	public static boolean hasBreathingJuju(PlayerEntity player)
+	// Generalized check for itemstack in inventory
+	public static boolean hasItemInInventory(PlayerEntity player, Item item)
 	{
 		PlayerInventory inv = player.getInventory();
 		int size = inv.size();
 
-		//Is the ring in the player inventory?
+		//Is the item in the player inventory?
 		for (int slot = 0; slot < size; slot++)
 		{
 			ItemStack stack = inv.getStack(slot);
-			if (stack.getItem() == ItemInit.ALEXANDRITE_JUJU)
+			if (stack.getItem() == item)
 			{
 				return true;
 			}
@@ -25,20 +26,27 @@ public final class PlayerEquipUtil
 		return false;
 	}
 
-	public static boolean hasPhoenixJuju(PlayerEntity player)
+	// Generalized check for itemstack in off hand
+	public static boolean hasItemInOffHand(PlayerEntity player, Item item)
 	{
-		PlayerInventory inv = player.getInventory();
-		int size = inv.size();
+		ItemStack offHand = player.getOffHandStack();
 
-		//Is the ring in the player inventory?
-		for (int slot = 0; slot < size; slot++)
+		if(offHand.getItem() == item)
 		{
-			ItemStack stack = inv.getStack(slot);
-			if (stack.getItem() == ItemInit.TOPAZ_JUJU ||
-					stack.getItem() == ItemInit.MOISSANITE_JUJU)
-			{
-				return true;
-			}
+			return true;
+		}
+
+		return false;
+	}
+
+	// Generalized check for itemstack in main hand
+	public static boolean hasItemInMainHand(PlayerEntity player, Item item)
+	{
+		ItemStack offHand = player.getMainHandStack();
+
+		if(offHand.getItem() == item)
+		{
+			return true;
 		}
 
 		return false;

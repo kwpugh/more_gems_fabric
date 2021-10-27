@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.mixin;
 
+import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.util.PlayerEquipUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -32,8 +33,7 @@ public abstract class LivingEntityMixinBreathing extends Entity
         {
             PlayerEntity player = (PlayerEntity) livingEntity;
 
-            if(PlayerEquipUtil.hasBreathingJuju(player)
-            )
+            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.ALEXANDRITE_JUJU))
             {
                 cir.setReturnValue(true);
             }

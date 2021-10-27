@@ -30,15 +30,14 @@ public abstract class PlayerEntityMixin extends LivingEntity
     }
 
     @Inject(method = "attack", at = @At(value = "HEAD"))
-    private void attackQuickening(Entity target_1, CallbackInfo ci)
+    private void attackQuickening(Entity target, CallbackInfo ci)
     {
         PlayerEntity self = ((PlayerEntity) (Object) this);
+        int level = EnchantmentHelper.getLevel(EnchantmentInit.QUICKENING, self.getEquippedStack(EquipmentSlot.MAINHAND));
 
-        Map<Enchantment, Integer> enchantments = EnchantmentHelper.get(self.getMainHandStack());
-
-        if (enchantments.containsKey(EnchantmentInit.QUICKENING))
+        if(level > 0)
         {
-            PlayerSpecialAbilities.giveQuickening(world, self, target_1);
+            PlayerSpecialAbilities.giveQuickening(world, self, target, level);
         }
     }
 
@@ -46,8 +45,9 @@ public abstract class PlayerEntityMixin extends LivingEntity
     private void damageVoidEscape(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
     {
         PlayerEntity self = (PlayerEntity) (Object) this;
+        int level = EnchantmentHelper.getLevel(EnchantmentInit.VOID_ESCAPE, self.getEquippedStack(EquipmentSlot.FEET));
 
-        if(EnchantmentHelper.getLevel(EnchantmentInit.VOID_ESCAPE, self.getEquippedStack(EquipmentSlot.FEET)) > 0)
+        if(level > 0)
         {
             self.fallDistance = 0.0F;
 

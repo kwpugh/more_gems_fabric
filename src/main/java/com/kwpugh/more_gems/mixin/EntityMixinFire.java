@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.mixin;
 
+import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.util.PlayerEquipUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -27,8 +28,8 @@ public abstract class EntityMixinFire
         {
             PlayerEntity player = (PlayerEntity) entity;
 
-            if(PlayerEquipUtil.hasPhoenixJuju(player)
-            )
+            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOPAZ_JUJU) ||
+                    PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU))
             {
                 cir.setReturnValue(true);
             }
