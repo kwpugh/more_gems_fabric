@@ -181,6 +181,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableFloating = true;
 		public boolean enableLightning = true;
 		public boolean enableLavaView = true;
+
+		@Comment("***************"
+				+"\nEnchantment Settings"
+				+"\n***************")
 		public float amountYellowHeartsQuickening = 10;
 		public int durationQuickening = 40;
 		public int strengthLevelQuickening = 1;
