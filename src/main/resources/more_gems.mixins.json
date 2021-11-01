@@ -11,7 +11,8 @@
     "LivingEntityMixin",
     "LivingEntityMixinBreathing",
     "PiglinBrainMixin",
-    "PlayerEntityMixin"
+    "PlayerEntityMixin",
+    "StatusEffectMixin"
   ],
   "client": [
     "BackgroundRendererMixin"
