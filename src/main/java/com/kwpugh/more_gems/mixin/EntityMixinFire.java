@@ -20,7 +20,7 @@ public abstract class EntityMixinFire
     }
 
     @Inject(method = "isFireImmune", at = @At("HEAD"), cancellable = true)
-    public void gobberIsFireImmune(CallbackInfoReturnable<Boolean> cir)
+    public void moregemsIsFireImmune(CallbackInfoReturnable<Boolean> cir)
     {
         Entity entity = (Entity) (Object) this;
 

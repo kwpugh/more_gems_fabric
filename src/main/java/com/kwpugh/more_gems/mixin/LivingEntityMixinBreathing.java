@@ -25,7 +25,7 @@ public abstract class LivingEntityMixinBreathing extends Entity
     }
 
     @Inject(method = "canBreatheInWater", at = @At("HEAD"), cancellable = true)
-    public void gobberCanBreatheInWater(CallbackInfoReturnable<Boolean> cir)
+    public void moregemsCanBreatheInWater(CallbackInfoReturnable<Boolean> cir)
     {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
 
