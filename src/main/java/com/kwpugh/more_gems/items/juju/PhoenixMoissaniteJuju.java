@@ -38,5 +38,6 @@ public class PhoenixMoissaniteJuju extends Item
 	{
 		tooltip.add(new TranslatableText("item.more_gems.moissanite_juju.tip1").formatted(Formatting.GREEN));
 		tooltip.add(new TranslatableText("item.more_gems.moissanite_juju.tip2").formatted(Formatting.GREEN));
+		tooltip.add(new TranslatableText("item.more_gems.moissanite_juju.tip3").formatted(Formatting.GREEN));
 	} 
 }

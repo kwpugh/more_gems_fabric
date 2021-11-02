@@ -1,10 +1,10 @@
 package com.kwpugh.more_gems.mixin;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.util.PlayerEquipUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.mob.HoglinEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.Box;
@@ -28,27 +28,25 @@ public abstract class HoglinEntityMixin
     @Inject(method = "mobTick", at = @At("HEAD"), cancellable = true)
     public void moregemsMobTick(CallbackInfo ci)
     {
-        HoglinEntity hoglin = (HoglinEntity) (Object) this;
-
-        Box mobBox = (new Box(hoglin.getBlockPos())).expand(3, 2, 3);
-        List<Entity> list = hoglin.world.getNonSpectatingEntities(Entity.class, mobBox);
-        Iterator<Entity> iterator = list.iterator();
-
-        Entity targetEntity;
-
-        // Cycle through box looking for players with Moissanite Juju
-        while(iterator.hasNext())
+        if(MoreGems.CONFIG.GENERAL.enableMoissaniteDocileHoglin)
         {
-            targetEntity = iterator.next();
+            HoglinEntity hoglin = (HoglinEntity) (Object) this;
+            Box mobBox = (new Box(hoglin.getBlockPos())).expand(2, 2, 2);
+            List<Entity> list = hoglin.world.getNonSpectatingEntities(Entity.class, mobBox);
+            Iterator<Entity> iterator = list.iterator();
+            Entity targetEntity;
 
-            if(targetEntity instanceof PlayerEntity)
+            // Cycle through box looking for players with Moissanite Juju
+            while(iterator.hasNext())
             {
-                PlayerEntity player = (PlayerEntity) targetEntity;
-
-                if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU))
+                targetEntity = iterator.next();
+                if(targetEntity instanceof PlayerEntity)
                 {
-                    hoglin.getBrain().remember(MemoryModuleType.AVOID_TARGET, player, 20);
-                    ci.cancel();
+                    PlayerEntity player = (PlayerEntity) targetEntity;
+                    if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU))
+                    {
+                        ci.cancel();
+                    }
                 }
             }
         }
