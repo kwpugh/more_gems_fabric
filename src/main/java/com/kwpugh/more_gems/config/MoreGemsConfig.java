@@ -153,7 +153,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean gembagEnable = true;
 		
     	@Comment("********"
-    			+"\nJuju"
+    			+"\nJuju Settings"
     			+"\n********")
 		public boolean jujuEnable = true;
 		public float jujuChance = .02F;
@@ -460,5 +460,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int moissaniteArmorEnchantability = 10;
 		public float moissaniteToughness = 0.75F;
 		public float moissaniteKnockbackResistance = 0.25F;
+		public boolean enableMoissaniteCuring = true;
 	}
 }
