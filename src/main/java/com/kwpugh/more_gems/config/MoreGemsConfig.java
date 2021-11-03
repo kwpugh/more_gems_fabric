@@ -156,7 +156,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     			+"\nJuju Settings"
     			+"\n********")
 		public boolean jujuEnable = true;
-		public float jujuChance = .02F;
+		public float jujuChance = .06F;
 		public boolean enableMoissaniteDocileHoglin = true;
 
 		@Comment("********"

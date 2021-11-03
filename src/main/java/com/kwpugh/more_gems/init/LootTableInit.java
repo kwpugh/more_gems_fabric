@@ -154,6 +154,17 @@ public class LootTableInit
 					new Identifier("minecraft", "chests/bastion_treasure")
 			));
 
+			FabricLootPoolBuilder MOISSANITE_JUJU = FabricLootPoolBuilder.builder()
+					.rolls(ConstantLootNumberProvider.create(1))
+					.with(ItemEntry.builder(ItemInit.MOISSANITE_JUJU))
+					.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
+
+			insert(new LootTableInsert(MOISSANITE_JUJU,
+					new Identifier("minecraft", "chests/bastion_treasure"),
+					new Identifier("minecraft", "chests/bastion_bridge"),
+					new Identifier("minecraft", "chests/bastion_hoglin_stable"),
+					new Identifier("minecraft", "chests/bastion_other")
+			));
 
 			LootTableLoadingCallback.EVENT.register(((resourceManager, lootManager, identifier, supplier, lootTableSetter) -> {
 				INSERTS.forEach(i->{
