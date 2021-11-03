@@ -2,8 +2,8 @@ package com.kwpugh.more_gems.init;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.*;
-
-import net.minecraft.enchantment.*;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -23,8 +23,9 @@ public class EnchantmentInit
 	public static final Enchantment FLOATING = new FloatingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment LIGHTNING = new LightningEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment LAVA_VIEW = new LavaViewEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_HEAD, new EquipmentSlot[]{EquipmentSlot.HEAD});
+	public static final Enchantment BEASTAMORE = new BeastAmoreEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
 
-	static boolean enableRazor = MoreGems.CONFIG.GENERAL.enableRazorSharpness;			
+	static boolean enableRazor = MoreGems.CONFIG.GENERAL.enableRazorSharpness;
 	static boolean enableShulker = MoreGems.CONFIG.GENERAL.enableShulkerBlade;
 	static boolean enableQuickening = MoreGems.CONFIG.GENERAL.enableQuickening;
 	static boolean enableUntouchable = MoreGems.CONFIG.GENERAL.enableUntouchable;
@@ -37,6 +38,7 @@ public class EnchantmentInit
 	static boolean enableFloating = MoreGems.CONFIG.GENERAL.enableFloating;
 	static boolean enableLightning = MoreGems.CONFIG.GENERAL.enableLightning;
 	static boolean enableLavaView = MoreGems.CONFIG.GENERAL.enableLavaView;
+	static boolean enableBeastAAmore = MoreGems.CONFIG.GENERAL.enableBeastAmore;
 
 	public static void registerEnchantments()
 	{
@@ -103,6 +105,11 @@ public class EnchantmentInit
 		if(enableLavaView)
 		{
 			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lava_view"), LAVA_VIEW);
+		}
+
+		if(enableBeastAAmore)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "beast_amore"), BEASTAMORE);
 		}
 	}
 }

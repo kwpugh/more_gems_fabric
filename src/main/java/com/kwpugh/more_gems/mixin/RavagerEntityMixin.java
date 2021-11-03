@@ -2,14 +2,13 @@ package com.kwpugh.more_gems.mixin;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.EnchantmentInit;
-import com.kwpugh.more_gems.init.ItemInit;
-import com.kwpugh.more_gems.util.PlayerEquipUtil;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.mob.HoglinEntity;
+import net.minecraft.entity.mob.RavagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.raid.RaiderEntity;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -21,43 +20,39 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.Iterator;
 import java.util.List;
 
-@Mixin(HoglinEntity.class)
-public abstract class HoglinEntityMixin
+@Mixin(RavagerEntity.class)
+public abstract class RavagerEntityMixin extends RaiderEntity
 {
-    @Shadow private int movementCooldownTicks;
+    @Shadow private int stunTick;
 
-    @Shadow public abstract int getMovementCooldownTicks();
-
-    public HoglinEntityMixin(EntityType<?> type, World world)
+    protected RavagerEntityMixin (EntityType<? extends RaiderEntity> entityType, World world)
     {
-        super();
+        super(entityType, world);
     }
 
-    @Inject(method = "mobTick", at = @At("HEAD"), cancellable = true)
-    public void moregemsMobTick(CallbackInfo ci)
+
+    @Inject(method = "tickMovement", at = @At("HEAD"), cancellable = true)
+    public void tickMovement(CallbackInfo ci)
     {
-        if(MoreGems.CONFIG.GENERAL.enableMoissaniteDocileHoglin ||
-                MoreGems.CONFIG.GENERAL.enableBeastAmore)
+
+        if(MoreGems.CONFIG.GENERAL.enableBeastAmore)
         {
-            HoglinEntity hoglin = (HoglinEntity) (Object) this;
-            Box mobBox = (new Box(hoglin.getBlockPos())).expand(4, 2, 4);
-            List<Entity> list = hoglin.world.getNonSpectatingEntities(Entity.class, mobBox);
+            RavagerEntity ravager = (RavagerEntity) (Object) this;
+            Box mobBox = (new Box(ravager.getBlockPos())).expand(4, 2, 4);
+            List<Entity> list = ravager.world.getNonSpectatingEntities(Entity.class, mobBox);
             Iterator<Entity> iterator = list.iterator();
             Entity targetEntity;
 
-            // Cycle through box looking for players with Moissanite Juju
+            // Cycle through box looking for players with enchantment
             while(iterator.hasNext())
             {
                 targetEntity = iterator.next();
                 if(targetEntity instanceof PlayerEntity)
                 {
                     PlayerEntity player = (PlayerEntity) targetEntity;
-                    if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU))
-                    {
-                        ci.cancel();
-                    }
                     if (EnchantmentHelper.getLevel(EnchantmentInit.BEASTAMORE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
                     {
+                        this.stunTick++;
                         ci.cancel();
                     }
                 }

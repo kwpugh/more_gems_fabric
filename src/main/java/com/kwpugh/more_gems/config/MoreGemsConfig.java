@@ -182,6 +182,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableFloating = true;
 		public boolean enableLightning = true;
 		public boolean enableLavaView = true;
+		public boolean enableBeastAmore =  true;
 
 		@Comment("***************"
 				+"\nEnchantment Settings"

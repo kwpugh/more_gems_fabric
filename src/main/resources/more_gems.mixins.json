@@ -13,6 +13,7 @@
     "LivingEntityMixinBreathing",
     "PiglinBrainMixin",
     "PlayerEntityMixin",
+    "RavagerEntityMixin",
     "StatusEffectMixin"
   ],
   "client": [
