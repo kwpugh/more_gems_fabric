@@ -50,10 +50,6 @@
       "required": false
     },
     {
-      "id": "more_gems:moissanite_ore",
-      "required": false
-    },
-    {
       "id": "more_gems:kunzite_ore_nether",
       "required": false
     },
@@ -99,10 +95,6 @@
     },
     {
       "id": "more_gems:carbonado_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:moissanite_block",
       "required": false
     }
   ]

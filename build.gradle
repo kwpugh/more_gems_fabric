@@ -38,8 +38,8 @@ dependencies {
 		}
 
 	//PughTools for common area tools
-	include "com.kwpugh:pugh_tools_fabric_1.18-snapshot:1.1.7"
-	modImplementation "com.kwpugh:pugh_tools_fabric_1.18-snapshot:1.1.7"
+	include "com.kwpugh:pugh_tools_fabric_1.18-snapshot:1.1.8"
+	modImplementation "com.kwpugh:pugh_tools_fabric_1.18-snapshot:1.1.8"
 }
 
 processResources {

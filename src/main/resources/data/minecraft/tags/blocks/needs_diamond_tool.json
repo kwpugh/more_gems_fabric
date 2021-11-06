@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "more_gems:moissanite_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_block",
+      "required": false
+    }
+  ]
+}

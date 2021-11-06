@@ -448,7 +448,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int moissaniteDurability = 2031;
 		public float moissaniteMiningSpeed = 8.0F;
 		public float moissaniteAttackDamage = 4.0F;
-		public int moissaniteMiningLevel = 3;
+		public int moissaniteMiningLevel = 4;
 		public int moissaniteEnchantability = 24;
 
 		@Comment("\n"
