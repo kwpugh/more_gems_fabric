@@ -279,6 +279,9 @@
 	"item.more_gems.treasure_bag": "Treasure Bag",
 	"item.more_gems.treasure_bag.tip1": "Right-click for a prize",
 
+	"item.more_gems.sharpening_gem": "Sharpening Gem",
+	"item.more_gems.sharpening_gem.tip1": "Used to repair damage on gem tools",
+
 	"enchantment.more_gems.razor_sharpness": "Razor Sharpness",
 	"enchantment.more_gems.razor_sharpness.desc": "MoreGems: (Sword) Adds to the attack damage",
 	"enchantment.more_gems.untouchable": "Untouchable",
@@ -305,8 +308,8 @@
 	"enchantment.more_gems.lightning.desc": "MoreGem: (Bow) Causes target to be struck by lightning when hit",
 	"enchantment.more_gems.lava_view": "Lava Clear View",
 	"enchantment.more_gems.lava_view.desc": "MoreGem: (Helmet) Gives the wearer clear view under lava",
-	"enchantment.more_gems.beast_amore": "Beast Amore",
-	"enchantment.more_gems.beast_amore.desc": "MoreGem: (Leggings) Large beasts will love you.",
+	"enchantment.more_gems.benevolence": "Benevolence",
+	"enchantment.more_gems.benevolence.desc": "MoreGem: (Leggings) Large beasts won't harm you.",
 
 	"biome.more_gems.red_gem_biome": "Red Gem Biome",
 	"biome.more_gems.orange_gem_biome": "Orange Gem Biome",

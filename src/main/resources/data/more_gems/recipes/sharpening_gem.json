@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " b ",
+    "bab",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:flint"
+    },
+    "b": {
+      "tag": "c:gems"
+    }
+  },
+  "result": {
+    "item": "more_gems:sharpening_gem"
+  }
+}

@@ -29,5 +29,6 @@ public class MoreGems implements ModInitializer
 		LootTableInit.registerLoot();
 		EnchantmentInit.registerEnchantments();
 		TagInit.registerTags();
+		RecipeInit.registerRecipes();
 	}
 }

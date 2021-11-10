@@ -23,7 +23,7 @@ public class EnchantmentInit
 	public static final Enchantment FLOATING = new FloatingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment LIGHTNING = new LightningEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment LAVA_VIEW = new LavaViewEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_HEAD, new EquipmentSlot[]{EquipmentSlot.HEAD});
-	public static final Enchantment BEASTAMORE = new BeastAmoreEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
+	public static final Enchantment BENEVOLENCE = new BenevolenceEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
 
 	static boolean enableRazor = MoreGems.CONFIG.GENERAL.enableRazorSharpness;
 	static boolean enableShulker = MoreGems.CONFIG.GENERAL.enableShulkerBlade;
@@ -38,7 +38,7 @@ public class EnchantmentInit
 	static boolean enableFloating = MoreGems.CONFIG.GENERAL.enableFloating;
 	static boolean enableLightning = MoreGems.CONFIG.GENERAL.enableLightning;
 	static boolean enableLavaView = MoreGems.CONFIG.GENERAL.enableLavaView;
-	static boolean enableBeastAAmore = MoreGems.CONFIG.GENERAL.enableBeastAmore;
+	static boolean enableBenevolence = MoreGems.CONFIG.GENERAL.enableBenevolence;
 
 	public static void registerEnchantments()
 	{
@@ -107,9 +107,9 @@ public class EnchantmentInit
 			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lava_view"), LAVA_VIEW);
 		}
 
-		if(enableBeastAAmore)
+		if(enableBenevolence)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "beast_amore"), BEASTAMORE);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "benevolence"), BENEVOLENCE);
 		}
 	}
 }

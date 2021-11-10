@@ -35,7 +35,7 @@ public abstract class RavagerEntityMixin extends RaiderEntity
     public void tickMovement(CallbackInfo ci)
     {
 
-        if(MoreGems.CONFIG.GENERAL.enableBeastAmore)
+        if(MoreGems.CONFIG.GENERAL.enableBenevolence)
         {
             RavagerEntity ravager = (RavagerEntity) (Object) this;
             Box mobBox = (new Box(ravager.getBlockPos())).expand(4, 2, 4);
@@ -50,7 +50,7 @@ public abstract class RavagerEntityMixin extends RaiderEntity
                 if(targetEntity instanceof PlayerEntity)
                 {
                     PlayerEntity player = (PlayerEntity) targetEntity;
-                    if (EnchantmentHelper.getLevel(EnchantmentInit.BEASTAMORE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
+                    if (EnchantmentHelper.getLevel(EnchantmentInit.BENEVOLENCE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
                     {
                         this.stunTick++;
                         ci.cancel();

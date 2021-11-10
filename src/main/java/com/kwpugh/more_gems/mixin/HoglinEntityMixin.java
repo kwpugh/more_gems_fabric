@@ -37,7 +37,7 @@ public abstract class HoglinEntityMixin
     public void moregemsMobTick(CallbackInfo ci)
     {
         if(MoreGems.CONFIG.GENERAL.enableMoissaniteDocileHoglin ||
-                MoreGems.CONFIG.GENERAL.enableBeastAmore)
+                MoreGems.CONFIG.GENERAL.enableBenevolence)
         {
             HoglinEntity hoglin = (HoglinEntity) (Object) this;
             Box mobBox = (new Box(hoglin.getBlockPos())).expand(4, 2, 4);
@@ -56,7 +56,7 @@ public abstract class HoglinEntityMixin
                     {
                         ci.cancel();
                     }
-                    if (EnchantmentHelper.getLevel(EnchantmentInit.BEASTAMORE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
+                    if (EnchantmentHelper.getLevel(EnchantmentInit.BENEVOLENCE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
                     {
                         ci.cancel();
                     }

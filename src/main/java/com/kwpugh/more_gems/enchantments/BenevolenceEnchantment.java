@@ -4,9 +4,9 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 
-public class BeastAmoreEnchantment extends Enchantment
+public class BenevolenceEnchantment extends Enchantment
 {
-    public BeastAmoreEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
+    public BenevolenceEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
     {
         super(rarity, enchantmentTarget, equipmentSlots);
     }

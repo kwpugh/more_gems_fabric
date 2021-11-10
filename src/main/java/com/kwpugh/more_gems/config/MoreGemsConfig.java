@@ -151,7 +151,13 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     			+"\nGemBag"
     			+"\n********")
 		public boolean gembagEnable = true;
-		
+
+		@Comment("********"
+				+"\nSharpening Gem"
+				+"\n********")
+		public boolean enableSharpeningGem = false;
+		public int sharpeningGemRepairAmount = 50;
+
     	@Comment("********"
     			+"\nJuju Settings"
     			+"\n********")
@@ -182,7 +188,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableFloating = true;
 		public boolean enableLightning = true;
 		public boolean enableLavaView = true;
-		public boolean enableBeastAmore =  true;
+		public boolean enableBenevolence =  true;
 
 		@Comment("***************"
 				+"\nEnchantment Settings"
@@ -206,8 +212,11 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+ "******************************"
 				+"\nBows, Paxels, Hammers, & Excavators"
 				+"\n********************************") 
-		public boolean extraToolsEnable = true;
-		public boolean bowsEnable = true;
+		public boolean enableExtraTools = true;
+		public boolean enableBows = true;
+		public boolean enableHammers = true;
+		public boolean enableExcavators = true;
+		public boolean enablePaxels = true;
 
 		@Comment("\n"
 				+ "\n"
