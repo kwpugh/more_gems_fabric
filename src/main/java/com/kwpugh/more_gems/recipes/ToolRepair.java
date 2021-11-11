@@ -23,7 +23,7 @@ public class ToolRepair extends SpecialCraftingRecipe
     @Override
     public boolean matches(CraftingInventory inventory, World world)
     {
-        return matchResult(inventory).matches();
+        return matchStack(inventory).matches();
     }
 
     @Override
@@ -31,11 +31,11 @@ public class ToolRepair extends SpecialCraftingRecipe
     {
         if(MoreGems.CONFIG.GENERAL.enableSharpeningGem)
         {
-            MatchResult matchResult = matchResult(inventory);
+            MatchStack matchStack = matchStack(inventory);
 
-            if (matchResult.matches())
+            if (matchStack.matches())
             {
-                ItemStack toolStack = matchResult.getToolStack();
+                ItemStack toolStack = matchStack.getToolStack();
 
                 if(TagInit.GEM_TOOLS.contains(toolStack.getItem()))
                 {
@@ -57,14 +57,13 @@ public class ToolRepair extends SpecialCraftingRecipe
         return width * height >= 2;
     }
 
-
     @Override
     public RecipeSerializer<?> getSerializer()
     {
         return RecipeInit.GEM_TOOL_REPAIR;
     }
 
-    private MatchResult matchResult(CraftingInventory inventory)
+    private MatchStack matchStack(CraftingInventory inventory)
     {
         ItemStack toolStack = ItemStack.EMPTY;
         ItemStack materialStack = ItemStack.EMPTY;
@@ -81,7 +80,7 @@ public class ToolRepair extends SpecialCraftingRecipe
                 {
                     if(!toolStack.isEmpty())
                     {
-                        return MatchResult.EMPTY;
+                        return MatchStack.EMPTY;
                     }
 
                     toolStack = stackToTest;
@@ -91,23 +90,23 @@ public class ToolRepair extends SpecialCraftingRecipe
                 {
                     if(!materialStack.isEmpty())
                     {
-                        return MatchResult.EMPTY;
+                        return MatchStack.EMPTY;
                     }
 
                     materialStack = stackToTest;
                     continue;
                 }
 
-                return MatchResult.EMPTY;
+                return MatchStack.EMPTY;
             }
         }
 
-        return new MatchResult(toolStack, materialStack);
+        return new MatchStack(toolStack, materialStack);
     }
 
-    private record MatchResult(ItemStack toolStack, ItemStack materialStack)
+    private record MatchStack(ItemStack toolStack, ItemStack materialStack)
     {
-        private static final MatchResult EMPTY = new MatchResult(ItemStack.EMPTY, ItemStack.EMPTY);
+        private static final MatchStack EMPTY = new MatchStack(ItemStack.EMPTY, ItemStack.EMPTY);
 
         private ItemStack getToolStack()
         {
