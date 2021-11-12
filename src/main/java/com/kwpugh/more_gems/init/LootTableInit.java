@@ -21,10 +21,99 @@ public class LootTableInit
 	static boolean jujuenable = MoreGems.CONFIG.GENERAL.jujuEnable;
 	static float treasueBagChance = MoreGems.CONFIG.GENERAL.treasureBagChance;
 
+	static float stoneDropGems = MoreGems.CONFIG.ORES.stoneDropGemsChance;
+	static float deepslateDropGems = MoreGems.CONFIG.ORES.deepslateDropGemsChance;
+
 	private static final List<LootTableInsert> INSERTS = Lists.newArrayList();
 
 	public static void registerLoot()
 	{
+		// TEMP CODE UNTIL ORE GEN GETS FIXED
+		FabricLootPoolBuilder CITRINE = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.CITRINE))
+				.withCondition(RandomChanceLootCondition.builder(stoneDropGems).build());
+
+		insert(new LootTableInsert(CITRINE,
+				new Identifier("minecraft", "blocks/stone")
+		));
+
+		FabricLootPoolBuilder TOURMALINE = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.TOURMALINE))
+				.withCondition(RandomChanceLootCondition.builder(stoneDropGems).build());
+
+		insert(new LootTableInsert(TOURMALINE,
+				new Identifier("minecraft", "blocks/stone")
+		));
+
+		FabricLootPoolBuilder KUNZITE = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.KUNZITE))
+				.withCondition(RandomChanceLootCondition.builder(stoneDropGems).build());
+
+		insert(new LootTableInsert(KUNZITE,
+				new Identifier("minecraft", "blocks/stone")
+		));
+
+		FabricLootPoolBuilder TOPAZ = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.TOPAZ))
+				.withCondition(RandomChanceLootCondition.builder(stoneDropGems).build());
+
+		insert(new LootTableInsert(TOPAZ,
+				new Identifier("minecraft", "blocks/stone")
+		));
+
+		FabricLootPoolBuilder ALEXANDRITE = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.ALEXANDRITE))
+				.withCondition(RandomChanceLootCondition.builder(deepslateDropGems).build());
+
+		insert(new LootTableInsert(ALEXANDRITE,
+				new Identifier("minecraft", "blocks/deepslate")
+		));
+
+		FabricLootPoolBuilder CORUNDUM = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.CORUNDUM))
+				.withCondition(RandomChanceLootCondition.builder(deepslateDropGems).build());
+
+		insert(new LootTableInsert(CORUNDUM,
+				new Identifier("minecraft", "blocks/deepslate")
+		));
+
+		FabricLootPoolBuilder SAPPHIRE = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.SAPPHIRE))
+				.withCondition(RandomChanceLootCondition.builder(deepslateDropGems).build());
+
+		insert(new LootTableInsert(SAPPHIRE,
+				new Identifier("minecraft", "blocks/deepslate")
+		));
+
+		FabricLootPoolBuilder RUBY = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.RUBY))
+				.withCondition(RandomChanceLootCondition.builder(deepslateDropGems).build());
+
+		insert(new LootTableInsert(RUBY,
+				new Identifier("minecraft", "blocks/deepslate")
+		));
+
+		FabricLootPoolBuilder CARBONADO = FabricLootPoolBuilder.builder()
+				.rolls(ConstantLootNumberProvider.create(1))
+				.with(ItemEntry.builder(ItemInit.CARBONADO))
+				.withCondition(RandomChanceLootCondition.builder(deepslateDropGems).build());
+
+		insert(new LootTableInsert(CARBONADO,
+				new Identifier("minecraft", "blocks/deepslate")
+		));
+
+		// END TEMP CODE
+
+
+
 		FabricLootPoolBuilder TREASURE_BAG = FabricLootPoolBuilder.builder()
 				.rolls(ConstantLootNumberProvider.create(1))
 				.with(ItemEntry.builder(ItemInit.TREASURE_BAG))

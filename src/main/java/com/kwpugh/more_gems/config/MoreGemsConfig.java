@@ -14,6 +14,13 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     @Config(name = "ores")
     public static class Ores implements ConfigData 
     {
+		@Comment("***********************"
+				+"\nTemp Solution"
+				+"\n- gem drops from stone and deepslate"
+				+"\n***********************")
+		public float stoneDropGemsChance = .03F;
+		public float deepslateDropGemsChance = .03F;
+
 	    @Comment("***********************"
 	    		+"\nCitrine Ores"
 	    		+"\n***********************") 

@@ -2,7 +2,6 @@ package com.kwpugh.more_gems;
 
 import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.init.*;
-import com.kwpugh.more_gems.world.OreGen;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
@@ -25,7 +24,7 @@ public class MoreGems implements ModInitializer
 		BlockInit.registerBlockItems();
 		ItemInit.registerItems();
 		ContainerInit.registerContainer();
-		OreGen.Features();
+		//OreGen.Features();
 		LootTableInit.registerLoot();
 		EnchantmentInit.registerEnchantments();
 		TagInit.registerTags();
