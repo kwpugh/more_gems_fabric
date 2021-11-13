@@ -18,6 +18,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nTemp Solution"
 				+"\n- gem drops from stone and deepslate"
 				+"\n***********************")
+		public boolean enableCoalGemDrops = true;
 		public float coalDropGemsChance = .03F;
 		public float deepslateCoalDropGemsChance = .03F;
 
