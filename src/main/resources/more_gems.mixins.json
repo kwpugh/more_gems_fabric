@@ -9,7 +9,7 @@
     "EntityMixinFire",
     "HoglinEntityMixin",
     "ItemMixin",
-    "LivingEntityMixin",
+    "LivingEntityMixinWisdom",
     "LivingEntityMixinBreathing",
     "PiglinBrainMixin",
     "PlayerEntityMixin",

@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LivingEntity.class)
-public class LivingEntityMixin
+public class LivingEntityMixinWisdom
 {
     @Shadow @Nullable protected PlayerEntity attackingPlayer;
 

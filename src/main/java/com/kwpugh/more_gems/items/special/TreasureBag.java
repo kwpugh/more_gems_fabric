@@ -1,13 +1,8 @@
 package com.kwpugh.more_gems.items.special;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.EnchantmentInit;
 import com.kwpugh.more_gems.init.TagInit;
-
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.enchantment.Enchantments;
@@ -23,6 +18,10 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class TreasureBag extends Item
 {
@@ -52,6 +51,10 @@ public class TreasureBag extends Item
     private static final EnchantmentLevelEntry LIGHTNING4 = new EnchantmentLevelEntry(EnchantmentInit.LIGHTNING, 4);
     private static final EnchantmentLevelEntry LIGHTNING5 = new EnchantmentLevelEntry(EnchantmentInit.LIGHTNING, 5);
     private static final EnchantmentLevelEntry QUICKENING1 = new EnchantmentLevelEntry(EnchantmentInit.QUICKENING, 1);
+    private static final EnchantmentLevelEntry QUICKENING2 = new EnchantmentLevelEntry(EnchantmentInit.QUICKENING, 2);
+    private static final EnchantmentLevelEntry QUICKENING3 = new EnchantmentLevelEntry(EnchantmentInit.QUICKENING, 3);
+    private static final EnchantmentLevelEntry QUICKENING4 = new EnchantmentLevelEntry(EnchantmentInit.QUICKENING, 4);
+    private static final EnchantmentLevelEntry QUICKENING5 = new EnchantmentLevelEntry(EnchantmentInit.QUICKENING, 5);
     private static final EnchantmentLevelEntry RAZOR_SHARPNESS1 = new EnchantmentLevelEntry(EnchantmentInit.RAZOR_SHARPNESS, 1);
     private static final EnchantmentLevelEntry SHULKER_BLADE1 = new EnchantmentLevelEntry(EnchantmentInit.SHULKER_BLADE, 1);
     private static final EnchantmentLevelEntry STUPIFY1 = new EnchantmentLevelEntry(EnchantmentInit.STUPIFY, 1);
@@ -104,6 +107,10 @@ public class TreasureBag extends Item
                 enchantmentList.add(LIGHTNING4);
                 enchantmentList.add(LIGHTNING5);
                 enchantmentList.add(QUICKENING1);
+                enchantmentList.add(QUICKENING2);
+                enchantmentList.add(QUICKENING3);
+                enchantmentList.add(QUICKENING4);
+                enchantmentList.add(QUICKENING5);
                 enchantmentList.add(RAZOR_SHARPNESS1);
                 enchantmentList.add(SHULKER_BLADE1);
                 enchantmentList.add(STUPIFY1);
