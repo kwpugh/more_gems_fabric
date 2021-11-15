@@ -31,13 +31,13 @@ public class LightningEnchantment extends Enchantment
     @Override
     public int getMaxLevel()
     {
-        return 1;
+        return 5;
     }
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level)
     {
-        if (user.getRandom().nextFloat() <= lightningChance)
+        if (user.getRandom().nextFloat() <= (lightningChance * level))
         {
             BlockPos blockPos = target.getBlockPos();
             LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(user.getEntityWorld());
