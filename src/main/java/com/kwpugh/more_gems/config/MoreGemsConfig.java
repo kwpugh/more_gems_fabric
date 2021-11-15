@@ -197,6 +197,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableLightning = true;
 		public boolean enableLavaView = true;
 		public boolean enableBenevolence =  true;
+		public boolean enableMiningHelper =  true;
 
 		@Comment("***************"
 				+"\nEnchantment Settings"
@@ -213,6 +214,8 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int wisdomExperienceMultiplier = 5;
 		public float lightningChance = 0.10F;
 		public int floatingBaseDuration = 80;
+		public int minngHelperVertical = 2;
+		public int minerHelperHoriz = 4;
 		
 		@Comment("********************************"
 				+ "\n"
