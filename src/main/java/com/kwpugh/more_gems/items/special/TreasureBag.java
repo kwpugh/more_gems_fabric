@@ -52,6 +52,8 @@ public class TreasureBag extends Item
     private static final EnchantmentLevelEntry WISDOM1 = new EnchantmentLevelEntry(EnchantmentInit.WISDOM, 1);
     private static final EnchantmentLevelEntry WISDOM2 = new EnchantmentLevelEntry(EnchantmentInit.WISDOM, 2);
     private static final EnchantmentLevelEntry WISDOM3 = new EnchantmentLevelEntry(EnchantmentInit.WISDOM, 3);
+    private static final EnchantmentLevelEntry BENEVOLENCE1 = new EnchantmentLevelEntry(EnchantmentInit.BENEVOLENCE, 3);
+    private static final EnchantmentLevelEntry MINING_HELPER1 = new EnchantmentLevelEntry(EnchantmentInit.MINING_HELPER, 3);
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand)
@@ -92,6 +94,8 @@ public class TreasureBag extends Item
                 enchantmentList.add(WISDOM1);
                 enchantmentList.add(WISDOM2);
                 enchantmentList.add(WISDOM3);
+                enchantmentList.add(BENEVOLENCE1);
+                enchantmentList.add(MINING_HELPER1);
 
                 // Pick a random enchant from list
                 int randomIndex = random.nextInt(enchantmentList.size());
