@@ -1,7 +1,8 @@
 package com.kwpugh.more_gems.enchantments;
 
-import com.kwpugh.more_gems.init.ItemInit;
-
+import com.kwpugh.more_gems.items.areatools.ModHammer;
+import com.kwpugh.more_gems.items.baseclasses.ModPaxel;
+import com.kwpugh.more_gems.items.baseclasses.ModPickaxe;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -36,23 +37,9 @@ public class FasterObsidianEnchantment extends Enchantment
 	@Override
 	public boolean isAcceptableItem(ItemStack stack)
 	{
-		Item pickaxe = stack.getItem();
+		Item tool = stack.getItem();
 
-		if(pickaxe == ItemInit.CORUNDUM_PICKAXE ||
-				pickaxe == ItemInit.SAPPHIRE_PICKAXE ||
-				pickaxe == ItemInit.RUBY_PICKAXE ||
-				pickaxe == ItemInit.CARBONADO_PICKAXE ||
-				pickaxe == ItemInit.MOISSANITE_PICKAXE ||
-				pickaxe == ItemInit.CORUNDUM_PAXEL || 
-				pickaxe == ItemInit.SAPPHIRE_PAXEL ||
-				pickaxe == ItemInit.RUBY_PAXEL ||
-				pickaxe == ItemInit.CARBONADO_PAXEL ||
-				pickaxe == ItemInit.MOISSANITE_PAXEL ||
-				pickaxe == ItemInit.CORUNDUM_HAMMER ||
-				pickaxe == ItemInit.SAPPHIRE_HAMMER ||
-				pickaxe == ItemInit.RUBY_HAMMER ||
-				pickaxe == ItemInit.CARBONADO_HAMMER ||
-				pickaxe == ItemInit.MOISSANITE_HAMMER)
+		if(tool instanceof ModPickaxe || tool instanceof ModHammer || tool instanceof ModPaxel)
 		{
 			return this.type.isAcceptableItem(stack.getItem());
 		}
@@ -60,6 +47,5 @@ public class FasterObsidianEnchantment extends Enchantment
 		{
 			return false;
 		}
-
 	}
 }

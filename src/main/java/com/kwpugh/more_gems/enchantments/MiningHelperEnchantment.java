@@ -1,5 +1,7 @@
 package com.kwpugh.more_gems.enchantments;
 
+import com.kwpugh.more_gems.items.areatools.ModHammer;
+import com.kwpugh.more_gems.items.baseclasses.ModPaxel;
 import com.kwpugh.more_gems.items.baseclasses.ModPickaxe;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -37,7 +39,7 @@ public class MiningHelperEnchantment extends Enchantment
 	{
 		Item tool = stack.getItem();
 
-		if(tool instanceof ModPickaxe)
+		if(tool instanceof ModPickaxe || tool instanceof ModPaxel || tool instanceof ModHammer)
 		{
 			return this.type.isAcceptableItem(stack.getItem());
 		}
