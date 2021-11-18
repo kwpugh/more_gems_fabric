@@ -18,7 +18,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nTemp Solution"
 				+"\n- gem drops from stone and deepslate"
 				+"\n***********************")
-		public boolean enableCoalGemDrops = true;
+		public boolean enableCoalGemDrops = false;
 		public float coalDropGemsChance = .03F;
 		public float deepslateCoalDropGemsChance = .03F;
 
@@ -26,15 +26,14 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\nCitrine Ores"
 	    		+"\n***********************") 
 	    public boolean citrineEnable = true;
-	    public int citrineVeinSize = 4;
+	    public int citrineVeinSize = 6;
     	public int citrineMaxLevel = 110;
     	public int citrinePerChunk = 12;
-    	
-        @Comment("***********************"
+    	       @Comment("***********************"
 	    		+"\nTourmaline Ores"
 	    		+"\n***********************")
         public boolean tourmalineEnable = true;
-        public int tourmalineVeinSize = 4;
+        public int tourmalineVeinSize = 6;
     	public int tourmalineMaxLevel = 80;
     	public int tourmalinePerChunk = 12;
     	
@@ -42,7 +41,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\nKunzite Ores"
 	    		+"\n***********************")
         public boolean kunziteEnable = true;
-        public int kunziteVeinSize = 4;
+        public int kunziteVeinSize = 6;
     	public int kunziteMaxLevel = 70;
     	public int kunzitePerChunk = 12;
 
@@ -50,7 +49,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nNether Kunzite Ores"
 				+"\n***********************")
 		public boolean kunziteEnableNether = true;
-		public int kunziteVeinSizeNether = 4;
+		public int kunziteVeinSizeNether = 6;
 		public int kunziteMaxLevelNether = 200;
 		public int kunzitePerChunkNether = 12;
 
@@ -58,7 +57,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\nTopaz Ores"
 	    		+"\n***********************")
         public boolean topazEnable = true;
-        public int topazVeinSize = 4;
+        public int topazVeinSize = 6;
     	public int topazMaxLevel = 60;
     	public int topazPerChunk = 12;
 
@@ -66,7 +65,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\nAlexandrite Ores"
 	    		+"\n***********************")
         public boolean alexandriteEnable = true;
-        public int alexandriteVeinSize = 4;
+        public int alexandriteVeinSize = 6;
     	public int alexandriteMaxLevel = 60;
     	public int alexandritePerChunk = 12;
 
@@ -74,7 +73,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nNether Alexandrite Ores"
 				+"\n***********************")
 		public boolean alexandriteEnableNether = true;
-		public int alexandriteVeinSizeNether = 4;
+		public int alexandriteVeinSizeNether = 6;
 		public int alexandriteMaxLevelNether = 200;
 		public int alexandritePerChunkNether = 12;
 
@@ -82,7 +81,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nCorundum Ores"
 				+"\n***********************")
 		public boolean conrundumEnable = true;
-		public int conrundumVeinSize = 3;
+		public int conrundumVeinSize = 5;
 		public int conrundumMaxLevel = 20;
 		public int conrundumPerChunk = 12;
 
@@ -90,7 +89,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nNether Corundum Ores"
 				+"\n***********************")
 		public boolean conrundumEnableNether = true;
-		public int conrundumVeinSizeNether = 3;
+		public int conrundumVeinSizeNether = 5;
 		public int conrundumMaxLevelNether = 70;
 		public int conrundumPerChunkNether = 12;
 
@@ -98,7 +97,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\nSapphire Ores"
  	    		+"\n***********************")
         public boolean sapphireEnable = true;
-        public int sapphireVeinSize = 4;
+        public int sapphireVeinSize = 5;
      	public int sapphireMaxLevel = 10;
      	public int sapphirePerChunk = 12;
 
@@ -106,7 +105,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nDeepslate Sapphire Ores"
 				+"\n***********************")
 		public boolean sapphireEnableDeepslate = true;
-		public int sapphireVeinSizeDeepslate = 4;
+		public int sapphireVeinSizeDeepslate = 5;
 		public int sapphireMaxLevelDeepslate = 0;
 		public int sapphirePerChunkDeepslate = 12;
 
@@ -114,7 +113,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\nRuby Ores"
  	    		+"\n***********************")
         public boolean rubyEnable = true;
-        public int rubyVeinSize = 4;
+        public int rubyVeinSize = 5;
      	public int rubyMaxLevel = 10;
      	public int rubyPerChunk = 12;
 
@@ -122,7 +121,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nDeepslate Ruby Ores"
 				+"\n***********************")
 		public boolean rubyEnableDeepslate = true;
-		public int rubyVeinSizeDeepslate = 4;
+		public int rubyVeinSizeDeepslate = 5;
 		public int rubyMaxLevelDeepslate = 0;
 		public int rubyPerChunkDeepslate = 12;
 
@@ -130,7 +129,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\nCarbonado Ores"
  	    		+"\n***********************")
         public boolean carbonadoEnable = true;
-        public int carbonadoVeinSize = 3;
+        public int carbonadoVeinSize = 5;
      	public int carbonadoMaxLevel = 5;
      	public int carbonadoPerChunk = 12;
 
@@ -138,15 +137,15 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nDeepslate Carbonado Ores"
 				+"\n***********************")
 		public boolean carbonadoEnableDeepslate = true;
-		public int carbonadoVeinSizeDeepslate = 3;
+		public int carbonadoVeinSizeDeepslate = 5;
 		public int carbonadoMaxLevelDeepslate = 0;
-		public int carbonadoPerChunkDeepslate = 12;
+		public int carbonadoPerChunkDeepslate = 10;
 
 		@Comment("***********************"
 				+"\nMoissanite Ores"
 				+"\n***********************")
 		public boolean moissaniteEnable = true;
-		public int moissaniteVeinSize = 3;
+		public int moissaniteVeinSize = 5;
 		public int moissaniteMaxLevel = 25;
 		public int moissanitePerChunk = 12;
 		public int moissaniteHighMaxLevel = 128;

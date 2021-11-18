@@ -1,4 +1,4 @@
-//package com.kwpugh.more_gems.world;
+package com.kwpugh.more_gems.world;//package com.kwpugh.more_gems.world;
 //
 //import com.kwpugh.more_gems.MoreGems;
 //import com.kwpugh.more_gems.config.MoreGemsConfig;
