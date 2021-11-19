@@ -29,7 +29,7 @@ public final class PlayerEquipUtil
 	// Generalized check for itemstack in off hand
 	public static boolean hasItemInOffHand(PlayerEntity player, Item item)
 	{
-		ItemStack offHand = player.getOffHandStack();
+		ItemStack offHand = player.getOffhandStack();
 
 		if(offHand.getItem() == item)
 		{
