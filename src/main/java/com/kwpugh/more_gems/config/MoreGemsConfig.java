@@ -15,8 +15,8 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     public static class Ores implements ConfigData 
     {
 		@Comment("***********************"
-				+"\nTemp Solution"
-				+"\n- gem drops from stone and deepslate"
+				+"\nNo ore gen solution"
+				+"\n- gem drops from Coal ores"
 				+"\n***********************")
 		public boolean enableCoalGemDrops = false;
 		public float coalDropGemsChance = .03F;
@@ -80,18 +80,18 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***********************"
 				+"\nCorundum Ores"
 				+"\n***********************")
-		public boolean conrundumEnable = true;
-		public int conrundumVeinSize = 5;
-		public int conrundumMaxLevel = 20;
-		public int conrundumPerChunk = 12;
+		public boolean corundumEnable = true;
+		public int corundumVeinSize = 5;
+		public int corundumMaxLevel = 20;
+		public int corundumPerChunk = 12;
 
 		@Comment("***********************"
 				+"\nNether Corundum Ores"
 				+"\n***********************")
-		public boolean conrundumEnableNether = true;
-		public int conrundumVeinSizeNether = 5;
-		public int conrundumMaxLevelNether = 70;
-		public int conrundumPerChunkNether = 12;
+		public boolean corundumEnableNether = true;
+		public int corundumVeinSizeNether = 5;
+		public int corundumMaxLevelNether = 70;
+		public int corundumPerChunkNether = 12;
 
         @Comment("***********************"
  	    		+"\nSapphire Ores"
@@ -178,6 +178,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableTreasureBag = true;
 		public float treasureBagChance = .015F;
 		public boolean enableEnchantedBookDrop = true;
+		public boolean enableWanderingTrades = true;
 
 		@Comment("***************"
 				+"\nEnchantments"

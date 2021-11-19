@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.mixin;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.ItemInit;
 import net.minecraft.entity.passive.WanderingTraderEntity;
 import net.minecraft.item.ItemStack;
@@ -16,14 +17,17 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class WanderingTraderEntityMixin
 {
     @Inject(method = "fillRecipes", at = @At("RETURN"))
-    private void addWanderingTraderTrades(CallbackInfo ci)
+    private void moregemsFillRecipes(CallbackInfo ci)
     {
-        TradeOfferList tradeOfferList = ((WanderingTraderEntity) (Object) this).getOffers();
-        World world = ((WanderingTraderEntity) (Object) this).world;
-
-        if (world.getRandom().nextDouble() < 0.5D)
+        if(MoreGems.CONFIG.GENERAL.enableWanderingTrades)
         {
-            tradeOfferList.add(new TradeOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(ItemInit.TREASURE_BAG, 1), 4, 4, 0.5f));
+            TradeOfferList tradeOfferList = ((WanderingTraderEntity) (Object) this).getOffers();
+            World world = ((WanderingTraderEntity) (Object) this).world;
+
+            if (world.getRandom().nextDouble() < 0.5D)
+            {
+                tradeOfferList.add(new TradeOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(ItemInit.TREASURE_BAG, 1), 4, 4, 0.5f));
+            }
         }
     }
 }

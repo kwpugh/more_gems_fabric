@@ -41,7 +41,7 @@ public class GemOreConfiguredFeature
 
     public static final ConfiguredFeature<?, ?> ORE_CORUNDUM_OVERWORLD
             = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD,
-            BlockInit.CORUNDUM_ORE.getDefaultState(), CONFIG.conrundumVeinSize));
+            BlockInit.CORUNDUM_ORE.getDefaultState(), CONFIG.corundumVeinSize));
 
     public static final ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD
             = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD,
@@ -70,6 +70,18 @@ public class GemOreConfiguredFeature
 
 
     // NETHER ORE
+    public static final ConfiguredFeature<?, ?> ORE_KUNZITE_NETHER
+            = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.NETHERRACK,
+            BlockInit.KUNZITE_ORE_NETHER.getDefaultState(), CONFIG.kunziteVeinSizeNether));
+
+    public static final ConfiguredFeature<?, ?> ORE_ALEXANDRITE_NETHER
+            = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.NETHERRACK,
+            BlockInit.ALEXANDRITE_ORE_NETHER.getDefaultState(), CONFIG.alexandriteVeinSizeNether));
+
+    public static final ConfiguredFeature<?, ?> ORE_CORUNDUM_NETHER
+            = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.NETHERRACK,
+            BlockInit.CORUNDUM_ORE_NETHER.getDefaultState(), CONFIG.corundumVeinSizeNether));
+
     public static final ConfiguredFeature<?, ?> ORE_MOISSANITE_NETHER
             = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.NETHERRACK,
             BlockInit.MOISSANITE_ORE.getDefaultState(), CONFIG.moissaniteVeinSize));
@@ -133,6 +145,18 @@ public class GemOreConfiguredFeature
 
 
         // NETHER ORES
+        RegistryKey<ConfiguredFeature<?, ?>> oreKunziteNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MoreGems.MOD_ID, "ore_kunzite_nether"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreKunziteNether.getValue(), ORE_KUNZITE_NETHER);
+
+        RegistryKey<ConfiguredFeature<?, ?>> oreAlexandriteNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MoreGems.MOD_ID, "alexandrite_ore_nether"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAlexandriteNether.getValue(), ORE_ALEXANDRITE_NETHER);
+
+        RegistryKey<ConfiguredFeature<?, ?>> oreCorundumNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MoreGems.MOD_ID, "ore_corundum_nether"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreCorundumNether.getValue(), ORE_CORUNDUM_NETHER);
+
         RegistryKey<ConfiguredFeature<?, ?>> oreMoissaniteNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_moissanite_nether"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreMoissaniteNether.getValue(), ORE_MOISSANITE_NETHER);

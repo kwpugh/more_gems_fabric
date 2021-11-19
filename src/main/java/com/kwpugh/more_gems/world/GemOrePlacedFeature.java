@@ -42,8 +42,8 @@ public class GemOrePlacedFeature
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.alexandriteMaxLevel))));
 
     public static final PlacedFeature ORE_CORUNDUM_OVERWORLD = GemOreConfiguredFeature
-            .ORE_CORUNDUM_OVERWORLD.withPlacement(modifiersWithCount(CONFIG.conrundumPerChunk,
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.conrundumMaxLevel))));
+            .ORE_CORUNDUM_OVERWORLD.withPlacement(modifiersWithCount(CONFIG.corundumPerChunk,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.corundumMaxLevel))));
 
     public static final PlacedFeature ORE_SAPPHIRE_OVERWORLD = GemOreConfiguredFeature
             .ORE_SAPPHIRE_OVERWORLD.withPlacement(modifiersWithCount(CONFIG.sapphirePerChunk,
@@ -72,6 +72,18 @@ public class GemOrePlacedFeature
 
 
     // NETHER ORES
+    public static final PlacedFeature ORE_KUNZITE_NETHER = GemOreConfiguredFeature
+            .ORE_KUNZITE_NETHER.withPlacement(modifiersWithCount(CONFIG.kunzitePerChunkNether,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.kunziteMaxLevelNether))));
+
+    public static final PlacedFeature ORE_ALEXANDRITE_NETHER = GemOreConfiguredFeature
+            .ORE_ALEXANDRITE_NETHER.withPlacement(modifiersWithCount(CONFIG.alexandritePerChunkNether,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.alexandriteMaxLevelNether))));
+
+    public static final PlacedFeature ORE_CORUNDUM_NETHER = GemOreConfiguredFeature
+            .ORE_CORUNDUM_NETHER.withPlacement(modifiersWithCount(CONFIG.corundumPerChunkNether,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.corundumMaxLevelNether))));
+
     public static final PlacedFeature ORE_MOISSANITE_NETHER = GemOreConfiguredFeature
             .ORE_MOISSANITE_NETHER.withPlacement(modifiersWithCount(CONFIG.moissanitePerChunk,
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.moissaniteMaxLevel))));
@@ -88,75 +100,176 @@ public class GemOrePlacedFeature
         RegistryKey<PlacedFeature> oreCitrineOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_citrine_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreCitrineOverworld.getValue(), ORE_CITRINE_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCitrineOverworld);
+
 
         RegistryKey<PlacedFeature> oreTourmalineOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_tourmaline_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreTourmalineOverworld.getValue(), ORE_TOURMALINE_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTourmalineOverworld);
+
 
         RegistryKey<PlacedFeature> oreKunziteOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_kunzite_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreKunziteOverworld.getValue(), ORE_KUNZITE_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreKunziteOverworld);
+
 
         RegistryKey<PlacedFeature> oreTopazOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_topaz_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreTopazOverworld.getValue(), ORE_TOPAZ_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTopazOverworld);
+
 
         RegistryKey<PlacedFeature> oreAlexandriteOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_alexandrite_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreAlexandriteOverworld.getValue(), ORE_ALEXANDRITE_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAlexandriteOverworld);
+
 
         RegistryKey<PlacedFeature> oreCorundumOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_corundum_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreCorundumOverworld.getValue(), ORE_CORUNDUM_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCorundumOverworld);
+
 
         RegistryKey<PlacedFeature> oreSapphireOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_sapphire_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreSapphireOverworld.getValue(), ORE_SAPPHIRE_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSapphireOverworld);
+
 
         RegistryKey<PlacedFeature> oreSapphireOverworldDeepslate = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_sapphire_overworld_deepslate"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreSapphireOverworldDeepslate.getValue(), ORE_SAPPHIRE_OVERWORLD_DEEPSLATE);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSapphireOverworldDeepslate);
+
 
         RegistryKey<PlacedFeature> oreRubyOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_ruby_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreRubyOverworld.getValue(), ORE_RUBY_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreRubyOverworld);
+
 
         RegistryKey<PlacedFeature> oreRubyOverworldDeepslate = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_ruby_overworld_deepslate"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreRubyOverworldDeepslate.getValue(), ORE_RUBY_OVERWORLD_DEEPSLATE);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreRubyOverworldDeepslate);
+
 
         RegistryKey<PlacedFeature> oreCarbonadoOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreCarbonadoOverworld.getValue(), ORE_CARBONADO_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoOverworld);
+
 
         RegistryKey<PlacedFeature> oreCarbonadoOverworldDeepslate = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld_deepslate"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreCarbonadoOverworldDeepslate.getValue(), ORE_CARBONADO_OVERWORLD_DEEPSLATE);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoOverworldDeepslate);
+
 
 
 
         // NETHER ORES
+        RegistryKey<PlacedFeature> oreKunziteNether = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+                new Identifier(MoreGems.MOD_ID, "ore_kunzite_nether"));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, oreKunziteNether.getValue(), ORE_KUNZITE_NETHER);
+
+
+        RegistryKey<PlacedFeature> oreAlexandriteNether = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+                new Identifier(MoreGems.MOD_ID, "alexandrite_ore_nether"));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, oreAlexandriteNether.getValue(), ORE_ALEXANDRITE_NETHER);
+
+
+        RegistryKey<PlacedFeature> oreCorundumNether = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+                new Identifier(MoreGems.MOD_ID, "ore_corundum_nether"));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, oreCorundumNether.getValue(), ORE_CORUNDUM_NETHER);
+
+
         RegistryKey<PlacedFeature> oreMoissaniteNether = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_moissanite_nether"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreMoissaniteNether.getValue(), ORE_MOISSANITE_NETHER);
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreMoissaniteNether);
+
 
         RegistryKey<PlacedFeature> oreMoissaniteNetherHigh = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                 new Identifier(MoreGems.MOD_ID, "ore_moissanite_nether_high"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreMoissaniteNetherHigh.getValue(), ORE_MOISSANITE_NETHER_HIGH);
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreMoissaniteNetherHigh);
+
+
+
+        if(CONFIG.citrineEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCitrineOverworld);
+        }
+
+        if(CONFIG.tourmalineEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTourmalineOverworld);
+        }
+
+        if(CONFIG.kunziteEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreKunziteOverworld);
+        }
+
+        if(CONFIG.topazEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTopazOverworld);
+        }
+
+        if(CONFIG.alexandriteEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAlexandriteOverworld);
+        }
+
+        if(CONFIG.corundumEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCorundumOverworld);
+        }
+
+        if(CONFIG.sapphireEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSapphireOverworld);
+        }
+
+        if(CONFIG.sapphireEnableDeepslate)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSapphireOverworldDeepslate);
+        }
+
+        if(CONFIG.rubyEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreRubyOverworld);
+        }
+
+        if(CONFIG.rubyEnableDeepslate)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreRubyOverworldDeepslate);
+        }
+
+        if(CONFIG.carbonadoEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoOverworld);
+        }
+
+        if(CONFIG.carbonadoEnableDeepslate)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoOverworldDeepslate);
+        }
+
+        if(CONFIG.kunziteEnableNether)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreKunziteNether);
+        }
+
+        if(CONFIG.alexandriteEnableNether)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreAlexandriteNether);
+        }
+
+        if(CONFIG.corundumEnableNether)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreCorundumNether);
+        }
+
+        if(CONFIG.moissaniteEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreMoissaniteNether);
+        }
+
+        if(CONFIG.moissaniteEnable)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreMoissaniteNetherHigh);
+        }
     }
 
 
