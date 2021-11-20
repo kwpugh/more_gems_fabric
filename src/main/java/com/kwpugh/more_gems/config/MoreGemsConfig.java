@@ -27,14 +27,14 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************") 
 	    public boolean citrineEnable = true;
 	    public int citrineVeinSize = 6;
-    	public int citrineMaxLevel = 110;
+    	public int citrineMaxLevel = 180;
     	public int citrinePerChunk = 12;
     	       @Comment("***********************"
 	    		+"\nTourmaline Ores"
 	    		+"\n***********************")
         public boolean tourmalineEnable = true;
         public int tourmalineVeinSize = 6;
-    	public int tourmalineMaxLevel = 80;
+    	public int tourmalineMaxLevel = 140;
     	public int tourmalinePerChunk = 12;
     	
         @Comment("***********************"
@@ -42,7 +42,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************")
         public boolean kunziteEnable = true;
         public int kunziteVeinSize = 6;
-    	public int kunziteMaxLevel = 70;
+    	public int kunziteMaxLevel = 120;
     	public int kunzitePerChunk = 12;
 
 		@Comment("***********************"
