@@ -8,6 +8,7 @@ import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -15,8 +16,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(CreeperEntity.class)
 public abstract class CreeperEntityMixin
 {
-    @Inject(at = @At("HEAD"), method = "explode", cancellable = true)
-    public void gobberExplode(CallbackInfo ci)
+    @Shadow  private int currentFuseTime;
+
+    @Inject(at = @At("HEAD"), method = "tick", cancellable = true)
+    public void gobberCreeperTick(CallbackInfo ci)
     {
         CreeperEntity self = (CreeperEntity) (Object) this;
         World world = self.getWorld();
@@ -24,12 +27,11 @@ public abstract class CreeperEntityMixin
         if(world.isClient()) return;
 
         LivingEntity target = self.getTarget();
-
         if(target instanceof PlayerEntity)
         {
             if (EnchantmentHelper.getLevel(EnchantmentInit.CREEPERLESS, target.getEquippedStack(EquipmentSlot.LEGS)) > 0)
             {
-                ci.cancel();
+                this.currentFuseTime = 0;
             }
         }
     }
