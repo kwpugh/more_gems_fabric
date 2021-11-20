@@ -1,0 +1,69 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "more_gems:citrine_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:ruby_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_ore_deepslate",
+      "required": false
+    },
+    {
+      "id": "more_gems:ruby_ore_deepslate",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_ore_deepslate",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_ore",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_ore_nether",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_ore_nether",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_ore_nether",
+      "required": false
+    }
+  ]
+}

@@ -82,7 +82,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\n***********************")
 		public boolean corundumEnable = true;
 		public int corundumVeinSize = 5;
-		public int corundumMaxLevel = 20;
+		public int corundumMaxLevel = 30;
 		public int corundumPerChunk = 12;
 
 		@Comment("***********************"
@@ -98,7 +98,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\n***********************")
         public boolean sapphireEnable = true;
         public int sapphireVeinSize = 5;
-     	public int sapphireMaxLevel = 10;
+     	public int sapphireMaxLevel = 30;
      	public int sapphirePerChunk = 12;
 
 		@Comment("***********************"
@@ -114,7 +114,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\n***********************")
         public boolean rubyEnable = true;
         public int rubyVeinSize = 5;
-     	public int rubyMaxLevel = 10;
+     	public int rubyMaxLevel = 20;
      	public int rubyPerChunk = 12;
 
 		@Comment("***********************"
@@ -130,7 +130,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\n***********************")
         public boolean carbonadoEnable = true;
         public int carbonadoVeinSize = 5;
-     	public int carbonadoMaxLevel = 5;
+     	public int carbonadoMaxLevel = 15;
      	public int carbonadoPerChunk = 12;
 
 		@Comment("***********************"

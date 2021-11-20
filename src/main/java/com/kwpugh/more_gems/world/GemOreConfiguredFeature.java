@@ -25,11 +25,11 @@ public class GemOreConfiguredFeature
     public static final ConfiguredFeature<?, ?> ORE_ALEXANDRITE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.ALEXANDRITE_ORE.getDefaultState(), CONFIG.alexandriteVeinSize));
     public static final ConfiguredFeature<?, ?> ORE_CORUNDUM_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.CORUNDUM_ORE.getDefaultState(), CONFIG.corundumVeinSize));
     public static final ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.SAPPHIRE_ORE.getDefaultState(), CONFIG.sapphireVeinSize));
-    public static final ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD_DEEPSLATE = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.SAPPHIRE_ORE.getDefaultState(), CONFIG.sapphireVeinSizeDeepslate));
+    public static final ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD_DEEPSLATE = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.SAPPHIRE_ORE_DEEPSLATE.getDefaultState(), CONFIG.sapphireVeinSizeDeepslate));
     public static final ConfiguredFeature<?, ?> ORE_RUBY_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.RUBY_ORE.getDefaultState(), CONFIG.rubyVeinSize));
     public static final ConfiguredFeature<?, ?> ORE_RUBY_OVERWORLD_DEEPSLATE = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.RUBY_ORE_DEEPSLATE.getDefaultState(), CONFIG.rubyVeinSizeDeepslate));
     public static final ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.CARBONADO_ORE.getDefaultState(), CONFIG.carbonadoVeinSize));
-    public static final ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD_DEEPSLATE = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.CARBONADO_ORE.getDefaultState(), CONFIG.carbonadoVeinSizeDeepslate));
+    public static final ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD_DEEPSLATE = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.CARBONADO_ORE_DEEPSLATE.getDefaultState(), CONFIG.carbonadoVeinSizeDeepslate));
 
 
     // NETHER ORE
