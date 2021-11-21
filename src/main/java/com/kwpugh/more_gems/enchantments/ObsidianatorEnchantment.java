@@ -8,6 +8,7 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.PickaxeItem;
 
 public class ObsidianatorEnchantment extends Enchantment
 {
@@ -39,7 +40,7 @@ public class ObsidianatorEnchantment extends Enchantment
 	{
 		Item tool = stack.getItem();
 
-		if(tool instanceof ModPickaxe || tool instanceof ModHammer || tool instanceof ModPaxel)
+		if(tool instanceof PickaxeItem || tool instanceof ModPickaxe || tool instanceof ModHammer || tool instanceof ModPaxel)
 		{
 			return this.type.isAcceptableItem(stack.getItem());
 		}

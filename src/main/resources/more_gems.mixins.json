@@ -11,6 +11,7 @@
     "ItemMixinBlinking",
     "LivingEntityMixinWisdom",
     "LivingEntityMixinBreathing",
+    "MiningToolItemMixin",
     "PiglinBrainMixin",
     "PlayerEntityMixin",
     "RavagerEntityMixin",
