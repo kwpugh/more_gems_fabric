@@ -239,7 +239,8 @@
 	"item.more_gems.moissanite_boots": "Moissanite Boots",
 
 	"itme.more_gems.enable_status": "Juju Status Active: %s",
-	"item.more_gems.juju.tip": "Sneak + Right-click toggle on/off",
+	"item.more_gems.juju.sneak": "Sneak + Right-click toggle on/off",
+	"item.more_gems.juju.no_sneak": "Right-click toggle on/off",
 
 	"item.more_gems.tourmaline_juju": "Tourmaline JuJu",
 	"item.more_gems.tourmaline_juju.tip1": "See a little better in the darkness",
@@ -291,8 +292,8 @@
 	"enchantment.more_gems.shulker_blade.desc": "MoreGems: (Sword) Hit targets float away",
 	"enchantment.more_gems.quickening": "Quickening",
 	"enchantment.more_gems.quickening.desc": "MoreGems: (Sword) Adds a boost of power to your attack",
-	"enchantment.more_gems.faster_obsidian": "Faster Obsidian",
-	"enchantment.more_gems.faster_obsidian.desc": "MoreGems: (Pickaxe) Mining obsidian in a few seconds",
+	"enchantment.more_gems.obsidianator": "Obsidianator",
+	"enchantment.more_gems.obsidianator.desc": "MoreGems: (Gem Pickaxe/Paxel/Hammer) Mine obsidian in a few seconds",
 	"enchantment.more_gems.blinking": "Blinking",
 	"enchantment.more_gems.blinking.desc": "MoreGems: (Sword) Allows short distance random teleport on right-click",
 	"enchantment.more_gems.wisdom": "Wisdom",

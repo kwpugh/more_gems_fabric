@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Map;
 
 @Mixin(Item.class)
-public class ItemMixin
+public class ItemMixinBlinking
 {
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     public void useBlinking(World world, PlayerEntity player, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir)

@@ -8,7 +8,7 @@
     "WanderingTraderEntityMixin",
     "EntityMixinFire",
     "HoglinEntityMixin",
-    "ItemMixin",
+    "ItemMixinBlinking",
     "LivingEntityMixinWisdom",
     "LivingEntityMixinBreathing",
     "PiglinBrainMixin",

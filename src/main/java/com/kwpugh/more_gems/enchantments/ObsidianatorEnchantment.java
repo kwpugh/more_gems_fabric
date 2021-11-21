@@ -9,9 +9,9 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class FasterObsidianEnchantment extends Enchantment
+public class ObsidianatorEnchantment extends Enchantment
 {
-	public FasterObsidianEnchantment(Rarity weight, EnchantmentTarget enchantmentTarget, EquipmentSlot[] slotTypes)
+	public ObsidianatorEnchantment(Rarity weight, EnchantmentTarget enchantmentTarget, EquipmentSlot[] slotTypes)
 	{
 		super(weight, enchantmentTarget, slotTypes);
 	}

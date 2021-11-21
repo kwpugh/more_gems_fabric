@@ -41,7 +41,7 @@ public class TreasureBag extends Item
     private static final EnchantmentLevelEntry UNBREAKING3 = new EnchantmentLevelEntry(Enchantments.UNBREAKING, 3);
     private static final EnchantmentLevelEntry BLINKING1 = new EnchantmentLevelEntry(EnchantmentInit.BLINKING, 1);
     private static final EnchantmentLevelEntry CREEPERLESS1 = new EnchantmentLevelEntry(EnchantmentInit.CREEPERLESS, 1);
-    private static final EnchantmentLevelEntry FASTER_OBSIDIAN1 = new EnchantmentLevelEntry(EnchantmentInit.FASTER_OBSIDIAN, 1);
+    private static final EnchantmentLevelEntry OBSIDIANATOR1 = new EnchantmentLevelEntry(EnchantmentInit.OBSIDIANATOR, 1);
     private static final EnchantmentLevelEntry FLOATING1 = new EnchantmentLevelEntry(EnchantmentInit.FLOATING, 1);
     private static final EnchantmentLevelEntry FLOATING2 = new EnchantmentLevelEntry(EnchantmentInit.FLOATING, 2);
     private static final EnchantmentLevelEntry LAVA_VIEW1 = new EnchantmentLevelEntry(EnchantmentInit.LAVA_VIEW, 1);
@@ -97,7 +97,7 @@ public class TreasureBag extends Item
                 enchantmentList.add(UNBREAKING3);
                 enchantmentList.add(BLINKING1);
                 enchantmentList.add(CREEPERLESS1);
-                enchantmentList.add(FASTER_OBSIDIAN1);
+                enchantmentList.add(OBSIDIANATOR1);
                 enchantmentList.add(FLOATING1);
                 enchantmentList.add(FLOATING2);
                 enchantmentList.add(LAVA_VIEW1);

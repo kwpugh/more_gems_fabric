@@ -14,7 +14,7 @@ public class EnchantmentInit
 	public static final Enchantment SHULKER_BLADE = new ShulkerBladeEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment QUICKENING = new QuickeningEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment UNTOUCHABLE = new UntouchableEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.CHEST});
-	public static final Enchantment FASTER_OBSIDIAN = new FasterObsidianEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.DIGGER, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+	public static final Enchantment OBSIDIANATOR = new ObsidianatorEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.DIGGER, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment BLINKING = new BlinkingEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment VOID_ESCAPE = new VoidEscapeEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_FEET, new EquipmentSlot[]{EquipmentSlot.FEET});
 	public static final Enchantment WISDOM = new WisdomEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -66,7 +66,7 @@ public class EnchantmentInit
 
 		if(enableFasterObsidian)
 		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "faster_obsidian"), FASTER_OBSIDIAN);
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "obsidianator"), OBSIDIANATOR);
 		}
 
 		if(enableBlinking)

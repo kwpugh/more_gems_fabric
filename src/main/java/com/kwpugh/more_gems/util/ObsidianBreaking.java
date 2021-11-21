@@ -12,7 +12,7 @@ public class ObsidianBreaking
         {
             String enchantments = stack.getEnchantments().toString();
 
-            if(enchantments.contains("faster_obsidian"))
+            if(enchantments.contains("obsidianator"))
             {
                 if (state.isOf(Blocks.OBSIDIAN)  || state.isOf(Blocks.CRYING_OBSIDIAN))
                 {
