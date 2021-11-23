@@ -60,7 +60,7 @@ public class BowClientRender implements ClientModInitializer
   
     
     
-    FabricModelPredicateProviderRegistry.register(ItemInit.RUBY_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+    FabricModelPredicateProviderRegistry.register(ItemInit.SPINEL_BOW, new Identifier("pull"), (stack, world, entity, i) ->
     {
     	if (entity == null) 
     {
@@ -73,7 +73,7 @@ public class BowClientRender implements ClientModInitializer
     }
     });
   
-    FabricModelPredicateProviderRegistry.register(ItemInit.RUBY_BOW, new Identifier("pulling"),
+    FabricModelPredicateProviderRegistry.register(ItemInit.SPINEL_BOW, new Identifier("pulling"),
       (stack, world, entity, i) ->
    	{
         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;

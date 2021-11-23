@@ -30,7 +30,7 @@
       "required": false
     },
     {
-      "id": "more_gems:ruby_ore",
+      "id": "more_gems:spinel_ore",
       "required": false
     },
     {
@@ -42,7 +42,7 @@
       "required": false
     },
     {
-      "id": "more_gems:ruby_ore_deepslate",
+      "id": "more_gems:spinel_ore_deepslate",
       "required": false
     },
     {

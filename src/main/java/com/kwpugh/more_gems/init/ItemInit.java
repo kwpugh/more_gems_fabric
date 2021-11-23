@@ -1,7 +1,6 @@
 package com.kwpugh.more_gems.init;
 
 import com.kwpugh.more_gems.MoreGems;
-import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.items.areatools.ModExcavator;
 import com.kwpugh.more_gems.items.areatools.ModHammer;
 import com.kwpugh.more_gems.items.baseclasses.*;
@@ -37,7 +36,7 @@ public class ItemInit
 	static boolean enableAlexandrite = MoreGems.CONFIG.GENERAL.enableAlexandriteSet;
 	static boolean enableCorundum = MoreGems.CONFIG.GENERAL.enableCorundumSet;
 	static boolean enableSapphire = MoreGems.CONFIG.GENERAL.enableSapphireSet;
-	static boolean enableRuby = MoreGems.CONFIG.GENERAL.enableRubySet;
+	static boolean enableSpinel = MoreGems.CONFIG.GENERAL.enableSpinelSet;
 	static boolean enableCarbonado = MoreGems.CONFIG.GENERAL.enableCarbonadoSet;
 	static boolean enableMoissanite = MoreGems.CONFIG.GENERAL.enableMoissaniteSet;
 
@@ -49,7 +48,7 @@ public class ItemInit
 	static int alexandriteBow = MoreGems.CONFIG.GENERAL.alexandriteDurability;
 	static int corundumBow = MoreGems.CONFIG.GENERAL.corundumDurability;
 	static int sapphireBow = MoreGems.CONFIG.GENERAL.sapphireDurability;
-	static int rubyBow = MoreGems.CONFIG.GENERAL.rubyDurability;
+	static int spinelBow = MoreGems.CONFIG.GENERAL.spinelDurability;
 	static int carbonadoBow = MoreGems.CONFIG.GENERAL.carbonadoDurability;
 	static int moissaniteBow = MoreGems.CONFIG.GENERAL.moissaniteDurability;
 
@@ -69,8 +68,8 @@ public class ItemInit
 	public static final ArmorMaterial CORUNDUM_ARMOR_MATERIAL = new CorundumArmorMaterial();
 	public static final ToolMaterial SAPPHIRE_TOOL_MATERIAL = new SapphireToolMaterial();
 	public static final ArmorMaterial SAPPHIRE_ARMOR_MATERIAL = new SapphireArmorMaterial();
-	public static final ToolMaterial RUBY_TOOL_MATERIAL = new RubyToolMaterial();
-	public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new RubyArmorMaterial();
+	public static final ToolMaterial SPINEL_TOOL_MATERIAL = new SpinelToolMaterial();
+	public static final ArmorMaterial SPINEL_ARMOR_MATERIAL = new SpinelArmorMaterial();
 	public static final ToolMaterial CARBONADO_TOOL_MATERIAL = new CarbonadoToolMaterial();
 	public static final ArmorMaterial CARBONADO_ARMOR_MATERIAL = new CarbonadoArmorMaterial();
 	public static final ArmorMaterial CARBONADO_GILDED_ARMOR_MATERIAL = new CarbonadoGildedArmorMaterial();
@@ -84,7 +83,7 @@ public class ItemInit
 	public static final Item ALEXANDRITE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SAPPHIRE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item MOISSANITE = new GemBase((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
@@ -144,15 +143,15 @@ public class ItemInit
 	public static final Item SAPPHIRE_SHOVEL = new ModShovel(SAPPHIRE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SAPPHIRE_HOE = new ModHoe(SAPPHIRE_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
-	public static final Item RUBY_SWORD = new ModSword(RUBY_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_BOW = new ModBow((new Item.Settings()).maxDamage(rubyBow).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_PICKAXE = new ModPickaxe(RUBY_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_AXE = new ModAxe(RUBY_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_SHOVEL = new ModShovel(RUBY_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_HOE = new ModHoe(RUBY_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_HAMMER = new ModHammer(RUBY_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_EXCAVATOR = new ModExcavator(RUBY_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_PAXEL = new ModPaxel(RUBY_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_SWORD = new ModSword(SPINEL_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_BOW = new ModBow((new Item.Settings()).maxDamage(spinelBow).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_PICKAXE = new ModPickaxe(SPINEL_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_AXE = new ModAxe(SPINEL_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_SHOVEL = new ModShovel(SPINEL_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_HOE = new ModHoe(SPINEL_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_HAMMER = new ModHammer(SPINEL_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_EXCAVATOR = new ModExcavator(SPINEL_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_PAXEL = new ModPaxel(SPINEL_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	
 	public static final Item CARBONADO_SWORD = new ModSword(CARBONADO_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_BOW = new ModBow((new Item.Settings()).maxDamage(carbonadoBow).group(MoreGems.MORE_GEMS_GROUP));
@@ -241,10 +240,10 @@ public class ItemInit
 	public static final Item SAPPHIRE_LEGGINGS = new ModArmor(SAPPHIRE_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SAPPHIRE_BOOTS = new ModArmor(SAPPHIRE_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
-	public static final Item RUBY_HELMET = new ModArmor(RUBY_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_CHESTPLATE = new ModArmor(RUBY_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_LEGGINGS = new ModArmor(RUBY_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_BOOTS = new ModArmor(RUBY_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_HELMET = new ModArmor(SPINEL_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_CHESTPLATE = new ModArmor(SPINEL_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_LEGGINGS = new ModArmor(SPINEL_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_BOOTS = new ModArmor(SPINEL_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item CARBONADO_HELMET = new ModArmor(CARBONADO_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_CHESTPLATE = new ModArmor(CARBONADO_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -265,7 +264,7 @@ public class ItemInit
 	public static final Item ALEXANDRITE_JUJU = new BreathingAlexandriteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM_JUJU = new FallingCorundumJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SAPPHIRE_JUJU = new SaturationSapphireJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item RUBY_JUJU = new StrengthRubyJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_JUJU = new StrengthSpinelJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_JUJU = new ConduitCarbonadoJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item MOISSANITE_JUJU = new PhoenixMoissaniteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 
@@ -281,7 +280,7 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite"), ALEXANDRITE);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum"), CORUNDUM);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire"), SAPPHIRE);
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby"), RUBY);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel"), SPINEL);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado"), CARBONADO);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite"), MOISSANITE);
 
@@ -357,13 +356,13 @@ public class ItemInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_hoe"), SAPPHIRE_HOE);
 		}
 
-		if(enableRuby)
+		if(enableSpinel)
 		{
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_sword"), RUBY_SWORD);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_pickaxe"), RUBY_PICKAXE);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_axe"), RUBY_AXE);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_shovel"), RUBY_SHOVEL);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_hoe"), RUBY_HOE);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_sword"), SPINEL_SWORD);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_pickaxe"), SPINEL_PICKAXE);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_axe"), SPINEL_AXE);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_shovel"), SPINEL_SHOVEL);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_hoe"), SPINEL_HOE);
 		}
 
 		if(enableCarbonado)
@@ -428,9 +427,9 @@ public class ItemInit
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_bow"), SAPPHIRE_BOW);
 				}
 
-				if(enableRuby)
+				if(enableSpinel)
 				{
-					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_bow"), RUBY_BOW);
+					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_bow"), SPINEL_BOW);
 				}
 
 				if(enableCarbonado)
@@ -486,9 +485,9 @@ public class ItemInit
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_hammer"), SAPPHIRE_HAMMER);
 				}
 
-				if(enableRuby)
+				if(enableSpinel)
 				{
-					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_hammer"), RUBY_HAMMER);
+					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_hammer"), SPINEL_HAMMER);
 				}
 
 				if(enableCarbonado)
@@ -544,9 +543,9 @@ public class ItemInit
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_excavator"), SAPPHIRE_EXCAVATOR);
 				}
 
-				if(enableRuby)
+				if(enableSpinel)
 				{
-					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_excavator"), RUBY_EXCAVATOR);
+					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_excavator"), SPINEL_EXCAVATOR);
 				}
 
 				if(enableCarbonado)
@@ -602,9 +601,9 @@ public class ItemInit
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_paxel"), SAPPHIRE_PAXEL);
 				}
 
-				if(enableRuby)
+				if(enableSpinel)
 				{
-					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_paxel"), RUBY_PAXEL);
+					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_paxel"), SPINEL_PAXEL);
 				}
 
 				if(enableCarbonado)
@@ -683,12 +682,12 @@ public class ItemInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_boots"), SAPPHIRE_BOOTS);
 		}
 
-		if(enableRuby)
+		if(enableSpinel)
 		{
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_helmet"), RUBY_HELMET);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_chestplate"), RUBY_CHESTPLATE);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_leggings"), RUBY_LEGGINGS);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_boots"), RUBY_BOOTS);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_helmet"), SPINEL_HELMET);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_chestplate"), SPINEL_CHESTPLATE);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_leggings"), SPINEL_LEGGINGS);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_boots"), SPINEL_BOOTS);
 		}
 
 		if(enableCarbonado)
@@ -719,7 +718,7 @@ public class ItemInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_juju"), ALEXANDRITE_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_juju"), CORUNDUM_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_juju"), SAPPHIRE_JUJU);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_juju"), RUBY_JUJU);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_juju"), SPINEL_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_juju"), CARBONADO_JUJU);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_juju"), MOISSANITE_JUJU);
 		}

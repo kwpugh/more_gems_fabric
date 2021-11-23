@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": { "item": "more_gems:spinel_ore_deepslate" },
+  "result": "more_gems:spinel",
+  "experience": 3.0,
+  "cookingtime": 100
+}

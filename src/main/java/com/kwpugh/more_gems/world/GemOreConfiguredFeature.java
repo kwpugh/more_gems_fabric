@@ -26,8 +26,8 @@ public class GemOreConfiguredFeature
     public static final ConfiguredFeature<?, ?> ORE_CORUNDUM_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.CORUNDUM_ORE.getDefaultState(), CONFIG.corundumVeinSize));
     public static final ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.SAPPHIRE_ORE.getDefaultState(), CONFIG.sapphireVeinSize));
     public static final ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD_DEEPSLATE = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.SAPPHIRE_ORE_DEEPSLATE.getDefaultState(), CONFIG.sapphireVeinSizeDeepslate));
-    public static final ConfiguredFeature<?, ?> ORE_RUBY_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.RUBY_ORE.getDefaultState(), CONFIG.rubyVeinSize));
-    public static final ConfiguredFeature<?, ?> ORE_RUBY_OVERWORLD_DEEPSLATE = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.RUBY_ORE_DEEPSLATE.getDefaultState(), CONFIG.rubyVeinSizeDeepslate));
+    public static final ConfiguredFeature<?, ?> ORE_SPINEL_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.SPINEL_ORE.getDefaultState(), CONFIG.spinelVeinSize));
+    public static final ConfiguredFeature<?, ?> ORE_SPINEL_OVERWORLD_DEEPSLATE = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.SPINEL_ORE_DEEPSLATE.getDefaultState(), CONFIG.spinelVeinSizeDeepslate));
     public static final ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_OVERWORLD, BlockInit.CARBONADO_ORE.getDefaultState(), CONFIG.carbonadoVeinSize));
     public static final ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD_DEEPSLATE = Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.CARBONADO_ORE_DEEPSLATE.getDefaultState(), CONFIG.carbonadoVeinSizeDeepslate));
 
@@ -68,11 +68,11 @@ public class GemOreConfiguredFeature
         RegistryKey<ConfiguredFeature<?, ?>> oreSapphireOverworldDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_sapphire_overworld_deepslate"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSapphireOverworldDeepslate.getValue(), ORE_SAPPHIRE_OVERWORLD_DEEPSLATE);
 
-        RegistryKey<ConfiguredFeature<?, ?>> oreRubyOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_ruby_overworld"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreRubyOverworld.getValue(), ORE_RUBY_OVERWORLD);
+        RegistryKey<ConfiguredFeature<?, ?>> oreSpinelOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_spinel_overworld"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSpinelOverworld.getValue(), ORE_SPINEL_OVERWORLD);
 
-        RegistryKey<ConfiguredFeature<?, ?>> oreRubyOverworldDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_ruby_overworld_deepslate"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreRubyOverworldDeepslate.getValue(), ORE_RUBY_OVERWORLD_DEEPSLATE);
+        RegistryKey<ConfiguredFeature<?, ?>> oreSpinelOverworldDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_spinel_overworld_deepslate"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSpinelOverworldDeepslate.getValue(), ORE_SPINEL_OVERWORLD_DEEPSLATE);
 
         RegistryKey<ConfiguredFeature<?, ?>> oreCarbonadoOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreCarbonadoOverworld.getValue(), ORE_CARBONADO_OVERWORLD);

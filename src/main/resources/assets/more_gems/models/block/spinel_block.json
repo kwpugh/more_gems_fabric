@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "more_gems:block/spinel_block"
+    }
+}

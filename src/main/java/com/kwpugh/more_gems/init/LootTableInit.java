@@ -96,12 +96,12 @@ public class LootTableInit
 					new Identifier("minecraft", "blocks/deepslate_coal_ore")
 			));
 
-			FabricLootPoolBuilder RUBY = FabricLootPoolBuilder.builder()
+			FabricLootPoolBuilder SPINEL = FabricLootPoolBuilder.builder()
 					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.RUBY))
+					.with(ItemEntry.builder(ItemInit.SPINEL))
 					.withCondition(RandomChanceLootCondition.builder(deepslateCoalDropGems).build());
 
-			insert(new LootTableInsert(RUBY,
+			insert(new LootTableInsert(SPINEL,
 					new Identifier("minecraft", "blocks/deepslate_coal_ore")
 			));
 
@@ -238,12 +238,12 @@ public class LootTableInit
 					new Identifier("minecraft", "chests/buried_treasure")
 			));
 
-			FabricLootPoolBuilder RUBY_JUJU = FabricLootPoolBuilder.builder()
+			FabricLootPoolBuilder SPINEL_JUJU = FabricLootPoolBuilder.builder()
 					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.RUBY_JUJU))
+					.with(ItemEntry.builder(ItemInit.SPINEL_JUJU))
 					.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
 
-			insert(new LootTableInsert(RUBY_JUJU,
+			insert(new LootTableInsert(SPINEL_JUJU,
 					new Identifier("minecraft", "chests/pillager_outpost"),
 					new Identifier("minecraft", "chests/nether_bridge"),
 					new Identifier("minecraft", "chests/bastion_treasure")

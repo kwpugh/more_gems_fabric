@@ -110,20 +110,20 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int sapphirePerChunkDeepslate = 12;
 
         @Comment("***********************"
- 	    		+"\nRuby Ores"
+ 	    		+"\nSpinel Ores"
  	    		+"\n***********************")
-        public boolean rubyEnable = true;
-        public int rubyVeinSize = 5;
-     	public int rubyMaxLevel = 20;
-     	public int rubyPerChunk = 12;
+        public boolean spinelEnable = true;
+        public int spinelVeinSize = 5;
+     	public int spinelMaxLevel = 20;
+     	public int spinelPerChunk = 12;
 
 		@Comment("***********************"
-				+"\nDeepslate Ruby Ores"
+				+"\nDeepslate Spinel Ores"
 				+"\n***********************")
-		public boolean rubyEnableDeepslate = true;
-		public int rubyVeinSizeDeepslate = 5;
-		public int rubyMaxLevelDeepslate = 0;
-		public int rubyPerChunkDeepslate = 12;
+		public boolean spinelEnableDeepslate = true;
+		public int spinelVeinSizeDeepslate = 5;
+		public int spinelMaxLevelDeepslate = 0;
+		public int spinelPerChunkDeepslate = 12;
 
         @Comment("***********************"
  	    		+"\nCarbonado Ores"
@@ -245,7 +245,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableAlexandriteSet = true;
 		public boolean enableCorundumSet = true;
 		public boolean enableSapphireSet = true;
-		public boolean enableRubySet = true;
+		public boolean enableSpinelSet = true;
 		public boolean enableCarbonadoSet = true;
 		public boolean enableMoissaniteSet = true;
 
@@ -437,24 +437,24 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+ "\n"
 				+ "\n"
 				+ "******************************"
-				+ "\nRUBY TOOL MATERIAL"
+				+ "\nSPINEL TOOL MATERIAL"
 				+ "\n******************************")
-		public int rubyDurability = 1404;
-		public float rubyMiningSpeed = 6.0F;
-		public float rubyAttackDamage = 2.0F;
-		public int rubyMiningLevel = 3;
-		public int rubyEnchantability = 14;
+		public int spinelDurability = 1404;
+		public float spinelMiningSpeed = 6.0F;
+		public float spinelAttackDamage = 2.0F;
+		public int spinelMiningLevel = 3;
+		public int spinelEnchantability = 14;
 
 		@Comment("\n"
 				+ "\n"
 				+ "\n"
 				+ "******************************"
-				+ "\nRUBY ARMOR MATERIAL"
+				+ "\nSPINEL ARMOR MATERIAL"
 				+ "\n******************************")
-		public int rubyDurabilityMultiplier = 30;
-		public int rubyArmorEnchantability = 9;
-		public float rubyToughness = 0.5F;
-		public float rubyKnockbackResistance = 0.0F;
+		public int spinelDurabilityMultiplier = 30;
+		public int spinelArmorEnchantability = 9;
+		public float spinelToughness = 0.5F;
+		public float spinelKnockbackResistance = 0.0F;
 
 		@Comment("\n"
 				+ "\n"

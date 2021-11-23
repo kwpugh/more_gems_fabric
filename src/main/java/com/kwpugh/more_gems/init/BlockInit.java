@@ -19,11 +19,11 @@ public class BlockInit
 	public static final Block ALEXANDRITE_ORE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 	public static final Block CORUNDUM_ORE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 	public static final Block SAPPHIRE_ORE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
-	public static final Block RUBY_ORE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
+	public static final Block SPINEL_ORE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 	public static final Block CARBONADO_ORE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 
 	public static final Block SAPPHIRE_ORE_DEEPSLATE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
-	public static final Block RUBY_ORE_DEEPSLATE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
+	public static final Block SPINEL_ORE_DEEPSLATE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 	public static final Block CARBONADO_ORE_DEEPSLATE = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 
 	public static final Block KUNZITE_ORE_NETHER = new BaseOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
@@ -38,7 +38,7 @@ public class BlockInit
 	public static final Block ALEXANDRITE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 	public static final Block CORUNDUM_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 	public static final Block SAPPHIRE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
-	public static final Block RUBY_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
+	public static final Block SPINEL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 	public static final Block CARBONADO_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 	public static final Block MOISSANITE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2.0F, 2.0F));
 
@@ -51,11 +51,11 @@ public class BlockInit
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_ore"), ALEXANDRITE_ORE);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_ore"), CORUNDUM_ORE);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "sapphire_ore"), SAPPHIRE_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "ruby_ore"), RUBY_ORE);
+		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "spinel_ore"), SPINEL_ORE);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "carbonado_ore"), CARBONADO_ORE);
 
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "sapphire_ore_deepslate"), SAPPHIRE_ORE_DEEPSLATE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "ruby_ore_deepslate"), RUBY_ORE_DEEPSLATE);
+		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "spinel_ore_deepslate"), SPINEL_ORE_DEEPSLATE);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "carbonado_ore_deepslate"), CARBONADO_ORE_DEEPSLATE);
 
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "kunzite_ore_nether"), KUNZITE_ORE_NETHER);
@@ -70,7 +70,7 @@ public class BlockInit
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_block"), ALEXANDRITE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_block"), CORUNDUM_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "sapphire_block"), SAPPHIRE_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "ruby_block"), RUBY_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "spinel_block"), SPINEL_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "carbonado_block"), CARBONADO_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "moissanite_block"), MOISSANITE_BLOCK);
 	}
@@ -86,11 +86,11 @@ public class BlockInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_ore"), new BlockItem(CORUNDUM_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_ore"), new BlockItem(SPINEL_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_ore"), new BlockItem(CARBONADO_ORE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_ore_deepslate"), new BlockItem(SAPPHIRE_ORE_DEEPSLATE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_ore_deepslate"), new BlockItem(RUBY_ORE_DEEPSLATE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_ore_deepslate"), new BlockItem(SPINEL_ORE_DEEPSLATE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_ore_deepslate"), new BlockItem(CARBONADO_ORE_DEEPSLATE, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_ore_nether"), new BlockItem(KUNZITE_ORE_NETHER, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
@@ -105,7 +105,7 @@ public class BlockInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_block"), new BlockItem(ALEXANDRITE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "ruby_block"), new BlockItem(RUBY_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_block"), new BlockItem(SPINEL_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_block"), new BlockItem(CARBONADO_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_block"), new BlockItem(MOISSANITE_BLOCK, new Item.Settings().group(MoreGems.MORE_GEMS_GROUP)));
 		}

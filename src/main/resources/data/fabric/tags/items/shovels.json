@@ -34,7 +34,7 @@
        "required": false
      },
      {
-       "id": "more_gems:ruby_shovel",
+       "id": "more_gems:spinel_shovel",
        "required": false
      },
      {
@@ -78,7 +78,7 @@
        "required": false
      },
      {
-       "id": "more_gems:ruby_excavator",
+       "id": "more_gems:spinel_excavator",
        "required": false
      },
      {
@@ -122,7 +122,7 @@
        "required": false
      },
      {
-       "id": "more_gems:ruby_paxel",
+       "id": "more_gems:spinel_paxel",
        "required": false
      },
      {

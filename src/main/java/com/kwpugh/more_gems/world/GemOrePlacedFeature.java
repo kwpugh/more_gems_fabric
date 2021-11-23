@@ -28,8 +28,8 @@ public class GemOrePlacedFeature
     public static final PlacedFeature ORE_CORUNDUM_OVERWORLD = GemOreConfiguredFeature.ORE_CORUNDUM_OVERWORLD.withPlacement(modifiersWithCount(CONFIG.corundumPerChunk, HeightRangePlacementModifier.uniform(YOffset.aboveBottom(70),YOffset.fixed(CONFIG.corundumMaxLevel))));
     public static final PlacedFeature ORE_SAPPHIRE_OVERWORLD = GemOreConfiguredFeature.ORE_SAPPHIRE_OVERWORLD.withPlacement(modifiersWithCount(CONFIG.sapphirePerChunk, HeightRangePlacementModifier.uniform(YOffset.aboveBottom(70),YOffset.fixed(CONFIG.sapphireMaxLevel))));
     public static final PlacedFeature ORE_SAPPHIRE_OVERWORLD_DEEPSLATE = GemOreConfiguredFeature.ORE_SAPPHIRE_OVERWORLD_DEEPSLATE.withPlacement(modifiersWithCount(CONFIG.sapphirePerChunkDeepslate, HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.sapphireMaxLevelDeepslate))));
-    public static final PlacedFeature ORE_RUBY_OVERWORLD = GemOreConfiguredFeature.ORE_RUBY_OVERWORLD.withPlacement(modifiersWithCount(CONFIG.rubyPerChunk, HeightRangePlacementModifier.uniform(YOffset.aboveBottom(70),YOffset.fixed(CONFIG.rubyMaxLevel))));
-    public static final PlacedFeature ORE_RUBY_OVERWORLD_DEEPSLATE = GemOreConfiguredFeature.ORE_RUBY_OVERWORLD_DEEPSLATE.withPlacement(modifiersWithCount(CONFIG.rubyPerChunkDeepslate, HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.rubyMaxLevelDeepslate))));
+    public static final PlacedFeature ORE_SPINEL_OVERWORLD = GemOreConfiguredFeature.ORE_SPINEL_OVERWORLD.withPlacement(modifiersWithCount(CONFIG.spinelPerChunk, HeightRangePlacementModifier.uniform(YOffset.aboveBottom(70),YOffset.fixed(CONFIG.spinelMaxLevel))));
+    public static final PlacedFeature ORE_SPINEL_OVERWORLD_DEEPSLATE = GemOreConfiguredFeature.ORE_SPINEL_OVERWORLD_DEEPSLATE.withPlacement(modifiersWithCount(CONFIG.spinelPerChunkDeepslate, HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.spinelMaxLevelDeepslate))));
     public static final PlacedFeature ORE_CARBONADO_OVERWORLD = GemOreConfiguredFeature.ORE_CARBONADO_OVERWORLD.withPlacement(modifiersWithCount(CONFIG.carbonadoPerChunk, HeightRangePlacementModifier.uniform(YOffset.aboveBottom(70),YOffset.fixed(CONFIG.carbonadoMaxLevel))));
     public static final PlacedFeature ORE_CARBONADO_OVERWORLD_DEEPSLATE = GemOreConfiguredFeature.ORE_CARBONADO_OVERWORLD_DEEPSLATE.withPlacement(modifiersWithCount(CONFIG.carbonadoPerChunkDeepslate, HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),YOffset.fixed(CONFIG.carbonadoMaxLevelDeepslate))));
 
@@ -68,11 +68,11 @@ public class GemOrePlacedFeature
         RegistryKey<PlacedFeature> oreSapphireOverworldDeepslate = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_sapphire_overworld_deepslate"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreSapphireOverworldDeepslate.getValue(), ORE_SAPPHIRE_OVERWORLD_DEEPSLATE);
 
-        RegistryKey<PlacedFeature> oreRubyOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_ruby_overworld"));
-        Registry.register(BuiltinRegistries.PLACED_FEATURE, oreRubyOverworld.getValue(), ORE_RUBY_OVERWORLD);
+        RegistryKey<PlacedFeature> oreSpinelOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_spinel_overworld"));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, oreSpinelOverworld.getValue(), ORE_SPINEL_OVERWORLD);
 
-        RegistryKey<PlacedFeature> oreRubyOverworldDeepslate = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_ruby_overworld_deepslate"));
-        Registry.register(BuiltinRegistries.PLACED_FEATURE, oreRubyOverworldDeepslate.getValue(), ORE_RUBY_OVERWORLD_DEEPSLATE);
+        RegistryKey<PlacedFeature> oreSpinelOverworldDeepslate = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_spinel_overworld_deepslate"));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, oreSpinelOverworldDeepslate.getValue(), ORE_SPINEL_OVERWORLD_DEEPSLATE);
 
         RegistryKey<PlacedFeature> oreCarbonadoOverworld = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreCarbonadoOverworld.getValue(), ORE_CARBONADO_OVERWORLD);
@@ -138,14 +138,14 @@ public class GemOrePlacedFeature
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSapphireOverworldDeepslate);
         }
 
-        if(CONFIG.rubyEnable)
+        if(CONFIG.spinelEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreRubyOverworld);
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSpinelOverworld);
         }
 
-        if(CONFIG.rubyEnableDeepslate)
+        if(CONFIG.spinelEnableDeepslate)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreRubyOverworldDeepslate);
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSpinelOverworldDeepslate);
         }
 
         if(CONFIG.carbonadoEnable)
