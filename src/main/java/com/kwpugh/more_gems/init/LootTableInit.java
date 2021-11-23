@@ -19,6 +19,7 @@ public class LootTableInit
 {
 	static float jujuChance = MoreGems.CONFIG.GENERAL.jujuChance;
 	static boolean jujuenable = MoreGems.CONFIG.GENERAL.jujuEnable;
+	static boolean enableTreasureBag = MoreGems.CONFIG.GENERAL.enableTreasureBag;
 	static float treasueBagChance = MoreGems.CONFIG.GENERAL.treasureBagChance;
 
 	static float coalDropGems = MoreGems.CONFIG.ORES.coalDropGemsChance;
@@ -31,7 +32,7 @@ public class LootTableInit
 	{
 		if(enableCoalGemDrops)
 		{
-			// TEMP CODE UNTIL ORE GEN GETS FIXED
+			// Alternate way to get gem drops from vanilla ores
 			FabricLootPoolBuilder CITRINE = FabricLootPoolBuilder.builder()
 					.rolls(ConstantLootNumberProvider.create(1))
 					.with(ItemEntry.builder(ItemInit.CITRINE))
@@ -121,20 +122,25 @@ public class LootTableInit
 			insert(new LootTableInsert(MOISSANITE,
 					new Identifier("minecraft", "blocks/deepslate_coal_ore")
 			));
-			// END TEMP CODE
 		}
 
 
-		FabricLootPoolBuilder TREASURE_BAG = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.TREASURE_BAG))
-				.withCondition(RandomChanceLootCondition.builder(treasueBagChance).build());
+		// Insert treasure bags into vanilla chests
+		if(enableTreasureBag)
+		{
+			FabricLootPoolBuilder TREASURE_BAG = FabricLootPoolBuilder.builder()
+					.rolls(ConstantLootNumberProvider.create(1))
+					.with(ItemEntry.builder(ItemInit.TREASURE_BAG))
+					.withCondition(RandomChanceLootCondition.builder(treasueBagChance).build());
 
-		insert(new LootTableInsert(TREASURE_BAG,
-				new Identifier("minecraft", "chests/desert_pyramid"),
-				new Identifier("minecraft", "chests/jungle_temple")
-		));
+			insert(new LootTableInsert(TREASURE_BAG,
+					new Identifier("minecraft", "chests/desert_pyramid"),
+					new Identifier("minecraft", "chests/jungle_temple")
+			));
+		}
 
+
+		// Insert jujus into vanilla chests
 		if(jujuenable)
 		{
 			FabricLootPoolBuilder CITRINE_JUJU = FabricLootPoolBuilder.builder()

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "more_gems:ruby"
+    {
+      "id": "more_gems:ruby",
+      "required": false
+    }
   ]
 }

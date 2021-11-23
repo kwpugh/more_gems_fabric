@@ -1,17 +1,45 @@
 {
   "replace": false,
   "values": [
-  	"more_gems:citrine",
-  	"more_gems:tourmaline",
-  	"more_gems:topaz",
-  	"more_gems:alexandrite",
-  	"more_gems:corundum",
-  	"more_gems:sapphire",
-  	"more_gems:carbonado",
-  	"more_gems:kunzite",
-  	"more_gems:ruby",
-  	"more_gems:moissanite",
-  	"minecraft:diamond",
-    "minecraft:emerald"
+	  {
+		  "id": "more_gems:citrine",
+		  "required": false
+	  },
+	  {
+		  "id": "more_gems:tourmaline",
+		  "required": false
+	  },
+	  {
+		  "id": "more_gems:topaz",
+		  "required": false
+	  },
+	  {
+		  "id": "more_gems:alexandrite",
+		  "required": false
+	  },
+	  {
+		  "id": "more_gems:corundum",
+		  "required": false
+	  },
+	  {
+		  "id": "more_gems:sapphire",
+		  "required": false
+	  },
+	  {
+		  "id": "more_gems:carbonado",
+		  "required": false
+	  },
+	  {
+		  "id": "more_gems:kunzite",
+		  "required": false
+	  },
+	  {
+		  "id": "more_gems:ruby",
+		  "required": false
+	  },
+	  {
+		  "id": "more_gems:moissanite",
+		  "required": false
+	  }
   ]
 }

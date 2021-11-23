@@ -1,7 +1,13 @@
 {
   "replace": false,
   "values": [
-    "more_gems:corundum_juju",
-    "more_gems:sapphire_juju"
+    {
+      "id": "more_gems:corundum_juju",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_juju",
+      "required": false
+    }
   ]
 }

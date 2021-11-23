@@ -1,15 +1,137 @@
 {
   "replace": false,
   "values": [
-    "more_gems:citrine_pickaxe",
-    "more_gems:tourmaline_pickaxe",
-    "more_gems:kunzite_pickaxe",
-    "more_gems:emerald_pickaxe",
-    "more_gems:topaz_pickaxe",
-    "more_gems:alexandrite_pickaxe",
-    "more_gems:corundum_pickaxe",
-    "more_gems:sapphire_pickaxe",
-    "more_gems:ruby_pickaxe",
-    "more_gems:carbonado_pickaxe"
+    {
+      "id": "more_gems:citrine_pickaxe",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_pickaxe",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_pickaxe",
+      "required": false
+    },
+    {
+      "id": "more_gems:emerald_pickaxe",
+      "required": false
+    },
+    {
+      "id":  "more_gems:topaz_pickaxe",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_pickaxe",
+      "required": false
+    },
+    {
+      "id":  "more_gems:corundum_pickaxe",
+      "required": false
+    },
+    {
+      "id":  "more_gems:sapphire_pickaxe",
+      "required": false
+    },
+    {
+      "id": "more_gems:ruby_pickaxe",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_pickaxe",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_pickaxe",
+      "required": false
+    },
+    {
+      "id": "more_gems:citrine_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_hammer",
+      "required": false
+    },
+    {
+      "id":  "more_gems:emerald_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:ruby_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_hammer",
+      "required": false
+    },
+    {
+      "id": "more_gems:citrine_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_paxel",
+      "required": false
+    },
+    {
+      "id":  "more_gems:kunzite_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:emerald_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:ruby_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_paxel",
+      "required": false
+    }
   ]
 }

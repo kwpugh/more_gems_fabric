@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "more_gems:carbonado"
+    {
+      "id": "more_gems:carbonado",
+      "required": false
+    }
   ]
 }

@@ -1,8 +1,17 @@
 {
   "replace": false,
   "values": [
-    "more_gems:emerald_juju",
-    "more_gems:topaz_juju",
-    "more_gems:alexandrite_juju"
+    {
+      "id": "more_gems:emerald_juju",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_juju",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_juju",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "more_gems:moissanite"
+    {
+      "id": "more_gems:moissanite",
+      "required": false
+    }
   ]
 }

@@ -1,8 +1,17 @@
 {
   "replace": false,
   "values": [
-    "more_gems:citrine_juju",
-    "more_gems:tourmaline_juju",
-    "more_gems:kunzite_juju"
+    {
+      "id": "more_gems:citrine_juju",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_juju",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_juju",
+      "required": false
+    }
   ]
 }

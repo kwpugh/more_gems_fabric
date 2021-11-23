@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "more_gems:kunzite"
+    {
+      "id": "more_gems:kunzite",
+      "required": false
+    }
   ]
 }

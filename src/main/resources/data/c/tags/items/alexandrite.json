@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "more_gems:alexandrite"
+    {
+      "id": "more_gems:alexandrite",
+      "required": false
+    }
   ]
 }

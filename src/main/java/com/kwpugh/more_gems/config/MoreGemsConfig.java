@@ -162,7 +162,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("********"
 				+"\nSharpening Gem"
 				+"\n********")
-		public boolean enableSharpeningGem = false;
+		public boolean enableSharpeningGem = true;
 		public int sharpeningGemRepairAmount = 50;
 
     	@Comment("********"
@@ -221,13 +221,33 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+ "\n"
 				+ "\n"
 				+ "******************************"
-				+"\nBows, Paxels, Hammers, & Excavators"
+				+"\nEnable/disable extra tools by type"
+				+"\n- bows, paxels, hammers, & excavators"
 				+"\n********************************") 
 		public boolean enableExtraTools = true;
 		public boolean enableBows = true;
 		public boolean enableHammers = true;
 		public boolean enableExcavators = true;
 		public boolean enablePaxels = true;
+
+		@Comment("********************************"
+				+ "\n"
+				+ "\n"
+				+ "******************************"
+				+"\nEnable/disable sets by material"
+				+"\n- armor, tools, & weapons"
+				+"\n********************************")
+		public boolean enableCitrineSet = true;
+		public boolean enableTourmalineSet = true;
+		public boolean enableKunziteSet = true;
+		public boolean enableTopazSet = true;
+		public boolean enableEmeraldSet = true;
+		public boolean enableAlexandriteSet = true;
+		public boolean enableCorundumSet = true;
+		public boolean enableSapphireSet = true;
+		public boolean enableRubySet = true;
+		public boolean enableCarbonadoSet = true;
+		public boolean enableMoissaniteSet = true;
 
 		@Comment("\n"
 				+ "\n"

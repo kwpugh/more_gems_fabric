@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "more_gems:sapphire"
+    {
+      "id": "more_gems:sapphire",
+      "required": false
+    }
   ]
 }
