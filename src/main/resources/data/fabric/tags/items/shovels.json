@@ -2,10 +2,6 @@
    "replace": false,
    "values": [
      {
-       "id": "more_gems:emerald_shovel",
-       "required": false
-     },
-     {
        "id": "more_gems:citrine_shovel",
        "required": false
      },
@@ -43,10 +39,6 @@
      },
      {
        "id": "more_gems:moissanite_shovel",
-       "required": false
-     },
-     {
-       "id": "more_gems:emerald_excavator",
        "required": false
      },
      {
@@ -99,10 +91,6 @@
      },
      {
        "id":  "more_gems:kunzite_paxel",
-       "required": false
-     },
-     {
-       "id": "more_gems:emerald_paxel",
        "required": false
      },
      {

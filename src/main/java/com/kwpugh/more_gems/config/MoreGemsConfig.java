@@ -241,7 +241,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableTourmalineSet = true;
 		public boolean enableKunziteSet = true;
 		public boolean enableTopazSet = true;
-		public boolean enableEmeraldSet = true;
 		public boolean enableAlexandriteSet = true;
 		public boolean enableCorundumSet = true;
 		public boolean enableSapphireSet = true;
@@ -317,29 +316,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int kunziteArmorEnchantability = 9;
 		public float kunziteToughness = 0.0F;
 		public float kunziteKnockbackResistance = 0.0F;
-
-		@Comment("\n"
-				+ "\n"
-				+ "\n"
-				+ "******************************"
-				+ "\nEMERALD TOOL MATERIAL"
-				+ "\n******************************")
-		public int emeraldDurability = 1170;
-		public float emeraldMiningSpeed = 6.0F;
-		public float emeraldAttackDamage = 2.0F;
-		public int emeraldMiningLevel = 2;
-		public int emeraldEnchantability = 14;
-
-		@Comment("\n"
-				+ "\n"
-				+ "\n"
-				+ "******************************"
-				+ "\nEMERALD ARMOR MATERIAL"
-				+ "\n******************************")
-		public int emeraldDurabilityMultiplier = 25;
-		public int emeraldArmorEnchantability = 9;
-		public float emeraldToughness = 0.0F;
-		public float emeraldKnockbackResistance = 0.0F;
 
 		@Comment("\n"
 				+ "\n"

@@ -1,6 +1,0 @@
-{
-    "parent": "more_gems:item/emerald_bow",
-    "textures": {
-        "layer0": "more_gems:item/emerald_bow_pulling_0"
-    }
-}

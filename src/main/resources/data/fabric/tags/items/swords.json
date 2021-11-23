@@ -2,10 +2,6 @@
    "replace": false,
    "values": [
      {
-       "id": "more_gems:emerald_sword",
-       "required": false
-     },
-     {
        "id": "more_gems:citrine_sword",
        "required": false
      },

@@ -32,7 +32,6 @@ public class ItemInit
 	static boolean enableTourmaline = MoreGems.CONFIG.GENERAL.enableTourmalineSet;
 	static boolean enableKunzite = MoreGems.CONFIG.GENERAL.enableKunziteSet;
 	static boolean enableTopaz = MoreGems.CONFIG.GENERAL.enableTopazSet;
-	static boolean enableEmerald = MoreGems.CONFIG.GENERAL.enableEmeraldSet;
 	static boolean enableAlexandrite = MoreGems.CONFIG.GENERAL.enableAlexandriteSet;
 	static boolean enableCorundum = MoreGems.CONFIG.GENERAL.enableCorundumSet;
 	static boolean enableSapphire = MoreGems.CONFIG.GENERAL.enableSapphireSet;
@@ -44,7 +43,6 @@ public class ItemInit
 	static int tourmalineBow = MoreGems.CONFIG.GENERAL.tourmalineDurability;
 	static int kunziteBow = MoreGems.CONFIG.GENERAL.kunziteDurability;
 	static int topazBow = MoreGems.CONFIG.GENERAL.topazDurability;
-	static int emeraldBow = MoreGems.CONFIG.GENERAL.emeraldDurability;
 	static int alexandriteBow = MoreGems.CONFIG.GENERAL.alexandriteDurability;
 	static int corundumBow = MoreGems.CONFIG.GENERAL.corundumDurability;
 	static int sapphireBow = MoreGems.CONFIG.GENERAL.sapphireDurability;
@@ -60,8 +58,6 @@ public class ItemInit
 	public static final ArmorMaterial KUNZITE_ARMOR_MATERIAL = new KunziteArmorMaterial();
 	public static final ToolMaterial TOPAZ_TOOL_MATERIAL = new TopazToolMaterial();
 	public static final ArmorMaterial TOPAZ_ARMOR_MATERIAL = new TopazArmorMaterial();
-	public static final ToolMaterial EMERALD_TOOL_MATERIAL = new EmeraldToolMaterial();
-	public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = new EmeraldArmorMaterial();
 	public static final ToolMaterial ALEXANDRITE_TOOL_MATERIAL = new AlexandriteToolMaterial();
 	public static final ArmorMaterial ALEXANDRITE_ARMOR_MATERIAL = new AlexandriteArmorMaterial();
 	public static final ToolMaterial CORUNDUM_TOOL_MATERIAL = new CorundumToolMaterial();
@@ -107,13 +103,6 @@ public class ItemInit
 	public static final Item KUNZITE_AXE = new ModAxe(KUNZITE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item KUNZITE_SHOVEL = new ModShovel(KUNZITE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item KUNZITE_HOE = new ModHoe(KUNZITE_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-
-	public static final Item EMERALD_SWORD = new ModSword(EMERALD_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_BOW = new ModBow((new Item.Settings()).maxDamage(emeraldBow).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_PICKAXE = new ModPickaxe(EMERALD_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_AXE = new ModAxe(EMERALD_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_SHOVEL = new ModShovel(EMERALD_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_HOE = new ModHoe(EMERALD_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item TOPAZ_SWORD = new ModSword(TOPAZ_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_BOW = new ModBow((new Item.Settings()).maxDamage(topazBow).group(MoreGems.MORE_GEMS_GROUP));
@@ -170,7 +159,6 @@ public class ItemInit
 	public static final Item CITRINE_HAMMER = new ModHammer(CITRINE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_HAMMER = new ModHammer(TOURMALINE_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item KUNZITE_HAMMER = new ModHammer(KUNZITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_HAMMER = new ModHammer(EMERALD_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_HAMMER = new ModHammer(TOPAZ_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item ALEXANDRITE_HAMMER = new ModHammer(ALEXANDRITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM_HAMMER = new ModHammer(CORUNDUM_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -181,7 +169,6 @@ public class ItemInit
 	public static final Item CITRINE_EXCAVATOR = new ModExcavator(CITRINE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_EXCAVATOR = new ModExcavator(TOURMALINE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item KUNZITE_EXCAVATOR = new ModExcavator(KUNZITE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_EXCAVATOR = new ModExcavator(EMERALD_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_EXCAVATOR = new ModExcavator(TOPAZ_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item ALEXANDRITE_EXCAVATOR = new ModExcavator(ALEXANDRITE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM_EXCAVATOR = new ModExcavator(CORUNDUM_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -192,7 +179,6 @@ public class ItemInit
 	public static final Item CITRINE_PAXEL = new ModPaxel(CITRINE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOURMALINE_PAXEL = new ModPaxel(TOURMALINE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item KUNZITE_PAXEL = new ModPaxel(KUNZITE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_PAXEL = new ModPaxel(EMERALD_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_PAXEL = new ModPaxel(TOPAZ_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item ALEXANDRITE_PAXEL = new ModPaxel(ALEXANDRITE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM_PAXEL = new ModPaxel(CORUNDUM_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -214,11 +200,6 @@ public class ItemInit
 	public static final Item KUNZITE_CHESTPLATE = new ModArmor(KUNZITE_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item KUNZITE_LEGGINGS = new ModArmor(KUNZITE_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item KUNZITE_BOOTS = new ModArmor(KUNZITE_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-
-	public static final Item EMERALD_HELMET = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_CHESTPLATE = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_LEGGINGS = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item EMERALD_BOOTS = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item TOPAZ_HELMET = new ModArmor(TOPAZ_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_CHESTPLATE = new ModArmor(TOPAZ_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -311,15 +292,6 @@ public class ItemInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_hoe"), KUNZITE_HOE);
 		}
 
-		if(enableEmerald)
-		{
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_sword"), EMERALD_SWORD);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_pickaxe"), EMERALD_PICKAXE);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_axe"), EMERALD_AXE);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_shovel"), EMERALD_SHOVEL);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_hoe"), EMERALD_HOE);
-		}
-
 		if(enableTopaz)
 		{
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_sword"), TOPAZ_SWORD);
@@ -402,11 +374,6 @@ public class ItemInit
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_bow"), KUNZITE_BOW);
 				}
 
-				if(enableEmerald)
-				{
-					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_bow"), EMERALD_BOW);
-				}
-
 				if(enableTopaz)
 				{
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_bow"), TOPAZ_BOW);
@@ -458,11 +425,6 @@ public class ItemInit
 				if(enableKunzite)
 				{
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_hammer"), KUNZITE_HAMMER);
-				}
-
-				if(enableEmerald)
-				{
-					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_hammer"), EMERALD_HAMMER);
 				}
 
 				if(enableTopaz)
@@ -518,11 +480,6 @@ public class ItemInit
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_excavator"), KUNZITE_EXCAVATOR);
 				}
 
-				if(enableEmerald)
-				{
-					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_excavator"), EMERALD_EXCAVATOR);
-				}
-
 				if(enableTopaz)
 				{
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_excavator"), TOPAZ_EXCAVATOR);
@@ -574,11 +531,6 @@ public class ItemInit
 				if(enableKunzite)
 				{
 					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_paxel"), KUNZITE_PAXEL);
-				}
-
-				if(enableEmerald)
-				{
-					Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_paxel"), EMERALD_PAXEL);
 				}
 
 				if(enableTopaz)
@@ -640,14 +592,6 @@ public class ItemInit
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_chestplate"), KUNZITE_CHESTPLATE);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_leggings"), KUNZITE_LEGGINGS);
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_boots"), KUNZITE_BOOTS);
-		}
-
-		if(enableEmerald)
-		{
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_helmet"), EMERALD_HELMET);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_chestplate"), EMERALD_CHESTPLATE);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_leggings"), EMERALD_LEGGINGS);
-			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "emerald_boots"), EMERALD_BOOTS);
 		}
 
 		if(enableTopaz)

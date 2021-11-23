@@ -14,10 +14,6 @@
       "required": false
     },
     {
-      "id": "more_gems:emerald_pickaxe",
-      "required": false
-    },
-    {
       "id":  "more_gems:topaz_pickaxe",
       "required": false
     },
@@ -58,10 +54,6 @@
       "required": false
     },
     {
-      "id":  "more_gems:emerald_hammer",
-      "required": false
-    },
-    {
       "id": "more_gems:topaz_hammer",
       "required": false
     },
@@ -99,10 +91,6 @@
     },
     {
       "id":  "more_gems:kunzite_paxel",
-      "required": false
-    },
-    {
-      "id": "more_gems:emerald_paxel",
       "required": false
     },
     {

@@ -178,19 +178,6 @@ public class LootTableInit
 					new Identifier("minecraft", "gameplay/fishing/treasure")
 			));
 
-			FabricLootPoolBuilder EMERALD_JUJU = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.EMERALD_JUJU))
-					.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-			insert(new LootTableInsert(EMERALD_JUJU,
-					new Identifier("minecraft", "chests/igloo_chest"),
-					new Identifier("minecraft", "chests/simple_dungeon"),
-					new Identifier("minecraft", "chests/underwater_ruin_big"),
-					new Identifier("minecraft", "chests/underwater_ruin_small"),
-					new Identifier("minecraft", "gameplay/fishing/treasure")
-			));
-
 			FabricLootPoolBuilder TOPAZ_JUJU = FabricLootPoolBuilder.builder()
 					.rolls(ConstantLootNumberProvider.create(1))
 					.with(ItemEntry.builder(ItemInit.TOPAZ_JUJU))

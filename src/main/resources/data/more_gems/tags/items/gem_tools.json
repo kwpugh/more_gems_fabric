@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "more_gems:emerald_axe",
-      "required": false
-    },
-    {
       "id": "more_gems:citrine_axe",
       "required": false
     },
@@ -58,10 +54,6 @@
       "required": false
     },
     {
-      "id": "more_gems:emerald_paxel",
-      "required": false
-    },
-    {
       "id": "more_gems:topaz_paxel",
       "required": false
     },
@@ -87,10 +79,6 @@
     },
     {
       "id": "more_gems:moissanite_paxel",
-      "required": false
-    },
-    {
-      "id": "more_gems:emerald_hoe",
       "required": false
     },
     {
@@ -146,10 +134,6 @@
       "required": false
     },
     {
-      "id": "more_gems:emerald_pickaxe",
-      "required": false
-    },
-    {
       "id":  "more_gems:topaz_pickaxe",
       "required": false
     },
@@ -190,10 +174,6 @@
       "required": false
     },
     {
-      "id":  "more_gems:emerald_hammer",
-      "required": false
-    },
-    {
       "id": "more_gems:topaz_hammer",
       "required": false
     },
@@ -219,10 +199,6 @@
     },
     {
       "id": "more_gems:moissanite_hammer",
-      "required": false
-    },
-    {
-      "id": "more_gems:emerald_shovel",
       "required": false
     },
     {
@@ -266,10 +242,6 @@
       "required": false
     },
     {
-      "id": "more_gems:emerald_excavator",
-      "required": false
-    },
-    {
       "id": "more_gems:citrine_excavator",
       "required": false
     },
@@ -307,10 +279,6 @@
     },
     {
       "id": "more_gems:moissanite_excavator",
-      "required": false
-    },
-    {
-      "id": "more_gems:emerald_sword",
       "required": false
     },
     {
