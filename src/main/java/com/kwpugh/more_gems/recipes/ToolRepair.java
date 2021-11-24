@@ -45,21 +45,18 @@ public class ToolRepair extends SpecialCraftingRecipe
                     ItemStack craftStack = toolStack.copy();
                     Item materialToTest = materialType.getItem();
 
-                    if(materialType != null)
+                    int damage = 0;
+
+                    if(materialToTest.equals(ItemInit.SHARPENING_GEM))
                     {
-                        int damage = 0;
-
-                        if(materialToTest.equals(ItemInit.SHARPENING_GEM))
-                        {
-                            damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemRepairAmount, 0);
-                        }
-                        else if(materialToTest.equals(ItemInit.SHARPENING_GEM_GREATER))
-                        {
-                            damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemGreaterRepairAmount, 0);
-                        }
-
-                        craftStack.setDamage(damage);
+                        damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemRepairAmount, 0);
                     }
+                    else if(materialToTest.equals(ItemInit.SHARPENING_GEM_GREATER))
+                    {
+                        damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemGreaterRepairAmount, 0);
+                    }
+
+                    craftStack.setDamage(damage);
 
                     return craftStack;
                 }
