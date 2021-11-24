@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ServerPlayerEntity.class)
-public class ServerPlayerEntityMixinBound
+public abstract class ServerPlayerEntityMixinBound
 {
     // Also need dropItem mixin in PlayerEntityMixin for Bound enchantment
     @Inject(method="copyFrom", at = @At(value="RETURN"))
@@ -16,9 +16,12 @@ public class ServerPlayerEntityMixinBound
     {
         if(!alive)
         {
-            if(!oldPlayer.isSpectator() && !((ServerPlayerEntity) (Object) this).world.getGameRules().getBoolean(GameRules.KEEP_INVENTORY))
+            ServerPlayerEntity currentPlayer = (ServerPlayerEntity) (Object) this;
+            boolean ruleTest = currentPlayer.world.getGameRules().getBoolean(GameRules.KEEP_INVENTORY);
+
+            if(!ruleTest && !oldPlayer.isSpectator())
             {
-                ((ServerPlayerEntity) (Object) this).getInventory().clone(oldPlayer.getInventory());
+                currentPlayer.getInventory().clone(oldPlayer.getInventory());
             }
         }
     }
