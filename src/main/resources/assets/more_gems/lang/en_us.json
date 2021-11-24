@@ -265,7 +265,7 @@
 	"item.more_gems.treasure_bag": "Treasure Bag",
 	"item.more_gems.treasure_bag.tip1": "Right-click for a prize",
 
-	"item.more_gems.sharpening_gem": "Sharpening Gem",
+	"item.more_gems.sharpening_gem": "Lesser Sharpening Gem",
 	"item.more_gems.sharpening_gem.tip1": "Used to repair damage on gem tools",
 	"item.more_gems.sharpening_gem.tip2": "Repairs %s units of durability",
 	"item.more_gems.sharpening_gem_greater": "Greater Sharpening Gem",
