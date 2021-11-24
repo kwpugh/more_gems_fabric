@@ -25,6 +25,7 @@ public class EnchantmentInit
 	public static final Enchantment LAVA_VIEW = new LavaViewEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_HEAD, new EquipmentSlot[]{EquipmentSlot.HEAD});
 	public static final Enchantment BENEVOLENCE = new BenevolenceEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
 	public static final Enchantment MINING_HELPER = new MiningHelperEnchantment(Enchantment.Rarity.COMMON, EnchantmentTarget.DIGGER, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+	public static final Enchantment BOUND = new BoundEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.BREAKABLE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
 	static boolean enableRazor = MoreGems.CONFIG.GENERAL.enableRazorSharpness;
 	static boolean enableShulker = MoreGems.CONFIG.GENERAL.enableShulkerBlade;
@@ -41,6 +42,7 @@ public class EnchantmentInit
 	static boolean enableLavaView = MoreGems.CONFIG.GENERAL.enableLavaView;
 	static boolean enableBenevolence = MoreGems.CONFIG.GENERAL.enableBenevolence;
 	static boolean enableMiningHelper = MoreGems.CONFIG.GENERAL.enableMiningHelper;
+	static boolean enableBound = MoreGems.CONFIG.GENERAL.enableBound;
 
 	public static void registerEnchantments()
 	{
@@ -117,6 +119,11 @@ public class EnchantmentInit
 		if(enableMiningHelper)
 		{
 			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mining_helper"), MINING_HELPER);
+		}
+
+		if(enableBound)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "bound"), BOUND);
 		}
 	}
 }

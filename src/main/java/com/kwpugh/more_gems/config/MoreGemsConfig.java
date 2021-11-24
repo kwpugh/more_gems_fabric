@@ -199,6 +199,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableLavaView = true;
 		public boolean enableBenevolence =  true;
 		public boolean enableMiningHelper =  true;
+		public boolean enableBound =  true;
 
 		@Comment("***************"
 				+"\nEnchantment Settings"
