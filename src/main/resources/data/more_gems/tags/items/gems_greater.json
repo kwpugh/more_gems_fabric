@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "more_gems:corundum",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado",
+      "required": false
+    },
+    {
+      "id": "more_gems:spinel",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite",
+      "required": false
+    }
+  ]
+}

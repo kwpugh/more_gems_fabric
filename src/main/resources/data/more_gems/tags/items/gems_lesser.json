@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "more_gems:citrine",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite",
+      "required": false
+    }
+  ]
+}

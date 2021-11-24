@@ -21,13 +21,6 @@ public class MiningToolItemMixin
     @Inject(method = "postMine", at = @At("HEAD"), cancellable = true)
     public void postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, CallbackInfoReturnable<Boolean> cir)
     {
-        if (!world.isClient && state.getHardness(world, pos) != 0.0F)
-        {
-            stack.damage(1, miner, (e) -> {
-                e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND);
-            });
-        }
-
         if(!world.isClient && EnchantmentHelper.getLevel(EnchantmentInit.MINING_HELPER, miner.getEquippedStack(EquipmentSlot.MAINHAND)) > 0)
         {
             MiningHelper.breakOtherOres(world, state, pos);

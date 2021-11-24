@@ -10,10 +10,10 @@
       "item": "minecraft:flint"
     },
     "b": {
-      "tag": "more_gems:gems_lesser"
+      "tag": "more_gems:gems_greater"
     }
   },
   "result": {
-    "item": "more_gems:sharpening_gem"
+    "item": "more_gems:sharpening_gem_greater"
   }
 }

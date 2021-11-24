@@ -22,26 +22,6 @@
       "required": false
     },
     {
-      "id": "more_gems:corundum_axe",
-      "required": false
-    },
-    {
-      "id": "more_gems:sapphire_axe",
-      "required": false
-    },
-    {
-      "id": "more_gems:spinel_axe",
-      "required": false
-    },
-    {
-      "id": "more_gems:carbonado_axe",
-      "required": false
-    },
-    {
-      "id": "more_gems:moissanite_axe",
-      "required": false
-    },
-    {
       "id": "more_gems:citrine_paxel",
       "required": false
     },
@@ -59,26 +39,6 @@
     },
     {
       "id": "more_gems:alexandrite_paxel",
-      "required": false
-    },
-    {
-      "id":  "more_gems:corundum_paxel",
-      "required": false
-    },
-    {
-      "id": "more_gems:sapphire_paxel",
-      "required": false
-    },
-    {
-      "id": "more_gems:spinel_paxel",
-      "required": false
-    },
-    {
-      "id": "more_gems:carbonado_paxel",
-      "required": false
-    },
-    {
-      "id": "more_gems:moissanite_paxel",
       "required": false
     },
     {

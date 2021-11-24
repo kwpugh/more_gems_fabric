@@ -160,10 +160,11 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean gembagEnable = true;
 
 		@Comment("********"
-				+"\nSharpening Gem"
+				+"\nSharpening Gems"
 				+"\n********")
 		public boolean enableSharpeningGem = true;
 		public int sharpeningGemRepairAmount = 50;
+		public int sharpeningGemGreaterRepairAmount = 100;
 
     	@Comment("********"
     			+"\nJuju Settings"

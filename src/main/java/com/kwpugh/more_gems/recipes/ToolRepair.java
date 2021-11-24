@@ -15,6 +15,8 @@ import net.minecraft.world.World;
 
 public class ToolRepair extends SpecialCraftingRecipe
 {
+    ItemStack materialType = ItemStack.EMPTY;
+
     public ToolRepair(Identifier identifier)
     {
         super(identifier);
@@ -37,11 +39,27 @@ public class ToolRepair extends SpecialCraftingRecipe
             {
                 ItemStack toolStack = matchStack.getToolStack();
 
+                // Test if the tool is in the gem_tools.json
                 if(TagInit.GEM_TOOLS.contains(toolStack.getItem()))
                 {
                     ItemStack craftStack = toolStack.copy();
-                    int damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemRepairAmount, 0);
-                    craftStack.setDamage(damage);
+                    Item materialToTest = materialType.getItem();
+
+                    if(materialType != null)
+                    {
+                        int damage = 0;
+
+                        if(materialToTest.equals(ItemInit.SHARPENING_GEM))
+                        {
+                            damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemRepairAmount, 0);
+                        }
+                        else if(materialToTest.equals(ItemInit.SHARPENING_GEM_GREATER))
+                        {
+                            damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemGreaterRepairAmount, 0);
+                        }
+
+                        craftStack.setDamage(damage);
+                    }
 
                     return craftStack;
                 }
@@ -86,13 +104,14 @@ public class ToolRepair extends SpecialCraftingRecipe
                     toolStack = stackToTest;
                     continue;
                 }
-                else if(itemToTest == ItemInit.SHARPENING_GEM)
+                else if(itemToTest == ItemInit.SHARPENING_GEM || itemToTest == ItemInit.SHARPENING_GEM_GREATER)
                 {
                     if(!materialStack.isEmpty())
                     {
                         return MatchStack.EMPTY;
                     }
 
+                    materialType = stackToTest;
                     materialStack = stackToTest;
                     continue;
                 }

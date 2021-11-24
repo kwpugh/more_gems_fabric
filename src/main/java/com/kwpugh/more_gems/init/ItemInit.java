@@ -8,6 +8,7 @@ import com.kwpugh.more_gems.items.gembag.GemBase;
 import com.kwpugh.more_gems.items.juju.*;
 import com.kwpugh.more_gems.items.special.CarbonadoGildedArmor;
 import com.kwpugh.more_gems.items.special.SharpeningGem;
+import com.kwpugh.more_gems.items.special.SharpeningGemGreater;
 import com.kwpugh.more_gems.items.special.TreasureBag;
 import com.kwpugh.more_gems.materials.*;
 import net.minecraft.entity.EquipmentSlot;
@@ -250,6 +251,7 @@ public class ItemInit
 	public static final Item MOISSANITE_JUJU = new PhoenixMoissaniteJuju((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item SHARPENING_GEM = new SharpeningGem((new Item.Settings()).maxCount(64).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SHARPENING_GEM_GREATER = new SharpeningGemGreater((new Item.Settings()).maxCount(64).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TREASURE_BAG = new TreasureBag((new Item.Settings()).maxCount(1).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static void registerItems()
@@ -675,6 +677,7 @@ public class ItemInit
 		if(enableSharpeningGem)
 		{
 			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sharpening_gem"), SHARPENING_GEM);
+			Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sharpening_gem_greater"), SHARPENING_GEM_GREATER);
 		}
 	}
 }
