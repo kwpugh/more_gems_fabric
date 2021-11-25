@@ -2,6 +2,7 @@ package com.kwpugh.more_gems.init;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.*;
+import com.kwpugh.more_gems.enchantments.bound.BoundEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;

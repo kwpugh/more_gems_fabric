@@ -6,6 +6,7 @@
   "mixins": [
     "CreeperEntityMixin",
     "WanderingTraderEntityMixin",
+    "EnchantmentTargetMixin",
     "EntityMixinFire",
     "HoglinEntityMixin",
     "ItemMixinBlinking",
@@ -15,7 +16,6 @@
     "PiglinBrainMixin",
     "PlayerEntityMixin",
     "RavagerEntityMixin",
-    "ServerPlayerEntityMixinBound",
     "StatusEffectMixin"
   ],
   "client": [

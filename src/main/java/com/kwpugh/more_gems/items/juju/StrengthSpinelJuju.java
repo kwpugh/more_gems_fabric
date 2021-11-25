@@ -5,7 +5,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -14,7 +13,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class StrengthSpinelJuju extends Item
+public class StrengthSpinelJuju extends BaseJujuItem
 {	
 	public StrengthSpinelJuju(Settings settings)
 	{

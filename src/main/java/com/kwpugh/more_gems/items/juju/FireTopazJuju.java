@@ -1,7 +1,6 @@
 package com.kwpugh.more_gems.items.juju;
 
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -10,7 +9,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class FireTopazJuju extends Item
+public class FireTopazJuju extends BaseJujuItem
 {
 	public FireTopazJuju(Settings settings)
 	{

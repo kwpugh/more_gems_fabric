@@ -1,4 +1,4 @@
-package com.kwpugh.more_gems.enchantments;
+package com.kwpugh.more_gems.enchantments.bound;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;

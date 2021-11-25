@@ -1,16 +1,12 @@
 package com.kwpugh.more_gems.items.juju;
 
-import java.util.List;
-
 import com.kwpugh.more_gems.util.EnableUtil;
-
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -19,7 +15,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class SpeedKunziteJuju extends Item
+import java.util.List;
+
+public class SpeedKunziteJuju extends BaseJujuItem
 {
 	public SpeedKunziteJuju(Settings settings)
 	{

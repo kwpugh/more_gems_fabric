@@ -1,18 +1,17 @@
 package com.kwpugh.more_gems.mixin;
 
 import com.kwpugh.more_gems.init.EnchantmentInit;
+import com.kwpugh.more_gems.enchantments.bound.BoundStack;
+import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
 import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -21,9 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity
 {
-    @Shadow public abstract boolean giveItemStack(ItemStack stack);
-
-    protected PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world)
+    public PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world)
     {
         super(entityType, world);
     }
@@ -33,7 +30,6 @@ public abstract class PlayerEntityMixin extends LivingEntity
     {
         PlayerEntity self = ((PlayerEntity) (Object) this);
         int level = EnchantmentHelper.getLevel(EnchantmentInit.QUICKENING, self.getEquippedStack(EquipmentSlot.MAINHAND));
-
         if(level > 0)
         {
             PlayerSpecialAbilities.giveQuickening(world, self, target, level);
@@ -44,12 +40,9 @@ public abstract class PlayerEntityMixin extends LivingEntity
     private void damageVoidEscape(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
     {
         PlayerEntity self = (PlayerEntity) (Object) this;
-        int level = EnchantmentHelper.getLevel(EnchantmentInit.VOID_ESCAPE, self.getEquippedStack(EquipmentSlot.FEET));
-
-        if(level > 0)
+        if(EnchantmentHelper.getLevel(EnchantmentInit.VOID_ESCAPE, self.getEquippedStack(EquipmentSlot.FEET)) > 0)
         {
             self.fallDistance = 0.0F;
-
             if(source.isOutOfWorld())
             {
                 PlayerSpecialAbilities.giveVoidEscape(world, self);
@@ -71,12 +64,9 @@ public abstract class PlayerEntityMixin extends LivingEntity
             {
                 if(!world.isClient)
                 {
-                    currentPlayer.giveItemStack(stack);
-                }
-
-                if(world.isClient)
-                {
-                    cir.cancel();
+                    //currentPlayer.giveItemStack(stack);    // Old code to give stack directly to player
+                    BoundStack boundStack = new BoundStack(currentPlayer, stack);
+                    BoundStackManager.addToList(boundStack);
                 }
             }
         }
