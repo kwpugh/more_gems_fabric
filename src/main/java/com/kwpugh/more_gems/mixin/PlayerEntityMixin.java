@@ -1,15 +1,14 @@
 package com.kwpugh.more_gems.mixin;
 
-import com.kwpugh.more_gems.init.EnchantmentInit;
 import com.kwpugh.more_gems.enchantments.bound.BoundStack;
 import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
+import com.kwpugh.more_gems.init.EnchantmentInit;
 import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.screen.slot.Slot;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
@@ -29,6 +28,7 @@ public abstract class PlayerEntityMixin extends LivingEntity
         super(entityType, world);
     }
 
+    // Used for the Quickening enchantment
     @Inject(method = "attack", at = @At(value = "HEAD"))
     private void attackQuickening(Entity target, CallbackInfo ci)
     {
@@ -40,6 +40,7 @@ public abstract class PlayerEntityMixin extends LivingEntity
         }
     }
 
+    // Used for the Void Escape enchantment
     @Inject(method = "damage", at = @At(value="HEAD"), cancellable = true)
     private void damageVoidEscape(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
     {
