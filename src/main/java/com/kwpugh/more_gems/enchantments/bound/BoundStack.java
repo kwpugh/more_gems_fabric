@@ -18,6 +18,7 @@ public class BoundStack
 {
     private PlayerEntity player;
     private ItemStack stack;
+    private int slotIndex;
 
     public BoundStack(PlayerEntity player, ItemStack stack)
     {

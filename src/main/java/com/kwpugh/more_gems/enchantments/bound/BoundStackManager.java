@@ -26,7 +26,19 @@ public class BoundStackManager
 
     public static void init()
     {
+        // Return any itemstacks to the player, if they are in the list
+        // added to the list by mixin in dropItem() in PlayerEntityMixin
+        ServerTickEvents.END_SERVER_TICK.register(tick -> {
+            for(Iterator<BoundStack> iterator = stackList.iterator(); iterator.hasNext();)
+            {
+                BoundStack boundStack = iterator.next();
+                boundStack.returnBoundStack();
+                iterator.remove();
+            }
+        });
+
         // After death, player inventory, with returned itemstacks, is copied to new player
+        // Some gravestone mods may conflict with this
         ServerPlayerEvents.COPY_FROM.register((oldPlayer, newPlayer, alive) -> {
 
             if(!alive)
@@ -40,16 +52,6 @@ public class BoundStackManager
             }
 
             MoreGems.LOGGER.info("Bound Enchantment Message: Copied data for {} to {}", oldPlayer.getGameProfile().getName(), newPlayer);
-        });
-
-        // Return any itemstacks to the player, if they are in the list
-        ServerTickEvents.END_SERVER_TICK.register(tick -> {
-            for(Iterator<BoundStack> iterator = stackList.iterator(); iterator.hasNext();)
-            {
-                BoundStack boundStack = iterator.next();
-                boundStack.returnBoundStack();
-                iterator.remove();
-            }
         });
     }
 
