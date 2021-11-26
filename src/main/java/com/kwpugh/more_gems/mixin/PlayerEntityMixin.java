@@ -56,7 +56,7 @@ public abstract class PlayerEntityMixin extends LivingEntity
         }
     }
 
-    // Used by Bound enchantment, works with ServerPlayerEntityMixinBound
+    // Used by Bound enchantment
     @Inject(method = "dropItem(Lnet/minecraft/item/ItemStack;ZZ)Lnet/minecraft/entity/ItemEntity;", at = @At("HEAD"), cancellable = true)
     private void moregemsDropItem(@NotNull ItemStack stack, boolean throwRandomly, boolean retainOwnership, CallbackInfoReturnable<ItemEntity> cir)
     {
