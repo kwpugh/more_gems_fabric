@@ -1,8 +1,10 @@
 package com.kwpugh.more_gems.enchantments.bound;
 
-import com.kwpugh.more_gems.MoreGems;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ShieldItem;
 
 /*
            +++++  Under development   +++++
@@ -18,7 +20,6 @@ public class BoundStack
 {
     private PlayerEntity player;
     private ItemStack stack;
-    private int slotIndex;
 
     public BoundStack(PlayerEntity player, ItemStack stack)
     {
@@ -30,8 +31,17 @@ public class BoundStack
     {
         PlayerEntity player = this.player;
         ItemStack stack = this.stack;
-        MoreGems.LOGGER.info("Bound Enchantment Message: ItemStack {} returned to {}", stack, player.getGameProfile().getName());
-        player.giveItemStack(stack);
+
+        if(player.canEquip(stack) && (stack.getItem() instanceof ArmorItem || stack.getItem() instanceof ShieldItem))
+        {
+            EquipmentSlot equipmentSlot = player.getPreferredEquipmentSlot(stack);
+            ItemStack split = stack.split(1);
+            player.equipStack(equipmentSlot, split);
+        }
+        else
+        {
+            player.giveItemStack(stack);
+        }
     }
 
     public String toString()

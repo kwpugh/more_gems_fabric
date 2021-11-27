@@ -97,11 +97,10 @@ public abstract class PlayerEntityMixin extends LivingEntity
 
         if (!stack.isEmpty())
         {
-            if(EnchantmentHelper.getLevel(EnchantmentInit.BOUND, stack) > 0)
+            if((EnchantmentHelper.getLevel(EnchantmentInit.BOUND, stack) > 0) || MoreGems.CONFIG.GENERAL.boundReturnAll)
             {
                 if(!world.isClient)
                 {
-                    //currentPlayer.giveItemStack(stack);    // Old code to give stack directly to player
                     BoundStack boundStack = new BoundStack(currentPlayer, stack);
                     BoundStackManager.addToList(boundStack);
                 }

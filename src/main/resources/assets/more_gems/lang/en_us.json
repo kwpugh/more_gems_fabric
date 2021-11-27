@@ -305,14 +305,8 @@
 	"enchantment.more_gems.attracting": "Attracting",
 	"enchantment.more_gems.attracting.desc": "MoreGem: (Tools) Draws items to player after breaking, range increases with level",
 
-	"biome.more_gems.red_gem_biome": "Red Gem Biome",
-	"biome.more_gems.orange_gem_biome": "Orange Gem Biome",
-	"biome.more_gems.green_gem_biome": "Green Gem Biome",
-	"biome.more_gems.blue_gem_biome": "Blue Gem Biome",
-	"biome.more_gems.purple_gem_biome": "Purple Gem Biome",
-
 	"item.more_gems.gembag": "Gem Bag",
-	"item.more_gems.gembag.tip": "Portable storage for your sparkly gems",
+	"item.more_gems.gembag.tip": "Portable storage for your sparkly gems & more",
 	"container.more_gems.gembag": "Gem Bag",
 
 	"item.more_gems.excavator.tip1": "A 3x3 Shovel",

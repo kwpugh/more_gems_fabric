@@ -220,6 +220,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int minngHelperVertical = 2;
 		public int minerHelperHoriz = 4;
 		public int attractingBaseHorizontalRadius = 6;
+		public boolean boundReturnAll = false;
 		
 		@Comment("********************************"
 				+ "\n"
