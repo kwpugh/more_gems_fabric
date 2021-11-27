@@ -302,6 +302,8 @@
 	"enchantment.more_gems.mining_helper.desc": "MoreGem: (Gem pickaxe) Not a vein miner, but it helps",
 	"enchantment.more_gems.bound": "Bound",
 	"enchantment.more_gems.bound.desc": "MoreGem: (Armors, tools or weapons) Keep bound item after death",
+	"enchantment.more_gems.attracting": "Attracting",
+	"enchantment.more_gems.attracting.desc": "MoreGem: (Tools) Draws items to player after breaking, range increases with level",
 
 	"biome.more_gems.red_gem_biome": "Red Gem Biome",
 	"biome.more_gems.orange_gem_biome": "Orange Gem Biome",

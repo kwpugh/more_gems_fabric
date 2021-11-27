@@ -15,7 +15,13 @@ public class BreathingAlexandriteJuju extends BaseJujuItem
 	{
 		super(settings);
 	}
-	 
+
+	@Override
+	public boolean hasRecipeRemainder()
+	{
+		return true;
+	}
+
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{

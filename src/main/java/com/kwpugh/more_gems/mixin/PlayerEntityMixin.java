@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.mixin;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.bound.BoundStack;
 import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
 import com.kwpugh.more_gems.init.EnchantmentInit;
@@ -9,6 +10,7 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,14 +20,44 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.List;
+
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity
 {
+    private int magneticRadius = MoreGems.CONFIG.GENERAL.attractingBaseHorizontalRadius;
+
     @Shadow protected abstract void dropInventory();
 
     public PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world)
     {
         super(entityType, world);
+    }
+
+    // Used for the Attracting enchantment
+    @Inject(method = "tick", at = @At(value = "TAIL"))
+    private void tickMagnetic(CallbackInfo ci)
+    {
+        PlayerEntity self = ((PlayerEntity) (Object) this);
+
+        if(!world.isClient && EnchantmentHelper.getLevel(EnchantmentInit.ATTRACTING, self.getEquippedStack(EquipmentSlot.MAINHAND)) > 0)
+        {
+            int level = EnchantmentHelper.getLevel(EnchantmentInit.ATTRACTING, self.getEquippedStack(EquipmentSlot.MAINHAND));
+
+            // Scan and collect items
+            List<ItemEntity> entityItems = self.getWorld().getEntitiesByClass(ItemEntity.class, self.getBoundingBox().expand(magneticRadius + level), EntityPredicates.VALID_ENTITY);
+            for (ItemEntity entityItemNearby : entityItems)
+            {
+                entityItemNearby.onPlayerCollision(self);
+            }
+
+            // Scan and collect XP orbs
+            List<ExperienceOrbEntity> entityXP = self.getWorld().getEntitiesByClass(ExperienceOrbEntity.class, self.getBoundingBox().expand(magneticRadius + level), EntityPredicates.VALID_ENTITY);
+            for (Entity entityXPNearby : entityXP)
+            {
+                entityXPNearby.onPlayerCollision(self);
+            }
+        }
     }
 
     // Used for the Quickening enchantment

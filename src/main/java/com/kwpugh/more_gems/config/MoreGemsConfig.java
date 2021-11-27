@@ -200,6 +200,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableBenevolence =  true;
 		public boolean enableMiningHelper =  true;
 		public boolean enableBound =  true;
+		public boolean enableAttracting =  true;
 
 		@Comment("***************"
 				+"\nEnchantment Settings"
@@ -218,6 +219,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int floatingBaseDuration = 80;
 		public int minngHelperVertical = 2;
 		public int minerHelperHoriz = 4;
+		public int attractingBaseHorizontalRadius = 6;
 		
 		@Comment("********************************"
 				+ "\n"
