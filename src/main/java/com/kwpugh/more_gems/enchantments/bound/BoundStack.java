@@ -3,6 +3,7 @@ package com.kwpugh.more_gems.enchantments.bound;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ElytraItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShieldItem;
 
@@ -32,7 +33,10 @@ public class BoundStack
         PlayerEntity player = this.player;
         ItemStack stack = this.stack;
 
-        if(player.canEquip(stack) && (stack.getItem() instanceof ArmorItem || stack.getItem() instanceof ShieldItem))
+        if(player.canEquip(stack) &&
+                (stack.getItem() instanceof ArmorItem
+                || stack.getItem() instanceof ShieldItem
+                || stack.getItem() instanceof ElytraItem))
         {
             EquipmentSlot equipmentSlot = player.getPreferredEquipmentSlot(stack);
             ItemStack split = stack.split(1);
