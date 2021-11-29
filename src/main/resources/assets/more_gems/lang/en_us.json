@@ -1,4 +1,8 @@
 {
+	"item.more_gems.ore.tip1": "Max Level: Y=%s",
+	"item.more_gems.ore.tip2": "Vein Size: %s",
+	"item.more_gems.ore.tip3": "Chances per Chunk: %s",
+
 	"item.more_gems.citrine": "Citrine",
 	"item.more_gems.citrine_ore": "Citrine Ore",
 	"block.more_gems.citrine_ore": "Citrine Ore",
