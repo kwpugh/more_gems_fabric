@@ -7,6 +7,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.MiningToolItem;
 
+/*
+    Relies on mixin to tick() in PlayerEntityMixin
+ */
+
 public class AttractingEnchantment extends Enchantment
 {
     public AttractingEnchantment(Rarity weight, EnchantmentTarget enchantmentTarget, EquipmentSlot[] slotTypes)
