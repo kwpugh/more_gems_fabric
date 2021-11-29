@@ -26,10 +26,11 @@ import java.util.Random;
 public class BaseOreBlock extends OreBlock
 {
     public static final MoreGemsConfig.Ores CONFIG = MoreGems.CONFIG.ORES;
-
     private int maxLevel;
     private int veinSize;
     private int chunkChance;
+    private static String miningLevel;
+    private static String spawnDim;
 
     public BaseOreBlock(FabricBlockSettings settings)
     {
@@ -63,10 +64,15 @@ public class BaseOreBlock extends OreBlock
         tooltip.add(new TranslatableText("item.more_gems.ore.tip1", maxLevel).formatted(Formatting.YELLOW));
         tooltip.add(new TranslatableText("item.more_gems.ore.tip2", veinSize).formatted(Formatting.YELLOW));
         tooltip.add(new TranslatableText("item.more_gems.ore.tip3", chunkChance).formatted(Formatting.YELLOW));
+        tooltip.add(new TranslatableText("item.more_gems.ore_dim.tip1", spawnDim).formatted(Formatting.GREEN));
+        tooltip.add(new TranslatableText("item.more_gems.ore_mining.tip1", miningLevel).formatted(Formatting.GREEN));
     }
 
     public void oreTips(ItemStack stack)
     {
+        miningLevel = "Iron";
+        spawnDim = "Overworld";
+
         if(stack.isOf(BlockInit.CITRINE_ORE.asItem()))
         {
             maxLevel = CONFIG.citrineMaxLevel;
@@ -90,6 +96,7 @@ public class BaseOreBlock extends OreBlock
             maxLevel = CONFIG.kunziteMaxLevelNether;
             veinSize = CONFIG.kunziteVeinSizeNether;
             chunkChance = CONFIG.kunzitePerChunkNether;
+            spawnDim = "Nether";
         }
         else if(stack.isOf(BlockInit.TOPAZ_ORE.asItem()))
         {
@@ -108,6 +115,7 @@ public class BaseOreBlock extends OreBlock
             maxLevel = CONFIG.alexandriteMaxLevelNether;
             veinSize = CONFIG.alexandriteVeinSizeNether;
             chunkChance = CONFIG.alexandritePerChunkNether;
+            spawnDim = "Nether";
         }
         else if(stack.isOf(BlockInit.CORUNDUM_ORE.asItem()))
         {
@@ -120,6 +128,7 @@ public class BaseOreBlock extends OreBlock
             maxLevel = CONFIG.corundumMaxLevelNether;
             veinSize = CONFIG.corundumVeinSizeNether;
             chunkChance = CONFIG.corundumPerChunkNether;
+            spawnDim = "Nether";
         }
         else if(stack.isOf(BlockInit.SAPPHIRE_ORE.asItem()))
         {
@@ -162,6 +171,8 @@ public class BaseOreBlock extends OreBlock
             maxLevel = CONFIG.moissaniteMaxLevel;
             veinSize = CONFIG.moissaniteVeinSize;
             chunkChance = CONFIG.moissanitePerChunk;
+            miningLevel = "Diamond";
+            spawnDim = "Overworld";
         }
     }
 }
