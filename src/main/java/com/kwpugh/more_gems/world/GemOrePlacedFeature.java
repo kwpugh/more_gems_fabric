@@ -2,8 +2,7 @@ package com.kwpugh.more_gems.world;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.config.MoreGemsConfig;
-import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.biome.v1.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -14,6 +13,7 @@ import net.minecraft.world.gen.decorator.*;
 import net.minecraft.world.gen.feature.PlacedFeature;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 public class GemOrePlacedFeature
 {
@@ -100,62 +100,62 @@ public class GemOrePlacedFeature
 
         if(CONFIG.citrineEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCitrineOverworld);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreCitrineOverworld);
         }
 
         if(CONFIG.tourmalineEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTourmalineOverworld);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreTourmalineOverworld);
         }
 
         if(CONFIG.kunziteEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreKunziteOverworld);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreKunziteOverworld);
         }
 
         if(CONFIG.topazEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTopazOverworld);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreTopazOverworld);
         }
 
         if(CONFIG.alexandriteEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAlexandriteOverworld);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreAlexandriteOverworld);
         }
 
         if(CONFIG.corundumEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCorundumOverworld);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreCorundumOverworld);
         }
 
         if(CONFIG.sapphireEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSapphireOverworld);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreSapphireOverworld);
         }
 
         if(CONFIG.sapphireEnableDeepslate)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSapphireOverworldDeepslate);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreSapphireOverworldDeepslate);
         }
 
         if(CONFIG.spinelEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSpinelOverworld);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreSpinelOverworld);
         }
 
         if(CONFIG.spinelEnableDeepslate)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSpinelOverworldDeepslate);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreSpinelOverworldDeepslate);
         }
 
         if(CONFIG.carbonadoEnable)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoOverworld);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoOverworld);
         }
 
         if(CONFIG.carbonadoEnableDeepslate)
         {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoOverworldDeepslate);
+            BiomeModifications.addFeature(customSelection(), GenerationStep.Feature.UNDERGROUND_ORES, oreCarbonadoOverworldDeepslate);
         }
 
         if(CONFIG.kunziteEnableNether)
@@ -184,6 +184,11 @@ public class GemOrePlacedFeature
         }
     }
 
+    // Custom predicate to deal with hardcoded weirdness in vanilla, instead of BiomeSelectors.foundInOverworld()
+    public static Predicate<BiomeSelectionContext> customSelection()
+    {
+        return context -> !NetherBiomes.canGenerateInNether(context.getBiomeKey()) && !TheEndBiomes.canGenerateInTheEnd(context.getBiomeKey());
+    }
 
     // Just in here until accessors are added to Fabric
     private static List<PlacementModifier> modifiers(PlacementModifier first, PlacementModifier second)
