@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.*;
@@ -187,7 +188,9 @@ public class GemOrePlacedFeature
     // Custom predicate to deal with hardcoded weirdness in vanilla, instead of BiomeSelectors.foundInOverworld()
     public static Predicate<BiomeSelectionContext> customSelection()
     {
-        return context -> !NetherBiomes.canGenerateInNether(context.getBiomeKey()) && !TheEndBiomes.canGenerateInTheEnd(context.getBiomeKey());
+        return context -> !NetherBiomes.canGenerateInNether(context.getBiomeKey()) &&
+                !TheEndBiomes.canGenerateInTheEnd(context.getBiomeKey()) &&
+                context.getBiome().getCategory() != Biome.Category.NONE;
     }
 
     // Just in here until accessors are added to Fabric
