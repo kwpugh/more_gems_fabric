@@ -3,6 +3,7 @@ package com.kwpugh.more_gems.init;
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.*;
 import com.kwpugh.more_gems.enchantments.bound.BoundEnchantment;
+import com.kwpugh.more_gems.enchantments.bound.FreezeProtectionEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -21,6 +22,7 @@ public class EnchantmentInit
 	public static final Enchantment WISDOM = new WisdomEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment STUPIFY = new StupifyEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment CREEPERLESS = new CreeperlessEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
+	public static final Enchantment FREEZE_PROTECTION = new FreezeProtectionEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[]{EquipmentSlot.CHEST});
 	public static final Enchantment FLOATING = new FloatingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment LIGHTNING = new LightningEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment LAVA_VIEW = new LavaViewEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_HEAD, new EquipmentSlot[]{EquipmentSlot.HEAD});
@@ -46,6 +48,7 @@ public class EnchantmentInit
 	static boolean enableMiningHelper = MoreGems.CONFIG.GENERAL.enableMiningHelper;
 	static boolean enableBound = MoreGems.CONFIG.GENERAL.enableBound;
 	static boolean enableAttracting = MoreGems.CONFIG.GENERAL.enableAttracting;
+	static boolean enableFreezeProtection = MoreGems.CONFIG.GENERAL.enableFreezeProtection;
 
 	public static void registerEnchantments()
 	{
@@ -132,6 +135,11 @@ public class EnchantmentInit
 		if(enableAttracting)
 		{
 			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "attracting"), ATTRACTING);
+		}
+
+		if(enableFreezeProtection)
+		{
+			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "freeze_protection"), FREEZE_PROTECTION);
 		}
 	}
 }

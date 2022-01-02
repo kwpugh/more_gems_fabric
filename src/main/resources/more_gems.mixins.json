@@ -7,7 +7,7 @@
     "CreeperEntityMixin",
     "WanderingTraderEntityMixin",
     "EnchantmentTargetMixin",
-    "EntityMixinFire",
+    "EntityMixinFireFreeze",
     "HoglinEntityMixin",
     "ItemMixinBlinking",
     "LivingEntityMixinWisdom",

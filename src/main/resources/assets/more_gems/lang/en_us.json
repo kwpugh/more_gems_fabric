@@ -310,6 +310,8 @@
 	"enchantment.more_gems.bound.desc": "MoreGem: (Armors, tools or weapons) Keep bound item after death",
 	"enchantment.more_gems.attracting": "Attracting",
 	"enchantment.more_gems.attracting.desc": "MoreGem: (Tools) Draws items to player after breaking, range increases with level",
+	"enchantment.more_gems.freeze_protection": "Freeze Protection",
+	"enchantment.more_gems.freeze_protection.desc": "MoreGem: (Chest) Provides protection against freezing",
 
 	"item.more_gems.gembag": "Gem Bag",
 	"item.more_gems.gembag.tip": "Portable storage for your sparkly gems & more",

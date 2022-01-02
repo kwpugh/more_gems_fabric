@@ -201,6 +201,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableMiningHelper =  true;
 		public boolean enableBound =  true;
 		public boolean enableAttracting =  true;
+		public boolean enableFreezeProtection =  true;
 
 		@Comment("***************"
 				+"\nEnchantment Settings"

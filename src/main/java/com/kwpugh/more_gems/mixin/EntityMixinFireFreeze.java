@@ -1,20 +1,24 @@
 package com.kwpugh.more_gems.mixin;
 
+import com.kwpugh.more_gems.init.EnchantmentInit;
 import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.util.PlayerEquipUtil;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Entity.class)
-public abstract class EntityMixinFire
+public abstract class EntityMixinFireFreeze
 {
-    public EntityMixinFire(EntityType<?> type, World world)
+    public EntityMixinFireFreeze(EntityType<?> type, World world)
     {
         super();
     }
@@ -32,6 +36,23 @@ public abstract class EntityMixinFire
                     PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU))
             {
                 cir.setReturnValue(true);
+            }
+        }
+    }
+
+    // Prevent freezing damage from powdered snow and other sources
+    @Inject(method = "setFrozenTicks", at = @At("HEAD"), cancellable = true)
+    public void moregemsSetFrozenTicks(int frozenTicks, CallbackInfo ci)
+    {
+        Entity entity = (Entity) (Object) this;
+
+        if(entity instanceof PlayerEntity)
+        {
+            PlayerEntity player = (PlayerEntity) entity;
+
+            if (EnchantmentHelper.getLevel(EnchantmentInit.FREEZE_PROTECTION, player.getEquippedStack(EquipmentSlot.CHEST)) > 0)
+            {
+                ci.cancel();
             }
         }
     }
