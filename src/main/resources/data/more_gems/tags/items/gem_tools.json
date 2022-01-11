@@ -2,6 +2,46 @@
   "replace": false,
   "values": [
     {
+      "id": "more_gems:citrine_bow",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_bow",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_bow",
+      "required": false
+    },
+    {
+      "id":  "more_gems:topaz_bow",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_bow",
+      "required": false
+    },
+    {
+      "id":  "more_gems:corundum_bow",
+      "required": false
+    },
+    {
+      "id":  "more_gems:sapphire_bow",
+      "required": false
+    },
+    {
+      "id": "more_gems:spinel_bow",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_bow",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_bow",
+      "required": false
+    },
+    {
       "id": "more_gems:citrine_axe",
       "required": false
     },
@@ -22,6 +62,26 @@
       "required": false
     },
     {
+      "id": "more_gems:corundum_axe",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_axe",
+      "required": false
+    },
+    {
+      "id": "more_gems:spinel_axe",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_axe",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_axe",
+      "required": false
+    },
+    {
       "id": "more_gems:citrine_paxel",
       "required": false
     },
@@ -39,6 +99,34 @@
     },
     {
       "id": "more_gems:alexandrite_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:spinel_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_paxel",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_paxel",
       "required": false
     },
     {
@@ -275,6 +363,10 @@
     },
     {
       "id": "more_gems:carbonado_sword",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_sword",
       "required": false
     }
   ]

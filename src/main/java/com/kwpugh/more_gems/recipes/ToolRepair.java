@@ -5,6 +5,7 @@ import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.init.RecipeInit;
 import com.kwpugh.more_gems.init.TagInit;
 import net.minecraft.inventory.CraftingInventory;
+import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolItem;
@@ -91,7 +92,7 @@ public class ToolRepair extends SpecialCraftingRecipe
             {
                 Item itemToTest = stackToTest.getItem();
 
-                if(itemToTest instanceof ToolItem)
+                if(itemToTest instanceof BowItem || itemToTest instanceof ToolItem)
                 {
                     if(!toolStack.isEmpty())
                     {
