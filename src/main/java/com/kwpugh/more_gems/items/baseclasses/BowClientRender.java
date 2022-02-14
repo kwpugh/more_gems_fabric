@@ -224,8 +224,6 @@ public class BowClientRender implements ClientModInitializer
       (stack, world, entity, i) ->
    	{
         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
-    });  
-    
+    });
   }
-
 }
