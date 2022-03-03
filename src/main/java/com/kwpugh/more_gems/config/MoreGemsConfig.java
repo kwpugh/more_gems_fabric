@@ -24,15 +24,14 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 
 	    @Comment("***********************"
 	    		+"\nCitrine Ores"
-	    		+"\n***********************") 
-	    public boolean citrineEnable = true;
+	    		+"\n***********************")
 	    public int citrineVeinSize = 6;
     	public int citrineMaxLevel = 180;
     	public int citrinePerChunk = 12;
+
     	       @Comment("***********************"
 	    		+"\nTourmaline Ores"
 	    		+"\n***********************")
-        public boolean tourmalineEnable = true;
         public int tourmalineVeinSize = 6;
     	public int tourmalineMaxLevel = 140;
     	public int tourmalinePerChunk = 12;
@@ -40,7 +39,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
         @Comment("***********************"
 	    		+"\nKunzite Ores"
 	    		+"\n***********************")
-        public boolean kunziteEnable = true;
         public int kunziteVeinSize = 6;
     	public int kunziteMaxLevel = 120;
     	public int kunzitePerChunk = 12;
@@ -48,7 +46,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***********************"
 				+"\nNether Kunzite Ores"
 				+"\n***********************")
-		public boolean kunziteEnableNether = true;
 		public int kunziteVeinSizeNether = 6;
 		public int kunziteMaxLevelNether = 200;
 		public int kunzitePerChunkNether = 12;
@@ -56,7 +53,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
         @Comment("***********************"
 	    		+"\nTopaz Ores"
 	    		+"\n***********************")
-        public boolean topazEnable = true;
         public int topazVeinSize = 6;
     	public int topazMaxLevel = 60;
     	public int topazPerChunk = 12;
@@ -64,7 +60,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
         @Comment("***********************"
 	    		+"\nAlexandrite Ores"
 	    		+"\n***********************")
-        public boolean alexandriteEnable = true;
         public int alexandriteVeinSize = 6;
     	public int alexandriteMaxLevel = 60;
     	public int alexandritePerChunk = 12;
@@ -72,7 +67,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***********************"
 				+"\nNether Alexandrite Ores"
 				+"\n***********************")
-		public boolean alexandriteEnableNether = true;
 		public int alexandriteVeinSizeNether = 6;
 		public int alexandriteMaxLevelNether = 200;
 		public int alexandritePerChunkNether = 12;
@@ -80,7 +74,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***********************"
 				+"\nCorundum Ores"
 				+"\n***********************")
-		public boolean corundumEnable = true;
 		public int corundumVeinSize = 5;
 		public int corundumMaxLevel = 30;
 		public int corundumPerChunk = 12;
@@ -88,7 +81,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***********************"
 				+"\nNether Corundum Ores"
 				+"\n***********************")
-		public boolean corundumEnableNether = true;
 		public int corundumVeinSizeNether = 5;
 		public int corundumMaxLevelNether = 70;
 		public int corundumPerChunkNether = 12;
@@ -96,7 +88,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
         @Comment("***********************"
  	    		+"\nSapphire Ores"
  	    		+"\n***********************")
-        public boolean sapphireEnable = true;
         public int sapphireVeinSize = 5;
      	public int sapphireMaxLevel = 30;
      	public int sapphirePerChunk = 12;
@@ -104,7 +95,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***********************"
 				+"\nDeepslate Sapphire Ores"
 				+"\n***********************")
-		public boolean sapphireEnableDeepslate = true;
 		public int sapphireVeinSizeDeepslate = 5;
 		public int sapphireMaxLevelDeepslate = 0;
 		public int sapphirePerChunkDeepslate = 12;
@@ -112,7 +102,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
         @Comment("***********************"
  	    		+"\nSpinel Ores"
  	    		+"\n***********************")
-        public boolean spinelEnable = true;
         public int spinelVeinSize = 5;
      	public int spinelMaxLevel = 20;
      	public int spinelPerChunk = 12;
@@ -120,7 +109,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***********************"
 				+"\nDeepslate Spinel Ores"
 				+"\n***********************")
-		public boolean spinelEnableDeepslate = true;
 		public int spinelVeinSizeDeepslate = 5;
 		public int spinelMaxLevelDeepslate = 0;
 		public int spinelPerChunkDeepslate = 12;
@@ -128,7 +116,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
         @Comment("***********************"
  	    		+"\nCarbonado Ores"
  	    		+"\n***********************")
-        public boolean carbonadoEnable = true;
         public int carbonadoVeinSize = 5;
      	public int carbonadoMaxLevel = 15;
      	public int carbonadoPerChunk = 12;
@@ -136,7 +123,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***********************"
 				+"\nDeepslate Carbonado Ores"
 				+"\n***********************")
-		public boolean carbonadoEnableDeepslate = true;
 		public int carbonadoVeinSizeDeepslate = 5;
 		public int carbonadoMaxLevelDeepslate = 0;
 		public int carbonadoPerChunkDeepslate = 10;
@@ -144,64 +130,34 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***********************"
 				+"\nMoissanite Ores"
 				+"\n***********************")
-		public boolean moissaniteEnable = true;
 		public int moissaniteVeinSize = 5;
 		public int moissaniteMaxLevel = 25;
 		public int moissanitePerChunk = 12;
-		public int moissaniteHighMaxLevel = 128;
+		public int moissaniteHighMaxLevel = 30;
     }
     
     @Config(name = "general")
 	public static class General implements ConfigData
-	{       
-       	@Comment("********"
-    			+"\nGemBag"
-    			+"\n********")
-		public boolean gembagEnable = true;
-
+	{
 		@Comment("********"
 				+"\nSharpening Gems"
 				+"\n********")
-		public boolean enableSharpeningGem = true;
 		public int sharpeningGemRepairAmount = 50;
 		public int sharpeningGemGreaterRepairAmount = 100;
 
     	@Comment("********"
     			+"\nJuju Settings"
     			+"\n********")
-		public boolean jujuEnable = true;
 		public float jujuChance = .06F;
 		public boolean enableMoissaniteDocileHoglin = true;
 
 		@Comment("********"
 				+"\nTreasure Bags"
 				+"\n********")
-		public boolean enableTreasureBag = true;
 		public float treasureBagChance = .015F;
 		public boolean enableEnchantedBookDrop = true;
 		public boolean enableWanderingTrades = true;
-
-		@Comment("***************"
-				+"\nEnchantments"
-				+"\n***************")
-		public boolean enableQuickening = true;
-		public boolean enableRazorSharpness = true;
-		public boolean enableShulkerBlade = true;
-		public boolean enableUntouchable = true;
-		public boolean enableFasterObsidian = true;
-		public boolean enableBlinking = true;
-		public boolean enableWisdom = true;
-		public boolean enableStupify = true;
-		public boolean enableVoidEscape = true;
-		public boolean enableCreeperless = true;
-		public boolean enableFloating = true;
-		public boolean enableLightning = true;
-		public boolean enableLavaView = true;
-		public boolean enableBenevolence =  true;
-		public boolean enableMiningHelper =  true;
-		public boolean enableBound =  true;
-		public boolean enableAttracting =  true;
-		public boolean enableFreezeProtection =  true;
+		public String defaultDrop = "minecraft:gunpowder";
 
 		@Comment("***************"
 				+"\nEnchantment Settings"
@@ -222,37 +178,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int minerHelperHoriz = 4;
 		public int attractingBaseHorizontalRadius = 6;
 		public boolean boundReturnAll = false;
-		
-		@Comment("********************************"
-				+ "\n"
-				+ "\n"
-				+ "******************************"
-				+"\nEnable/disable extra tools by type"
-				+"\n- bows, paxels, hammers, & excavators"
-				+"\n********************************") 
-		public boolean enableExtraTools = true;
-		public boolean enableBows = true;
-		public boolean enableHammers = true;
-		public boolean enableExcavators = true;
-		public boolean enablePaxels = true;
-
-		@Comment("********************************"
-				+ "\n"
-				+ "\n"
-				+ "******************************"
-				+"\nEnable/disable sets by material"
-				+"\n- armor, tools, & weapons"
-				+"\n********************************")
-		public boolean enableCitrineSet = true;
-		public boolean enableTourmalineSet = true;
-		public boolean enableKunziteSet = true;
-		public boolean enableTopazSet = true;
-		public boolean enableAlexandriteSet = true;
-		public boolean enableCorundumSet = true;
-		public boolean enableSapphireSet = true;
-		public boolean enableSpinelSet = true;
-		public boolean enableCarbonadoSet = true;
-		public boolean enableMoissaniteSet = true;
 
 		@Comment("\n"
 				+ "\n"

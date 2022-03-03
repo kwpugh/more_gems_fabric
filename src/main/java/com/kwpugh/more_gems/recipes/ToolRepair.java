@@ -32,35 +32,33 @@ public class ToolRepair extends SpecialCraftingRecipe
     @Override
     public ItemStack craft(CraftingInventory inventory)
     {
-        if(MoreGems.CONFIG.GENERAL.enableSharpeningGem)
+        MatchStack matchStack = matchStack(inventory);
+
+        if (matchStack.matches())
         {
-            MatchStack matchStack = matchStack(inventory);
+            ItemStack toolStack = matchStack.getToolStack();
 
-            if (matchStack.matches())
+            // Test if the tool is in the gem_tools.json
+            //if(TagInit.GEM_TOOLS.contains(toolStack.getItem()))
+            if(toolStack.isIn(TagInit.GEM_TOOLS))
             {
-                ItemStack toolStack = matchStack.getToolStack();
+                ItemStack craftStack = toolStack.copy();
+                Item materialToTest = materialType.getItem();
 
-                // Test if the tool is in the gem_tools.json
-                if(TagInit.GEM_TOOLS.contains(toolStack.getItem()))
+                int damage = 0;
+
+                if(materialToTest.equals(ItemInit.SHARPENING_GEM))
                 {
-                    ItemStack craftStack = toolStack.copy();
-                    Item materialToTest = materialType.getItem();
-
-                    int damage = 0;
-
-                    if(materialToTest.equals(ItemInit.SHARPENING_GEM))
-                    {
-                        damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemRepairAmount, 0);
-                    }
-                    else if(materialToTest.equals(ItemInit.SHARPENING_GEM_GREATER))
-                    {
-                        damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemGreaterRepairAmount, 0);
-                    }
-
-                    craftStack.setDamage(damage);
-
-                    return craftStack;
+                    damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemRepairAmount, 0);
                 }
+                else if(materialToTest.equals(ItemInit.SHARPENING_GEM_GREATER))
+                {
+                    damage = Math.max(craftStack.getDamage() - MoreGems.CONFIG.GENERAL.sharpeningGemGreaterRepairAmount, 0);
+                }
+
+                craftStack.setDamage(damage);
+
+                return craftStack;
             }
         }
 

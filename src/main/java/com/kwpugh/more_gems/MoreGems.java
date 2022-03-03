@@ -1,8 +1,8 @@
 package com.kwpugh.more_gems;
 
 import com.kwpugh.more_gems.config.MoreGemsConfig;
-import com.kwpugh.more_gems.init.*;
 import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
+import com.kwpugh.more_gems.init.*;
 import com.kwpugh.more_gems.world.GemOreConfiguredFeature;
 import com.kwpugh.more_gems.world.GemOrePlacedFeature;
 import me.shedaniel.autoconfig.AutoConfig;

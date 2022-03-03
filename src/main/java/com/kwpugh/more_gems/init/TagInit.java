@@ -1,22 +1,24 @@
 package com.kwpugh.more_gems.init;
 
-import net.fabricmc.fabric.api.tag.TagFactory;
 import net.minecraft.item.Item;
-import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 public class TagInit
 {
+    public static final TagKey<Item> COMMON_LOOT = TagKey.of(Registry.ITEM_KEY, new Identifier("c", "common_loot"));
+
     // Fabric c tags used by Treasure Bag
-    public static final Tag<Item> TREASURE_BAG = TagFactory.ITEM.create(new Identifier("c", "treasure_bag"));
+    public static final TagKey<Item> TREASURE_BAG = TagKey.of(Registry.ITEM_KEY, new Identifier("c", "treasure_bag"));
 
     // Mod tags used for sharpening gems
-    public static final Tag<Item> GEM_TOOLS = TagFactory.ITEM.create(new Identifier("more_gems", "gem_tools"));
-    public static final Tag<Item> GEMS_LESSER = TagFactory.ITEM.create(new Identifier("more_gems", "gem_lesser"));
-    public static final Tag<Item> GEMS_GREATER = TagFactory.ITEM.create(new Identifier("more_gems", "gem_greater"));
+    public static final TagKey<Item> GEM_TOOLS = TagKey.of(Registry.ITEM_KEY, new Identifier("more_gems", "gem_tools"));
+    public static final TagKey<Item> GEMS_LESSER = TagKey.of(Registry.ITEM_KEY, new Identifier("more_gems", "gem_lesser"));
+    public static final TagKey<Item> GEMS_GREATER = TagKey.of(Registry.ITEM_KEY, new Identifier("more_gems", "gem_greater"));
 
     public static void registerTags()
     {
-        // No Op
+        // Force class load
     }
 }

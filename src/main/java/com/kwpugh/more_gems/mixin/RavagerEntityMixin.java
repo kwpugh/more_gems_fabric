@@ -34,27 +34,23 @@ public abstract class RavagerEntityMixin extends RaiderEntity
     @Inject(method = "tickMovement", at = @At("HEAD"), cancellable = true)
     public void tickMovement(CallbackInfo ci)
     {
+        RavagerEntity ravager = (RavagerEntity) (Object) this;
+        Box mobBox = (new Box(ravager.getBlockPos())).expand(4, 2, 4);
+        List<Entity> list = ravager.world.getNonSpectatingEntities(Entity.class, mobBox);
+        Iterator<Entity> iterator = list.iterator();
+        Entity targetEntity;
 
-        if(MoreGems.CONFIG.GENERAL.enableBenevolence)
+        // Cycle through box looking for players with enchantment
+        while(iterator.hasNext())
         {
-            RavagerEntity ravager = (RavagerEntity) (Object) this;
-            Box mobBox = (new Box(ravager.getBlockPos())).expand(4, 2, 4);
-            List<Entity> list = ravager.world.getNonSpectatingEntities(Entity.class, mobBox);
-            Iterator<Entity> iterator = list.iterator();
-            Entity targetEntity;
-
-            // Cycle through box looking for players with enchantment
-            while(iterator.hasNext())
+            targetEntity = iterator.next();
+            if(targetEntity instanceof PlayerEntity)
             {
-                targetEntity = iterator.next();
-                if(targetEntity instanceof PlayerEntity)
+                PlayerEntity player = (PlayerEntity) targetEntity;
+                if (EnchantmentHelper.getLevel(EnchantmentInit.BENEVOLENCE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
                 {
-                    PlayerEntity player = (PlayerEntity) targetEntity;
-                    if (EnchantmentHelper.getLevel(EnchantmentInit.BENEVOLENCE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
-                    {
-                        this.stunTick++;
-                        ci.cancel();
-                    }
+                    this.stunTick++;
+                    ci.cancel();
                 }
             }
         }

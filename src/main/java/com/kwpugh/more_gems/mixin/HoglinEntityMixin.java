@@ -36,8 +36,7 @@ public abstract class HoglinEntityMixin
     @Inject(method = "mobTick", at = @At("HEAD"), cancellable = true)
     public void moregemsMobTick(CallbackInfo ci)
     {
-        if(MoreGems.CONFIG.GENERAL.enableMoissaniteDocileHoglin ||
-                MoreGems.CONFIG.GENERAL.enableBenevolence)
+        if(MoreGems.CONFIG.GENERAL.enableMoissaniteDocileHoglin)
         {
             HoglinEntity hoglin = (HoglinEntity) (Object) this;
             Box mobBox = (new Box(hoglin.getBlockPos())).expand(4, 2, 4);

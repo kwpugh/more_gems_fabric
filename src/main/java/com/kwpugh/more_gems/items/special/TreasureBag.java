@@ -16,7 +16,9 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
@@ -77,13 +79,22 @@ public class TreasureBag extends Item
     {
         ItemStack stack = player.getStackInHand(hand);
         ItemStack mainHandStack = player.getMainHandStack();
+        ItemStack treasure;
+
+        // Get the default item string from config and cast to ItemStack
+        Identifier id = Identifier.tryParse(MoreGems.CONFIG.GENERAL.defaultDrop);
+        ItemStack defaultStack = Registry.ITEM.get(id).getDefaultStack();
 
         if (!world.isClient)
         {
             // Random items from treasure_bag.json
             for(int i = 0; i < 2; i++)
             {
-                ItemStack treasure = TagInit.TREASURE_BAG.getRandom(random).getDefaultStack();
+                treasure = Registry.ITEM.getEntryList(TagInit.TREASURE_BAG).flatMap((items) ->
+                        items.getRandom(random)).map((itemEntry) ->
+                        (itemEntry.value()).getDefaultStack()).orElse(defaultStack);
+
+
                 world.spawnEntity(new ItemEntity(world, player.getX(), player.getY(), player.getZ(), treasure));
             }
 

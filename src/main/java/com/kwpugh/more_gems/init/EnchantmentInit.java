@@ -31,115 +31,26 @@ public class EnchantmentInit
 	public static final Enchantment BOUND = new BoundEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.BREAKABLE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment ATTRACTING = new AttractingEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.DIGGER, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
-	static boolean enableRazor = MoreGems.CONFIG.GENERAL.enableRazorSharpness;
-	static boolean enableShulker = MoreGems.CONFIG.GENERAL.enableShulkerBlade;
-	static boolean enableQuickening = MoreGems.CONFIG.GENERAL.enableQuickening;
-	static boolean enableUntouchable = MoreGems.CONFIG.GENERAL.enableUntouchable;
-	static boolean enableFasterObsidian = MoreGems.CONFIG.GENERAL.enableFasterObsidian;
-	static boolean enableBlinking = MoreGems.CONFIG.GENERAL.enableBlinking;
-	static boolean enableWisdom = MoreGems.CONFIG.GENERAL.enableWisdom;
-	static boolean enableStupify = MoreGems.CONFIG.GENERAL.enableStupify;
-	static boolean enableVoidEscape = MoreGems.CONFIG.GENERAL.enableVoidEscape;
-	static boolean enableCreeperless = MoreGems.CONFIG.GENERAL.enableCreeperless;
-	static boolean enableFloating = MoreGems.CONFIG.GENERAL.enableFloating;
-	static boolean enableLightning = MoreGems.CONFIG.GENERAL.enableLightning;
-	static boolean enableLavaView = MoreGems.CONFIG.GENERAL.enableLavaView;
-	static boolean enableBenevolence = MoreGems.CONFIG.GENERAL.enableBenevolence;
-	static boolean enableMiningHelper = MoreGems.CONFIG.GENERAL.enableMiningHelper;
-	static boolean enableBound = MoreGems.CONFIG.GENERAL.enableBound;
-	static boolean enableAttracting = MoreGems.CONFIG.GENERAL.enableAttracting;
-	static boolean enableFreezeProtection = MoreGems.CONFIG.GENERAL.enableFreezeProtection;
 
 	public static void registerEnchantments()
 	{
-		if(enableRazor)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "razor_sharpness"), RAZOR_SHARPNESS);
-		}
-
-		if(enableShulker)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "shulker_blade"), SHULKER_BLADE);
-		}
-
-		if(enableQuickening)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "quickening"), QUICKENING);
-		}
-
-		if(enableUntouchable)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "untouchable"), UNTOUCHABLE);
-		}
-
-		if(enableFasterObsidian)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "obsidianator"), OBSIDIANATOR);
-		}
-
-		if(enableBlinking)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "blinking"), BLINKING);
-		}
-
-		if(enableWisdom)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "wisdom"), WISDOM);
-		}
-
-		if(enableStupify)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stupify"), STUPIFY);
-		}
-
-		if(enableVoidEscape)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "void_escape"), VOID_ESCAPE);
-		}
-
-		if(enableCreeperless)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "creeperless"), CREEPERLESS);
-		}
-
-		if(enableFloating)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "floating"), FLOATING);
-		}
-
-		if(enableLightning)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lightning"), LIGHTNING);
-		}
-
-		if(enableLavaView)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lava_view"), LAVA_VIEW);
-		}
-
-		if(enableBenevolence)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "benevolence"), BENEVOLENCE);
-		}
-
-		if(enableMiningHelper)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mining_helper"), MINING_HELPER);
-		}
-
-		if(enableBound)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "bound"), BOUND);
-		}
-
-		if(enableAttracting)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "attracting"), ATTRACTING);
-		}
-
-		if(enableFreezeProtection)
-		{
-			Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "freeze_protection"), FREEZE_PROTECTION);
-		}
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "razor_sharpness"), RAZOR_SHARPNESS);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "shulker_blade"), SHULKER_BLADE);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "quickening"), QUICKENING);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "untouchable"), UNTOUCHABLE);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "obsidianator"), OBSIDIANATOR);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "blinking"), BLINKING);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "wisdom"), WISDOM);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stupify"), STUPIFY);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "void_escape"), VOID_ESCAPE);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "creeperless"), CREEPERLESS);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "floating"), FLOATING);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lightning"), LIGHTNING);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lava_view"), LAVA_VIEW);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "benevolence"), BENEVOLENCE);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mining_helper"), MINING_HELPER);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "bound"), BOUND);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "attracting"), ATTRACTING);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "freeze_protection"), FREEZE_PROTECTION);
 	}
 }
