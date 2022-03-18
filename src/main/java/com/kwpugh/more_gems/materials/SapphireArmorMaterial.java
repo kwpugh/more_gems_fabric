@@ -45,7 +45,7 @@ public class SapphireArmorMaterial implements ArmorMaterial
     @Override
     public Ingredient getRepairIngredient()
     {
-        return Ingredient.ofItems(ItemInit.CORUNDUM);
+        return Ingredient.ofItems(ItemInit.SAPPHIRE);
     }
 
     @Override

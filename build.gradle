@@ -34,8 +34,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	//PughTools for common area tools
-	include "com.kwpugh:pugh_tools_fabric_1.18.2:1.2.0"
-	modImplementation "com.kwpugh:pugh_tools_fabric_1.18.2:1.2.0"
+	include "com.kwpugh:pugh_tools_fabric_1.18.2:1.2.1"
+	modImplementation "com.kwpugh:pugh_tools_fabric_1.18.2:1.2.1"
 
 	// Cloth Config
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig}") {

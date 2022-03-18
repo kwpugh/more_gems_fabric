@@ -45,7 +45,7 @@ public class MoissaniteArmorMaterial implements ArmorMaterial
     @Override
     public Ingredient getRepairIngredient()
     {
-        return Ingredient.ofItems(ItemInit.CARBONADO);
+        return Ingredient.ofItems(ItemInit.MOISSANITE);
     }
 
     @Override

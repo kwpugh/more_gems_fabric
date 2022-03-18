@@ -46,6 +46,6 @@ public class MoissaniteToolMaterial implements ToolMaterial
     @Override
     public Ingredient getRepairIngredient()
     {
-        return Ingredient.ofItems(ItemInit.CARBONADO);
+        return Ingredient.ofItems(ItemInit.MOISSANITE);
     }
 }
