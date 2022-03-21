@@ -1,109 +1,31 @@
 {
   "replace": false,
   "values": [
-    {
-      "id": "more_gems:citrine_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:tourmaline_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:kunzite_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:topaz_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:alexandrite_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:corundum_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:sapphire_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:spinel_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:carbonado_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:sapphire_ore_deepslate",
-      "required": false
-    },
-    {
-      "id": "more_gems:spinel_ore_deepslate",
-      "required": false
-    },
-    {
-      "id": "more_gems:carbonado_ore_deepslate",
-      "required": false
-    },
-    {
-      "id": "more_gems:moissanite_ore",
-      "required": false
-    },
-    {
-      "id": "more_gems:kunzite_ore_nether",
-      "required": false
-    },
-    {
-      "id": "more_gems:alexandrite_ore_nether",
-      "required": false
-    },
-    {
-      "id": "more_gems:corundum_ore_nether",
-      "required": false
-    },
-    {
-      "id": "more_gems:citrine_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:tourmaline_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:kunzite_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:topaz_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:alexandrite_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:corundum_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:sapphire_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:spinel_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:carbonado_block",
-      "required": false
-    },
-    {
-      "id": "more_gems:moissanite_block",
-      "required": false
-    }
+    "more_gems:citrine_ore",
+    "more_gems:tourmaline_ore",
+    "more_gems:kunzite_ore",
+    "more_gems:topaz_ore",
+    "more_gems:alexandrite_ore",
+    "more_gems:corundum_ore",
+    "more_gems:sapphire_ore",
+    "more_gems:spinel_ore",
+    "more_gems:carbonado_ore",
+    "more_gems:sapphire_ore_deepslate",
+    "more_gems:spinel_ore_deepslate",
+    "more_gems:carbonado_ore_deepslate",
+    "more_gems:moissanite_ore",
+    "more_gems:kunzite_ore_nether",
+    "more_gems:alexandrite_ore_nether",
+    "more_gems:corundum_ore_nether",
+    "more_gems:citrine_block",
+    "more_gems:tourmaline_block",
+    "more_gems:kunzite_block",
+    "more_gems:topaz_block",
+    "more_gems:alexandrite_block",
+    "more_gems:corundum_block",
+    "more_gems:sapphire_block",
+    "more_gems:spinel_block",
+    "more_gems:carbonado_block",
+    "more_gems:moissanite_block"
   ]
 }
