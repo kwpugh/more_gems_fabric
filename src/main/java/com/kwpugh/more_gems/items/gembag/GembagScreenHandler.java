@@ -1,25 +1,30 @@
 package com.kwpugh.more_gems.items.gembag;
 
+import com.google.common.collect.Sets;
+import com.kwpugh.more_gems.init.ContainerInit;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.screen.ScreenHandler;
+import net.minecraft.item.Items;
+import net.minecraft.screen.GenericContainerScreenHandler;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
-import com.google.common.collect.Sets;
-import net.minecraft.util.Hand;
+import net.minecraft.screen.slot.SlotActionType;
 
 import java.util.Set;
 
-public class GembagScreenHandler extends ScreenHandler
+public class GembagScreenHandler extends GenericContainerScreenHandler
 {
+    private final ScreenHandlerType<?> type;
+    public static final Set<Item> SHULKER_BOXES;
+
     private final Inventory inventory;
     private final PlayerInventory playerInventory;
-    public final int inventoryWidth;
-    public final int inventoryHeight;
-    public static final Set<Item> SHULKER_BOXES;
+    public final int inventoryWidth = 9;
+    public final int inventoryHeight = 6;
 
     static
     {
@@ -30,20 +35,57 @@ public class GembagScreenHandler extends ScreenHandler
                 Items.WHITE_SHULKER_BOX, Items.YELLOW_SHULKER_BOX, Items.PURPLE_SHULKER_BOX);
     }
 
-    public GembagScreenHandler(final int syncId, final PlayerInventory playerInventory, final Inventory inventory, final int inventoryWidth, final int inventoryHeight, final Hand hand)
+    public GembagScreenHandler(int syncId, PlayerInventory playerInventory)
     {
-        super(null, syncId);
+        this(syncId, playerInventory, new SimpleInventory(54));
+    }
+
+    public GembagScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory)
+    {
+        this(ContainerInit.GEMBAG_SCREEN_HANDLER, syncId, playerInventory, inventory);
+    }
+
+    protected GembagScreenHandler(ScreenHandlerType<?> type, int syncId, PlayerInventory playerInventory, Inventory inventory)
+    {
+        super(ScreenHandlerType.GENERIC_9X6, syncId, playerInventory, inventory, 6);
+        this.type = type;
         this.inventory = inventory;
         this.playerInventory = playerInventory;
-        this.inventoryWidth = inventoryWidth;
-        this.inventoryHeight = inventoryHeight;
 
-        checkSize(inventory, inventoryWidth * inventoryHeight);
+        checkSize(inventory, inventoryHeight * inventoryWidth);
         inventory.onOpen(playerInventory.player);
         setupSlots(false);
     }
 
-    public class BackpackLockedSlot extends Slot
+    public void setupSlots(final boolean includeChestInventory)
+    {
+        int i = (this.inventoryHeight - 4) * 18;
+
+        int n;
+        int m;
+        for(n = 0; n < this.inventoryHeight; ++n)
+        {
+            for(m = 0; m < 9; ++m)
+            {
+                this.addSlot(new BackpackLockedSlot(inventory, m + n * 9, 8 + m * 18, 18 + n * 18));
+            }
+        }
+
+        for(n = 0; n < 3; ++n)
+        {
+            for(m = 0; m < 9; ++m)
+            {
+                this.addSlot(new BackpackLockedSlot(playerInventory, m + n * 9 + 9, 8 + m * 18, 103 + n * 18 + i));
+            }
+        }
+
+        for(n = 0; n < 9; ++n)
+        {
+            this.addSlot(new BackpackLockedSlot(playerInventory, n, 8 + n * 18, 161 + i));
+        }
+    }
+
+    public static class BackpackLockedSlot extends Slot
     {
         public BackpackLockedSlot(Inventory inventory, int index, int x, int y)
         {
@@ -62,93 +104,41 @@ public class GembagScreenHandler extends ScreenHandler
             return stackMovementIsAllowed(stack);
         }
 
+        // Prevents items that override canBeNested() from being inserted into backpack
         public boolean stackMovementIsAllowed(ItemStack stack)
         {
-            Item testItem = stack.getItem();
-            if(stack.getItem() instanceof GembagItem) return false;
-            if(SHULKER_BOXES.contains(testItem)) return false;
-
-            return true;
+            return stack.getItem().canBeNested();
         }
     }
 
     @Override
-    public void close(final PlayerEntity player)
-    {
-        super.close(player);
-        inventory.onClose(player);
+    public ScreenHandlerType<?> getType() {
+        return type;
     }
 
-    public void setupSlots(final boolean includeChestInventory)
+    // Shift-click disabled for now
+    @Override
+    public ItemStack transferSlot(PlayerEntity player, int index)
     {
-        int i = (this.inventoryHeight - 4) * 18;
-
-        int n;
-        int m;
-        for(n = 0; n < this.inventoryHeight; ++n)
-        {
-           for(m = 0; m < 9; ++m)
-           {
-              this.addSlot(new BackpackLockedSlot(inventory, m + n * 9, 8 + m * 18, 18 + n * 18));
-           }
-        }
-
-        for(n = 0; n < 3; ++n)
-        {
-           for(m = 0; m < 9; ++m)
-           {
-              this.addSlot(new BackpackLockedSlot(playerInventory, m + n * 9 + 9, 8 + m * 18, 103 + n * 18 + i));
-           }
-        }
-
-        for(n = 0; n < 9; ++n)
-        {
-           this.addSlot(new BackpackLockedSlot(playerInventory, n, 8 + n * 18, 161 + i));
-        }
+        return ItemStack.EMPTY;
     }
 
     @Override
-    public boolean canUse(final PlayerEntity player)
+    public void onSlotClick(int slotId, int clickData, SlotActionType actionType, PlayerEntity playerEntity)
     {
-        return this.inventory.canPlayerUse(player);
-    }
-
-    @Override
-    public ItemStack transferSlot(final PlayerEntity player, final int invSlot)
-    {
-        ItemStack newStack = ItemStack.EMPTY;
-        Slot slot = this.slots.get(invSlot);
-        ItemStack originalStack = slot.getStack();
-        Item testItem = originalStack.getItem();
-
-        if(testItem instanceof GembagItem) return ItemStack.EMPTY;
-        if(SHULKER_BOXES.contains(testItem)) return ItemStack.EMPTY;
-
-        if (slot.hasStack())
+        // Prevents single or shift-click while pack is open
+        if (slotId >= 0)  // slotId < 0 are used for networking internals
         {
-            newStack = originalStack.copy();
-            if (invSlot < this.inventory.size())
-            {
-                if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true))
-                {
-                   return ItemStack.EMPTY;
-                }
-            }
-            else if (!this.insertItem(originalStack, 0, this.inventory.size(), false))
-            {
-              return ItemStack.EMPTY;
-            }
+            ItemStack stack = getSlot(slotId).getStack();
 
-            if (originalStack.isEmpty())
+            if(stack.getItem() instanceof GembagItem ||
+                SHULKER_BOXES.contains(stack.getItem()))
             {
-               slot.setStack(ItemStack.EMPTY);
-            }
-            else
-            {
-              slot.markDirty();
+                // Return to caller with no action
+                return;
             }
         }
 
-        return newStack;
+        super.onSlotClick(slotId, clickData, actionType, playerEntity);
     }
 }

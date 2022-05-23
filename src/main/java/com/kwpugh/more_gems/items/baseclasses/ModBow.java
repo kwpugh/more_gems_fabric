@@ -89,8 +89,8 @@ public class ModBow extends BowItem
 
 						world.spawnEntity(persistentProjectileEntity);
 					}
-
-					world.playSound((PlayerEntity) null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (world.random.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+					
+					world.playSound((PlayerEntity)null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
 
 					if (!bl2 && !playerEntity.getAbilities().creativeMode)
 					{

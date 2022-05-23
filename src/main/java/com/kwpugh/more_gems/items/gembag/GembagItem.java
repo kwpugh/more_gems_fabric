@@ -1,26 +1,16 @@
 package com.kwpugh.more_gems.items.gembag;
 
-import java.util.List;
-
-import com.kwpugh.more_gems.init.ContainerInit;
-
-import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
-import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
-import net.minecraft.util.Formatting;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class GembagItem extends Item
+public class GembagItem extends GemBase
 {
-    public GembagItem(Settings settings)
-    {
+    public GembagItem(Settings settings) {
         super(settings);
     }
 
@@ -33,35 +23,22 @@ public class GembagItem extends Item
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
     {
+        ItemStack stack = user.getStackInHand(hand);
+
         if(!world.isClient)
         {
-            ContainerProviderRegistry.INSTANCE.openContainer(ContainerInit.GEMBAG_IDENTIFIER, user, buf -> {
-                buf.writeItemStack(user.getStackInHand(hand));
-                buf.writeInt(hand == Hand.MAIN_HAND ? 0 : 1);
-            });
+            user.openHandledScreen(createScreenHandlerFactory(stack));
         }
 
-        return super.use(world, user, hand);
+        return TypedActionResult.success(stack);
     }
 
-    public static GembagInventory getInventory(ItemStack stack, Hand hand, PlayerEntity player)
+    private NamedScreenHandlerFactory createScreenHandlerFactory(ItemStack stack)
     {
-        if(!stack.hasNbt())
-        {
-            stack.setNbt(new NbtCompound());
-        }
+//        return new SimpleNamedScreenHandlerFactory((syncId, inventory, player) ->
+//                new GembagScreenHandler(syncId, inventory, new GembagInventory(stack)), stack.getName());
 
-        if(!stack.getNbt().contains("gembag"))
-        {
-            stack.getNbt().put("gembag", new NbtCompound());
-        }
-
-        return new GembagInventory(stack.getNbt().getCompound("gembag"), hand, player);
+        return new SimpleNamedScreenHandlerFactory((i, playerInventory, playerEntity) ->
+                NewGembagScreenHandler.createGeneric9x6(i, playerInventory, new GembagInventory(stack)), stack.getName());
     }
-
-	@Override
-	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
-	{
-	    tooltip.add(new TranslatableText("item.more_gems.gembag.tip").formatted(Formatting.YELLOW));
-	}
 }

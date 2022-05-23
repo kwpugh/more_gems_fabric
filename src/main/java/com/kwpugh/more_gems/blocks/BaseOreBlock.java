@@ -6,22 +6,14 @@ import com.kwpugh.more_gems.init.BlockInit;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.BlockView;
 
 import java.util.List;
-import java.util.Random;
 
 public class BaseOreBlock extends OreBlock
 {
@@ -38,34 +30,16 @@ public class BaseOreBlock extends OreBlock
         this.settings.requiresTool();
     }
 
-    Random random = new Random();
-    UniformIntProvider experienceDropped = UniformIntProvider.create(0, 2);
-
-    @Override
-    public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack)
-    {
-        super.onStacksDropped(state, world, pos, stack);
-
-        if(EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0)
-        {
-            int i = this.experienceDropped.get(random);
-            if (i > 0)
-            {
-                this.dropExperience(world, pos, i);
-            }
-        }
-    }
-
     @Environment(EnvType.CLIENT)
     public void appendTooltip(ItemStack stack, BlockView world, List<Text> tooltip, TooltipContext options)
     {
         oreTips(stack);
 
-        tooltip.add(new TranslatableText("item.more_gems.ore.tip1", maxLevel).formatted(Formatting.YELLOW));
-        tooltip.add(new TranslatableText("item.more_gems.ore.tip2", veinSize).formatted(Formatting.YELLOW));
-        tooltip.add(new TranslatableText("item.more_gems.ore.tip3", chunkChance).formatted(Formatting.YELLOW));
-        tooltip.add(new TranslatableText("item.more_gems.ore_dim.tip1", spawnDim).formatted(Formatting.GREEN));
-        tooltip.add(new TranslatableText("item.more_gems.ore_mining.tip1", miningLevel).formatted(Formatting.GREEN));
+        tooltip.add(Text.translatable("item.more_gems.ore.tip1", maxLevel).formatted(Formatting.YELLOW));
+        tooltip.add(Text.translatable("item.more_gems.ore.tip2", veinSize).formatted(Formatting.YELLOW));
+        tooltip.add(Text.translatable("item.more_gems.ore.tip3", chunkChance).formatted(Formatting.YELLOW));
+        tooltip.add(Text.translatable("item.more_gems.ore_dim.tip1", spawnDim).formatted(Formatting.GREEN));
+        tooltip.add(Text.translatable("item.more_gems.ore_mining.tip1", miningLevel).formatted(Formatting.GREEN));
     }
 
     public void oreTips(ItemStack stack)

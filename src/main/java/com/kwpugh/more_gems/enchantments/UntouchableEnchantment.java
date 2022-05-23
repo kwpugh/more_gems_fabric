@@ -46,7 +46,8 @@ public class UntouchableEnchantment extends Enchantment
 
 	public void onUserDamaged(LivingEntity user, Entity attacker, int level)
 	{
-	      Random random = user.getRandom();
+	      Random random = new Random();
+
 	      if (shouldDamageAttacker(level, random))
 	      {
 	         if (attacker != null)

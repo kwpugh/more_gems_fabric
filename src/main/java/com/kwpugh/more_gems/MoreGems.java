@@ -3,6 +3,7 @@ package com.kwpugh.more_gems;
 import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
 import com.kwpugh.more_gems.init.*;
+import com.kwpugh.more_gems.items.special.TreasureBag;
 import com.kwpugh.more_gems.world.GemOreConfiguredFeature;
 import com.kwpugh.more_gems.world.GemOrePlacedFeature;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -37,5 +38,11 @@ public class MoreGems implements ModInitializer
 		TagInit.registerTags();
 		RecipeInit.registerRecipes();
 		BoundStackManager.init();
+		TreasureBag.initEnchantmentEntries();
+	}
+
+	public static Identifier createID(String path)
+	{
+		return new Identifier(MOD_ID, path);
 	}
 }

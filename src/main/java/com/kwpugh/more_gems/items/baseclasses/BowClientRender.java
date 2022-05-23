@@ -1,11 +1,10 @@
 package com.kwpugh.more_gems.items.baseclasses;
 
 import com.kwpugh.more_gems.init.ItemInit;
-
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
+import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.util.Identifier;
 
 /*
@@ -18,7 +17,7 @@ public class BowClientRender implements ClientModInitializer
   @Override
   public void onInitializeClient() 
   {
-    FabricModelPredicateProviderRegistry.register(ItemInit.MOISSANITE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+    ModelPredicateProviderRegistry.register(ItemInit.MOISSANITE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
     {
       if (entity == null)
       {
@@ -31,7 +30,7 @@ public class BowClientRender implements ClientModInitializer
       }
     });
 
-    FabricModelPredicateProviderRegistry.register(ItemInit.MOISSANITE_BOW, new Identifier("pulling"),
+    ModelPredicateProviderRegistry.register(ItemInit.MOISSANITE_BOW, new Identifier("pulling"),
             (stack, world, entity, i) ->
             {
               return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
@@ -39,7 +38,7 @@ public class BowClientRender implements ClientModInitializer
 
 
 
-    FabricModelPredicateProviderRegistry.register(ItemInit.CARBONADO_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+    ModelPredicateProviderRegistry.register(ItemInit.CARBONADO_BOW, new Identifier("pull"), (stack, world, entity, i) ->
     {
       if (entity == null) 
       {
@@ -51,37 +50,16 @@ public class BowClientRender implements ClientModInitializer
             : (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
       }
     });
-    
-    FabricModelPredicateProviderRegistry.register(ItemInit.CARBONADO_BOW, new Identifier("pulling"),
+
+    ModelPredicateProviderRegistry.register(ItemInit.CARBONADO_BOW, new Identifier("pulling"),
         (stack, world, entity, i) ->
     	{
           return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
         });
-  
-    
-    
-    FabricModelPredicateProviderRegistry.register(ItemInit.SPINEL_BOW, new Identifier("pull"), (stack, world, entity, i) ->
-    {
-    	if (entity == null) 
-    {
-      return 0.0F;
-    } 
-    else 
-    {
-      return entity.getActiveItem() != stack ? 0.0F
-          : (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
-    }
-    });
-  
-    FabricModelPredicateProviderRegistry.register(ItemInit.SPINEL_BOW, new Identifier("pulling"),
-      (stack, world, entity, i) ->
-   	{
-        return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
-    });
-    
-    
 
-    FabricModelPredicateProviderRegistry.register(ItemInit.SAPPHIRE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+
+
+    ModelPredicateProviderRegistry.register(ItemInit.SPINEL_BOW, new Identifier("pull"), (stack, world, entity, i) ->
     {
     	if (entity == null) 
     {
@@ -93,37 +71,16 @@ public class BowClientRender implements ClientModInitializer
           : (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
     }
     });
-  
-    FabricModelPredicateProviderRegistry.register(ItemInit.SAPPHIRE_BOW, new Identifier("pulling"),
-      (stack, world, entity, i) ->
-   	{
-        return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
-    });
-    
-    
-    
-    FabricModelPredicateProviderRegistry.register(ItemInit.CORUNDUM_BOW, new Identifier("pull"), (stack, world, entity, i) ->
-    {
-    	if (entity == null) 
-    {
-      return 0.0F;
-    } 
-    else 
-    {
-      return entity.getActiveItem() != stack ? 0.0F
-          : (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
-    }
-    });
-  
-    FabricModelPredicateProviderRegistry.register(ItemInit.CORUNDUM_BOW, new Identifier("pulling"),
+
+    ModelPredicateProviderRegistry.register(ItemInit.SPINEL_BOW, new Identifier("pulling"),
       (stack, world, entity, i) ->
    	{
         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
     });
 
-  
-    
-    FabricModelPredicateProviderRegistry.register(ItemInit.ALEXANDRITE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+
+
+    ModelPredicateProviderRegistry.register(ItemInit.SAPPHIRE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
     {
     	if (entity == null) 
     {
@@ -135,16 +92,58 @@ public class BowClientRender implements ClientModInitializer
           : (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
     }
     });
-  
-    FabricModelPredicateProviderRegistry.register(ItemInit.ALEXANDRITE_BOW, new Identifier("pulling"),
+
+    ModelPredicateProviderRegistry.register(ItemInit.SAPPHIRE_BOW, new Identifier("pulling"),
+      (stack, world, entity, i) ->
+   	{
+        return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
+    });
+
+
+
+    ModelPredicateProviderRegistry.register(ItemInit.CORUNDUM_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+    {
+    	if (entity == null) 
+    {
+      return 0.0F;
+    } 
+    else 
+    {
+      return entity.getActiveItem() != stack ? 0.0F
+          : (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
+    }
+    });
+
+    ModelPredicateProviderRegistry.register(ItemInit.CORUNDUM_BOW, new Identifier("pulling"),
+      (stack, world, entity, i) ->
+   	{
+        return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
+    });
+
+
+
+    ModelPredicateProviderRegistry.register(ItemInit.ALEXANDRITE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+    {
+    	if (entity == null) 
+    {
+      return 0.0F;
+    } 
+    else 
+    {
+      return entity.getActiveItem() != stack ? 0.0F
+          : (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
+    }
+    });
+
+    ModelPredicateProviderRegistry.register(ItemInit.ALEXANDRITE_BOW, new Identifier("pulling"),
       (stack, world, entity,i ) ->
    	{
         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
     });
 
-    
-    
-    FabricModelPredicateProviderRegistry.register(ItemInit.TOPAZ_BOW, new Identifier("pull"), (stack, world, entity,i ) ->
+
+
+    ModelPredicateProviderRegistry.register(ItemInit.TOPAZ_BOW, new Identifier("pull"), (stack, world, entity,i ) ->
     {
     	if (entity == null) 
     {
@@ -156,16 +155,16 @@ public class BowClientRender implements ClientModInitializer
           : (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
     }
     });
-  
-    FabricModelPredicateProviderRegistry.register(ItemInit.TOPAZ_BOW, new Identifier("pulling"),
+
+    ModelPredicateProviderRegistry.register(ItemInit.TOPAZ_BOW, new Identifier("pulling"),
       (stack, world, entity, i) ->
    	{
         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
     });
-    
-    
-    
-    FabricModelPredicateProviderRegistry.register(ItemInit.KUNZITE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+
+
+
+    ModelPredicateProviderRegistry.register(ItemInit.KUNZITE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
     {
     	if (entity == null) 
     {
@@ -177,16 +176,16 @@ public class BowClientRender implements ClientModInitializer
           : (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
     }
     });
-  
-    FabricModelPredicateProviderRegistry.register(ItemInit.KUNZITE_BOW, new Identifier("pulling"),
+
+    ModelPredicateProviderRegistry.register(ItemInit.KUNZITE_BOW, new Identifier("pulling"),
       (stack, world, entity, i) ->
    	{
         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
     });
-    
-    
-    
-    FabricModelPredicateProviderRegistry.register(ItemInit.TOURMALINE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+
+
+
+    ModelPredicateProviderRegistry.register(ItemInit.TOURMALINE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
     {
     	if (entity == null) 
     {
@@ -199,7 +198,7 @@ public class BowClientRender implements ClientModInitializer
     }
     });
   
-    FabricModelPredicateProviderRegistry.register(ItemInit.TOURMALINE_BOW, new Identifier("pulling"),
+    ModelPredicateProviderRegistry.register(ItemInit.TOURMALINE_BOW, new Identifier("pulling"),
       (stack, world, entity, i) ->
    	{
         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
@@ -207,7 +206,7 @@ public class BowClientRender implements ClientModInitializer
     
     
     
-    FabricModelPredicateProviderRegistry.register(ItemInit.CITRINE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
+    ModelPredicateProviderRegistry.register(ItemInit.CITRINE_BOW, new Identifier("pull"), (stack, world, entity, i) ->
     {
     	if (entity == null) 
     {
@@ -220,7 +219,7 @@ public class BowClientRender implements ClientModInitializer
     }
     });
   
-    FabricModelPredicateProviderRegistry.register(ItemInit.CITRINE_BOW, new Identifier("pulling"),
+    ModelPredicateProviderRegistry.register(ItemInit.CITRINE_BOW, new Identifier("pulling"),
       (stack, world, entity, i) ->
    	{
         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;

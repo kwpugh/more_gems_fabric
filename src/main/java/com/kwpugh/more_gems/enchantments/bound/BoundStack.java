@@ -1,6 +1,7 @@
 package com.kwpugh.more_gems.enchantments.bound;
 
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ElytraItem;
@@ -9,7 +10,6 @@ import net.minecraft.item.ShieldItem;
 
 /*
            +++++  Under development   +++++
-
         Simple object used to hold a PlayerEntity
         and a ItemStack.  USed in conjunction with
         BoundManager, which manages a List of BoundStacks.
@@ -38,7 +38,7 @@ public class BoundStack
                 || stack.getItem() instanceof ShieldItem
                 || stack.getItem() instanceof ElytraItem))
         {
-            EquipmentSlot equipmentSlot = player.getPreferredEquipmentSlot(stack);
+            EquipmentSlot equipmentSlot = LivingEntity.getPreferredEquipmentSlot(stack);
             ItemStack split = stack.split(1);
             player.equipStack(equipmentSlot, split);
         }

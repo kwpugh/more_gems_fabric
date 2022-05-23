@@ -11,7 +11,6 @@ import java.util.List;
 
 /*
           +++++  Under development   +++++
-
     Creates and manages a list of BoundStack
     objects that contain PlayerEntity and ITemStack
     objects that can be added to it by a method call.

@@ -8,7 +8,6 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
@@ -37,6 +36,6 @@ public class ModHammer extends Hammer
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
     {
-        tooltip.add(new TranslatableText("item.more_gems.hammer.tip1").formatted(Formatting.GREEN));
+        tooltip.add(Text.translatable("item.more_gems.hammer.tip1").formatted(Formatting.GREEN));
     }
 }

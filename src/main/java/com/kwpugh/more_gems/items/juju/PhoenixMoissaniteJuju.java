@@ -6,7 +6,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
@@ -32,8 +31,8 @@ public class PhoenixMoissaniteJuju extends BaseJujuItem
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
 	{
-		tooltip.add(new TranslatableText("item.more_gems.moissanite_juju.tip1").formatted(Formatting.GREEN));
-		tooltip.add(new TranslatableText("item.more_gems.moissanite_juju.tip2").formatted(Formatting.GREEN));
-		tooltip.add(new TranslatableText("item.more_gems.moissanite_juju.tip3").formatted(Formatting.GREEN));
+		tooltip.add(Text.translatable("item.more_gems.moissanite_juju.tip1").formatted(Formatting.GREEN));
+		tooltip.add(Text.translatable("item.more_gems.moissanite_juju.tip2").formatted(Formatting.GREEN));
+		tooltip.add(Text.translatable("item.more_gems.moissanite_juju.tip3").formatted(Formatting.GREEN));
 	} 
 }

@@ -91,7 +91,7 @@ public class PlayerSpecialAbilities
 			if (player.teleport(g, h, j, false))
 			{
 				SoundEvent soundEvent = SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT;
-				world.playSound((PlayerEntity)null, d, e, f, soundEvent, SoundCategory.PLAYERS, 1.0F, 1.0F);
+				world.playSound((PlayerEntity)null, d, e, f, soundEvent, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 				player.playSound(soundEvent, 1.0F, 1.0F);
 				break;
 			}
@@ -110,7 +110,7 @@ public class PlayerSpecialAbilities
 		if(player.teleport(0, 81, 0, false))
 		{
 			SoundEvent soundEvent = SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT;
-			world.playSound(player, 0, 81, 0, soundEvent, SoundCategory.PLAYERS, 1.0F, 1.0F);
+			world.playSound((PlayerEntity)null, 0, 81, 0, soundEvent, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 			player.playSound(soundEvent, 1.0F, 1.0F);
 		}
 	}
@@ -155,8 +155,6 @@ public class PlayerSpecialAbilities
 
 				return;
 			}
-
-			return;
 		}
 	}
 
