@@ -6,12 +6,19 @@ import com.kwpugh.more_gems.init.BlockInit;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 
 import java.util.List;
 
@@ -28,6 +35,17 @@ public class BaseOreBlock extends OreBlock
     {
         super(settings);
         this.settings.requiresTool();
+    }
+
+    @Override
+    public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack, boolean dropExperience)
+    {
+        super.onStacksDropped(state, world, pos, stack, dropExperience);
+
+        if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0)
+        {
+            this.dropExperience(world, pos, 2);
+        }
     }
 
     @Environment(EnvType.CLIENT)
@@ -149,6 +167,8 @@ public class BaseOreBlock extends OreBlock
             spawnDim = "Overworld";
         }
     }
+
+
 }
 
 

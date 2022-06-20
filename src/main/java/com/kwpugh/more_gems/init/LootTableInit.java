@@ -1,298 +1,183 @@
 package com.kwpugh.more_gems.init;
 
-import com.google.common.collect.Lists;
 import com.kwpugh.more_gems.MoreGems;
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.FabricLootSupplierBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
-import net.minecraft.util.Identifier;
-import org.apache.commons.lang3.ArrayUtils;
-
-import java.util.List;
 
 public class LootTableInit
 {
 	static float jujuChance = MoreGems.CONFIG.GENERAL.jujuChance;
 	static float treasueBagChance = MoreGems.CONFIG.GENERAL.treasureBagChance;
-	static float coalDropGems = MoreGems.CONFIG.ORES.coalDropGemsChance;
-	static float deepslateCoalDropGems = MoreGems.CONFIG.ORES.deepslateCoalDropGemsChance;
-	static boolean enableCoalGemDrops = MoreGems.CONFIG.ORES.enableCoalGemDrops;
-
-	private static final List<LootTableInsert> INSERTS = Lists.newArrayList();
 
 	public static void registerLoot()
 	{
-		if(enableCoalGemDrops)
-		{
-			// Alternate way to get gem drops from vanilla ores
-			FabricLootPoolBuilder CITRINE = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.CITRINE))
-					.withCondition(RandomChanceLootCondition.builder(coalDropGems).build());
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if(id.equals(LootTables.DESERT_PYRAMID_CHEST) ||
+                    id.equals(LootTables.JUNGLE_TEMPLE_CHEST))
+            {
+                LootPool TREASURE_BAG = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.TREASURE_BAG))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(treasueBagChance).build())
+                        .build();
 
-			insert(new LootTableInsert(CITRINE,
-					new Identifier("minecraft", "blocks/coal_ore")
-			));
+                tableBuilder.pool(TREASURE_BAG);
+            }
 
-			FabricLootPoolBuilder TOURMALINE = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.TOURMALINE))
-					.withCondition(RandomChanceLootCondition.builder(coalDropGems).build());
+            if(id.equals(LootTables.DESERT_PYRAMID_CHEST) ||
+                    id.equals(LootTables.ABANDONED_MINESHAFT_CHEST) ||
+                    id.equals(LootTables.FISHING_TREASURE_GAMEPLAY))
+            {
+                LootPool CITRINE_JUJU = LootPool.builder()
+                            .with(ItemEntry.builder(ItemInit.CITRINE_JUJU))
+                            .rolls(ConstantLootNumberProvider.create(1))
+                            .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                            .build();
 
-			insert(new LootTableInsert(TOURMALINE,
-					new Identifier("minecraft", "blocks/coal_ore")
-			));
+                    tableBuilder.pool(CITRINE_JUJU);
+            }
 
-			FabricLootPoolBuilder KUNZITE = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.KUNZITE))
-					.withCondition(RandomChanceLootCondition.builder(coalDropGems).build());
+            if(id.equals(LootTables.JUNGLE_TEMPLE_CHEST) ||
+                    id.equals(LootTables.UNDERWATER_RUIN_BIG_CHEST) ||
+                    id.equals(LootTables.UNDERWATER_RUIN_SMALL_CHEST) ||
+                    id.equals(LootTables.FISHING_TREASURE_GAMEPLAY))
+            {
+                LootPool TOURMALINE_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.TOURMALINE_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-			insert(new LootTableInsert(KUNZITE,
-					new Identifier("minecraft", "blocks/coal_ore")
-			));
+                tableBuilder.pool(TOURMALINE_JUJU);
+            }
 
-			FabricLootPoolBuilder TOPAZ = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.TOPAZ))
-					.withCondition(RandomChanceLootCondition.builder(coalDropGems).build());
+            if(id.equals(LootTables.SIMPLE_DUNGEON_CHEST) ||
+                    id.equals(LootTables.UNDERWATER_RUIN_BIG_CHEST) ||
+                    id.equals(LootTables.UNDERWATER_RUIN_SMALL_CHEST) ||
+                    id.equals(LootTables.FISHING_TREASURE_GAMEPLAY))
+            {
+                LootPool KUNZITE_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.KUNZITE_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-			insert(new LootTableInsert(TOPAZ,
-					new Identifier("minecraft", "blocks/coal_ore")
-			));
+                tableBuilder.pool(KUNZITE_JUJU);
+            }
 
-			FabricLootPoolBuilder ALEXANDRITE = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.ALEXANDRITE))
-					.withCondition(RandomChanceLootCondition.builder(deepslateCoalDropGems).build());
+            if(id.equals(LootTables.BURIED_TREASURE_CHEST) ||
+                    id.equals(LootTables.STRONGHOLD_CORRIDOR_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_SUPPLY_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_MAP_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_TREASURE_CHEST))
+            {
+                LootPool TOPAZ_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.TOPAZ_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-			insert(new LootTableInsert(ALEXANDRITE,
-					new Identifier("minecraft", "blocks/deepslate_coal_ore")
-			));
+                tableBuilder.pool(TOPAZ_JUJU);
+            }
 
-			FabricLootPoolBuilder CORUNDUM = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.CORUNDUM))
-					.withCondition(RandomChanceLootCondition.builder(deepslateCoalDropGems).build());
+            if(id.equals(LootTables.BURIED_TREASURE_CHEST) ||
+                    id.equals(LootTables.STRONGHOLD_LIBRARY_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_SUPPLY_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_MAP_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_TREASURE_CHEST))
+            {
+                LootPool ALEXANDRITE_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.ALEXANDRITE_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-			insert(new LootTableInsert(CORUNDUM,
-					new Identifier("minecraft", "blocks/deepslate_coal_ore")
-			));
+                tableBuilder.pool(ALEXANDRITE_JUJU);
+            }
 
-			FabricLootPoolBuilder SAPPHIRE = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.SAPPHIRE))
-					.withCondition(RandomChanceLootCondition.builder(deepslateCoalDropGems).build());
+            if(id.equals(LootTables.NETHER_BRIDGE_CHEST) ||
+                    id.equals(LootTables.RUINED_PORTAL_CHEST) ||
+                    id.equals(LootTables.BURIED_TREASURE_CHEST))
+            {
+                LootPool CORUNDUM_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.CORUNDUM_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-			insert(new LootTableInsert(SAPPHIRE,
-					new Identifier("minecraft", "blocks/deepslate_coal_ore")
-			));
+                tableBuilder.pool(CORUNDUM_JUJU);
+            }
 
-			FabricLootPoolBuilder SPINEL = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.SPINEL))
-					.withCondition(RandomChanceLootCondition.builder(deepslateCoalDropGems).build());
+            if(id.equals(LootTables.NETHER_BRIDGE_CHEST) ||
+                    id.equals(LootTables.BURIED_TREASURE_CHEST))
+            {
+                LootPool SAPPHIRE_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.SAPPHIRE_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-			insert(new LootTableInsert(SPINEL,
-					new Identifier("minecraft", "blocks/deepslate_coal_ore")
-			));
+                tableBuilder.pool(SAPPHIRE_JUJU);
+            }
 
-			FabricLootPoolBuilder CARBONADO = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.CARBONADO))
-					.withCondition(RandomChanceLootCondition.builder(deepslateCoalDropGems).build());
+            if(id.equals(LootTables.PILLAGER_OUTPOST_CHEST) ||
+                    id.equals(LootTables.NETHER_BRIDGE_CHEST) ||
+                    id.equals(LootTables.BASTION_TREASURE_CHEST))
+            {
+                LootPool SPINEL_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.SPINEL_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-			insert(new LootTableInsert(CARBONADO,
-					new Identifier("minecraft", "blocks/deepslate_coal_ore")
-			));
+                tableBuilder.pool(SPINEL_JUJU);
+            }
 
-			FabricLootPoolBuilder MOISSANITE = FabricLootPoolBuilder.builder()
-					.rolls(ConstantLootNumberProvider.create(1))
-					.with(ItemEntry.builder(ItemInit.MOISSANITE))
-					.withCondition(RandomChanceLootCondition.builder(deepslateCoalDropGems).build());
+            if(id.equals(LootTables.END_CITY_TREASURE_CHEST) ||
+                    id.equals(LootTables.NETHER_BRIDGE_CHEST) ||
+                    id.equals(LootTables.BASTION_TREASURE_CHEST))
+            {
+                LootPool CARBONADO_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.CARBONADO_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-			insert(new LootTableInsert(MOISSANITE,
-					new Identifier("minecraft", "blocks/deepslate_coal_ore")
-			));
-		}
+                tableBuilder.pool(CARBONADO_JUJU);
+            }
 
+            if(id.equals(LootTables.BASTION_TREASURE_CHEST) ||
+                    id.equals(LootTables.BASTION_BRIDGE_CHEST) ||
+                    id.equals(LootTables.BASTION_HOGLIN_STABLE_CHEST) ||
+                    id.equals(LootTables.BASTION_OTHER_CHEST))
+            {
+                LootPool MOISSANITE_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.MOISSANITE_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-		// Insert treasure bags into vanilla chests
-		FabricLootPoolBuilder TREASURE_BAG = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.TREASURE_BAG))
-				.withCondition(RandomChanceLootCondition.builder(treasueBagChance).build());
+                tableBuilder.pool(MOISSANITE_JUJU);
+            }
 
-		insert(new LootTableInsert(TREASURE_BAG,
-				new Identifier("minecraft", "chests/desert_pyramid"),
-				new Identifier("minecraft", "chests/jungle_temple")
-		));
+            if(id.equals(LootTables.STRONGHOLD_CORRIDOR_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_SUPPLY_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_MAP_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_TREASURE_CHEST) ||
+                    id.equals(LootTables.BURIED_TREASURE_CHEST))
+            {
+                LootPool EMERALD_JUJU = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.EMERALD_JUJU))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(jujuChance).build())
+                        .build();
 
-
-
-		// Insert jujus into vanilla chests
-		FabricLootPoolBuilder CITRINE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.CITRINE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(CITRINE_JUJU,
-				new Identifier("minecraft", "chests/desert_pyramid"),
-				new Identifier("minecraft", "chests/abandoned_mineshaft"),
-				new Identifier("minecraft", "gameplay/fishing/treasure")
-		));
-
-		FabricLootPoolBuilder TOURMALINE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.TOURMALINE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(TOURMALINE_JUJU,
-				new Identifier("minecraft", "chests/jungle_temple"),
-				new Identifier("minecraft", "chests/underwater_ruin_big"),
-				new Identifier("minecraft", "chests/underwater_ruin_small"),
-				new Identifier("minecraft", "gameplay/fishing/treasure")
-		));
-
-		FabricLootPoolBuilder KUNZITE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.KUNZITE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(KUNZITE_JUJU,
-				new Identifier("minecraft", "chests/simple_dungeon"),
-				new Identifier("minecraft", "chests/underwater_ruin_big"),
-				new Identifier("minecraft", "chests/underwater_ruin_small"),
-				new Identifier("minecraft", "gameplay/fishing/treasure")
-		));
-
-		FabricLootPoolBuilder TOPAZ_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.TOPAZ_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(TOPAZ_JUJU,
-				new Identifier("minecraft", "chests/buried_treasure"),
-				new Identifier("minecraft", "chests/stronghold_corridor"),
-				new Identifier("minecraft", "chests/shipwreck_supply"),
-				new Identifier("minecraft", "chests/shipwreck_map"),
-				new Identifier("minecraft", "chests/shipwreck_treasure")
-		));
-
-		FabricLootPoolBuilder ALEXANDRITE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.ALEXANDRITE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(ALEXANDRITE_JUJU,
-				new Identifier("minecraft", "chests/buried_treasure"),
-				new Identifier("minecraft", "chests/stronghold_library"),
-				new Identifier("minecraft", "chests/shipwreck_supply"),
-				new Identifier("minecraft", "chests/shipwreck_map"),
-				new Identifier("minecraft", "chests/shipwreck_treasure")
-		));
-
-		FabricLootPoolBuilder CORUNDUM_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.CORUNDUM_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(CORUNDUM_JUJU,
-				new Identifier("minecraft", "chests/nether_bridge"),
-				new Identifier("minecraft", "chests/ruined_portal"),
-				new Identifier("minecraft", "chests/buried_treasure")
-		));
-
-		FabricLootPoolBuilder SAPPHIRE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.SAPPHIRE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(SAPPHIRE_JUJU,
-				new Identifier("minecraft", "chests/nether_bridge"),
-				new Identifier("minecraft", "chests/buried_treasure")
-		));
-
-		FabricLootPoolBuilder SPINEL_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.SPINEL_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(SPINEL_JUJU,
-				new Identifier("minecraft", "chests/pillager_outpost"),
-				new Identifier("minecraft", "chests/nether_bridge"),
-				new Identifier("minecraft", "chests/bastion_treasure")
-		));
-
-		FabricLootPoolBuilder CARBONADO_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.CARBONADO_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(CARBONADO_JUJU,
-				new Identifier("minecraft", "chests/end_city_treasure"),
-				new Identifier("minecraft", "chests/nether_bridge"),
-				new Identifier("minecraft", "chests/bastion_treasure")
-		));
-
-		FabricLootPoolBuilder MOISSANITE_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.MOISSANITE_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(MOISSANITE_JUJU,
-				new Identifier("minecraft", "chests/bastion_treasure"),
-				new Identifier("minecraft", "chests/bastion_bridge"),
-				new Identifier("minecraft", "chests/bastion_hoglin_stable"),
-				new Identifier("minecraft", "chests/bastion_other")
-		));
-
-		FabricLootPoolBuilder EMERALD_JUJU = FabricLootPoolBuilder.builder()
-				.rolls(ConstantLootNumberProvider.create(1))
-				.with(ItemEntry.builder(ItemInit.EMERALD_JUJU))
-				.withCondition(RandomChanceLootCondition.builder(jujuChance).build());
-
-		insert(new LootTableInsert(EMERALD_JUJU,
-				new Identifier("minecraft", "chests/buried_treasure"),
-				new Identifier("minecraft", "chests/stronghold_corridor"),
-				new Identifier("minecraft", "chests/shipwreck_supply"),
-				new Identifier("minecraft", "chests/shipwreck_map"),
-				new Identifier("minecraft", "chests/shipwreck_treasure")
-		));
-
-
-		LootTableLoadingCallback.EVENT.register(((resourceManager, lootManager, identifier, supplier, lootTableSetter) -> {
-			INSERTS.forEach(i->{
-				if(ArrayUtils.contains(i.tables, identifier))
-				{
-					i.insert(supplier);
-				}
-			});
-		}));
-	}
-
-	public static void insert(LootTableInsert insert)
-	{
-		INSERTS.add(insert);
-	}
-
-	public static class LootTableInsert
-	{
-		public final Identifier[] tables;
-		public final FabricLootPoolBuilder lootPool;
-
-		public LootTableInsert(FabricLootPoolBuilder lootPool, Identifier... tables)
-		{
-			this.tables = tables;
-			this.lootPool = lootPool;
-		}
-
-		public void insert(FabricLootSupplierBuilder supplier)
-		{
-			supplier.pool(lootPool);
-		}
-	}
+                tableBuilder.pool(EMERALD_JUJU);
+            }
+        });
+    }
 }

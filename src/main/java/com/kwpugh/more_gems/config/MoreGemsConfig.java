@@ -14,14 +14,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     @Config(name = "ores")
     public static class Ores implements ConfigData 
     {
-		@Comment("***********************"
-				+"\nNo ore gen solution"
-				+"\n- gem drops from Coal ores"
-				+"\n***********************")
-		public boolean enableCoalGemDrops = false;
-		public float coalDropGemsChance = .03F;
-		public float deepslateCoalDropGemsChance = .03F;
-
 	    @Comment("***********************"
 	    		+"\nCitrine Ores"
 	    		+"\n***********************")
@@ -139,6 +131,17 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     @Config(name = "general")
 	public static class General implements ConfigData
 	{
+		@Comment("\n"
+				+"\n"
+				+"\n"
+				+"******************************"
+				+"\nBow Zoom Multiplier"
+				+"\n- vanilla bow value = .15F"
+				+"\n- pretty good value = .45F"
+				+"\n- awesome value = .75F"
+				+"\n******************************")
+		public float bowZoomMultiplier = .45F;
+
 		@Comment("********"
 				+"\nSharpening Gems"
 				+"\n********")

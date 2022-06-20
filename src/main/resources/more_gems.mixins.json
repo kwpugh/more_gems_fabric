@@ -5,20 +5,21 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "CreeperEntityMixin",
-    "WanderingTraderEntityMixin",
     "EnchantmentTargetMixin",
     "EntityMixinFireFreeze",
     "HoglinEntityMixin",
     "ItemMixinBlinking",
-    "LivingEntityMixinWisdom",
     "LivingEntityMixinBreathing",
+    "LivingEntityMixinWisdom",
     "MiningToolItemMixin",
     "PiglinBrainMixin",
     "PlayerEntityMixin",
     "RavagerEntityMixin",
-    "StatusEffectMixin"
+    "StatusEffectMixin",
+    "WanderingTraderEntityMixin"
   ],
   "client": [
+    "AbstractClientPlayerEntityMixin",
     "BackgroundRendererMixin"
   ],
   "injectors": {
