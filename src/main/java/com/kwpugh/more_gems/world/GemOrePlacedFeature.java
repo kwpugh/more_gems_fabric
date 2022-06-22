@@ -2,17 +2,21 @@ package com.kwpugh.more_gems.world;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.config.MoreGemsConfig;
-import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.biome.v1.*;
+import net.minecraft.tag.BiomeTags;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.feature.OreFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
+import java.util.function.BiConsumer;
 
 public class GemOrePlacedFeature
 {
@@ -119,14 +123,4 @@ public class GemOrePlacedFeature
         return modifiers(RarityFilterPlacementModifier.of(chance), heightModifier);
     }
 }
-
-
-//    // Custom predicate to deal with hardcoded weirdness in vanilla, instead of BiomeSelectors.foundInOverworld()
-//    public static Predicate<BiomeSelectionContext> customSelection()
-//    {
-//        return context -> !NetherBiomes.canGenerateInNether(context.getBiomeKey()) &&
-//                !TheEndBiomes.canGenerateInTheEnd(context.getBiomeKey()) &&
-//                context.getBiome().getCategory() != Biome.Category.NONE;
-//    }
-//
 
