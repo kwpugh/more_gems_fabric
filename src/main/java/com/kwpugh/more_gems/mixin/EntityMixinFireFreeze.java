@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.mixin;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.EnchantmentInit;
 import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.util.PlayerEquipUtil;
@@ -33,7 +34,12 @@ public abstract class EntityMixinFireFreeze
             PlayerEntity player = (PlayerEntity) entity;
 
             if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOPAZ_JUJU) ||
-                    PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU) ||
+                    PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU))
+            {
+                cir.setReturnValue(true);
+            }
+
+            if(MoreGems.CONFIG.GENERAL.enableJujuCrownPowers &&
                     PlayerEquipUtil.isWearingCrown(player))
             {
                 cir.setReturnValue(true);

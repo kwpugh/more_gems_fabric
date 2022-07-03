@@ -1,5 +1,7 @@
 package com.kwpugh.more_gems.items.special;
 
+import com.kwpugh.more_gems.MoreGems;
+import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.util.EnableUtil;
 import com.kwpugh.more_gems.util.PlayerEquipUtil;
 import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
@@ -37,7 +39,7 @@ public class CrownGem extends ArmorItem
     {
         if(entity instanceof PlayerEntity player)
         {
-            if(PlayerEquipUtil.isWearingCrown(player))
+            if(PlayerEquipUtil.isWearingCrown(player) && MoreGems.CONFIG.GENERAL.enableJujuCrownPowers)
             {
                 player.addStatusEffect(effect);
                 player.addStatusEffect(effect2);
@@ -54,6 +56,13 @@ public class CrownGem extends ArmorItem
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
     {
-        tooltip.add(Text.translatable("item.more_gems.crown_gem.tip1").formatted(Formatting.GREEN));
+        if(MoreGems.CONFIG.GENERAL.enableJujuCrownPowers)
+        {
+            tooltip.add(Text.translatable("item.more_gems.crown_gem.tip1").formatted(Formatting.GREEN));
+        }
+        else
+        {
+            tooltip.add(Text.translatable("item.more_gems.crown_gem.tip2").formatted(Formatting.RED));
+        }
     }
 }

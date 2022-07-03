@@ -155,6 +155,11 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableMoissaniteDocileHoglin = true;
 
 		@Comment("********"
+				+"\nJuju Crown"
+				+"\n********")
+		public boolean enableJujuCrownPowers = true;
+
+		@Comment("********"
 				+"\nTreasure Bags"
 				+"\n********")
 		public float treasureBagChance = .015F;

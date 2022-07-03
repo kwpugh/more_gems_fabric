@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.mixin;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.util.PlayerEquipUtil;
 import net.minecraft.entity.Entity;
@@ -33,7 +34,12 @@ public abstract class LivingEntityMixinBreathing extends Entity
         {
             PlayerEntity player = (PlayerEntity) livingEntity;
 
-            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.ALEXANDRITE_JUJU) ||
+            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.ALEXANDRITE_JUJU))
+            {
+                cir.setReturnValue(true);
+            }
+
+            if(MoreGems.CONFIG.GENERAL.enableJujuCrownPowers &&
                     PlayerEquipUtil.isWearingCrown(player))
             {
                 cir.setReturnValue(true);

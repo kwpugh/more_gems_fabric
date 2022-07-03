@@ -271,7 +271,8 @@
 	"item.more_gems.crown": "Gold Crown",
 	"item.more_gems.crown.tip1": "A simple gold crown",
 	"item.more_gems.crown_gem": "Juju Gold Crown",
-	"item.more_gems.crown_gem.tip1": "A gold crown with Juju",
+	"item.more_gems.crown_gem.tip1": "A gold crown with Juju Power",
+	"item.more_gems.crown_gem.tip2": "Juju powers disabled",
 
 	"item.more_gems.treasure_bag": "Treasure Bag",
 	"item.more_gems.treasure_bag.tip1": "Right-click for a prize",
