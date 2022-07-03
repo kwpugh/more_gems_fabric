@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "abc",
+    "dge",
+    " f "
+  ],
+  "key": {
+    "a": {
+      "item": "more_gems:alexandrite_juju"
+    },
+    "b": {
+      "item": "more_gems:carbonado_juju"
+    },
+    "c": {
+      "item": "more_gems:spinel_juju"
+    },
+    "d": {
+      "item": "more_gems:kunzite_juju"
+    },
+    "e": {
+      "item": "more_gems:topaz_juju"
+    },
+    "f": {
+      "item": "more_gems:moissanite_juju"
+    },
+    "g": {
+      "item": "more_gems:crown"
+    }
+  },
+  "result": {
+    "item": "more_gems:crown_gem"
+  }
+}

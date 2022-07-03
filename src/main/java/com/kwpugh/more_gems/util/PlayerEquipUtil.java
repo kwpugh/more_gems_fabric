@@ -1,5 +1,7 @@
 package com.kwpugh.more_gems.util;
 
+import com.kwpugh.more_gems.init.ItemInit;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
@@ -7,6 +9,19 @@ import net.minecraft.item.ItemStack;
 
 public final class PlayerEquipUtil
 {
+	public static boolean isWearingCrown(PlayerEntity player)
+	{
+		ItemStack head = player.getEquippedStack(EquipmentSlot.HEAD);
+
+		//Full Set
+		if(head.getItem() == ItemInit.CROWN_GEM)
+		{
+			return true;
+		}
+
+		return false;
+	}
+
 	// Generalized check for itemstack in inventory
 	public static boolean hasItemInInventory(PlayerEntity player, Item item)
 	{

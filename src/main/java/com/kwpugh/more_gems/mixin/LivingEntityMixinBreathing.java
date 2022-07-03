@@ -33,7 +33,8 @@ public abstract class LivingEntityMixinBreathing extends Entity
         {
             PlayerEntity player = (PlayerEntity) livingEntity;
 
-            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.ALEXANDRITE_JUJU))
+            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.ALEXANDRITE_JUJU) ||
+                    PlayerEquipUtil.isWearingCrown(player))
             {
                 cir.setReturnValue(true);
             }

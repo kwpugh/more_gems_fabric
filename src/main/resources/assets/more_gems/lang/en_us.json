@@ -268,6 +268,11 @@
 	"item.more_gems.moissanite_juju.tip2": "Restores health while in lava",
 	"item.more_gems.moissanite_juju.tip3": "Hoglins will not attack",
 
+	"item.more_gems.crown": "Gold Crown",
+	"item.more_gems.crown.tip1": "A simple gold crown",
+	"item.more_gems.crown_gem": "Juju Gold Crown",
+	"item.more_gems.crown_gem.tip1": "A gold crown with Juju",
+
 	"item.more_gems.treasure_bag": "Treasure Bag",
 	"item.more_gems.treasure_bag.tip1": "Right-click for a prize",
 
