@@ -230,6 +230,7 @@ public class ItemInit
 
 	public static final Item CROWN = new ModArmor(ArmorMaterials.GOLD, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CROWN_GEM = new CrownGem(ArmorMaterials.GOLD, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CROWN_NETHERITE_GEM = new CrownNetheriteGem(ArmorMaterials.NETHERITE, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item SHARPENING_GEM = new SharpeningGem((new Item.Settings()).maxCount(64).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SHARPENING_GEM_GREATER = new SharpeningGemGreater((new Item.Settings()).maxCount(64).group(MoreGems.MORE_GEMS_GROUP));
@@ -422,6 +423,7 @@ public class ItemInit
 
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "crown"), CROWN);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "crown_gem"), CROWN_GEM);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "crown_netherite_gem"), CROWN_NETHERITE_GEM);
 
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sharpening_gem"), SHARPENING_GEM);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sharpening_gem_greater"), SHARPENING_GEM_GREATER);

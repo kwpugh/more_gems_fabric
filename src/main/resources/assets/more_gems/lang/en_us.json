@@ -273,6 +273,9 @@
 	"item.more_gems.crown_gem": "Juju Gold Crown",
 	"item.more_gems.crown_gem.tip1": "A gold crown with Juju Power",
 	"item.more_gems.crown_gem.tip2": "Juju powers disabled",
+	"item.more_gems.crown_netherite_gem": "Juju Netherite Crown",
+	"item.more_gems.crown_netherite_gem.tip1": "A netherite crown with Juju Power",
+	"item.more_gems.crown_netherite_gem.tip2": "Juju powers disabled",
 
 	"item.more_gems.treasure_bag": "Treasure Bag",
 	"item.more_gems.treasure_bag.tip1": "Right-click for a prize",

@@ -14,7 +14,8 @@ public final class PlayerEquipUtil
 		ItemStack head = player.getEquippedStack(EquipmentSlot.HEAD);
 
 		//Full Set
-		if(head.getItem() == ItemInit.CROWN_GEM)
+		if(head.getItem() == ItemInit.CROWN_GEM ||
+			head.getItem() == ItemInit.CROWN_NETHERITE_GEM)
 		{
 			return true;
 		}

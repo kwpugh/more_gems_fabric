@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "abc",
+    "dfe",
+    "ggg"
+  ],
+  "key": {
+    "a": {
+      "item": "more_gems:tourmaline_juju"
+    },
+    "b": {
+      "item": "more_gems:sapphire_juju"
+    },
+    "c": {
+      "item": "more_gems:citrine_juju"
+    },
+    "d": {
+      "item": "more_gems:emerald_juju"
+    },
+    "e": {
+      "item": "more_gems:corundum_juju"
+    },
+    "f": {
+      "item": "more_gems:crown_gem"
+    },
+    "g": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "more_gems:crown_netherite_gem"
+  }
+}
