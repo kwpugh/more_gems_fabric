@@ -2,6 +2,7 @@ package com.kwpugh.more_gems.mixin;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.EnchantmentInit;
+import com.kwpugh.more_gems.util.PlayerEquipUtil;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -50,6 +51,18 @@ public abstract class RavagerEntityMixin extends RaiderEntity
                 if (EnchantmentHelper.getLevel(EnchantmentInit.BENEVOLENCE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
                 {
                     this.stunTick++;
+                    ci.cancel();
+                }
+
+                if(MoreGems.CONFIG.GENERAL.enableJujuCrownNetheritePowers &&
+                        PlayerEquipUtil.isWearingCrownNetherite(player))
+                {
+                    ci.cancel();
+                }
+
+                if(MoreGems.CONFIG.GENERAL.enableJujuCrownPowers &&
+                        PlayerEquipUtil.isWearingCrown(player))
+                {
                     ci.cancel();
                 }
             }

@@ -16,6 +16,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
+// Also has water/lava walking defined via LivingEntityMixinTravel
 public class FallingCorundumJuju extends BaseJujuItem
 {
 	public FallingCorundumJuju(Settings settings)

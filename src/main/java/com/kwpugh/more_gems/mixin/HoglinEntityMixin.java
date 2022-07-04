@@ -55,11 +55,25 @@ public abstract class HoglinEntityMixin
                     {
                         ci.cancel();
                     }
-                    if (EnchantmentHelper.getLevel(EnchantmentInit.BENEVOLENCE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
+                    if(EnchantmentHelper.getLevel(EnchantmentInit.BENEVOLENCE, player.getEquippedStack(EquipmentSlot.LEGS)) > 0)
+                    {
+                        ci.cancel();
+                    }
+
+                    if(MoreGems.CONFIG.GENERAL.enableJujuCrownNetheritePowers &&
+                            PlayerEquipUtil.isWearingCrownNetherite(player))
+                    {
+                        ci.cancel();
+                    }
+
+                    if(MoreGems.CONFIG.GENERAL.enableJujuCrownPowers &&
+                            PlayerEquipUtil.isWearingCrown(player))
                     {
                         ci.cancel();
                     }
                 }
+
+
             }
         }
     }

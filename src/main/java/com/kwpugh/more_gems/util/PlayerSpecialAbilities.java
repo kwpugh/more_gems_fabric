@@ -230,6 +230,11 @@ public class PlayerSpecialAbilities
 			{
 				player.removeStatusEffect(StatusEffects.INSTANT_DAMAGE);
 			}
+
+			if(player.hasStatusEffect(StatusEffects.DARKNESS))
+			{
+				player.removeStatusEffect(StatusEffects.DARKNESS);
+			}
 		}
 	}
 }

@@ -44,6 +44,9 @@ public class TreasureBag extends Item
         createEntry(Enchantments.LOOTING, 2);
         createEntry(Enchantments.INFINITY, 1);
         createEntry(Enchantments.UNBREAKING, 2);
+        createEntry(Enchantments.SWIFT_SNEAK, 1);
+        createEntry(Enchantments.SWIFT_SNEAK, 2);
+        createEntry(Enchantments.SWIFT_SNEAK, 3);
         createEntry(EnchantmentInit.BLINKING, 1);
         createEntry(EnchantmentInit.CREEPERLESS, 1);
         createEntry(EnchantmentInit.OBSIDIANATOR, 1);

@@ -20,15 +20,15 @@ import java.util.List;
 
 public class CrownNetheriteGem extends ArmorItem
 {
-    StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 8, 0, false, false);
-    StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 8, 0, false, false);
-    StatusEffectInstance effect3 = new StatusEffectInstance(StatusEffects.HASTE, 8, 1, false, false);
-    StatusEffectInstance effect4 = new StatusEffectInstance(StatusEffects.SPEED, 8, 1, false, false);
-    StatusEffectInstance effect5 = new StatusEffectInstance(StatusEffects.STRENGTH, 8, 2, false, false);
-    StatusEffectInstance effect6 = new StatusEffectInstance(StatusEffects.NIGHT_VISION, 8, 0, false, false);
-    StatusEffectInstance effect7 = new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, 8, 0, false, false);
-    StatusEffectInstance effect8 = new StatusEffectInstance(StatusEffects.SLOW_FALLING, 8, 0, false, false);
-    StatusEffectInstance effect9 = new StatusEffectInstance(StatusEffects.SATURATION, 8, 0, false, false);
+    StatusEffectInstance conduit = new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 8, 0, false, false);
+    StatusEffectInstance dolphin = new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 8, 0, false, false);
+    StatusEffectInstance haste = new StatusEffectInstance(StatusEffects.HASTE, 8, 1, false, false);
+    StatusEffectInstance speed = new StatusEffectInstance(StatusEffects.SPEED, 8, 1, false, false);
+    StatusEffectInstance strength = new StatusEffectInstance(StatusEffects.STRENGTH, 8, 2, false, false);
+    StatusEffectInstance vision = new StatusEffectInstance(StatusEffects.NIGHT_VISION, 8, 0, false, false);
+    StatusEffectInstance hero = new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, 8, 0, false, false);
+    StatusEffectInstance falling = new StatusEffectInstance(StatusEffects.SLOW_FALLING, 8, 0, false, false);
+    StatusEffectInstance saturation = new StatusEffectInstance(StatusEffects.SATURATION, 8, 0, false, false);
 
     public CrownNetheriteGem(ArmorMaterial material, EquipmentSlot slot, Settings settings)
     {
@@ -42,15 +42,15 @@ public class CrownNetheriteGem extends ArmorItem
         {
             if(PlayerEquipUtil.isWearingCrownNetherite(player) && MoreGems.CONFIG.GENERAL.enableJujuCrownPowers)
             {
-                player.addStatusEffect(effect);
-                player.addStatusEffect(effect2);
-                player.addStatusEffect(effect3);
-                player.addStatusEffect(effect4);
-                player.addStatusEffect(effect5);
-                player.addStatusEffect(effect6);
-                player.addStatusEffect(effect7);
-                player.addStatusEffect(effect8);
-                player.addStatusEffect(effect9);
+                player.addStatusEffect(conduit);
+                player.addStatusEffect(dolphin);
+                player.addStatusEffect(haste);
+                player.addStatusEffect(speed);
+                player.addStatusEffect(strength);
+                player.addStatusEffect(vision);
+                player.addStatusEffect(hero);
+                player.addStatusEffect(falling);
+                player.addStatusEffect(saturation);
 
                 PlayerSpecialAbilities.givePhoenixEffect(world, player);
                 PlayerSpecialAbilities.giveCuringEffect(world, player);
