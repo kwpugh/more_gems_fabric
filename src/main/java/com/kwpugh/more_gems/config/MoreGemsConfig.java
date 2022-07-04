@@ -158,6 +158,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\nJuju Crown"
 				+"\n********")
 		public boolean enableJujuCrownPowers = true;
+		public boolean enableJujuCrownNetheritePowers = true;
 
 		@Comment("********"
 				+"\nTreasure Bags"

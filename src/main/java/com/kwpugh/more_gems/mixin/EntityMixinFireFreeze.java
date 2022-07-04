@@ -33,14 +33,20 @@ public abstract class EntityMixinFireFreeze
         {
             PlayerEntity player = (PlayerEntity) entity;
 
-            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOPAZ_JUJU) ||
-                    PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU))
+            if(MoreGems.CONFIG.GENERAL.enableJujuCrownNetheritePowers &&
+                    PlayerEquipUtil.isWearingCrownNetherite(player))
             {
                 cir.setReturnValue(true);
             }
 
             if(MoreGems.CONFIG.GENERAL.enableJujuCrownPowers &&
                     PlayerEquipUtil.isWearingCrown(player))
+            {
+                cir.setReturnValue(true);
+            }
+
+            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOPAZ_JUJU) ||
+                    PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU))
             {
                 cir.setReturnValue(true);
             }

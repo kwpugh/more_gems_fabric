@@ -34,13 +34,19 @@ public abstract class LivingEntityMixinBreathing extends Entity
         {
             PlayerEntity player = (PlayerEntity) livingEntity;
 
-            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.ALEXANDRITE_JUJU))
+            if(MoreGems.CONFIG.GENERAL.enableJujuCrownNetheritePowers &&
+                    PlayerEquipUtil.isWearingCrownNetherite(player))
             {
                 cir.setReturnValue(true);
             }
 
             if(MoreGems.CONFIG.GENERAL.enableJujuCrownPowers &&
                     PlayerEquipUtil.isWearingCrown(player))
+            {
+                cir.setReturnValue(true);
+            }
+
+            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.ALEXANDRITE_JUJU))
             {
                 cir.setReturnValue(true);
             }

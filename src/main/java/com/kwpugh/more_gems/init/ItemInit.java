@@ -249,7 +249,6 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado"), CARBONADO);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite"), MOISSANITE);
 
-
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_sword"), CITRINE_SWORD);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_pickaxe"), CITRINE_PICKAXE);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_axe"), CITRINE_AXE);
@@ -321,7 +320,6 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_bow"), CARBONADO_BOW);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_bow"), MOISSANITE_BOW);
 
-
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_hammer"), CITRINE_HAMMER);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_hammer"), TOURMALINE_HAMMER);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_hammer"), KUNZITE_HAMMER);
@@ -332,7 +330,6 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_hammer"), SPINEL_HAMMER);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_hammer"), CARBONADO_HAMMER);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_hammer"), MOISSANITE_HAMMER);
-
 
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_excavator"), CITRINE_EXCAVATOR);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_excavator"), TOURMALINE_EXCAVATOR);
@@ -345,7 +342,6 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_excavator"), CARBONADO_EXCAVATOR);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_excavator"), MOISSANITE_EXCAVATOR);
 
-
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_paxel"), CITRINE_PAXEL);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_paxel"), TOURMALINE_PAXEL);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_paxel"), KUNZITE_PAXEL);
@@ -356,7 +352,6 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_paxel"), SPINEL_PAXEL);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_paxel"), CARBONADO_PAXEL);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_paxel"), MOISSANITE_PAXEL);
-
 
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_helmet"), CITRINE_HELMET);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_chestplate"), CITRINE_CHESTPLATE);

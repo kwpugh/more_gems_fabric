@@ -40,7 +40,7 @@ public class CrownNetheriteGem extends ArmorItem
     {
         if(entity instanceof PlayerEntity player)
         {
-            if(PlayerEquipUtil.isWearingCrown(player) && MoreGems.CONFIG.GENERAL.enableJujuCrownPowers)
+            if(PlayerEquipUtil.isWearingCrownNetherite(player) && MoreGems.CONFIG.GENERAL.enableJujuCrownPowers)
             {
                 player.addStatusEffect(effect);
                 player.addStatusEffect(effect2);

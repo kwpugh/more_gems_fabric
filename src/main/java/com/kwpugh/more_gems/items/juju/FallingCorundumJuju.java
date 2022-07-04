@@ -55,5 +55,6 @@ public class FallingCorundumJuju extends BaseJujuItem
 		tooltip.add(Text.translatable("item.more_gems.corundum_juju.tip1").formatted(Formatting.GREEN));
 		tooltip.add(Text.translatable("item.more_gems.juju.no_sneak").formatted(Formatting.BLUE));
 		tooltip.add(Text.translatable("itme.more_gems.enable_status", EnableUtil.isEnabled(itemStack)).formatted(Formatting.GOLD));
+		tooltip.add(Text.translatable("item.more_gems.corundum_juju.tip2").formatted(Formatting.YELLOW));
 	}
 }
