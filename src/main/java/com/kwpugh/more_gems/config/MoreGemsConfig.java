@@ -142,6 +142,17 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\n******************************")
 		public float bowZoomMultiplier = .45F;
 
+		@Comment("\n"
+				+"\n"
+				+"\n"
+				+"******************************"
+				+"\nGlobal Gem Bow Settings"
+				+"\n******************************")
+		public float projectileSpeed = 6.0F;
+		public double projectileDamageFactorFirst = 0.20D;
+		public double projectileDamageFactorSecond = 0.5D;
+		public float projectileDivergence = 0.0F;
+
 		@Comment("********"
 				+"\nSharpening Gems"
 				+"\n********")

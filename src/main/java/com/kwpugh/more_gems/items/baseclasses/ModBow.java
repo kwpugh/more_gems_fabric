@@ -3,6 +3,7 @@ package com.kwpugh.more_gems.items.baseclasses;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import com.kwpugh.more_gems.MoreGems;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
@@ -22,6 +23,11 @@ import net.minecraft.world.World;
 
 public class ModBow extends BowItem
 {
+	public static float speed = MoreGems.CONFIG.GENERAL.projectileSpeed;
+	public static double damage1 = MoreGems.CONFIG.GENERAL.projectileDamageFactorFirst;
+	public static double damage2 = MoreGems.CONFIG.GENERAL.projectileDamageFactorSecond;
+	public static float divergence = MoreGems.CONFIG.GENERAL.projectileDivergence;
+
 	public ModBow(Settings settings)
 	{
 		super(settings);
@@ -51,7 +57,7 @@ public class ModBow extends BowItem
 					{
 						ArrowItem arrowItem = (ArrowItem) (itemStack.getItem() instanceof ArrowItem ? itemStack.getItem() : Items.ARROW);
 						PersistentProjectileEntity persistentProjectileEntity = arrowItem.createArrow(world, itemStack, playerEntity);
-						persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0F, f * 6.0F, 0.0F);
+						persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0F, f * speed, divergence);
 
 						if (f == 1.0F)
 						{
@@ -62,10 +68,8 @@ public class ModBow extends BowItem
 
 						if (j > 0)
 						{
-							persistentProjectileEntity.setDamage(persistentProjectileEntity.getDamage() + j * 0.5D + 0.5D);
+							persistentProjectileEntity.setDamage(persistentProjectileEntity.getDamage() + j * damage1 + damage2);
 						}
-
-						persistentProjectileEntity.setDamage(persistentProjectileEntity.getDamage() + j * 0.5D + 0.5D);
 
 						int k = EnchantmentHelper.getLevel(Enchantments.PUNCH, stack);
 
