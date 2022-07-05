@@ -118,6 +118,8 @@ public class PlayerSpecialAbilities
 	// Effects for Quickening Enchantment called my mixin
 	public static void giveQuickening(World world, LivingEntity player, Entity target, int level)
 	{
+		if(!MoreGems.CONFIG.GENERAL.enableQuickeningEffect) return;
+
 		if(!world.isClient)
 		{
 			// Slow down the enemy

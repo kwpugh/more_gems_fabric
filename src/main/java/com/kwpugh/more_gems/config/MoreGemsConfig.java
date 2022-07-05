@@ -182,6 +182,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***************"
 				+"\nEnchantment Settings"
 				+"\n***************")
+		public boolean enableQuickeningEffect = true;
 		public float amountYellowHeartsQuickening = 10;
 		public int durationQuickening = 40;
 		public int strengthLevelQuickening = 1;
