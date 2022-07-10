@@ -23,7 +23,7 @@ public abstract class LivingEntityMixinTravel extends Entity
 
     // For walk on water/lava feature to Corundum Juju
     @Inject(at = @At("HEAD"), method = "canWalkOnFluid", cancellable = true)
-    public void canWalkOnFluid(FluidState state, CallbackInfoReturnable<Boolean> cir)
+    public void moregemsCanWalkOnFluid(FluidState state, CallbackInfoReturnable<Boolean> cir)
     {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
 
