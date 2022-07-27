@@ -167,8 +167,6 @@ public class BaseOreBlock extends OreBlock
             spawnDim = "Overworld";
         }
     }
-
-
 }
 
 

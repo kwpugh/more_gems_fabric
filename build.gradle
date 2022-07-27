@@ -51,9 +51,9 @@ dependencies {
 //	modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${project.roughlyenoughitems}"
 //	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.roughlyenoughitems}"
 
-	modImplementation ("com.terraformersmc:modmenu:${project.modmenu}") {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
+//	modImplementation ("com.terraformersmc:modmenu:${project.modmenu}") {
+//		exclude(group: "net.fabricmc.fabric-api")
+//	}
 }
 
 processResources {

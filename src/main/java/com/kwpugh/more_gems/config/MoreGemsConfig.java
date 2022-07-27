@@ -153,6 +153,63 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public double projectileDamageFactorSecond = 0.5D;
 		public float projectileDivergence = 0.0F;
 
+		@Comment("\n"
+				+"\n"
+				+"\n"
+				+"******************************"
+				+"\nGem Arrow Settings"
+				+"\n- note: amplifer levels start at 0"
+				+"\n******************************")
+		public float citrineExtraDamage = 1.0F;
+		public byte citrinePierceLevel = 1;
+		public int citrinePunchLevel = 1;
+		public float tourmalineExtraDamage = 1.25F;
+		public byte tourmalinePierceLevel = 1;
+		public int tourmalinePunchLevel = 1;
+		public float kunziteExtraDamage = 1.5F;
+		public byte kunzitePierceLevel = 1;
+		public int kunzitePunchLevel = 1;
+		public float topazExtraDamage = 1.75F;
+		public byte topazPierceLevel = 1;
+		public int topazPunchLevel = 1;
+		public float alexandriteExtraDamage = 2.0F;
+		public byte alexandritePierceLevel = 1;
+		public int alexandritePunchLevel = 1;
+		public int alexandriteSlownessAmplifier = 0;
+		public int alexandriteSlownessDuration = 300;
+		public boolean alexandritePowderSnow = true;
+		public float corundumExtraDamage = 2.25F;
+		public byte corundumPierceLevel = 1;
+		public int corundumPunchLevel = 1;
+		public int corundumBlindnessAmplifier = 0;
+		public int corundumBlindnessDuration = 300;
+		public boolean corundumCobwebs = true;
+		public float sapphireExtraDamage = 2.5F;
+		public byte sapphirePierceLevel = 1;
+		public int sapphirePunchLevel = 1;
+		public int sapphireDarknessAmplifier = 0;
+		public int sapphireDarknessDuration = 300;
+		public boolean sapphireDarknessCloud = true;
+		public float spinelExtraDamage = 2.75F;
+		public byte spinelPierceLevel = 1;
+		public int spinelPunchLevel = 1;
+		public int spinelPoisonAmplifier = 0;
+		public int spinelPoisonDuration = 300;
+		public boolean spinelPoisonCloud = true;
+		public float carbonadoExtraDamage = 3.0F;
+		public byte carbonadoPierceLevel = 1;
+		public int carbonadoPunchLevel = 2;
+		public int carbonadoSlownessAmplifier = 1;
+		public int carbonadoSlownessDuration = 300;
+		public boolean carbonadoExplosion = true;
+		public int carbonadoExplosionFactor = 2;
+		public float moissaniteExtraDamage = 4.0F;
+		public byte moissanitePierceLevel = 2;
+		public int moissanitePunchLevel = 2;
+		public int moissaniteWitherAmplifier = 1;
+		public int moissaniteWitherDuration = 300;
+		public boolean moissaniteFireCloud = true;
+
 		@Comment("********"
 				+"\nSharpening Gems"
 				+"\n********")

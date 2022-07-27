@@ -3,6 +3,8 @@ package com.kwpugh.more_gems.init;
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.items.areatools.ModExcavator;
 import com.kwpugh.more_gems.items.areatools.ModHammer;
+import com.kwpugh.more_gems.items.areatools.ModHammerCrude;
+import com.kwpugh.more_gems.items.arrows.*;
 import com.kwpugh.more_gems.items.baseclasses.*;
 import com.kwpugh.more_gems.items.gembag.GemBase;
 import com.kwpugh.more_gems.items.juju.*;
@@ -120,7 +122,7 @@ public class ItemInit
 	public static final Item SPINEL_HAMMER = new ModHammer(SPINEL_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SPINEL_EXCAVATOR = new ModExcavator(SPINEL_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SPINEL_PAXEL = new ModPaxel(SPINEL_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	
+
 	public static final Item CARBONADO_SWORD = new ModSword(CARBONADO_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_BOW = new ModBow((new Item.Settings()).maxDamage(carbonadoBow).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_PICKAXE = new ModPickaxe(CARBONADO_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -135,11 +137,11 @@ public class ItemInit
 	public static final Item MOISSANITE_SHOVEL = new ModShovel(MOISSANITE_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item MOISSANITE_HOE = new ModHoe(MOISSANITE_TOOL_MATERIAL, -3, 0.0F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
 
-	public static final Item CITRINE_HAMMER = new ModHammer(CITRINE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item TOURMALINE_HAMMER = new ModHammer(TOURMALINE_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item KUNZITE_HAMMER = new ModHammer(KUNZITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item TOPAZ_HAMMER = new ModHammer(TOPAZ_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item ALEXANDRITE_HAMMER = new ModHammer(ALEXANDRITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CITRINE_HAMMER = new ModHammerCrude(CITRINE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOURMALINE_HAMMER = new ModHammerCrude(TOURMALINE_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_HAMMER = new ModHammerCrude(KUNZITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOPAZ_HAMMER = new ModHammerCrude(TOPAZ_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item ALEXANDRITE_HAMMER = new ModHammerCrude(ALEXANDRITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CORUNDUM_HAMMER = new ModHammer(CORUNDUM_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item SAPPHIRE_HAMMER = new ModHammer(SAPPHIRE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_HAMMER = new ModHammer(CARBONADO_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -164,6 +166,17 @@ public class ItemInit
 	public static final Item SAPPHIRE_PAXEL = new ModPaxel(SAPPHIRE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CARBONADO_PAXEL = new ModPaxel(CARBONADO_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item MOISSANITE_PAXEL = new ModPaxel(MOISSANITE_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
+
+	public static final Item CITRINE_ARROW = new CitrineArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOURMALINE_ARROW = new TourmalineArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item KUNZITE_ARROW = new KunziteArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOPAZ_ARROW = new TopazArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item ALEXANDRITE_ARROW = new AlexandriteArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CORUNDUM_ARROW = new CorundumArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SAPPHIRE_ARROW = new SapphireArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item SPINEL_ARROW = new SpinelArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item CARBONADO_ARROW = new CarbonadoArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item MOISSANITE_ARROW = new MoissaniteArrowItem((new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item CITRINE_HELMET = new ModArmor(CITRINE_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item CITRINE_CHESTPLATE = new ModArmor(CITRINE_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
@@ -319,6 +332,17 @@ public class ItemInit
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_bow"), SPINEL_BOW);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_bow"), CARBONADO_BOW);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_bow"), MOISSANITE_BOW);
+
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_arrow"), CITRINE_ARROW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_arrow"), TOURMALINE_ARROW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_arrow"), KUNZITE_ARROW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_arrow"), TOPAZ_ARROW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_arrow"), ALEXANDRITE_ARROW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_arrow"), CORUNDUM_ARROW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_arrow"), SAPPHIRE_ARROW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_arrow"), SPINEL_ARROW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_arrow"), CARBONADO_ARROW);
+		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_arrow"), MOISSANITE_ARROW);
 
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_hammer"), CITRINE_HAMMER);
 		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_hammer"), TOURMALINE_HAMMER);

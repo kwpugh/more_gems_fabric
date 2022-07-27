@@ -39,6 +39,7 @@ public class MoreGems implements ModInitializer
 		RecipeInit.registerRecipes();
 		BoundStackManager.init();
 		TreasureBag.initEnchantmentEntries();
+		EntityInit.registerEntities();
 	}
 
 	public static Identifier createID(String path)

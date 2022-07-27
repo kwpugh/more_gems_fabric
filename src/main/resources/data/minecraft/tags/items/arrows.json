@@ -1,0 +1,44 @@
+{
+  "values": [
+    {
+      "id": "more_gems:citrine_arrow",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_arrow",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_arrow",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_arrow",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_arrow",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_arrow",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_arrow",
+      "required": false
+    },
+    {
+      "id": "more_gems:spinel_arrow",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_arrow",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_arrow",
+      "required": false
+    }
+  ]
+}
