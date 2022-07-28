@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  g",
+    " s ",
+    "f  "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "f": {
+      "item": "minecraft:feather"
+    },
+    "g": {
+      "tag": "c:tourmaline"
+    }
+  },
+  "result": {
+    "item": "more_gems:tourmaline_arrow"
+  }
+}

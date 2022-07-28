@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  g",
+    " s ",
+    "f  "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "f": {
+      "item": "minecraft:feather"
+    },
+    "g": {
+      "tag": "c:topaz"
+    }
+  },
+  "result": {
+    "item": "more_gems:topaz_arrow"
+  }
+}
