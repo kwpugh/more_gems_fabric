@@ -23,8 +23,7 @@
       "com.kwpugh.more_gems.MoreGems"
     ],
     "client": [
-      "com.kwpugh.more_gems.MoreGemsClient",
-      "com.kwpugh.more_gems.items.baseclasses.BowClientRender"
+      "com.kwpugh.more_gems.MoreGemsClient"
     ]
   },
   "mixins": [

@@ -20,7 +20,6 @@
     "WanderingTraderEntityMixin"
   ],
   "client": [
-    "AbstractClientPlayerEntityMixin",
     "BackgroundRendererMixin"
   ],
   "injectors": {

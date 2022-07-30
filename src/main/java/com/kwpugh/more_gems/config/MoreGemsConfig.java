@@ -135,23 +135,26 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\n"
 				+"\n"
 				+"******************************"
+				+"\nGlobal Gem Bow Settings"
+				+"\n******************************")
+		public float projectileSpeed = 4.0F;
+		public float projectileDivergence = 0.0F;
+		public float projectileRoll = 0.0F;
+		public double projectilePowerDamageBonus = 0.60D;
+		public int projectileFlameBurnSeconds = 100;
+		public double projectileExtraDamage = 0.0D;
+		public int projectileDropRange = 15;
+
+		@Comment("\n"
+				+"\n"
+				+"\n"
+				+"******************************"
 				+"\nBow Zoom Multiplier"
 				+"\n- vanilla bow value = .15F"
 				+"\n- pretty good value = .45F"
 				+"\n- awesome value = .75F"
 				+"\n******************************")
 		public float bowZoomMultiplier = .45F;
-
-		@Comment("\n"
-				+"\n"
-				+"\n"
-				+"******************************"
-				+"\nGlobal Gem Bow Settings"
-				+"\n******************************")
-		public float projectileSpeed = 6.0F;
-		public double projectileDamageFactorFirst = 0.20D;
-		public double projectileDamageFactorSecond = 0.5D;
-		public float projectileDivergence = 0.0F;
 
 		@Comment("\n"
 				+"\n"
