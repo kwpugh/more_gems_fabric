@@ -138,7 +138,7 @@ public class ItemInit
 	public static final Item MOISSANITE_HOE = new ModHoe(MOISSANITE_TOOL_MATERIAL, -3, 0.0F, (new Item.Settings()).fireproof().group(MoreGems.MORE_GEMS_GROUP));
 
 	public static final Item CITRINE_HAMMER = new ModHammerCrude(CITRINE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
-	public static final Item TOURMALINE_HAMMER = new ModHammerCrude(TOURMALINE_TOOL_MATERIAL, -2, 0.0F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
+	public static final Item TOURMALINE_HAMMER = new ModHammerCrude(TOURMALINE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item KUNZITE_HAMMER = new ModHammerCrude(KUNZITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item TOPAZ_HAMMER = new ModHammerCrude(TOPAZ_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
 	public static final Item ALEXANDRITE_HAMMER = new ModHammerCrude(ALEXANDRITE_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(MoreGems.MORE_GEMS_GROUP));
