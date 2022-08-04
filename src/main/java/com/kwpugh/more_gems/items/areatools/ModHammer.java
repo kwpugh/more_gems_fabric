@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.items.areatools;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.util.ObsidianBreaking;
 import com.kwpugh.pugh_tools.Tools.Hammer;
 import net.minecraft.block.BlockState;
@@ -17,7 +18,7 @@ public class ModHammer extends Hammer
 {
     public ModHammer(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings)
     {
-        super(material, attackDamage, attackSpeed, settings);
+        super(material, attackDamage, attackSpeed, MoreGems.CONFIG.GENERAL.enableFullDamage, settings);
     }
 
     @Override

@@ -261,6 +261,14 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean boundReturnAll = false;
 
 		@Comment("\n"
+				+"\n"
+				+ "***********************"
+				+"\nFull Tool Damage"
+				+"\n- effects hammer/excavator"
+				+"\n***********************")
+		public boolean enableFullDamage = false;
+
+		@Comment("\n"
 				+ "\n"
 				+ "\n"
 				+ "******************************"

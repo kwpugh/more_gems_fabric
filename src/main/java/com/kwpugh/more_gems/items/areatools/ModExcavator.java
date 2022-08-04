@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.items.areatools;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.pugh_tools.Tools.Excavator;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
@@ -14,7 +15,7 @@ public class ModExcavator extends Excavator
 {
     public ModExcavator(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings)
     {
-        super(material, attackDamage, attackSpeed, settings);
+        super(material, attackDamage, attackSpeed, MoreGems.CONFIG.GENERAL.enableFullDamage, settings);
     }
 
     @Override
