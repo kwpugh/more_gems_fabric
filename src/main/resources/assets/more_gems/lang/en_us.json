@@ -344,10 +344,10 @@
 	"item.more_gems.arrow.fire_cloud": "Fire Cloud",
 	"item.more_gems.arrow.cobwebs": "Cobwebs",
 	"item.more_gems.arrow.powder_snow": "Powder Snow",
-	"item.more_gems.arrow.poison_cloud": "Poison Cloud",
+	"item.more_gems.arrow.poison_cloud": "Poison & Weakness Cloud",
 	"item.more_gems.arrow.explosion": "Explosion",
 	"item.more_gems.arrow.darkness": "Darkness to target",
-	"item.more_gems.arrow.darkness_cloud": "Darkness Cloud",
+	"item.more_gems.arrow.darkness_cloud": "Darkness & Lightning Cloud",
 
 	"item.more_gems.gembag": "Gem Bag",
 	"item.more_gems.gembag.tip": "Portable storage for your sparkly gems & more",

@@ -63,11 +63,14 @@ public class SpinelArrowEntity extends PersistentProjectileEntity
 
         if(MoreGems.CONFIG.GENERAL.spinelPoisonCloud)
         {
+            StatusEffectInstance weakness = new StatusEffectInstance(StatusEffects.WEAKNESS, MoreGems.CONFIG.GENERAL.spinelPoisonDuration, MoreGems.CONFIG.GENERAL.spinelPoisonAmplifier);
+
             this.cloud = new AreaEffectCloudEntity(target.world, target.getX(), target.getY(), target.getZ());
             this.cloud.setRadius(4.0F);
             this.cloud.setDuration(300);
             this.cloud.setParticleType(ParticleTypes.MYCELIUM);
             this.cloud.addEffect(poison);
+            this.cloud.addEffect(weakness);
 
             world.spawnEntity(this.cloud);
         }

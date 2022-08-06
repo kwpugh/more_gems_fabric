@@ -9,6 +9,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -18,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class SapphireArrowEntity extends PersistentProjectileEntity
@@ -70,6 +72,11 @@ public class SapphireArrowEntity extends PersistentProjectileEntity
             this.cloud.addEffect(darkness);
 
             world.spawnEntity(this.cloud);
+
+            BlockPos blockPos = target.getBlockPos();
+            LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(target.getEntityWorld());
+            lightningEntity.refreshPositionAfterTeleport(Vec3d.ofBottomCenter(blockPos));
+            target.getEntityWorld().spawnEntity(lightningEntity);
         }
     }
 
