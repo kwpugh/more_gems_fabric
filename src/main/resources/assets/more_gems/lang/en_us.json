@@ -322,6 +322,8 @@
 	"enchantment.more_gems.attracting.desc": "MoreGem: (Tools) Draws items to player after breaking, range increases with level",
 	"enchantment.more_gems.freeze_protection": "Freeze Protection",
 	"enchantment.more_gems.freeze_protection.desc": "MoreGem: (Chest) Provides protection against freezing",
+	"enchantment.more_gems.mercy_kill": "Mercy Kill",
+	"enchantment.more_gems.mercy_kill.desc": "MoreGem: (Sword) Passive animals will die with one shot",
 
 	"item.more_gems.citrine_arrow": "Citrine Arrow",
 	"item.more_gems.tourmaline_arrow": "Tourmaline Arrow",

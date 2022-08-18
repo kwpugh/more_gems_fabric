@@ -46,7 +46,9 @@ public abstract class EntityMixinFireFreeze
             }
 
             if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOPAZ_JUJU) ||
-                    PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU))
+                    PlayerEquipUtil.hasItemInEnder(player, ItemInit.TOPAZ_JUJU) ||
+                    PlayerEquipUtil.hasItemInInventory(player, ItemInit.MOISSANITE_JUJU) ||
+                    PlayerEquipUtil.hasItemInEnder(player, ItemInit.MOISSANITE_JUJU))
             {
                 cir.setReturnValue(true);
             }

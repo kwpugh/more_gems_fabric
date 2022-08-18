@@ -224,6 +224,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
     			+"\n********")
 		public float jujuChance = .06F;
 		public boolean enableMoissaniteDocileHoglin = true;
+		public boolean enableJujuInEnderchest = true;
 
 		@Comment("********"
 				+"\nJuju Crown"

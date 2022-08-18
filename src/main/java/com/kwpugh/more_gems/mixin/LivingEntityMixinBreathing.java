@@ -46,7 +46,8 @@ public abstract class LivingEntityMixinBreathing extends Entity
                 cir.setReturnValue(true);
             }
 
-            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.ALEXANDRITE_JUJU))
+            if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.ALEXANDRITE_JUJU) ||
+                    PlayerEquipUtil.hasItemInEnder(player, ItemInit.ALEXANDRITE_JUJU))
             {
                 cir.setReturnValue(true);
             }

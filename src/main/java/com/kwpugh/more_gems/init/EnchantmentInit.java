@@ -3,7 +3,6 @@ package com.kwpugh.more_gems.init;
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.*;
 import com.kwpugh.more_gems.enchantments.bound.BoundEnchantment;
-import com.kwpugh.more_gems.enchantments.FreezeProtectionEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -30,6 +29,7 @@ public class EnchantmentInit
 	public static final Enchantment MINING_HELPER = new MiningHelperEnchantment(Enchantment.Rarity.COMMON, EnchantmentTarget.DIGGER, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment BOUND = new BoundEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.BREAKABLE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment ATTRACTING = new AttractingEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.DIGGER, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+	public static final Enchantment MERCY_KILL = new MercyKillEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
 
 	public static void registerEnchantments()
@@ -52,5 +52,6 @@ public class EnchantmentInit
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "bound"), BOUND);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "attracting"), ATTRACTING);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "freeze_protection"), FREEZE_PROTECTION);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mercy_kill"), MERCY_KILL);
 	}
 }

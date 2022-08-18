@@ -80,6 +80,7 @@ public class TreasureBag extends Item
         createEntry(EnchantmentInit.ATTRACTING, 2);
         createEntry(EnchantmentInit.ATTRACTING, 3);
         createEntry(EnchantmentInit.FREEZE_PROTECTION, 1);
+        createEntry(EnchantmentInit.MERCY_KILL, 1);
     }
 
     public static void createEntry(Enchantment enchantment, int level)

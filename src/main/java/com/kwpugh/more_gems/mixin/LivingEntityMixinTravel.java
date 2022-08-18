@@ -29,7 +29,8 @@ public abstract class LivingEntityMixinTravel extends Entity
 
         if(livingEntity instanceof PlayerEntity player)
         {
-            if(PlayerEquipUtil.hasItemInOffHand(player, ItemInit.CORUNDUM_JUJU))
+            if(PlayerEquipUtil.hasItemInOffHand(player, ItemInit.CORUNDUM_JUJU) ||
+                    PlayerEquipUtil.hasItemInEnder(player, ItemInit.CORUNDUM_JUJU))
             {
                 cir.setReturnValue(true);
             }

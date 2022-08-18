@@ -4,10 +4,15 @@ import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.bound.BoundStack;
 import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
 import com.kwpugh.more_gems.init.EnchantmentInit;
+import com.kwpugh.more_gems.init.ItemInit;
+import com.kwpugh.more_gems.util.EnableUtil;
+import com.kwpugh.more_gems.util.PlayerEquipUtil;
 import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.predicate.entity.EntityPredicates;
@@ -36,7 +41,7 @@ public abstract class PlayerEntityMixin extends LivingEntity
 
     // Used for the Attracting enchantment
     @Inject(method = "tick", at = @At(value = "TAIL"))
-    private void tickMagnetic(CallbackInfo ci)
+    private void moregemsTick(CallbackInfo ci)
     {
         PlayerEntity self = ((PlayerEntity) (Object) this);
 
@@ -56,6 +61,100 @@ public abstract class PlayerEntityMixin extends LivingEntity
             for (Entity entityXPNearby : entityXP)
             {
                 entityXPNearby.onPlayerCollision(self);
+            }
+        }
+
+        if(!world.isClient && MoreGems.CONFIG.GENERAL.enableJujuInEnderchest)
+        {
+            if(PlayerEquipUtil.hasItemInEnder(self, ItemInit.CARBONADO_JUJU))
+            {
+                ItemStack stack = PlayerEquipUtil.getItemStackInEnder(self, ItemInit.CARBONADO_JUJU);
+
+                if(EnableUtil.isEnabled(stack))
+                {
+                    StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 8, 0, false, false);
+                    StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 8, 0, false, false);
+                    {
+                        self.addStatusEffect(effect);
+                        self.addStatusEffect(effect2);
+                    }
+                }
+            }
+
+            if(PlayerEquipUtil.hasItemInEnder(self, ItemInit.CORUNDUM_JUJU))
+            {
+                ItemStack stack = PlayerEquipUtil.getItemStackInEnder(self, ItemInit.CORUNDUM_JUJU);
+
+                if(EnableUtil.isEnabled(stack))
+                {
+                    StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.SLOW_FALLING, 8, 0, false, false);
+                    {
+                        self.addStatusEffect(effect);
+                    }
+                }
+            }
+
+            if(PlayerEquipUtil.hasItemInEnder(self, ItemInit.CITRINE_JUJU))
+            {
+                StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.HASTE, 8, 1, false, false);
+                {
+                    self.addStatusEffect(effect);
+                }
+            }
+
+            if(PlayerEquipUtil.hasItemInEnder(self, ItemInit.EMERALD_JUJU))
+            {
+                StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, 8, 0, false, false);
+                {
+                    self.addStatusEffect(effect);
+                }
+            }
+
+            if(PlayerEquipUtil.hasItemInEnder(self, ItemInit.MOISSANITE_JUJU))
+            {
+                PlayerSpecialAbilities.givePhoenixEffect(world, self);
+            }
+
+            if(PlayerEquipUtil.hasItemInEnder(self, ItemInit.SAPPHIRE_JUJU))
+            {
+                StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.SATURATION, 8, 0, false, false);
+                {
+                    self.addStatusEffect(effect2);
+                }
+            }
+
+            if(PlayerEquipUtil.hasItemInEnder(self, ItemInit.KUNZITE_JUJU))
+            {
+                ItemStack stack = PlayerEquipUtil.getItemStackInEnder(self, ItemInit.KUNZITE_JUJU);
+
+                if(EnableUtil.isEnabled(stack))
+                {
+                    StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.SPEED, 8, 1, false, false);
+                    {
+                        self.addStatusEffect(effect);
+                    }
+                }
+            }
+
+            if(PlayerEquipUtil.hasItemInEnder(self, ItemInit.SPINEL_JUJU))
+            {
+                StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.STRENGTH, 8, 2, false, false);
+                {
+                    self.addStatusEffect(effect);
+                }
+            }
+
+            if(PlayerEquipUtil.hasItemInEnder(self, ItemInit.TOURMALINE_JUJU))
+            {
+                ItemStack stack = PlayerEquipUtil.getItemStackInEnder(self, ItemInit.TOURMALINE_JUJU);
+
+                if(EnableUtil.isEnabled(stack))
+                {
+                    StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.NIGHT_VISION, 8, 0, false, false);
+                    {
+                        self.addStatusEffect(effect);
+                    }
+                }
             }
         }
     }

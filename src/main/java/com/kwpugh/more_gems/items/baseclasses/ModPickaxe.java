@@ -14,7 +14,7 @@ public class ModPickaxe extends PickaxeItem
 	{
 		super(material, attackDamage, attackSpeed, settings);
 	}
-
+	
 	@Override
 	public float getMiningSpeedMultiplier(ItemStack stack, BlockState state)
 	{
