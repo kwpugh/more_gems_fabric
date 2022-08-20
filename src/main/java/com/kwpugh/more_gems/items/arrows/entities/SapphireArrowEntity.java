@@ -32,6 +32,11 @@ public class SapphireArrowEntity extends PersistentProjectileEntity
         super(entityType, world);
     }
 
+    public SapphireArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.SAPPHIRE_ARROW, x, y, z, world);
+    }
+
     public SapphireArrowEntity(World world, LivingEntity owner)
     {
         super(EntityInit.SAPPHIRE_ARROW, owner, world);

@@ -23,6 +23,11 @@ public class TourmalineArrowEntity extends PersistentProjectileEntity
         super(entityType, world);
     }
 
+    public TourmalineArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.TOURMALINE_ARROW, x, y, z, world);
+    }
+
     public TourmalineArrowEntity(World world, LivingEntity owner)
     {
         super(EntityInit.TOURMALINE_ARROW, owner, world);

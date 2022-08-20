@@ -23,6 +23,11 @@ public class CitrineArrowEntity extends PersistentProjectileEntity
         super(entityType, world);
     }
 
+    public CitrineArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.CITRINE_ARROW, x, y, z, world);
+    }
+
     public CitrineArrowEntity(World world, LivingEntity owner)
     {
         super(EntityInit.CITRINE_ARROW, owner, world);

@@ -30,6 +30,11 @@ public class SpinelArrowEntity extends PersistentProjectileEntity
         super(entityType, world);
     }
 
+    public SpinelArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.SPINEL_ARROW, x, y, z, world);
+    }
+
     public SpinelArrowEntity(World world, LivingEntity owner)
     {
         super(EntityInit.SPINEL_ARROW, owner, world);

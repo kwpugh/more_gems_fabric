@@ -30,6 +30,11 @@ public class MoissaniteArrowEntity extends PersistentProjectileEntity
         super(entityType, world);
     }
 
+    public MoissaniteArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.MOISSANITE_ARROW, x, y, z, world);
+    }
+
     public MoissaniteArrowEntity(World world, LivingEntity owner)
     {
         super(EntityInit.MOISSANITE_ARROW, owner, world);

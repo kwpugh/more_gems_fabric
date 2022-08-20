@@ -23,6 +23,11 @@ public class TopazArrowEntity extends PersistentProjectileEntity
         super(entityType, world);
     }
 
+    public TopazArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.TOPAZ_ARROW, x, y, z, world);
+    }
+
     public TopazArrowEntity(World world, LivingEntity owner)
     {
         super(EntityInit.TOPAZ_ARROW, owner, world);

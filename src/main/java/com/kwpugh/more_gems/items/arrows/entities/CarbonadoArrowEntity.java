@@ -33,6 +33,11 @@ public class CarbonadoArrowEntity extends PersistentProjectileEntity
         super(entityType, world);
     }
 
+    public CarbonadoArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.CARBONADO_ARROW, x, y, z, world);
+    }
+
     public CarbonadoArrowEntity(World world, LivingEntity owner)
     {
         super(EntityInit.CARBONADO_ARROW, owner, world);

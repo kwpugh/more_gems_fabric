@@ -35,6 +35,11 @@ public class AlexandriteArrowEntity extends PersistentProjectileEntity
         super(EntityInit.ALEXANDRITE_ARROW, owner, world);
     }
 
+    public AlexandriteArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.ALEXANDRITE_ARROW, x, y, z, world);
+    }
+
     public void tick()
     {
         super.tick();

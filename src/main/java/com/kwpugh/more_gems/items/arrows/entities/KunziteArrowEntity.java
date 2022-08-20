@@ -23,6 +23,11 @@ public class KunziteArrowEntity extends PersistentProjectileEntity
         super(entityType, world);
     }
 
+    public KunziteArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.KUNZITE_ARROW, x, y, z, world);
+    }
+
     public KunziteArrowEntity(World world, LivingEntity owner)
     {
         super(EntityInit.KUNZITE_ARROW, owner, world);

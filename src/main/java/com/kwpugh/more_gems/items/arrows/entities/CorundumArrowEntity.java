@@ -30,6 +30,11 @@ public class CorundumArrowEntity extends PersistentProjectileEntity
         super(entityType, world);
     }
 
+    public CorundumArrowEntity(World world, double x, double y, double z)
+    {
+        super(EntityInit.CORUNDUM_ARROW, x, y, z, world);
+    }
+
     public CorundumArrowEntity(World world, LivingEntity owner)
     {
         super(EntityInit.CORUNDUM_ARROW, owner, world);
