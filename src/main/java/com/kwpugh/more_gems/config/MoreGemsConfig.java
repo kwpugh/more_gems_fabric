@@ -199,6 +199,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int spinelPoisonAmplifier = 0;
 		public int spinelPoisonDuration = 300;
 		public boolean spinelPoisonCloud = true;
+		public float spinelArrowLootChance = .08F;
 		public float carbonadoExtraDamage = 3.0F;
 		public byte carbonadoPierceLevel = 1;
 		public int carbonadoPunchLevel = 2;
@@ -206,12 +207,14 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int carbonadoSlownessDuration = 300;
 		public boolean carbonadoExplosion = true;
 		public int carbonadoExplosionFactor = 2;
+		public float carbonadoArrowLootChance = .08F;
 		public float moissaniteExtraDamage = 4.0F;
 		public byte moissanitePierceLevel = 2;
 		public int moissanitePunchLevel = 2;
 		public int moissaniteWitherAmplifier = 1;
 		public int moissaniteWitherDuration = 300;
 		public boolean moissaniteFireCloud = true;
+		public float moissaniteArrowLootChance = .08F;
 
 		@Comment("********"
 				+"\nSharpening Gems"

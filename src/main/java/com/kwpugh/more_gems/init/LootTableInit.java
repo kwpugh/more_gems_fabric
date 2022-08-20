@@ -12,10 +12,38 @@ public class LootTableInit
 {
 	static float jujuChance = MoreGems.CONFIG.GENERAL.jujuChance;
 	static float treasueBagChance = MoreGems.CONFIG.GENERAL.treasureBagChance;
+    static float spinelArrowChance = MoreGems.CONFIG.GENERAL.spinelArrowLootChance;
+    static float carbonadoArrowChance = MoreGems.CONFIG.GENERAL.carbonadoArrowLootChance;
+    static float moissaniteArrowChance = MoreGems.CONFIG.GENERAL.moissaniteArrowLootChance;
 
 	public static void registerLoot()
 	{
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if(id.equals(LootTables.VILLAGE_FLETCHER_CHEST))
+            {
+                LootPool SPINEL_ARROW = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.MOISSANITE_ARROW))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(spinelArrowChance).build())
+                        .build();
+
+                LootPool CARBONADO_ARROW = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.MOISSANITE_ARROW))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(carbonadoArrowChance).build())
+                        .build();
+
+                LootPool MOISSANITE_ARROW = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.MOISSANITE_ARROW))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(moissaniteArrowChance).build())
+                        .build();
+
+                tableBuilder.pool(SPINEL_ARROW);
+                tableBuilder.pool(CARBONADO_ARROW);
+                tableBuilder.pool(MOISSANITE_ARROW);
+            }
+
             if(id.equals(LootTables.DESERT_PYRAMID_CHEST) ||
                     id.equals(LootTables.JUNGLE_TEMPLE_CHEST))
             {
