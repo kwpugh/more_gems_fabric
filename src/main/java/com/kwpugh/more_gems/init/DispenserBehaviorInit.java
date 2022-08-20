@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Position;
 import net.minecraft.world.World;
 
-public class DispenserBehaviors
+public class DispenserBehaviorInit
 {
     public static void registerBehaviors()
     {
