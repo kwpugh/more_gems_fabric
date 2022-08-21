@@ -17,7 +17,10 @@ import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class MoissaniteArrowEntity extends PersistentProjectileEntity
@@ -58,7 +61,17 @@ public class MoissaniteArrowEntity extends PersistentProjectileEntity
     protected void onHit(LivingEntity target)
     {
         super.onHit(target);
+        doHit(target);
+    }
 
+    protected void onBlockHit(BlockHitResult blockHitResult)
+    {
+        super.onBlockHit(blockHitResult);
+        doCloud(blockHitResult.getBlockPos());
+    }
+
+    private void doHit(LivingEntity target)
+    {
         this.setPierceLevel((byte) (this.getPierceLevel() + MoreGems.CONFIG.GENERAL.moissanitePierceLevel));
         this.setPunch(this.getPunch() + MoreGems.CONFIG.GENERAL.moissanitePunchLevel);
         target.damage(DamageSource.IN_FIRE, MoreGems.CONFIG.GENERAL.moissaniteExtraDamage);
@@ -66,9 +79,13 @@ public class MoissaniteArrowEntity extends PersistentProjectileEntity
         StatusEffectInstance wither = new StatusEffectInstance(StatusEffects.WITHER, MoreGems.CONFIG.GENERAL.moissaniteWitherDuration, MoreGems.CONFIG.GENERAL.moissaniteWitherAmplifier);
         target.addStatusEffect(wither, this.getEffectCause());
 
+        doCloud(target.getBlockPos());
+    }
+
+    private void doCloud(BlockPos hitPos)
+    {
         BlockPos pos;
         BlockState state;
-        Block block;
 
         if(MoreGems.CONFIG.GENERAL.moissaniteFireCloud)
         {
@@ -78,9 +95,8 @@ public class MoissaniteArrowEntity extends PersistentProjectileEntity
                 {
                     for (int z = 2; z >= -2; z--)
                     {
-                        pos = target.getBlockPos().add(x, y, z);
+                        pos = hitPos.add(x, y, z);
                         state = world.getBlockState(pos);
-                        block = state.getBlock();
 
                         if(state.isIn(TagInit.AIR_BLOCKS))
                         {
@@ -91,7 +107,6 @@ public class MoissaniteArrowEntity extends PersistentProjectileEntity
             }
         }
     }
-
 
     public void readCustomDataFromNbt(NbtCompound nbt)
     {

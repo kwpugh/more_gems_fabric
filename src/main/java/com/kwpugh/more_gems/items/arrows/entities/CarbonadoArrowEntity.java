@@ -18,6 +18,7 @@ import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
@@ -61,7 +62,17 @@ public class CarbonadoArrowEntity extends PersistentProjectileEntity
     protected void onHit(LivingEntity target)
     {
         super.onHit(target);
+        doHit(target);
+    }
 
+    protected void onBlockHit(BlockHitResult blockHitResult)
+    {
+        super.onBlockHit(blockHitResult);
+        doExplode(blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+    }
+
+    private void doHit(LivingEntity  target)
+    {
         this.setPierceLevel((byte) (this.getPierceLevel() + MoreGems.CONFIG.GENERAL.carbonadoPierceLevel));
         this.setPunch(this.getPunch() + MoreGems.CONFIG.GENERAL.carbonadoPunchLevel);
         target.damage(DamageSource.IN_FIRE, MoreGems.CONFIG.GENERAL.carbonadoExtraDamage);
@@ -69,17 +80,17 @@ public class CarbonadoArrowEntity extends PersistentProjectileEntity
         StatusEffectInstance slowness = new StatusEffectInstance(StatusEffects.SLOWNESS, MoreGems.CONFIG.GENERAL.carbonadoSlownessDuration, MoreGems.CONFIG.GENERAL.carbonadoSlownessAmplifier);
         target.addStatusEffect(slowness, this.getEffectCause());
 
-        if(MoreGems.CONFIG.GENERAL.carbonadoExplosion)
-        {
-            explodeOnHit(target.getX(), target.getBodyY(1.0), target.getZ());
-        }
+        doExplode(target.getX(), target.getBodyY(1.0), target.getZ());
     }
 
-    private void explodeOnHit(double x, double y, double z)
+    private void doExplode(double x, double y, double z)
     {
-        boolean griefingAllowed = this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING);
-        this.world.createExplosion(this, x, y, z, MoreGems.CONFIG.GENERAL.carbonadoExplosionFactor, griefingAllowed ? Explosion.DestructionType.BREAK : Explosion.DestructionType.NONE);
-        this.discard();
+        if(MoreGems.CONFIG.GENERAL.carbonadoExplosion)
+        {
+            boolean griefingAllowed = this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING);
+            this.world.createExplosion(this, x, y, z, MoreGems.CONFIG.GENERAL.carbonadoExplosionFactor, griefingAllowed ? Explosion.DestructionType.BREAK : Explosion.DestructionType.NONE);
+            this.discard();
+        }
     }
 
     public void readCustomDataFromNbt(NbtCompound nbt)

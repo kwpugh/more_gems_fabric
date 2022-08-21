@@ -39,7 +39,6 @@ public class ToolRepair extends SpecialCraftingRecipe
             ItemStack toolStack = matchStack.getToolStack();
 
             // Test if the tool is in the gem_tools.json
-            //if(TagInit.GEM_TOOLS.contains(toolStack.getItem()))
             if(toolStack.isIn(TagInit.GEM_TOOLS))
             {
                 ItemStack craftStack = toolStack.copy();

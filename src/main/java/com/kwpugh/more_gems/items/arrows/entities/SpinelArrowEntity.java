@@ -17,6 +17,7 @@ import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -80,7 +81,6 @@ public class SpinelArrowEntity extends PersistentProjectileEntity
             world.spawnEntity(this.cloud);
         }
     }
-
 
     public void readCustomDataFromNbt(NbtCompound nbt)
     {
