@@ -10,7 +10,7 @@ public class SpinelToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.spinelDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.spinelMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.spinelAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.spinelMiningLevel;
+    private static int miningLevel = 2;
     private static int enchantability = MoreGems.CONFIG.GENERAL.spinelEnchantability;
 
     @Override

@@ -43,7 +43,5 @@ public class MercyKillEnchantment extends Enchantment
 	    {
 			target.damage(DamageSource.GENERIC, 100);
 	    }
-	 
-	    super.onTargetDamaged(user, target, level);
 	}
 }

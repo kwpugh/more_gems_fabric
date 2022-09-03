@@ -10,7 +10,7 @@ public class SapphireToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.sapphireDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.sapphireMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.sapphireAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.sapphireMiningLevel;
+    private static int miningLevel = 2;
     private static int enchantability = MoreGems.CONFIG.GENERAL.sapphireEnchantability;
 
     @Override

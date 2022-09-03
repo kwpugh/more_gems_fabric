@@ -10,7 +10,7 @@ public class MoissaniteToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.moissaniteDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.moissaniteMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.moissaniteAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.moissaniteMiningLevel;
+    private static int miningLevel = 4;
     private static int enchantability = MoreGems.CONFIG.GENERAL.moissaniteEnchantability;
 
     @Override

@@ -31,6 +31,10 @@ public class PlayerSpecialAbilities
 	static int enemySlownessDurationTicks = MoreGems.CONFIG.GENERAL.enemySlownessDurationTicksQuickening;
 	static int slownessLevel = MoreGems.CONFIG.GENERAL.slownessLevelQuickening;
 	static int wisdomMultiplier = MoreGems.CONFIG.GENERAL.wisdomExperienceMultiplier;
+	static boolean weaknessEnable = MoreGems.CONFIG.GENERAL.weaknessEnableQuickening;
+	static boolean strengthEnable = MoreGems.CONFIG.GENERAL.strengthEnsableQuickening;
+	static boolean healthEnable = MoreGems.CONFIG.GENERAL.healthEnsableQuickening;
+	static boolean speedEnable = MoreGems.CONFIG.GENERAL.speedEnableQuickening;
 
 	public static void stupifyEnemy(Entity target, int level)
 	{
@@ -123,19 +127,19 @@ public class PlayerSpecialAbilities
 		if(!world.isClient)
 		{
 			// Slow down the enemy
-			if(target instanceof LivingEntity)
+			if(target instanceof LivingEntity && weaknessEnable)
 			{
 				((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, enemySlownessDurationTicks, slownessLevel));
 			}
 
 			// Juice up the player
-			StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.STRENGTH, duration * level, strengthLevel, false, false);
-			StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, duration * level, 0, false, false);
-			StatusEffectInstance effect3 = new StatusEffectInstance(StatusEffects.SPEED, duration * level, speedLevel, false, false);
+			StatusEffectInstance strength = new StatusEffectInstance(StatusEffects.STRENGTH, duration * level, strengthLevel, false, false);
+			StatusEffectInstance health = new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, duration * level, 0, false, false);
+			StatusEffectInstance speed = new StatusEffectInstance(StatusEffects.SPEED, duration * level, speedLevel, false, false);
 
-			player.addStatusEffect(effect);
-			player.addStatusEffect(effect2);
-			player.addStatusEffect(effect3);
+			if(strengthEnable) player.addStatusEffect(strength);
+			if(healthEnable) player.addStatusEffect(health);
+			if(speedEnable) player.addStatusEffect(speed);
 
 			float current = player.getAbsorptionAmount();
 

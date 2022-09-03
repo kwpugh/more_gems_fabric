@@ -206,6 +206,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int carbonadoSlownessAmplifier = 1;
 		public int carbonadoSlownessDuration = 300;
 		public boolean carbonadoExplosion = true;
+		public boolean carbonadoExplosionOnBlock = true;
 		public int carbonadoExplosionFactor = 2;
 		public float carbonadoArrowLootChance = .08F;
 		public float moissaniteExtraDamage = 4.0F;
@@ -214,6 +215,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int moissaniteWitherAmplifier = 1;
 		public int moissaniteWitherDuration = 300;
 		public boolean moissaniteFireCloud = true;
+		public boolean moissaniteFireCloudOnBlock = true;
 		public float moissaniteArrowLootChance = .08F;
 
 		@Comment("********"
@@ -253,6 +255,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int speedLevelQuickening = 1;
 		public int slownessLevelQuickening = 1;
 		public int enemySlownessDurationTicksQuickening = 300;
+		public boolean strengthEnsableQuickening = true;
+		public boolean healthEnsableQuickening = true;
+		public boolean speedEnableQuickening = true;
+		public boolean weaknessEnableQuickening = true;
 		public float razorDamageIncrease = 6.0F;
 		public int untouchableDamage = 7;
 		public int shulkerBladeDurationTicks = 300;
@@ -281,7 +287,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int citrineDurability = 825;
 		public float citrineMiningSpeed = 6.0F;
 		public float citrineAttackDamage = 2.0F;
-		public int citrineMiningLevel = 2;
 		public int citrineEnchantability = 14;
 
 		@Comment("\n"
@@ -304,7 +309,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int tourmalineDurability = 936;
 		public float tourmalineMiningSpeed = 6.0F;
 		public float tourmalineAttackDamage = 2.0F;
-		public int tourmalineMiningLevel = 2;
 		public int tourmalineEnchantability = 14;
 
 		@Comment("\n"
@@ -327,7 +331,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int kunziteDurability = 1092;
 		public float kunziteMiningSpeed = 6.0F;
 		public float kunziteAttackDamage = 2.0F;
-		public int kunziteMiningLevel = 2;
 		public int kunziteEnchantability = 14;
 
 		@Comment("\n"
@@ -350,7 +353,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int topazDurability = 1248;
 		public float topazMiningSpeed = 6.0F;
 		public float topazAttackDamage = 2.0F;
-		public int topazMiningLevel = 2;
 		public int topazEnchantability = 14;
 
 		@Comment("\n"
@@ -373,7 +375,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int alexandriteDurability = 1326;
 		public float alexandriteMiningSpeed = 6.0F;
 		public float alexandriteAttackDamage = 2.0F;
-		public int alexandriteMiningLevel = 2;
 		public int alexandriteEnchantability = 14;
 
 		@Comment("\n"
@@ -396,7 +397,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int corundumDurability = 1404;
 		public float corundumMiningSpeed = 6.0F;
 		public float corundumAttackDamage = 2.0F;
-		public int corundumMiningLevel = 3;
 		public int corundumEnchantability = 14;
 
 		@Comment("\n"
@@ -419,7 +419,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int sapphireDurability = 1404;
 		public float sapphireMiningSpeed = 6.0F;
 		public float sapphireAttackDamage = 2.0F;
-		public int sapphireMiningLevel = 3;
 		public int sapphireEnchantability = 14;
 
 		@Comment("\n"
@@ -442,7 +441,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int spinelDurability = 1404;
 		public float spinelMiningSpeed = 6.0F;
 		public float spinelAttackDamage = 2.0F;
-		public int spinelMiningLevel = 3;
 		public int spinelEnchantability = 14;
 
 		@Comment("\n"
@@ -465,7 +463,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int carbonadoDurability = 1561;
 		public float carbonadoMiningSpeed = 8.0F;
 		public float carbonadoAttackDamage = 3.0F;
-		public int carbonadoMiningLevel = 3;
 		public int carbonadoEnchantability = 24;
 
 		@Comment("\n"
@@ -488,7 +485,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int moissaniteDurability = 2031;
 		public float moissaniteMiningSpeed = 8.0F;
 		public float moissaniteAttackDamage = 4.0F;
-		public int moissaniteMiningLevel = 4;
 		public int moissaniteEnchantability = 24;
 
 		@Comment("\n"

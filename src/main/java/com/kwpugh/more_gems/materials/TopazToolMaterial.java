@@ -10,7 +10,7 @@ public class TopazToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.topazDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.topazMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.topazAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.topazMiningLevel;
+    private static int miningLevel = 2;
     private static int enchantability = MoreGems.CONFIG.GENERAL.topazEnchantability;
 
     @Override

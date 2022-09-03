@@ -10,7 +10,7 @@ public class AlexandriteToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.alexandriteDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.alexandriteMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.alexandriteAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.alexandriteMiningLevel;
+    private static int miningLevel = 2;
     private static int enchantability = MoreGems.CONFIG.GENERAL.alexandriteEnchantability;
 
     @Override

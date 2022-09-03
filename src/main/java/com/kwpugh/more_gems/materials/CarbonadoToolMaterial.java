@@ -10,7 +10,7 @@ public class CarbonadoToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.carbonadoDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.carbonadoMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.carbonadoAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.carbonadoMiningLevel;
+    private static int miningLevel = 3;
     private static int enchantability = MoreGems.CONFIG.GENERAL.carbonadoEnchantability;
 
     @Override

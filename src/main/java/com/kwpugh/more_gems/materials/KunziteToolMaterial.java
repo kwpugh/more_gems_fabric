@@ -10,7 +10,7 @@ public class KunziteToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.kunziteDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.kunziteMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.kunziteAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.kunziteMiningLevel;
+    private static int miningLevel = 2;
     private static int enchantability = MoreGems.CONFIG.GENERAL.kunziteEnchantability;
 
     @Override

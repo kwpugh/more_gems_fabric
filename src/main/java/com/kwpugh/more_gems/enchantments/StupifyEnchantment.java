@@ -36,7 +36,5 @@ public class StupifyEnchantment extends Enchantment
     public void onTargetDamaged(LivingEntity user, Entity target, int level)
     {
         PlayerSpecialAbilities.stupifyEnemy(target, level);
-
-        super.onTargetDamaged(user, target, level);
     }
 }

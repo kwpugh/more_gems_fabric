@@ -85,7 +85,7 @@ public class CarbonadoArrowEntity extends PersistentProjectileEntity
 
     private void doExplode(double x, double y, double z)
     {
-        if(MoreGems.CONFIG.GENERAL.carbonadoExplosion)
+        if(MoreGems.CONFIG.GENERAL.carbonadoExplosion && MoreGems.CONFIG.GENERAL.carbonadoExplosionOnBlock)
         {
             boolean griefingAllowed = this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING);
             this.world.createExplosion(this, x, y, z, MoreGems.CONFIG.GENERAL.carbonadoExplosionFactor, griefingAllowed ? Explosion.DestructionType.BREAK : Explosion.DestructionType.NONE);

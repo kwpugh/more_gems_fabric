@@ -10,7 +10,7 @@ public class TourmalineToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.tourmalineDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.tourmalineMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.tourmalineAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.tourmalineMiningLevel;
+    private static int miningLevel = 2;
     private static int enchantability = MoreGems.CONFIG.GENERAL.tourmalineEnchantability;
 
     @Override

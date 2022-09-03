@@ -43,8 +43,6 @@ public class RazorSharpnessEnchantment extends Enchantment
 	    {
 	        //TBD, maybe poison?
 	    }
-
-	    super.onTargetDamaged(user, target, level);
 	}
 
 	public float getAttackDamage(int level, EntityGroup group)

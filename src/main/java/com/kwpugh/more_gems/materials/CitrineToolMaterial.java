@@ -10,7 +10,7 @@ public class CitrineToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.citrineDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.citrineMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.citrineAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.citrineMiningLevel;
+    private static int miningLevel = 2;
     private static int enchantability = MoreGems.CONFIG.GENERAL.citrineEnchantability;
 
     @Override

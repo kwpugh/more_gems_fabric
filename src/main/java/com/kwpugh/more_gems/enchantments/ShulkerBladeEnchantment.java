@@ -45,7 +45,5 @@ public class ShulkerBladeEnchantment extends Enchantment
 	    {
 	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, shulkerBladeDurationTicks, 0));
 	    }
-	 
-	    super.onTargetDamaged(user, target, level);
 	}
 }

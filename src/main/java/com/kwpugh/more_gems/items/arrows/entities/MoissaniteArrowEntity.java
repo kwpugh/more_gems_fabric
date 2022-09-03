@@ -87,7 +87,7 @@ public class MoissaniteArrowEntity extends PersistentProjectileEntity
         BlockPos pos;
         BlockState state;
 
-        if(MoreGems.CONFIG.GENERAL.moissaniteFireCloud)
+        if(MoreGems.CONFIG.GENERAL.moissaniteFireCloud && MoreGems.CONFIG.GENERAL.moissaniteFireCloudOnBlock)
         {
             for (int x = 2; x >= -2; x--)
             {

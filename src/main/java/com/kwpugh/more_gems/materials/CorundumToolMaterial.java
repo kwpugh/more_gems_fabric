@@ -10,7 +10,7 @@ public class CorundumToolMaterial implements ToolMaterial
     private static int durability = MoreGems.CONFIG.GENERAL.corundumDurability;
     private static float miningSpeed = MoreGems.CONFIG.GENERAL.corundumMiningSpeed;
     private static float attackDamage = MoreGems.CONFIG.GENERAL.corundumAttackDamage;
-    private static int miningLevel = MoreGems.CONFIG.GENERAL.corundumMiningLevel;
+    private static int miningLevel = 2;
     private static int enchantability = MoreGems.CONFIG.GENERAL.corundumEnchantability;
 
     @Override

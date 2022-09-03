@@ -42,7 +42,5 @@ public class FloatingEnchantment extends Enchantment
         {
             ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, baseDuration * level, level - 1, true, false));
         }
-
-        super.onTargetDamaged(user, target, level);
     }
 }
