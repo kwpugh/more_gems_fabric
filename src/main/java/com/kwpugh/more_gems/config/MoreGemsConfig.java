@@ -218,64 +218,79 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean moissaniteFireCloudOnBlock = true;
 		public float moissaniteArrowLootChance = .08F;
 
-		@Comment("********"
+		@Comment("\n"
+				+"\n"
+				+"******************************"
 				+"\nSharpening Gems"
-				+"\n********")
+				+ "\n******************************")
 		public int sharpeningGemRepairAmount = 50;
 		public int sharpeningGemGreaterRepairAmount = 100;
 
-    	@Comment("********"
+		@Comment("\n"
+				+"\n"
+				+"******************************"
     			+"\nJuju Settings"
-    			+"\n********")
+				+ "\n******************************")
 		public float jujuChance = .06F;
 		public boolean enableMoissaniteDocileHoglin = true;
 		public boolean enableJujuInEnderchest = true;
 
-		@Comment("********"
+		@Comment("\n"
+				+"\n"
+				+"******************************"
 				+"\nJuju Crown"
-				+"\n********")
+				+ "\n******************************")
 		public boolean enableJujuCrownPowers = true;
 		public boolean enableJujuCrownNetheritePowers = true;
 
-		@Comment("********"
+		@Comment("\n"
+				+"\n"
+				+"******************************"
 				+"\nTreasure Bags"
-				+"\n********")
+				+ "\n******************************")
 		public float treasureBagChance = .015F;
 		public boolean enableEnchantedBookDrop = true;
 		public boolean enableWanderingTrades = true;
 		public String defaultDrop = "minecraft:gunpowder";
 
-		@Comment("***************"
+		@Comment("\n"
+				+"\n"
+				+"******************************"
 				+"\nEnchantment Settings"
-				+"\n***************")
-		public boolean enableQuickeningEffect = true;
-		public float amountYellowHeartsQuickening = 10;
-		public int durationQuickening = 40;
-		public int strengthLevelQuickening = 1;
-		public int speedLevelQuickening = 1;
-		public int slownessLevelQuickening = 1;
-		public int enemySlownessDurationTicksQuickening = 300;
-		public boolean strengthEnsableQuickening = true;
-		public boolean healthEnsableQuickening = true;
-		public boolean speedEnableQuickening = true;
-		public boolean weaknessEnableQuickening = true;
+				+ "\n******************************")
+		public boolean quickeningEnableEffect = true;
+		public float quickeningAmountYellowHearts = 10;
+		public int quickeningDuration = 40;
+		public int quickeningStrengthLevel = 1;
+		public int quickeningSpeedLevel = 1;
+		public int quickeningSlownessLevel = 1;
+		public int quickeningEnemySlownessDurationTicks = 300;
+		public boolean quickeningStrengthEnable = true;
+		public boolean quickeningHealthEnable = true;
+		public boolean quickeningSpeedEnable = true;
+		public boolean quickeningWeaknessEnable = true;
 		public float razorDamageIncrease = 6.0F;
 		public int untouchableDamage = 7;
 		public int shulkerBladeDurationTicks = 300;
 		public int wisdomExperienceMultiplier = 5;
 		public float lightningChance = 0.10F;
 		public int floatingBaseDuration = 80;
-		public int minngHelperVertical = 2;
+		public int miningHelperVertical = 2;
 		public int minerHelperHoriz = 4;
 		public int attractingBaseHorizontalRadius = 6;
 		public boolean boundReturnAll = false;
+		public double stupefyChanceMultiplier = .15;
+		public int stupefyLevelOneDurationTicks = 20;
+		public int stupefyLevelTwoDurationTicks = 60;
+		public int stupefyLevelThreeDurationTicks = 90;
+
 
 		@Comment("\n"
 				+"\n"
-				+ "***********************"
+				+"******************************"
 				+"\nFull Tool Damage"
 				+"\n- effects hammer/excavator"
-				+"\n***********************")
+				+ "\n******************************")
 		public boolean enableFullDamage = false;
 
 		@Comment("\n"

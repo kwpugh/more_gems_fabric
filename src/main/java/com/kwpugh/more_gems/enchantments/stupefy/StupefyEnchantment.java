@@ -1,4 +1,4 @@
-package com.kwpugh.more_gems.enchantments;
+package com.kwpugh.more_gems.enchantments.stupefy;
 
 import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
 import net.minecraft.enchantment.Enchantment;
@@ -7,9 +7,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 
-public class StupifyEnchantment extends Enchantment
+public class StupefyEnchantment extends Enchantment
 {
-    public StupifyEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
+    public StupefyEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
     {
         super(rarity, enchantmentTarget, equipmentSlots);
     }
@@ -29,12 +29,12 @@ public class StupifyEnchantment extends Enchantment
     @Override
     public int getMaxLevel()
     {
-        return 1;
+        return 3;
     }
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level)
     {
-        PlayerSpecialAbilities.stupifyEnemy(target, level);
+        PlayerSpecialAbilities.stupefyEnemy(target, level);
     }
 }

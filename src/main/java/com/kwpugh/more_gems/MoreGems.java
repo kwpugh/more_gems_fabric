@@ -2,6 +2,7 @@ package com.kwpugh.more_gems;
 
 import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
+import com.kwpugh.more_gems.enchantments.stupefy.StupefyEntityManager;
 import com.kwpugh.more_gems.init.*;
 import com.kwpugh.more_gems.items.special.TreasureBag;
 import com.kwpugh.more_gems.world.GemOreConfiguredFeature;
@@ -38,6 +39,7 @@ public class MoreGems implements ModInitializer
 		TagInit.registerTags();
 		RecipeInit.registerRecipes();
 		BoundStackManager.init();
+		StupefyEntityManager.init();
 		TreasureBag.initEnchantmentEntries();
 		EntityInit.registerEntities();
 		DispenserBehaviorInit.registerBehaviors();

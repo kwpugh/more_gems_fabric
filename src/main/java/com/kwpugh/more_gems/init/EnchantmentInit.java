@@ -3,6 +3,7 @@ package com.kwpugh.more_gems.init;
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.*;
 import com.kwpugh.more_gems.enchantments.bound.BoundEnchantment;
+import com.kwpugh.more_gems.enchantments.stupefy.StupefyEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -19,7 +20,7 @@ public class EnchantmentInit
 	public static final Enchantment BLINKING = new BlinkingEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment VOID_ESCAPE = new VoidEscapeEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_FEET, new EquipmentSlot[]{EquipmentSlot.FEET});
 	public static final Enchantment WISDOM = new WisdomEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
-	public static final Enchantment STUPIFY = new StupifyEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+	public static final Enchantment STUPEFY = new StupefyEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment CREEPERLESS = new CreeperlessEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
 	public static final Enchantment FREEZE_PROTECTION = new FreezeProtectionEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[]{EquipmentSlot.CHEST});
 	public static final Enchantment FLOATING = new FloatingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -41,7 +42,7 @@ public class EnchantmentInit
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "obsidianator"), OBSIDIANATOR);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "blinking"), BLINKING);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "wisdom"), WISDOM);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stupify"), STUPIFY);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stupefy"), STUPEFY);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "void_escape"), VOID_ESCAPE);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "creeperless"), CREEPERLESS);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "floating"), FLOATING);

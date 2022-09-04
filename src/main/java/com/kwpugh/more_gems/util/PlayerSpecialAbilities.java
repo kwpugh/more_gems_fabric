@@ -1,6 +1,8 @@
 package com.kwpugh.more_gems.util;
 
 import com.kwpugh.more_gems.MoreGems;
+import com.kwpugh.more_gems.enchantments.stupefy.StupefiedEntity;
+import com.kwpugh.more_gems.enchantments.stupefy.StupefyEntityManager;
 import com.kwpugh.more_gems.init.EnchantmentInit;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -24,19 +26,20 @@ import java.util.Random;
 
 public class PlayerSpecialAbilities
 {
-	static int duration = MoreGems.CONFIG.GENERAL.durationQuickening;
-	static int strengthLevel = MoreGems.CONFIG.GENERAL.strengthLevelQuickening;
-	static int speedLevel = MoreGems.CONFIG.GENERAL.speedLevelQuickening;
-	static float yellowHearts = MoreGems.CONFIG.GENERAL.amountYellowHeartsQuickening;
-	static int enemySlownessDurationTicks = MoreGems.CONFIG.GENERAL.enemySlownessDurationTicksQuickening;
-	static int slownessLevel = MoreGems.CONFIG.GENERAL.slownessLevelQuickening;
+	static int duration = MoreGems.CONFIG.GENERAL.quickeningDuration;
+	static int strengthLevel = MoreGems.CONFIG.GENERAL.quickeningStrengthLevel;
+	static int speedLevel = MoreGems.CONFIG.GENERAL.quickeningSpeedLevel;
+	static float yellowHearts = MoreGems.CONFIG.GENERAL.quickeningAmountYellowHearts;
+	static int enemySlownessDurationTicks = MoreGems.CONFIG.GENERAL.quickeningEnemySlownessDurationTicks;
+	static int slownessLevel = MoreGems.CONFIG.GENERAL.quickeningSlownessLevel;
 	static int wisdomMultiplier = MoreGems.CONFIG.GENERAL.wisdomExperienceMultiplier;
-	static boolean weaknessEnable = MoreGems.CONFIG.GENERAL.weaknessEnableQuickening;
-	static boolean strengthEnable = MoreGems.CONFIG.GENERAL.strengthEnsableQuickening;
-	static boolean healthEnable = MoreGems.CONFIG.GENERAL.healthEnsableQuickening;
-	static boolean speedEnable = MoreGems.CONFIG.GENERAL.speedEnableQuickening;
+	static boolean weaknessEnable = MoreGems.CONFIG.GENERAL.quickeningWeaknessEnable;
+	static boolean strengthEnable = MoreGems.CONFIG.GENERAL.quickeningStrengthEnable;
+	static boolean healthEnable = MoreGems.CONFIG.GENERAL.quickeningHealthEnable;
+	static boolean speedEnable = MoreGems.CONFIG.GENERAL.quickeningSpeedEnable;
+	static double chanceMultiplier = MoreGems.CONFIG.GENERAL.stupefyChanceMultiplier;
 
-	public static void stupifyEnemy(Entity target, int level)
+	public static void stupefyEnemy(Entity target, int level)
 	{
 		Random random = new Random();
 		World world = target.getEntityWorld();
@@ -47,13 +50,12 @@ public class PlayerSpecialAbilities
 					!(target instanceof WitherEntity))
 			{
 				double r = random.nextDouble();
-				if (r <= (.20 * level))
+				if (r <= (chanceMultiplier * level))
 				{
+					int age = target.age;
 					((HostileEntity) target).setAiDisabled(true);
-				}
-				else
-				{
-					((HostileEntity) target).setAiDisabled(false);
+					StupefiedEntity stupifyEntity = new StupefiedEntity(target, level, age);
+					StupefyEntityManager.addToList(stupifyEntity);
 				}
 			}
 		}
@@ -122,7 +124,7 @@ public class PlayerSpecialAbilities
 	// Effects for Quickening Enchantment called my mixin
 	public static void giveQuickening(World world, LivingEntity player, Entity target, int level)
 	{
-		if(!MoreGems.CONFIG.GENERAL.enableQuickeningEffect) return;
+		if(!MoreGems.CONFIG.GENERAL.quickeningEnableEffect) return;
 
 		if(!world.isClient)
 		{
@@ -156,10 +158,7 @@ public class PlayerSpecialAbilities
 			}
 			if(current < (yellowHearts - 1.0F))
 			{
-
 				player.setAbsorptionAmount(current + 1.0F);
-
-				return;
 			}
 		}
 	}

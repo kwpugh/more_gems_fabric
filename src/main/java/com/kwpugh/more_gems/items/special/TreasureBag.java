@@ -65,7 +65,9 @@ public class TreasureBag extends Item
         createEntry(EnchantmentInit.QUICKENING, 5);
         createEntry(EnchantmentInit.RAZOR_SHARPNESS, 1);
         createEntry(EnchantmentInit.SHULKER_BLADE, 1);
-        createEntry(EnchantmentInit.STUPIFY, 1);
+        createEntry(EnchantmentInit.STUPEFY, 1);
+        createEntry(EnchantmentInit.STUPEFY, 2);
+        createEntry(EnchantmentInit.STUPEFY, 3);
         createEntry(EnchantmentInit.UNTOUCHABLE, 1);
         createEntry(EnchantmentInit.UNTOUCHABLE, 2);
         createEntry(EnchantmentInit.UNTOUCHABLE, 3);
