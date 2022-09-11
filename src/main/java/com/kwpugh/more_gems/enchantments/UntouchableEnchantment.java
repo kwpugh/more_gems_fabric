@@ -1,6 +1,5 @@
 package com.kwpugh.more_gems.enchantments;
 
-import java.util.Random;
 import com.kwpugh.more_gems.MoreGems;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -8,13 +7,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ItemStack;
 
 public class UntouchableEnchantment extends Enchantment
 {
-	static int untouchableDamage = MoreGems.CONFIG.GENERAL.untouchableDamage;
-	
 	public UntouchableEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
 	{
 		super(rarity, enchantmentTarget, equipmentSlots);
@@ -35,35 +30,36 @@ public class UntouchableEnchantment extends Enchantment
 	@Override
 	public int getMaxLevel()
 	{
-	    return 3;
+	    return 4;
 	}
 
 	@Override
-	public boolean isAcceptableItem(ItemStack stack)
-	{
-		return stack.getItem() instanceof ArmorItem ? true : super.isAcceptableItem(stack);
-	}
-
 	public void onUserDamaged(LivingEntity user, Entity attacker, int level)
 	{
-	      Random random = new Random();
-
-	      if (shouldDamageAttacker(level, random))
-	      {
-	         if (attacker != null)
-	         {
-	            attacker.damage(DamageSource.thorns(user), (float)getDamageAmount(level, random));
-	         }
-	      }
-	   }
-
-	public static boolean shouldDamageAttacker(int level, Random random)
-	{
-		return true;
+		if (user.getRandom().nextFloat() <= (MoreGems.CONFIG.GENERAL.untouchableChance + (level / 10)))
+		{
+			if (attacker != null)
+			{
+				attacker.damage(DamageSource.thorns(user), MoreGems.CONFIG.GENERAL.untouchableBaseDamage + (level * 1.5F));
+			}
+		}
 	}
 
-	public static int getDamageAmount(int level, Random random)
+	@Override
+	public boolean isTreasure()
 	{
-		return untouchableDamage;
+		return MoreGems.CONFIG.GENERAL.enableUntouchable;
+	}
+
+	@Override
+	public boolean isAvailableForEnchantedBookOffer()
+	{
+		return MoreGems.CONFIG.GENERAL.enableUntouchable;
+	}
+
+	@Override
+	public boolean isAvailableForRandomSelection()
+	{
+		return MoreGems.CONFIG.GENERAL.enableUntouchable;
 	}
 }

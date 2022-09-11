@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.enchantments;
 
+import com.kwpugh.more_gems.MoreGems;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
@@ -43,5 +44,23 @@ public class MercyKillEnchantment extends Enchantment
 	    {
 			target.damage(DamageSource.GENERIC, 100);
 	    }
+	}
+
+	@Override
+	public boolean isTreasure()
+	{
+		return MoreGems.CONFIG.GENERAL.enableMercyKill;
+	}
+
+	@Override
+	public boolean isAvailableForEnchantedBookOffer()
+	{
+		return MoreGems.CONFIG.GENERAL.enableMercyKill;
+	}
+
+	@Override
+	public boolean isAvailableForRandomSelection()
+	{
+		return MoreGems.CONFIG.GENERAL.enableMercyKill;
 	}
 }

@@ -256,8 +256,42 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("\n"
 				+"\n"
 				+"******************************"
+				+"\nEnable/Disable Enchantments"
+				+ "\n******************************")
+		public boolean enableAttracting = true;
+		public boolean enableBenevolence = true;
+		public boolean enableBlinking = true;
+		public boolean enablebound = true;
+		public boolean enableCreeperless = true;
+		public boolean enableFloating = true;
+		public boolean enableFreezeProtection = true;
+		public boolean enableLavaView = true;
+		public boolean enableLightning = true;
+		public boolean enableMercyKill = true;
+		public boolean enableMiningHelper = true;
+		public boolean enableObsidinator = true;
+		public boolean enableQuickening = true;
+		public boolean enableRazorSharpness = true;
+		public boolean enableShulkerBlade = true;
+		public boolean enableStupefy = true;
+		public boolean enableUntouchable = true;
+		public boolean enableVoidEscape = true;
+		public boolean enableWisdom = true;
+
+		@Comment("\n"
+				+"\n"
+				+"******************************"
 				+"\nEnchantment Settings"
 				+ "\n******************************")
+		public int attractingBaseHorizontalRadius = 6;
+		public int blinkingAttackSafeDistance = 3;
+		public int blinkingEvadeStarting = 24;
+		public int blinkingEvadeEnding = 26;
+		public boolean boundReturnAll = false;
+		public int floatingBaseDuration = 80;
+		public float lightningChance = 0.10F;
+		public int miningHelperVertical = 2;
+		public int miningHelperHoriz = 4;
 		public boolean quickeningEnableEffect = true;
 		public float quickeningAmountYellowHearts = 10;
 		public int quickeningDuration = 40;
@@ -270,20 +304,14 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean quickeningSpeedEnable = true;
 		public boolean quickeningWeaknessEnable = true;
 		public float razorDamageIncrease = 6.0F;
-		public int untouchableDamage = 7;
 		public int shulkerBladeDurationTicks = 300;
-		public int wisdomExperienceMultiplier = 5;
-		public float lightningChance = 0.10F;
-		public int floatingBaseDuration = 80;
-		public int miningHelperVertical = 2;
-		public int minerHelperHoriz = 4;
-		public int attractingBaseHorizontalRadius = 6;
-		public boolean boundReturnAll = false;
 		public double stupefyChanceMultiplier = .15;
 		public int stupefyLevelOneDurationTicks = 20;
 		public int stupefyLevelTwoDurationTicks = 60;
 		public int stupefyLevelThreeDurationTicks = 90;
-
+		public float untouchableChance = .50F;
+		public float untouchableBaseDamage = 7;
+		public int wisdomExperienceMultiplier = 5;
 
 		@Comment("\n"
 				+"\n"

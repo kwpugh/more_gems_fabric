@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.enchantments;
 
+import com.kwpugh.more_gems.MoreGems;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -27,5 +28,23 @@ public class WisdomEnchantment extends Enchantment
     public int getMaxLevel()
     {
         return 3;
+    }
+
+    @Override
+    public boolean isTreasure()
+    {
+        return MoreGems.CONFIG.GENERAL.enableWisdom;
+    }
+
+    @Override
+    public boolean isAvailableForEnchantedBookOffer()
+    {
+        return MoreGems.CONFIG.GENERAL.enableWisdom;
+    }
+
+    @Override
+    public boolean isAvailableForRandomSelection()
+    {
+        return MoreGems.CONFIG.GENERAL.enableWisdom;
     }
 }

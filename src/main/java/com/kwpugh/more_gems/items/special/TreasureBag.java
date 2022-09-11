@@ -38,49 +38,72 @@ public class TreasureBag extends Item
     public static void initEnchantmentEntries()
     {
         createEntry(Enchantments.SILK_TOUCH, 1);
-        createEntry(Enchantments.EFFICIENCY, 2);
-        createEntry(Enchantments.SHARPNESS, 2);
-        createEntry(Enchantments.FORTUNE, 2);
-        createEntry(Enchantments.LOOTING, 2);
+        createEntry(Enchantments.EFFICIENCY, 4);
+        createEntry(Enchantments.EFFICIENCY, 5);
+        createEntry(Enchantments.SHARPNESS, 4);
+        createEntry(Enchantments.SHARPNESS, 5);
+        createEntry(Enchantments.FORTUNE, 3);
+        createEntry(Enchantments.LOOTING, 3);
         createEntry(Enchantments.INFINITY, 1);
         createEntry(Enchantments.UNBREAKING, 2);
-        createEntry(Enchantments.SWIFT_SNEAK, 1);
-        createEntry(Enchantments.SWIFT_SNEAK, 2);
         createEntry(Enchantments.SWIFT_SNEAK, 3);
-        createEntry(EnchantmentInit.BLINKING, 1);
-        createEntry(EnchantmentInit.CREEPERLESS, 1);
-        createEntry(EnchantmentInit.OBSIDIANATOR, 1);
-        createEntry(EnchantmentInit.FLOATING, 1);
-        createEntry(EnchantmentInit.FLOATING, 2);
-        createEntry(EnchantmentInit.LAVA_VIEW, 1);
-        createEntry(EnchantmentInit.LIGHTNING, 1);
-        createEntry(EnchantmentInit.LIGHTNING, 2);
-        createEntry(EnchantmentInit.LIGHTNING, 3);
-        createEntry(EnchantmentInit.LIGHTNING, 4);
-        createEntry(EnchantmentInit.LIGHTNING, 5);
-        createEntry(EnchantmentInit.QUICKENING, 1);
-        createEntry(EnchantmentInit.QUICKENING, 2);
-        createEntry(EnchantmentInit.QUICKENING, 3);
-        createEntry(EnchantmentInit.QUICKENING, 4);
-        createEntry(EnchantmentInit.QUICKENING, 5);
-        createEntry(EnchantmentInit.RAZOR_SHARPNESS, 1);
-        createEntry(EnchantmentInit.SHULKER_BLADE, 1);
-        createEntry(EnchantmentInit.STUPEFY, 1);
-        createEntry(EnchantmentInit.STUPEFY, 2);
-        createEntry(EnchantmentInit.STUPEFY, 3);
-        createEntry(EnchantmentInit.UNTOUCHABLE, 1);
-        createEntry(EnchantmentInit.UNTOUCHABLE, 2);
-        createEntry(EnchantmentInit.UNTOUCHABLE, 3);
+        if(MoreGems.CONFIG.GENERAL.enableBlinking) createEntry(EnchantmentInit.BLINKING, 1);
+        if(MoreGems.CONFIG.GENERAL.enableCreeperless) createEntry(EnchantmentInit.CREEPERLESS, 1);
+        if(MoreGems.CONFIG.GENERAL.enableObsidinator) createEntry(EnchantmentInit.OBSIDIANATOR, 1);
+        if(MoreGems.CONFIG.GENERAL.enableFloating)
+        {
+            createEntry(EnchantmentInit.FLOATING, 1);
+            createEntry(EnchantmentInit.FLOATING, 2);
+        }
+        if(MoreGems.CONFIG.GENERAL.enableLavaView) createEntry(EnchantmentInit.LAVA_VIEW, 1);
+        if(MoreGems.CONFIG.GENERAL.enableLightning)
+        {
+            createEntry(EnchantmentInit.LIGHTNING, 1);
+            createEntry(EnchantmentInit.LIGHTNING, 2);
+            createEntry(EnchantmentInit.LIGHTNING, 3);
+            createEntry(EnchantmentInit.LIGHTNING, 4);
+            createEntry(EnchantmentInit.LIGHTNING, 5);
+        }
+        if(MoreGems.CONFIG.GENERAL.enableQuickening)
+        {
+            createEntry(EnchantmentInit.QUICKENING, 1);
+            createEntry(EnchantmentInit.QUICKENING, 2);
+            createEntry(EnchantmentInit.QUICKENING, 3);
+            createEntry(EnchantmentInit.QUICKENING, 4);
+            createEntry(EnchantmentInit.QUICKENING, 5);
+        }
+        if(MoreGems.CONFIG.GENERAL.enableRazorSharpness) createEntry(EnchantmentInit.RAZOR_SHARPNESS, 1);
+        if(MoreGems.CONFIG.GENERAL.enableShulkerBlade) createEntry(EnchantmentInit.SHULKER_BLADE, 1);
+        if(MoreGems.CONFIG.GENERAL.enableStupefy)
+        {
+            createEntry(EnchantmentInit.STUPEFY, 1);
+            createEntry(EnchantmentInit.STUPEFY, 2);
+            createEntry(EnchantmentInit.STUPEFY, 3);
+        }
+        if(MoreGems.CONFIG.GENERAL.enableUntouchable)
+        {
+            createEntry(EnchantmentInit.UNTOUCHABLE, 1);
+            createEntry(EnchantmentInit.UNTOUCHABLE, 2);
+            createEntry(EnchantmentInit.UNTOUCHABLE, 3);
+            createEntry(EnchantmentInit.UNTOUCHABLE, 4);
+        }
         createEntry(EnchantmentInit.VOID_ESCAPE, 1);
-        createEntry(EnchantmentInit.WISDOM, 1);
-        createEntry(EnchantmentInit.WISDOM, 2);
-        createEntry(EnchantmentInit.WISDOM, 3);
+        if(MoreGems.CONFIG.GENERAL.enableWisdom)
+        {
+            createEntry(EnchantmentInit.WISDOM, 1);
+            createEntry(EnchantmentInit.WISDOM, 2);
+            createEntry(EnchantmentInit.WISDOM, 3);
+        }
+
         createEntry(EnchantmentInit.BENEVOLENCE, 1);
         createEntry(EnchantmentInit.MINING_HELPER, 1);
         createEntry(EnchantmentInit.BOUND, 1);
-        createEntry(EnchantmentInit.ATTRACTING, 1);
-        createEntry(EnchantmentInit.ATTRACTING, 2);
-        createEntry(EnchantmentInit.ATTRACTING, 3);
+        if(MoreGems.CONFIG.GENERAL.enableAttracting)
+        {
+            createEntry(EnchantmentInit.ATTRACTING, 1);
+            createEntry(EnchantmentInit.ATTRACTING, 2);
+            createEntry(EnchantmentInit.ATTRACTING, 3);
+        }
         createEntry(EnchantmentInit.FREEZE_PROTECTION, 1);
         createEntry(EnchantmentInit.MERCY_KILL, 1);
     }
@@ -94,8 +117,6 @@ public class TreasureBag extends Item
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand)
     {
-        //Random random = new Random();
-
         ItemStack stack = player.getStackInHand(hand);
         ItemStack mainHandStack = player.getMainHandStack();
         ItemStack treasure;

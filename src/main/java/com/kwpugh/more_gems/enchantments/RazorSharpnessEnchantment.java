@@ -49,4 +49,22 @@ public class RazorSharpnessEnchantment extends Enchantment
 	{
 		return razorDamageIncrease;
    }
+
+	@Override
+	public boolean isTreasure()
+	{
+		return MoreGems.CONFIG.GENERAL.enableRazorSharpness;
+	}
+
+	@Override
+	public boolean isAvailableForEnchantedBookOffer()
+	{
+		return MoreGems.CONFIG.GENERAL.enableRazorSharpness;
+	}
+
+	@Override
+	public boolean isAvailableForRandomSelection()
+	{
+		return MoreGems.CONFIG.GENERAL.enableRazorSharpness;
+	}
 }

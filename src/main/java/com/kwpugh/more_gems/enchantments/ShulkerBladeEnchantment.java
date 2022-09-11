@@ -46,4 +46,22 @@ public class ShulkerBladeEnchantment extends Enchantment
 	        ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, shulkerBladeDurationTicks, 0));
 	    }
 	}
+
+	@Override
+	public boolean isTreasure()
+	{
+		return MoreGems.CONFIG.GENERAL.enableShulkerBlade;
+	}
+
+	@Override
+	public boolean isAvailableForEnchantedBookOffer()
+	{
+		return MoreGems.CONFIG.GENERAL.enableShulkerBlade;
+	}
+
+	@Override
+	public boolean isAvailableForRandomSelection()
+	{
+		return MoreGems.CONFIG.GENERAL.enableShulkerBlade;
+	}
 }

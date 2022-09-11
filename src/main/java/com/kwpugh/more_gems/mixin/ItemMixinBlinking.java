@@ -31,7 +31,7 @@ public class ItemMixinBlinking
         {
             if (!world.isClient)
             {
-                PlayerSpecialAbilities.giveBlinking(world, player);
+                PlayerSpecialAbilities.giveBlinkingEvade(world, player);
             }
 
             cir.setReturnValue(TypedActionResult.pass(stack));

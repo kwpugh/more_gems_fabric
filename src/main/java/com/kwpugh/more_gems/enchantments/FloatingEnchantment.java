@@ -43,4 +43,22 @@ public class FloatingEnchantment extends Enchantment
             ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, baseDuration * level, level - 1, true, false));
         }
     }
+
+    @Override
+    public boolean isTreasure()
+    {
+        return MoreGems.CONFIG.GENERAL.enableFloating;
+    }
+
+    @Override
+    public boolean isAvailableForEnchantedBookOffer()
+    {
+        return MoreGems.CONFIG.GENERAL.enableFloating;
+    }
+
+    @Override
+    public boolean isAvailableForRandomSelection()
+    {
+        return MoreGems.CONFIG.GENERAL.enableFloating;
+    }
 }

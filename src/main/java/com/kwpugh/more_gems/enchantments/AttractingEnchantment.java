@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.enchantments;
 
+import com.kwpugh.more_gems.MoreGems;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -49,5 +50,23 @@ public class AttractingEnchantment extends Enchantment
         {
             return false;
         }
+    }
+
+    @Override
+    public boolean isTreasure()
+    {
+        return MoreGems.CONFIG.GENERAL.enableAttracting;
+    }
+
+    @Override
+    public boolean isAvailableForEnchantedBookOffer()
+    {
+        return MoreGems.CONFIG.GENERAL.enableAttracting;
+    }
+
+    @Override
+    public boolean isAvailableForRandomSelection()
+    {
+        return MoreGems.CONFIG.GENERAL.enableAttracting;
     }
 }

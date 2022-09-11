@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 public class MiningHelper
 {
     static int helperVertical = MoreGems.CONFIG.GENERAL.miningHelperVertical;
-    static int helperHoriz = MoreGems.CONFIG.GENERAL.minerHelperHoriz;
+    static int helperHoriz = MoreGems.CONFIG.GENERAL.miningHelperHoriz;
 
     public static void breakOtherOres(World world, BlockState state, BlockPos pos, PlayerEntity player, boolean silk)
     {

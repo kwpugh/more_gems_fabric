@@ -4,6 +4,9 @@ import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.stupefy.StupefiedEntity;
 import com.kwpugh.more_gems.enchantments.stupefy.StupefyEntityManager;
 import com.kwpugh.more_gems.init.EnchantmentInit;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -14,12 +17,20 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeKeys;
+import net.minecraft.world.chunk.Chunk;
 
 import java.util.Map;
 import java.util.Random;
@@ -38,6 +49,9 @@ public class PlayerSpecialAbilities
 	static boolean healthEnable = MoreGems.CONFIG.GENERAL.quickeningHealthEnable;
 	static boolean speedEnable = MoreGems.CONFIG.GENERAL.quickeningSpeedEnable;
 	static double chanceMultiplier = MoreGems.CONFIG.GENERAL.stupefyChanceMultiplier;
+	static int blinkingAttackDistance = MoreGems.CONFIG.GENERAL.blinkingAttackSafeDistance;
+	static int blinkingEvadeMin = MoreGems.CONFIG.GENERAL.blinkingEvadeStarting;
+	static int blinkingEvadeMax = MoreGems.CONFIG.GENERAL.blinkingEvadeEnding;
 
 	public static void stupefyEnemy(Entity target, int level)
 	{
@@ -77,29 +91,110 @@ public class PlayerSpecialAbilities
 		}
 	}
 
-	// Used for Blinking enchantment on swords
-	public static void giveBlinking(World world, PlayerEntity player)
+	// Logic for blinking enchantment when player hits entity with sword
+	public static void giveBlinkingAttack(Entity target, PlayerEntity player)
 	{
-		double d = player.getX();
-		double e = player.getY();
-		double f = player.getZ();
+		if(player.hasVehicle()) player.stopRiding();
 
-		for(int i = 0; i < 16; ++i)
+		Direction oppositeFacing = target.getHorizontalFacing().getOpposite();
+		double safeDistance = blinkingAttackDistance + target.getBoundingBox().getZLength();
+
+		BlockPos blinkedPos = new BlockPos(target.getX() + (oppositeFacing.getOffsetX() * safeDistance),
+				target.getY() + (oppositeFacing.getOffsetY() * safeDistance),
+				target.getZ() + (oppositeFacing.getOffsetZ() * safeDistance));
+
+		BlockState blinkedPosState = player.world.getBlockState(blinkedPos);
+
+		if(!blinkedPosState.isOpaque())
 		{
-			double g = player.getX() + (player.getRandom().nextDouble() - 0.5D) * 16.0D;
-			double h = MathHelper.clamp(player.getY() + (double)(player.getRandom().nextInt(16) - 8), (double)world.getBottomY(), (double)(world.getBottomY() + ((ServerWorld)world).getLogicalHeight() - 1));
-			double j = player.getZ() + (player.getRandom().nextDouble() - 0.5D) * 16.0D;
-			if (player.hasVehicle())
-			{
-				player.stopRiding();
-			}
+			player.teleport(blinkedPos.getX(),blinkedPos.getY(),blinkedPos.getZ());
+			player.setYaw(target.getHorizontalFacing().asRotation());
+		}
+		else
+		{
+			blinkedPos = blinkedPos.add(0,1,0);
+			blinkedPosState = player.world.getBlockState(blinkedPos);
 
-			if (player.teleport(g, h, j, false))
+			if(!blinkedPosState.isOpaque())
 			{
-				SoundEvent soundEvent = SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT;
-				world.playSound((PlayerEntity)null, d, e, f, soundEvent, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
-				player.playSound(soundEvent, 1.0F, 1.0F);
-				break;
+				player.teleport(blinkedPos.getX(),blinkedPos.getY(),blinkedPos.getZ());
+				player.setYaw(target.getHorizontalFacing().asRotation());
+			}
+		}
+
+		SoundEvent soundEvent = SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT;
+		player.world.playSound(null, player.getX(), player.getY(), player.getZ(), soundEvent, SoundCategory.NEUTRAL, 0.5F, 0.4F / (player.world.getRandom().nextFloat() * 0.4F + 0.8F));
+		player.playSound(soundEvent, 1.0F, 1.0F);
+	}
+
+	//  Logic used for Blinking enchantment on right-click of swords
+	public static void giveBlinkingEvade(World world, PlayerEntity player)
+	{
+		Random rand = new Random();
+
+		if (!world.isClient)
+		{
+			if (world instanceof ServerWorld)
+			{
+				// Check a number of times for a safe spot
+				for(int i = 1; i < 6; i++)
+				{
+					ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
+
+					if(i == 1)
+					{
+						serverPlayer.sendMessage((Text.translatable("Checking for a safe spot, please wait a moment")), true);
+					}
+
+					if(i > 1 && i < 6)
+					{
+						serverPlayer.sendMessage((Text.translatable("Still checking...")), true);
+					}
+
+					BlockPos startingPos = player.getBlockPos();
+
+					int x = Math.round(startingPos.getX()) + rand.nextInt(blinkingEvadeMax + blinkingEvadeMin) - blinkingEvadeMin;
+					int y = 180;
+					int z = Math.round(startingPos.getZ()) + rand.nextInt(blinkingEvadeMax + blinkingEvadeMin) - blinkingEvadeMin;
+
+					Chunk chunk = world.getChunk(x >> 4, z >> 4);
+					RegistryEntry<Biome> registryEntry = world.getBiome(startingPos);
+					if (registryEntry.matchesKey(BiomeKeys.OCEAN) ||
+							registryEntry.matchesKey(BiomeKeys.RIVER) ||
+							registryEntry.matchesKey(BiomeKeys.BEACH))
+					{
+						continue;
+					}
+
+					//Let's avoid putting them underground
+					while (y > 61)
+					{
+						y--;
+						BlockPos groundPos = new BlockPos(x, y-2, z);
+						if(!chunk.getBlockState(groundPos).getMaterial().equals(Material.AIR) &&
+								(!chunk.getBlockState(groundPos).getBlock().equals(Blocks.BEDROCK) &&
+										(!chunk.getBlockState(groundPos).getBlock().equals(Blocks.WATER) &&
+												(y-2) > 60)))
+						{
+							BlockPos legPos = new BlockPos(x, y-1, z);
+							if (chunk.getBlockState(legPos).getMaterial().equals(Material.AIR))
+							{
+								BlockPos headPos = new BlockPos(x, y, z);
+								if (chunk.getBlockState(headPos).getMaterial().equals(Material.AIR))
+								{
+									serverPlayer.stopRiding();
+									serverPlayer.requestTeleport(x, y, z);
+									serverPlayer.fallDistance = 0.0F;
+
+									world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+
+									serverPlayer.sendMessage((Text.translatable("Blink evade success")), true);
+
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

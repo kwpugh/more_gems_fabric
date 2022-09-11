@@ -37,12 +37,30 @@ public class LightningEnchantment extends Enchantment
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level)
     {
-        if (user.getRandom().nextFloat() <= (lightningChance * level))
+        if(user.getRandom().nextFloat() <= (lightningChance * level))
         {
             BlockPos blockPos = target.getBlockPos();
             LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(user.getEntityWorld());
             lightningEntity.refreshPositionAfterTeleport(Vec3d.ofBottomCenter(blockPos));
             user.getEntityWorld().spawnEntity(lightningEntity);
         }
+    }
+
+    @Override
+    public boolean isTreasure()
+    {
+        return MoreGems.CONFIG.GENERAL.enableLightning;
+    }
+
+    @Override
+    public boolean isAvailableForEnchantedBookOffer()
+    {
+        return MoreGems.CONFIG.GENERAL.enableLightning;
+    }
+
+    @Override
+    public boolean isAvailableForRandomSelection()
+    {
+        return MoreGems.CONFIG.GENERAL.enableLightning;
     }
 }

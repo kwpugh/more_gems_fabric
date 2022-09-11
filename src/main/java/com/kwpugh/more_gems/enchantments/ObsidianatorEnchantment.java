@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.enchantments;
 
+import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.items.areatools.ModHammer;
 import com.kwpugh.more_gems.items.baseclasses.ModPaxel;
 import com.kwpugh.more_gems.items.baseclasses.ModPickaxe;
@@ -48,5 +49,23 @@ public class ObsidianatorEnchantment extends Enchantment
 		{
 			return false;
 		}
+	}
+
+	@Override
+	public boolean isTreasure()
+	{
+		return MoreGems.CONFIG.GENERAL.enableObsidinator;
+	}
+
+	@Override
+	public boolean isAvailableForEnchantedBookOffer()
+	{
+		return MoreGems.CONFIG.GENERAL.enableObsidinator;
+	}
+
+	@Override
+	public boolean isAvailableForRandomSelection()
+	{
+		return MoreGems.CONFIG.GENERAL.enableObsidinator;
 	}
 }
