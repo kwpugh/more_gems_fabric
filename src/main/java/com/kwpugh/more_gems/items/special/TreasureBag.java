@@ -47,14 +47,24 @@ public class TreasureBag extends Item
         createEntry(Enchantments.INFINITY, 1);
         createEntry(Enchantments.UNBREAKING, 2);
         createEntry(Enchantments.SWIFT_SNEAK, 3);
+
+        if(MoreGems.CONFIG.GENERAL.enableAttracting)
+        {
+            createEntry(EnchantmentInit.ATTRACTING, 1);
+            createEntry(EnchantmentInit.ATTRACTING, 2);
+            createEntry(EnchantmentInit.ATTRACTING, 3);
+        }
+        if(MoreGems.CONFIG.GENERAL.enableBenevolence) createEntry(EnchantmentInit.BENEVOLENCE, 1);
         if(MoreGems.CONFIG.GENERAL.enableBlinking) createEntry(EnchantmentInit.BLINKING, 1);
+        if(MoreGems.CONFIG.GENERAL.enablebound) createEntry(EnchantmentInit.BOUND, 1);
+        if(MoreGems.CONFIG.GENERAL.enableClimbing) createEntry(EnchantmentInit.CLIMBING, 1);
         if(MoreGems.CONFIG.GENERAL.enableCreeperless) createEntry(EnchantmentInit.CREEPERLESS, 1);
-        if(MoreGems.CONFIG.GENERAL.enableObsidinator) createEntry(EnchantmentInit.OBSIDIANATOR, 1);
         if(MoreGems.CONFIG.GENERAL.enableFloating)
         {
             createEntry(EnchantmentInit.FLOATING, 1);
             createEntry(EnchantmentInit.FLOATING, 2);
         }
+        if(MoreGems.CONFIG.GENERAL.enableFreezeProtection) createEntry(EnchantmentInit.FREEZE_PROTECTION, 1);
         if(MoreGems.CONFIG.GENERAL.enableLavaView) createEntry(EnchantmentInit.LAVA_VIEW, 1);
         if(MoreGems.CONFIG.GENERAL.enableLightning)
         {
@@ -64,6 +74,9 @@ public class TreasureBag extends Item
             createEntry(EnchantmentInit.LIGHTNING, 4);
             createEntry(EnchantmentInit.LIGHTNING, 5);
         }
+        if(MoreGems.CONFIG.GENERAL.enableMercyKill) createEntry(EnchantmentInit.MERCY_KILL, 1);
+        if(MoreGems.CONFIG.GENERAL.enableMiningHelper) createEntry(EnchantmentInit.MINING_HELPER, 1);
+        if(MoreGems.CONFIG.GENERAL.enableObsidinator) createEntry(EnchantmentInit.OBSIDIANATOR, 1);
         if(MoreGems.CONFIG.GENERAL.enableQuickening)
         {
             createEntry(EnchantmentInit.QUICKENING, 1);
@@ -87,25 +100,13 @@ public class TreasureBag extends Item
             createEntry(EnchantmentInit.UNTOUCHABLE, 3);
             createEntry(EnchantmentInit.UNTOUCHABLE, 4);
         }
-        createEntry(EnchantmentInit.VOID_ESCAPE, 1);
+        if(MoreGems.CONFIG.GENERAL.enableVoidEscape) createEntry(EnchantmentInit.VOID_ESCAPE, 1);
         if(MoreGems.CONFIG.GENERAL.enableWisdom)
         {
             createEntry(EnchantmentInit.WISDOM, 1);
             createEntry(EnchantmentInit.WISDOM, 2);
             createEntry(EnchantmentInit.WISDOM, 3);
         }
-
-        createEntry(EnchantmentInit.BENEVOLENCE, 1);
-        createEntry(EnchantmentInit.MINING_HELPER, 1);
-        createEntry(EnchantmentInit.BOUND, 1);
-        if(MoreGems.CONFIG.GENERAL.enableAttracting)
-        {
-            createEntry(EnchantmentInit.ATTRACTING, 1);
-            createEntry(EnchantmentInit.ATTRACTING, 2);
-            createEntry(EnchantmentInit.ATTRACTING, 3);
-        }
-        createEntry(EnchantmentInit.FREEZE_PROTECTION, 1);
-        createEntry(EnchantmentInit.MERCY_KILL, 1);
     }
 
     public static void createEntry(Enchantment enchantment, int level)

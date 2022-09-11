@@ -56,6 +56,25 @@ public final class PlayerEquipUtil
 		return false;
 	}
 
+	// Return Itemtack for Item in inventory
+	public static ItemStack getItemInInventory(PlayerEntity player, Item item)
+	{
+		PlayerInventory inv = player.getInventory();
+		int size = inv.size();
+
+		//Is the item in the player inventory?
+		for (int slot = 0; slot < size; slot++)
+		{
+			ItemStack stack = inv.getStack(slot);
+			if (stack.getItem() == item)
+			{
+				return stack;
+			}
+		}
+
+		return ItemStack.EMPTY;
+	}
+
 	// Generalized check for itemstack in off hand
 	public static boolean hasItemInOffHand(PlayerEntity player, Item item)
 	{

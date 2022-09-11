@@ -24,7 +24,7 @@ public class StatusEffectMixin
 
             if(entity instanceof PlayerEntity player)
             {
-                if ((effect == StatusEffects.POISON || effect == StatusEffects.WITHER) &&
+                if((effect == StatusEffects.POISON || effect == StatusEffects.WITHER) &&
                         player.getEquippedStack(EquipmentSlot.HEAD).isOf(ItemInit.MOISSANITE_HELMET) &&
                         player.getEquippedStack(EquipmentSlot.CHEST).isOf(ItemInit.MOISSANITE_CHESTPLATE) &&
                         player.getEquippedStack(EquipmentSlot.LEGS).isOf(ItemInit.MOISSANITE_LEGGINGS) &&
@@ -41,7 +41,7 @@ public class StatusEffectMixin
 
             if(entity instanceof PlayerEntity player)
             {
-                if ((effect == StatusEffects.POISON || effect == StatusEffects.WITHER) &&
+                if((effect == StatusEffects.POISON || effect == StatusEffects.WITHER) &&
                         player.getEquippedStack(EquipmentSlot.HEAD).isOf(ItemInit.CROWN_NETHERITE_GEM))
                 {
                     ci.cancel();

@@ -268,7 +268,6 @@ public class PlayerSpecialAbilities
 		{
 			StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 8, 0, false, false);
 			StatusEffectInstance effect3 = new StatusEffectInstance(StatusEffects.SATURATION, 8, 0, false, false);
-
 			{
 				player.addStatusEffect(effect2);
 				player.addStatusEffect(effect3);

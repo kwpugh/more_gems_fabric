@@ -260,6 +260,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+ "\n******************************")
 		public boolean enableAttracting = true;
 		public boolean enableBenevolence = true;
+		public boolean enableClimbing = true;
 		public boolean enableBlinking = true;
 		public boolean enablebound = true;
 		public boolean enableCreeperless = true;

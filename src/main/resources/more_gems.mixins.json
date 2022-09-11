@@ -10,6 +10,7 @@
     "HoglinEntityMixin",
     "ItemMixinBlinking",
     "LivingEntityMixinBreathing",
+    "LivingEntityMixinClimbing",
     "LivingEntityMixinTravel",
     "LivingEntityMixinWisdom",
     "MiningToolItemMixin",
