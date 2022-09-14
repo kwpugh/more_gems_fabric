@@ -223,8 +223,9 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"******************************"
 				+"\nSharpening Gems"
 				+ "\n******************************")
-		public int sharpeningGemRepairAmount = 50;
-		public int sharpeningGemGreaterRepairAmount = 100;
+		public float sharpeningGemLootChance = .30F;
+		public int sharpeningGemRepairAmount = 250;
+		public int sharpeningGemGreaterRepairAmount = 500;
 
 		@Comment("\n"
 				+"\n"

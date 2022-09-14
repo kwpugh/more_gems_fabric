@@ -5,10 +5,7 @@ import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.init.RecipeInit;
 import com.kwpugh.more_gems.init.TagInit;
 import net.minecraft.inventory.CraftingInventory;
-import net.minecraft.item.BowItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolItem;
+import net.minecraft.item.*;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.SpecialCraftingRecipe;
 import net.minecraft.util.Identifier;
@@ -38,8 +35,8 @@ public class ToolRepair extends SpecialCraftingRecipe
         {
             ItemStack toolStack = matchStack.getToolStack();
 
-            // Test if the tool is in the gem_tools.json
-            if(toolStack.isIn(TagInit.GEM_TOOLS))
+            // Test if the tool is in the gem_tools.json or gem_armors.json
+            if(toolStack.isIn(TagInit.GEM_TOOLS) || toolStack.isIn(TagInit.GEM_ARMORS))
             {
                 ItemStack craftStack = toolStack.copy();
                 Item materialToTest = materialType.getItem();
@@ -89,7 +86,7 @@ public class ToolRepair extends SpecialCraftingRecipe
             {
                 Item itemToTest = stackToTest.getItem();
 
-                if(itemToTest instanceof BowItem || itemToTest instanceof ToolItem)
+                if(itemToTest instanceof BowItem || itemToTest instanceof ToolItem || itemToTest instanceof ArmorItem)
                 {
                     if(!toolStack.isEmpty())
                     {

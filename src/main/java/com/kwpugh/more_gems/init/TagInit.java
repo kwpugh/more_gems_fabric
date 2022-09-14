@@ -16,6 +16,7 @@ public class TagInit
 
     // Mod tags used for sharpening gems
     public static final TagKey<Item> GEM_TOOLS = TagKey.of(Registry.ITEM_KEY, new Identifier("more_gems", "gem_tools"));
+    public static final TagKey<Item> GEM_ARMORS = TagKey.of(Registry.ITEM_KEY, new Identifier("more_gems", "gem_armors"));
     public static final TagKey<Item> GEMS_LESSER = TagKey.of(Registry.ITEM_KEY, new Identifier("more_gems", "gem_lesser"));
     public static final TagKey<Item> GEMS_GREATER = TagKey.of(Registry.ITEM_KEY, new Identifier("more_gems", "gem_greater"));
 

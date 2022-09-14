@@ -1,0 +1,165 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "more_gems:citrine_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:citrine_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:citrine_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:citrine_boots",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:tourmaline_boots",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:kunzite_boots",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:topaz_boots",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:alexandrite_boots",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:corundum_boots",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:sapphire_boots",
+      "required": false
+    },
+    {
+      "id": "more_gems:spinel_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:spinel_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:spinel_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:spinel_boots",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:carbonado_boots",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_helmet",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_chestplate",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_leggings",
+      "required": false
+    },
+    {
+      "id": "more_gems:moissanite_boots",
+      "required": false
+    }
+  ]
+}

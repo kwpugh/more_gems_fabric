@@ -15,6 +15,7 @@ public class LootTableInit
     static float spinelArrowChance = MoreGems.CONFIG.GENERAL.spinelArrowLootChance;
     static float carbonadoArrowChance = MoreGems.CONFIG.GENERAL.carbonadoArrowLootChance;
     static float moissaniteArrowChance = MoreGems.CONFIG.GENERAL.moissaniteArrowLootChance;
+    static float sharpeningGemChance = MoreGems.CONFIG.GENERAL.sharpeningGemLootChance;
 
 	public static void registerLoot()
 	{
@@ -42,6 +43,45 @@ public class LootTableInit
                 tableBuilder.pool(SPINEL_ARROW);
                 tableBuilder.pool(CARBONADO_ARROW);
                 tableBuilder.pool(MOISSANITE_ARROW);
+            }
+
+            if(id.equals(LootTables.DESERT_PYRAMID_CHEST) ||
+                    id.equals(LootTables.JUNGLE_TEMPLE_CHEST) ||
+                    id.equals(LootTables.VILLAGE_WEAPONSMITH_CHEST) ||
+                    id.equals(LootTables.VILLAGE_TOOLSMITH_CHEST) ||
+                    id.equals(LootTables.ABANDONED_MINESHAFT_CHEST) ||
+                    id.equals(LootTables.ANCIENT_CITY_CHEST) ||
+                    id.equals(LootTables.ANCIENT_CITY_ICE_BOX_CHEST) ||
+                    id.equals(LootTables.UNDERWATER_RUIN_BIG_CHEST) ||
+                    id.equals(LootTables.UNDERWATER_RUIN_SMALL_CHEST) ||
+                    id.equals(LootTables.FISHING_TREASURE_GAMEPLAY) ||
+                    id.equals(LootTables.STRONGHOLD_CORRIDOR_CHEST) ||
+                    id.equals(LootTables.BURIED_TREASURE_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_SUPPLY_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_MAP_CHEST) ||
+                    id.equals(LootTables.SHIPWRECK_TREASURE_CHEST) ||
+                    id.equals(LootTables.RUINED_PORTAL_CHEST) ||
+                    id.equals(LootTables.PILLAGER_OUTPOST_CHEST) ||
+                    id.equals(LootTables.NETHER_BRIDGE_CHEST) ||
+                    id.equals(LootTables.BASTION_BRIDGE_CHEST) ||
+                    id.equals(LootTables.BASTION_HOGLIN_STABLE_CHEST) ||
+                    id.equals(LootTables.BASTION_OTHER_CHEST) ||
+                    id.equals(LootTables.BASTION_TREASURE_CHEST))
+            {
+                LootPool SHARPENING_GEM = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.SHARPENING_GEM))
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(sharpeningGemChance).build())
+                        .build();
+
+                LootPool SHARPENING_GEM_GREATER = LootPool.builder()
+                        .with(ItemEntry.builder(ItemInit.SHARPENING_GEM_GREATER))
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(sharpeningGemChance).build())
+                        .build();
+
+                tableBuilder.pool(SHARPENING_GEM);
+                tableBuilder.pool(SHARPENING_GEM_GREATER);
             }
 
             if(id.equals(LootTables.DESERT_PYRAMID_CHEST) ||
