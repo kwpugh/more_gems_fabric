@@ -15,8 +15,13 @@ public class TopazArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.topazToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.topazKnockbackResistance;
 
+    private static int topazHead = MoreGems.CONFIG.GENERAL.topazHeadProtection;
+    private static int topazChest = MoreGems.CONFIG.GENERAL.topazChestProtection;
+    private static int topazLeggings = MoreGems.CONFIG.GENERAL.topazLeggingsProtection;
+    private static int topazBoots = MoreGems.CONFIG.GENERAL.topazBootsProtection;
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 6, 2};
+    private static final int[] PROTECTION_AMOUNT = new int[]{topazHead, topazLeggings, topazChest, topazBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)

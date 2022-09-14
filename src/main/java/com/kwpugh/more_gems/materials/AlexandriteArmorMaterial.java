@@ -15,8 +15,13 @@ public class AlexandriteArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.alexandriteToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.alexandriteKnockbackResistance;
 
+    private static int alexandriteHead = MoreGems.CONFIG.GENERAL.citrineHeadProtection;
+    private static int alexandriteChest = MoreGems.CONFIG.GENERAL.citrineChestProtection;
+    private static int alexandriteLeggings = MoreGems.CONFIG.GENERAL.citrineLeggingsProtection;
+    private static int alexandriteBoots = MoreGems.CONFIG.GENERAL.citrineBootsProtection;
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 6, 2};
+    private static final int[] PROTECTION_AMOUNT = new int[]{alexandriteHead, alexandriteLeggings, alexandriteChest, alexandriteBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)

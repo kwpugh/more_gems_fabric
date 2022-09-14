@@ -15,8 +15,13 @@ public class CarbonadoArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.carbonadoToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.carbonadoKnockbackResistance;
 
+    private static int carbonadoHead = MoreGems.CONFIG.GENERAL.carbonadoHeadProtection;
+    private static int carbonadoChest = MoreGems.CONFIG.GENERAL.carbonadoChestProtection;
+    private static int carbonadoLeggings = MoreGems.CONFIG.GENERAL.carbonadoLeggingsProtection;
+    private static int carbonadoBoots = MoreGems.CONFIG.GENERAL.carbonadoBootsProtection;
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{3, 6, 8, 3};
+    private static final int[] PROTECTION_AMOUNT = new int[]{carbonadoHead, carbonadoLeggings, carbonadoChest, carbonadoBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)

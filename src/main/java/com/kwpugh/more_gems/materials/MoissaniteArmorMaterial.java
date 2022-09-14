@@ -15,8 +15,13 @@ public class MoissaniteArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.moissaniteToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.moissaniteKnockbackResistance;
 
+    private static int moissaniteHead = MoreGems.CONFIG.GENERAL.moissaniteHeadProtection;
+    private static int moissaniteChest = MoreGems.CONFIG.GENERAL.moissaniteChestProtection;
+    private static int moissaniteLeggings = MoreGems.CONFIG.GENERAL.moissaniteLeggingsProtection;
+    private static int moissaniteBoots = MoreGems.CONFIG.GENERAL.moissaniteBootsProtection;
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{3, 6, 8, 3};
+    private static final int[] PROTECTION_AMOUNT = new int[]{moissaniteHead, moissaniteLeggings, moissaniteChest, moissaniteBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)

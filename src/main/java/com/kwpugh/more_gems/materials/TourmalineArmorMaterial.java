@@ -15,9 +15,13 @@ public class TourmalineArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.tourmalineToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.tourmalineKnockbackResistance;
 
+    private static int tourmalineHead = MoreGems.CONFIG.GENERAL.tourmalineHeadProtection;
+    private static int tourmalineChest = MoreGems.CONFIG.GENERAL.tourmalineChestProtection;
+    private static int tourmalineLeggings = MoreGems.CONFIG.GENERAL.tourmalineLeggingsProtection;
+    private static int tourmalineBoots = MoreGems.CONFIG.GENERAL.tourmalineBootsProtection;
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 6, 2};
+    private static final int[] PROTECTION_AMOUNT = new int[]{tourmalineHead, tourmalineLeggings, tourmalineChest, tourmalineBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)

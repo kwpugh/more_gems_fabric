@@ -15,8 +15,13 @@ public class CorundumArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.corundumToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.corundumKnockbackResistance;
 
+    private static int corundumHead = MoreGems.CONFIG.GENERAL.corundumHeadProtection;
+    private static int corundumChest = MoreGems.CONFIG.GENERAL.corundumChestProtection;
+    private static int corundumLeggings = MoreGems.CONFIG.GENERAL.corundumLeggingsProtection;
+    private static int corundumBoots = MoreGems.CONFIG.GENERAL.corundumBootsProtection;
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 7, 2};
+    private static final int[] PROTECTION_AMOUNT = new int[]{corundumHead, corundumLeggings, corundumChest, corundumBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)

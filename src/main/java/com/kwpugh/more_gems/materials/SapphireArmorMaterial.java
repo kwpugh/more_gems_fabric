@@ -15,8 +15,13 @@ public class SapphireArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.sapphireToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.sapphireKnockbackResistance;
 
+    private static int sapphireHead = MoreGems.CONFIG.GENERAL.sapphireHeadProtection;
+    private static int sapphireChest = MoreGems.CONFIG.GENERAL.sapphireChestProtection;
+    private static int sapphireLeggings = MoreGems.CONFIG.GENERAL.sapphireLeggingsProtection;
+    private static int sapphireBoots = MoreGems.CONFIG.GENERAL.sapphireBootsProtection;
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 7, 2};
+    private static final int[] PROTECTION_AMOUNT = new int[]{sapphireHead, sapphireLeggings, sapphireChest, sapphireBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)

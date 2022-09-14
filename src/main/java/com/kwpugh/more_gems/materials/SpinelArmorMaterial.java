@@ -15,8 +15,13 @@ public class SpinelArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.spinelToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.spinelKnockbackResistance;
 
+    private static int spinelHead = MoreGems.CONFIG.GENERAL.spinelHeadProtection;
+    private static int spinelChest = MoreGems.CONFIG.GENERAL.spinelChestProtection;
+    private static int spinelLeggings = MoreGems.CONFIG.GENERAL.spinelLeggingsProtection;
+    private static int spinelBoots = MoreGems.CONFIG.GENERAL.spinelBootsProtection;
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 7, 2};
+    private static final int[] PROTECTION_AMOUNT = new int[]{spinelHead, spinelLeggings, spinelChest, spinelBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)

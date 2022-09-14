@@ -15,8 +15,13 @@ public class KunziteArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.kunziteToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.kunziteKnockbackResistance;
 
+    private static int kunziteHead = MoreGems.CONFIG.GENERAL.kunziteHeadProtection;
+    private static int kunziteChest = MoreGems.CONFIG.GENERAL.kunziteChestProtection;
+    private static int kunziteLeggings = MoreGems.CONFIG.GENERAL.kunziteLeggingsProtection;
+    private static int kunziteBoots = MoreGems.CONFIG.GENERAL.kunziteBootsProtection;
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 6, 2};
+    private static final int[] PROTECTION_AMOUNT = new int[]{kunziteHead, kunziteLeggings, kunziteChest, kunziteBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)

@@ -344,6 +344,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int citrineArmorEnchantability = 7;
 		public float citrineToughness = 0.0F;
 		public float citrineKnockbackResistance = 0.0F;
+		public int citrineHeadProtection = 2;
+		public int citrineChestProtection = 6;
+		public int citrineLeggingsProtection = 5;
+		public int citrineBootsProtection = 2;
 
 		@Comment("\n"
 				+ "\n"
@@ -366,6 +370,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int tourmalineArmorEnchantability = 9;
 		public float tourmalineToughness = 0.0F;
 		public float tourmalineKnockbackResistance = 0.0F;
+		public int tourmalineHeadProtection = 2;
+		public int tourmalineChestProtection = 6;
+		public int tourmalineLeggingsProtection = 5;
+		public int tourmalineBootsProtection = 2;
 
 		@Comment("\n"
 				+ "\n"
@@ -388,6 +396,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int kunziteArmorEnchantability = 9;
 		public float kunziteToughness = 0.0F;
 		public float kunziteKnockbackResistance = 0.0F;
+		public int kunziteHeadProtection = 2;
+		public int kunziteChestProtection = 6;
+		public int kunziteLeggingsProtection = 5;
+		public int kunziteBootsProtection = 2;
 
 		@Comment("\n"
 				+ "\n"
@@ -410,6 +422,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int topazArmorEnchantability = 9;
 		public float topazToughness = 0.0F;
 		public float topazKnockbackResistance = 0.0F;
+		public int topazHeadProtection = 2;
+		public int topazChestProtection = 6;
+		public int topazLeggingsProtection = 5;
+		public int topazBootsProtection = 2;
 
 		@Comment("\n"
 				+ "\n"
@@ -432,6 +448,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int alexandriteArmorEnchantability = 9;
 		public float alexandriteToughness = 0.0F;
 		public float alexandriteKnockbackResistance = 0.0F;
+		public int alexandriteHeadProtection = 2;
+		public int alexandriteChestProtection = 6;
+		public int alexandriteLeggingsProtection = 5;
+		public int alexandriteBootsProtection = 2;
 
 		@Comment("\n"
 				+ "\n"
@@ -454,6 +474,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int corundumArmorEnchantability = 9;
 		public float corundumToughness = 0.25F;
 		public float corundumKnockbackResistance = 0.0F;
+		public int corundumHeadProtection = 2;
+		public int corundumChestProtection = 7;
+		public int corundumLeggingsProtection = 5;
+		public int corundumBootsProtection = 2;
 
 		@Comment("\n"
 				+ "\n"
@@ -476,6 +500,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int sapphireArmorEnchantability = 9;
 		public float sapphireToughness = 0.25F;
 		public float sapphireKnockbackResistance = 0.0F;
+		public int sapphireHeadProtection = 2;
+		public int sapphireChestProtection = 7;
+		public int sapphireLeggingsProtection = 5;
+		public int sapphireBootsProtection = 2;
 
 		@Comment("\n"
 				+ "\n"
@@ -498,6 +526,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int spinelArmorEnchantability = 9;
 		public float spinelToughness = 0.5F;
 		public float spinelKnockbackResistance = 0.0F;
+		public int spinelHeadProtection = 2;
+		public int spinelChestProtection = 7;
+		public int spinelLeggingsProtection = 5;
+		public int spinelBootsProtection = 2;
 
 		@Comment("\n"
 				+ "\n"
@@ -520,6 +552,10 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int carbonadoArmorEnchantability = 10;
 		public float carbonadoToughness = 0.75F;
 		public float carbonadoKnockbackResistance = 0.25F;
+		public int carbonadoHeadProtection = 3;
+		public int carbonadoChestProtection = 8;
+		public int carbonadoLeggingsProtection = 6;
+		public int carbonadoBootsProtection = 3;
 
 		@Comment("\n"
 				+ "\n"
@@ -543,5 +579,9 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public float moissaniteToughness = 0.75F;
 		public float moissaniteKnockbackResistance = 0.25F;
 		public boolean enableMoissaniteCuring = true;
+		public int moissaniteHeadProtection = 3;
+		public int moissaniteChestProtection = 8;
+		public int moissaniteLeggingsProtection = 6;
+		public int moissaniteBootsProtection = 3;
 	}
 }
