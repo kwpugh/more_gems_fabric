@@ -5,6 +5,7 @@ import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
 import com.kwpugh.more_gems.enchantments.stupefy.StupefyEntityManager;
 import com.kwpugh.more_gems.init.*;
 import com.kwpugh.more_gems.items.special.TreasureBag;
+import com.kwpugh.more_gems.util.ElytraEvent;
 import com.kwpugh.more_gems.world.GemOreConfiguredFeature;
 import com.kwpugh.more_gems.world.GemOrePlacedFeature;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -43,6 +44,7 @@ public class MoreGems implements ModInitializer
 		TreasureBag.initEnchantmentEntries();
 		EntityInit.registerEntities();
 		DispenserBehaviorInit.registerBehaviors();
+		ElytraEvent.init();
 	}
 
 	public static Identifier createID(String path)

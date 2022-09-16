@@ -20,6 +20,7 @@ public class EnchantmentInit
 	public static final Enchantment CREEPERLESS = new CreeperlessEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
 	public static final Enchantment FLOATING = new FloatingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment FREEZE_PROTECTION = new FreezeProtectionEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[]{EquipmentSlot.CHEST});
+	public static final Enchantment GLIDING = new GlidingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[]{EquipmentSlot.CHEST});
 	public static final Enchantment LAVA_VIEW = new LavaViewEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_HEAD, new EquipmentSlot[]{EquipmentSlot.HEAD});
 	public static final Enchantment LIGHTNING = new LightningEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment MERCY_KILL = new MercyKillEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -44,6 +45,7 @@ public class EnchantmentInit
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "creeperless"), CREEPERLESS);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "floating"), FLOATING);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "freeze_protection"), FREEZE_PROTECTION);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "gliding"), GLIDING);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lava_view"), LAVA_VIEW);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lightning"), LIGHTNING);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mercy_kill"), MERCY_KILL);

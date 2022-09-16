@@ -326,6 +326,8 @@
 	"enchantment.more_gems.mercy_kill.desc": "MoreGem: (Sword) Passive animals will die with one shot",
 	"enchantment.more_gems.climbing": "Climbing",
 	"enchantment.more_gems.climbing.desc": "MoreGem: (Boots) Allows player to climb walls",
+	"enchantment.more_gems.gliding": "Gliding",
+	"enchantment.more_gems.gliding.desc": "MoreGem: (Chests) Provides elytra-like gliding",
 
 	"item.more_gems.citrine_arrow": "Citrine Arrow",
 	"item.more_gems.tourmaline_arrow": "Tourmaline Arrow",

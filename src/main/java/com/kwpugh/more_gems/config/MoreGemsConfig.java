@@ -267,6 +267,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableCreeperless = true;
 		public boolean enableFloating = true;
 		public boolean enableFreezeProtection = true;
+		public boolean enableGliding = true;
 		public boolean enableLavaView = true;
 		public boolean enableLightning = true;
 		public boolean enableMercyKill = true;
