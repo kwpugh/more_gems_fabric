@@ -12,13 +12,11 @@
     "LivingEntityMixinBreathing",
     "LivingEntityMixinClimbing",
     "LivingEntityMixinTravel",
-    "LivingEntityMixinWisdom",
     "MiningToolItemMixin",
     "PiglinBrainMixin",
     "PlayerEntityMixin",
     "RavagerEntityMixin",
-    "StatusEffectMixin",
-    "WanderingTraderEntityMixin"
+    "StatusEffectMixin"
   ],
   "client": [
     "BackgroundRendererMixin"

@@ -42,7 +42,8 @@ public class PlayerSpecialAbilities
 	static float yellowHearts = MoreGems.CONFIG.GENERAL.quickeningAmountYellowHearts;
 	static int enemySlownessDurationTicks = MoreGems.CONFIG.GENERAL.quickeningEnemySlownessDurationTicks;
 	static int slownessLevel = MoreGems.CONFIG.GENERAL.quickeningSlownessLevel;
-	static int wisdomMultiplier = MoreGems.CONFIG.GENERAL.wisdomExperienceMultiplier;
+	static int wisdomMultiplier = MoreGems.CONFIG.GENERAL.wisdomExpMultiplier;
+	static int wisdomExpBase = MoreGems.CONFIG.GENERAL.wisdomExpBaseValue;
 	static boolean weaknessEnable = MoreGems.CONFIG.GENERAL.quickeningWeaknessEnable;
 	static boolean strengthEnable = MoreGems.CONFIG.GENERAL.quickeningStrengthEnable;
 	static boolean healthEnable = MoreGems.CONFIG.GENERAL.quickeningHealthEnable;
@@ -75,18 +76,11 @@ public class PlayerSpecialAbilities
 	}
 
 	// Used for Wisdom enchantment on swords
-	public static void giveWisdom(ItemStack stack, PlayerEntity attackingPlayer)
+	public static void giveWisdom(PlayerEntity attackingPlayer, ItemStack stack, int level)
 	{
-		Map<Enchantment, Integer> enchantments = EnchantmentHelper.get(attackingPlayer.getMainHandStack());
-
-		if (enchantments.containsKey(EnchantmentInit.WISDOM))
+		if (attackingPlayer != null)
 		{
-			int level = (EnchantmentHelper.getLevel(EnchantmentInit.WISDOM, stack));
-
-			if (attackingPlayer != null)
-			{
-				attackingPlayer.addExperience(level * wisdomMultiplier);
-			}
+			attackingPlayer.addExperience(wisdomExpBase + (level * wisdomMultiplier));
 		}
 	}
 

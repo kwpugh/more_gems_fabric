@@ -314,7 +314,8 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int stupefyLevelThreeDurationTicks = 90;
 		public float untouchableChance = .50F;
 		public float untouchableBaseDamage = 7;
-		public int wisdomExperienceMultiplier = 5;
+		public int wisdomExpBaseValue = 25;
+		public int wisdomExpMultiplier = 5;
 
 		@Comment("\n"
 				+"\n"

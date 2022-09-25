@@ -3,9 +3,10 @@ package com.kwpugh.more_gems;
 import com.kwpugh.more_gems.config.MoreGemsConfig;
 import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
 import com.kwpugh.more_gems.enchantments.stupefy.StupefyEntityManager;
+import com.kwpugh.more_gems.events.AfterKilledOtherEntityEvent;
 import com.kwpugh.more_gems.init.*;
 import com.kwpugh.more_gems.items.special.TreasureBag;
-import com.kwpugh.more_gems.util.ElytraEvent;
+import com.kwpugh.more_gems.events.ElytraEvent;
 import com.kwpugh.more_gems.world.GemOreConfiguredFeature;
 import com.kwpugh.more_gems.world.GemOrePlacedFeature;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -13,6 +14,7 @@ import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -45,6 +47,8 @@ public class MoreGems implements ModInitializer
 		EntityInit.registerEntities();
 		DispenserBehaviorInit.registerBehaviors();
 		ElytraEvent.init();
+		ServerEntityCombatEvents.AFTER_KILLED_OTHER_ENTITY.register(new AfterKilledOtherEntityEvent());
+		TraderOfferInit.register();
 	}
 
 	public static Identifier createID(String path)

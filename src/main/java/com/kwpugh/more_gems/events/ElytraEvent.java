@@ -1,4 +1,4 @@
-package com.kwpugh.more_gems.util;
+package com.kwpugh.more_gems.events;
 
 import com.kwpugh.more_gems.init.EnchantmentInit;
 import net.fabricmc.fabric.api.entity.event.v1.EntityElytraEvents;
