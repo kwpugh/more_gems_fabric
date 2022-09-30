@@ -20,10 +20,10 @@ import java.util.List;
 
 public class CrownGem extends ArmorItem
 {
-    StatusEffectInstance conduit = new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 8, 0, false, false);
-    StatusEffectInstance dolphin = new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 8, 0, false, false);
-    StatusEffectInstance speed = new StatusEffectInstance(StatusEffects.SPEED, 8, 1, false, false);
-    StatusEffectInstance strength = new StatusEffectInstance(StatusEffects.STRENGTH, 8, 2, false, false);
+    StatusEffectInstance conduit = new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 0, 0, false, false);
+    StatusEffectInstance dolphin = new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 0, 0, false, false);
+    StatusEffectInstance speed = new StatusEffectInstance(StatusEffects.SPEED, 0, 1, false, false);
+    StatusEffectInstance strength = new StatusEffectInstance(StatusEffects.STRENGTH, 0, 2, false, false);
 
     public CrownGem(ArmorMaterial material, EquipmentSlot slot, Settings settings)
     {

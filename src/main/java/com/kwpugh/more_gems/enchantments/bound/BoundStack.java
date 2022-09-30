@@ -9,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShieldItem;
 
 /*
-           +++++  Under development   +++++
         Simple object used to hold a PlayerEntity
         and a ItemStack.  Used in conjunction with
         BoundManager, which manages a List of BoundStacks.

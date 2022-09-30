@@ -65,6 +65,7 @@ public class TreasureBag extends Item
             createEntry(EnchantmentInit.FLOATING, 2);
         }
         if(MoreGems.CONFIG.GENERAL.enableFreezeProtection) createEntry(EnchantmentInit.FREEZE_PROTECTION, 1);
+        if(MoreGems.CONFIG.GENERAL.enableGliding) createEntry(EnchantmentInit.GLIDING, 1);
         if(MoreGems.CONFIG.GENERAL.enableLavaView) createEntry(EnchantmentInit.LAVA_VIEW, 1);
         if(MoreGems.CONFIG.GENERAL.enableLightning)
         {
