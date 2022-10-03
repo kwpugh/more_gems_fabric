@@ -22,26 +22,34 @@ public class StupefyEntityManager
             for(Iterator<StupefiedEntity> iterator = entityList.iterator(); iterator.hasNext();)
             {
                 StupefiedEntity stupefiedEntity = iterator.next();
+
+                // ensure only one call of remove() per iteration
                 Entity target = stupefiedEntity.getTarget();
-                int storedAge = stupefiedEntity.getAge();
-                int storedLevel = stupefiedEntity.getLevel();
-                int duration = 0;
 
-                duration = switch(storedLevel)
+                if(target.isAlive())
                 {
-                    case 1 -> levelOneTicks;
-                    case 2 -> levelTwoTicks;
-                    case 3 -> levelThreeTicks;
-                    default -> 40 * storedLevel;
-                };
+                    int storedAge = stupefiedEntity.getAge();
+                    int storedLevel = stupefiedEntity.getLevel();
+                    int duration = 0;
 
-                if(target.age - storedAge > duration)
+                    duration = switch(storedLevel)
+                            {
+                                case 1 -> levelOneTicks;
+                                case 2 -> levelTwoTicks;
+                                case 3 -> levelThreeTicks;
+                                default -> 40 * storedLevel;
+                            };
+
+                    if(target.age - storedAge > duration)
+                    {
+                        ((HostileEntity) target).setAiDisabled(false);
+                        iterator.remove();
+                    }
+                }
+                else
                 {
-                    ((HostileEntity) target).setAiDisabled(false);
                     iterator.remove();
                 }
-
-                if(!target.isAlive()) iterator.remove();
             }
         });
     }
