@@ -21,6 +21,7 @@ public class EnchantmentInit
 	public static final Enchantment FLOATING = new FloatingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment FREEZE_PROTECTION = new FreezeProtectionEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[]{EquipmentSlot.CHEST});
 	public static final Enchantment GLIDING = new GlidingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[]{EquipmentSlot.CHEST});
+	public static final Enchantment GUIDING = new GuidingEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment LAVA_VIEW = new LavaViewEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_HEAD, new EquipmentSlot[]{EquipmentSlot.HEAD});
 	public static final Enchantment LIGHTNING = new LightningEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment MERCY_KILL = new MercyKillEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -29,6 +30,7 @@ public class EnchantmentInit
 	public static final Enchantment QUICKENING = new QuickeningEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment RAZOR_SHARPNESS = new RazorSharpnessEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment SHULKER_BLADE = new ShulkerBladeEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+	public static final Enchantment STOUT = new StoutEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[]{EquipmentSlot.CHEST});
 	public static final Enchantment STUPEFY = new StupefyEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	public static final Enchantment UNTOUCHABLE = new UntouchableEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[]{EquipmentSlot.CHEST});
 	public static final Enchantment VOID_ESCAPE = new VoidEscapeEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR_FEET, new EquipmentSlot[]{EquipmentSlot.FEET});
@@ -46,6 +48,7 @@ public class EnchantmentInit
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "floating"), FLOATING);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "freeze_protection"), FREEZE_PROTECTION);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "gliding"), GLIDING);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "guiding"), GUIDING);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lava_view"), LAVA_VIEW);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lightning"), LIGHTNING);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mercy_kill"), MERCY_KILL);
@@ -54,6 +57,7 @@ public class EnchantmentInit
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "quickening"), QUICKENING);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "razor_sharpness"), RAZOR_SHARPNESS);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "shulker_blade"), SHULKER_BLADE);
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stout"), STOUT);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stupefy"), STUPEFY);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "untouchable"), UNTOUCHABLE);
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "wisdom"), WISDOM);

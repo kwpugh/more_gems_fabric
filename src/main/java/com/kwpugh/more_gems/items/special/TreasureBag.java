@@ -88,6 +88,12 @@ public class TreasureBag extends Item
         }
         if(MoreGems.CONFIG.GENERAL.enableRazorSharpness) createEntry(EnchantmentInit.RAZOR_SHARPNESS, 1);
         if(MoreGems.CONFIG.GENERAL.enableShulkerBlade) createEntry(EnchantmentInit.SHULKER_BLADE, 1);
+        if(MoreGems.CONFIG.GENERAL.enableStout)
+        {
+            createEntry(EnchantmentInit.STOUT, 1);
+            createEntry(EnchantmentInit.STOUT, 2);
+            createEntry(EnchantmentInit.STOUT, 3);
+        }
         if(MoreGems.CONFIG.GENERAL.enableStupefy)
         {
             createEntry(EnchantmentInit.STUPEFY, 1);

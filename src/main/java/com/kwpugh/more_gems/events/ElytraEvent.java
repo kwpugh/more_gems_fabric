@@ -7,7 +7,7 @@ import net.minecraft.entity.EquipmentSlot;
 
 public class ElytraEvent
 {
-    public static void init()
+    public static void register()
     {
         EntityElytraEvents.CUSTOM.register((entity, tickElytra) -> {
             if(EnchantmentHelper.getLevel(EnchantmentInit.GLIDING, entity.getEquippedStack(EquipmentSlot.CHEST)) > 0)

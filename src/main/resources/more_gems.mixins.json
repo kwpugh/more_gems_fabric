@@ -13,6 +13,7 @@
     "LivingEntityMixinClimbing",
     "LivingEntityMixinTravel",
     "MiningToolItemMixin",
+    "PersistentProjectileEntityMixin",
     "PiglinBrainMixin",
     "PlayerEntityMixin",
     "RavagerEntityMixin",

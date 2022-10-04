@@ -29,7 +29,7 @@ public abstract class CreeperEntityMixin
         LivingEntity target = self.getTarget();
         if(target instanceof PlayerEntity)
         {
-            if (EnchantmentHelper.getLevel(EnchantmentInit.CREEPERLESS, target.getEquippedStack(EquipmentSlot.LEGS)) > 0)
+            if(EnchantmentHelper.getLevel(EnchantmentInit.CREEPERLESS, target.getEquippedStack(EquipmentSlot.LEGS)) > 0)
             {
                 this.currentFuseTime = 0;
             }
