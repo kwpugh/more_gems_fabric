@@ -12,10 +12,14 @@ public class TraderOfferInit
     public static void register()
     {
         TradeOfferHelper.registerWanderingTraderOffers(1, factories -> {
-            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 10), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.CREEPERLESS, 1)), 3, 2, 0.05f)));
+            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 10), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.CREEPERLESS, 1)), 1, 2, 0.05f)));
             factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 7), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.BOUND, 1)), 3, 2, 0.05f)));
-            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.ATTRACTING, 1)), 3, 2, 0.05f)));
-            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 5), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.WISDOM, 1)), 3, 2, 0.05f)));
+            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.ATTRACTING, 1)), 1, 2, 0.05f)));
+            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 5), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.WISDOM, 1)), 2, 2, 0.05f)));
+            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.CLIMBING, 1)), 1, 2, 0.05f)));
+            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.GLIDING, 1)), 1, 2, 0.05f)));
+            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.GUIDING, 1)), 2, 2, 0.05f)));
+            factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.STOUT, 1)), 2, 2, 0.05f)));
             factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.GOLD_INGOT, 4), new ItemStack(ItemInit.TOURMALINE, 3), new ItemStack(ItemInit.TOURMALINE_JUJU), 3, 2, 0.05f)));
             factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.GOLD_INGOT, 4), new ItemStack(ItemInit.CITRINE, 3), new ItemStack(ItemInit.CITRINE_JUJU), 3, 2, 0.05f)));
             factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.GOLD_INGOT, 4), new ItemStack(ItemInit.KUNZITE, 3), new ItemStack(ItemInit.KUNZITE_JUJU), 3, 2, 0.05f)));

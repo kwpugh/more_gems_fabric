@@ -16,7 +16,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(CreeperEntity.class)
 public abstract class CreeperEntityMixin
 {
-    @Shadow  private int currentFuseTime;
+    @Shadow private int currentFuseTime;
+    @Shadow private int fuseTime;
 
     @Inject(at = @At("HEAD"), method = "tick", cancellable = true)
     public void gobberCreeperTick(CallbackInfo ci)
@@ -31,7 +32,7 @@ public abstract class CreeperEntityMixin
         {
             if(EnchantmentHelper.getLevel(EnchantmentInit.CREEPERLESS, target.getEquippedStack(EquipmentSlot.LEGS)) > 0)
             {
-                this.currentFuseTime = 0;
+                this.currentFuseTime = 1;
             }
         }
     }
