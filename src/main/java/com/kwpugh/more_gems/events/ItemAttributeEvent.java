@@ -13,7 +13,10 @@ public class ItemAttributeEvent
     public static void register()
     {
         ModifyItemAttributeModifiersCallback.EVENT.register((stack, slot, attributeModifiers) -> {
-            if(slot == EquipmentSlot.CHEST)
+            if(slot == EquipmentSlot.HEAD ||
+                    slot == EquipmentSlot.CHEST ||
+                    slot == EquipmentSlot.LEGS ||
+                    slot == EquipmentSlot.FEET)
             {
                 int i = EnchantmentHelper.getLevel(EnchantmentInit.STOUT, stack);
 
