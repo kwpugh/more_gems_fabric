@@ -2,7 +2,7 @@ package com.kwpugh.more_gems.mixin;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.bound.BoundStack;
-import com.kwpugh.more_gems.enchantments.bound.BoundStackManager;
+import com.kwpugh.more_gems.events.BoundStackManager;
 import com.kwpugh.more_gems.init.EnchantmentInit;
 import com.kwpugh.more_gems.init.ItemInit;
 import com.kwpugh.more_gems.util.EnableUtil;

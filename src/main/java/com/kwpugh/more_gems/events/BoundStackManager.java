@@ -1,6 +1,7 @@
-package com.kwpugh.more_gems.enchantments.bound;
+package com.kwpugh.more_gems.events;
 
 import com.kwpugh.more_gems.MoreGems;
+import com.kwpugh.more_gems.enchantments.bound.BoundStack;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.world.GameRules;

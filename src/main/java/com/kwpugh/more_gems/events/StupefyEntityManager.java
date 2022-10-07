@@ -1,6 +1,7 @@
-package com.kwpugh.more_gems.enchantments.stupefy;
+package com.kwpugh.more_gems.events;
 
 import com.kwpugh.more_gems.MoreGems;
+import com.kwpugh.more_gems.enchantments.stupefy.StupefiedEntity;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.mob.HostileEntity;

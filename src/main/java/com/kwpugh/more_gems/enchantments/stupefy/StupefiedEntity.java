@@ -15,8 +15,6 @@ public class StupefiedEntity
         this.age = age;
     }
 
-
-
     public Entity getTarget()
     {
         return target;

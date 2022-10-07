@@ -2,13 +2,10 @@ package com.kwpugh.more_gems.util;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.enchantments.stupefy.StupefiedEntity;
-import com.kwpugh.more_gems.enchantments.stupefy.StupefyEntityManager;
-import com.kwpugh.more_gems.init.EnchantmentInit;
+import com.kwpugh.more_gems.events.StupefyEntityManager;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.boss.WitherEntity;
@@ -31,7 +28,6 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.chunk.Chunk;
 
-import java.util.Map;
 import java.util.Random;
 
 public class PlayerSpecialAbilities

@@ -35,7 +35,7 @@ public class TreasureBag extends Item
     private final Random random = Random.create();
     private static final List<EnchantmentLevelEntry> enchantmentList = new ArrayList<>();
 
-    public static void initEnchantmentEntries()
+    public static void initTreasure()
     {
         createEntry(Enchantments.SILK_TOUCH, 1);
         createEntry(Enchantments.EFFICIENCY, 4);

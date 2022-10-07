@@ -6,6 +6,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -28,11 +29,12 @@ public abstract class CreeperEntityMixin
         if(world.isClient()) return;
 
         LivingEntity target = self.getTarget();
-        if(target instanceof PlayerEntity)
+        if(target instanceof PlayerEntity player)
         {
             if(EnchantmentHelper.getLevel(EnchantmentInit.CREEPERLESS, target.getEquippedStack(EquipmentSlot.LEGS)) > 0)
             {
                 this.currentFuseTime = 1;
+                player.sendMessage((Text.translatable("Creeper Alert!!")), true);
             }
         }
     }

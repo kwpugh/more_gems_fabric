@@ -9,7 +9,7 @@ import net.minecraft.village.TradeOffer;
 
 public class TraderOfferInit
 {
-    public static void register()
+    public static void registerOffers()
     {
         TradeOfferHelper.registerWanderingTraderOffers(1, factories -> {
             factories.add(((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 10), new ItemStack(Items.BOOK), EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(EnchantmentInit.CREEPERLESS, 1)), 1, 2, 0.05f)));

@@ -1,6 +1,7 @@
-package com.kwpugh.more_gems.init;
+package com.kwpugh.more_gems.events;
 
 import com.kwpugh.more_gems.MoreGems;
+import com.kwpugh.more_gems.init.ItemInit;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTables;
@@ -8,7 +9,7 @@ import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 
-public class LootTableInit
+public class LootTableEvent
 {
 	static float jujuChance = MoreGems.CONFIG.GENERAL.jujuChance;
 	static float treasueBagChance = MoreGems.CONFIG.GENERAL.treasureBagChance;
