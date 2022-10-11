@@ -263,7 +263,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableBenevolence = true;
 		public boolean enableClimbing = true;
 		public boolean enableBlinking = true;
-		public boolean enablebound = true;
+		public boolean enableBound = true;
 		public boolean enableCreeperless = true;
 		public boolean enableFloating = true;
 		public boolean enableFreezeProtection = true;
@@ -272,6 +272,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean enableLavaView = true;
 		public boolean enableLightning = true;
 		public boolean enableMercyKill = true;
+		public boolean enableMight = true;
 		public boolean enableMiningHelper = true;
 		public boolean enableObsidinator = true;
 		public boolean enableQuickening = true;
@@ -296,6 +297,9 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int floatingBaseDuration = 80;
 		public int guidingTargetArea = 14;
 		public float lightningChance = 0.10F;
+		public double mightAttackModifier = 0.5D;
+		public double mightKnockbackModifier = 0.25D;
+		public double mightSpeedModifier = 0.25D;
 		public int miningHelperVertical = 2;
 		public int miningHelperHoriz = 4;
 		public boolean quickeningEnableEffect = true;
@@ -311,8 +315,8 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean quickeningWeaknessEnable = true;
 		public float razorDamageIncrease = 6.0F;
 		public int shulkerBladeDurationTicks = 300;
-		public double stoutHealthModifier = 1.5D;
-		public double stoutArmorModifier = 1.0D;
+		public double stoutHealthModifier = 0.5D;
+		public double stoutArmorModifier = 0.5D;
 		public double stupefyChanceMultiplier = .15;
 		public int stupefyLevelOneDurationTicks = 20;
 		public int stupefyLevelTwoDurationTicks = 60;

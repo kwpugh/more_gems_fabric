@@ -1,13 +1,13 @@
-package com.kwpugh.more_gems.enchantments.bound;
+package com.kwpugh.more_gems.enchantments;
 
 import com.kwpugh.more_gems.MoreGems;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 
-public class BoundEnchantment extends Enchantment
+public class MightEnchantment extends Enchantment
 {
-    public BoundEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
+    public MightEnchantment(Rarity rarity, EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots)
     {
         super(rarity, enchantmentTarget, equipmentSlots);
     }
@@ -27,24 +27,24 @@ public class BoundEnchantment extends Enchantment
     @Override
     public int getMaxLevel()
     {
-        return 1;
+        return 3;
     }
 
     @Override
     public boolean isTreasure()
     {
-        return MoreGems.CONFIG.GENERAL.enableBound;
+        return MoreGems.CONFIG.GENERAL.enableMight;
     }
 
     @Override
     public boolean isAvailableForEnchantedBookOffer()
     {
-        return MoreGems.CONFIG.GENERAL.enableBound;
+        return MoreGems.CONFIG.GENERAL.enableMight;
     }
 
     @Override
     public boolean isAvailableForRandomSelection()
     {
-        return MoreGems.CONFIG.GENERAL.enableBound;
+        return MoreGems.CONFIG.GENERAL.enableMight;
     }
 }

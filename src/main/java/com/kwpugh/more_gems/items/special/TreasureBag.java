@@ -56,7 +56,7 @@ public class TreasureBag extends Item
         }
         if(MoreGems.CONFIG.GENERAL.enableBenevolence) createEntry(EnchantmentInit.BENEVOLENCE, 1);
         if(MoreGems.CONFIG.GENERAL.enableBlinking) createEntry(EnchantmentInit.BLINKING, 1);
-        if(MoreGems.CONFIG.GENERAL.enablebound) createEntry(EnchantmentInit.BOUND, 1);
+        if(MoreGems.CONFIG.GENERAL.enableBound) createEntry(EnchantmentInit.BOUND, 1);
         if(MoreGems.CONFIG.GENERAL.enableClimbing) createEntry(EnchantmentInit.CLIMBING, 1);
         if(MoreGems.CONFIG.GENERAL.enableCreeperless) createEntry(EnchantmentInit.CREEPERLESS, 1);
         if(MoreGems.CONFIG.GENERAL.enableFloating)
@@ -77,6 +77,12 @@ public class TreasureBag extends Item
             createEntry(EnchantmentInit.LIGHTNING, 5);
         }
         if(MoreGems.CONFIG.GENERAL.enableMercyKill) createEntry(EnchantmentInit.MERCY_KILL, 1);
+        if(MoreGems.CONFIG.GENERAL.enableMight)
+        {
+            createEntry(EnchantmentInit.MIGHT, 1);
+            createEntry(EnchantmentInit.MIGHT, 2);
+            createEntry(EnchantmentInit.MIGHT, 3);
+        }
         if(MoreGems.CONFIG.GENERAL.enableMiningHelper) createEntry(EnchantmentInit.MINING_HELPER, 1);
         if(MoreGems.CONFIG.GENERAL.enableObsidinator) createEntry(EnchantmentInit.OBSIDIANATOR, 1);
         if(MoreGems.CONFIG.GENERAL.enableQuickening)
