@@ -297,9 +297,9 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int floatingBaseDuration = 80;
 		public int guidingTargetArea = 14;
 		public float lightningChance = 0.10F;
-		public double mightAttackModifier = 0.5D;
+		public double mightAttackDamageModifier = 0.5D;
 		public double mightKnockbackModifier = 0.25D;
-		public double mightSpeedModifier = 0.25D;
+		public double mightAttackSpeedModifier = 0.25D;
 		public int miningHelperVertical = 2;
 		public int miningHelperHoriz = 4;
 		public boolean quickeningEnableEffect = true;
@@ -315,8 +315,9 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean quickeningWeaknessEnable = true;
 		public float razorDamageIncrease = 6.0F;
 		public int shulkerBladeDurationTicks = 300;
-		public double stoutHealthModifier = 0.5D;
+		public double stoutToughnessModifier = 0.5D;
 		public double stoutArmorModifier = 0.5D;
+		public double stoutHealthModifier = 0.5D;
 		public double stupefyChanceMultiplier = .15;
 		public int stupefyLevelOneDurationTicks = 20;
 		public int stupefyLevelTwoDurationTicks = 60;
