@@ -315,7 +315,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public boolean quickeningWeaknessEnable = true;
 		public float razorDamageIncrease = 6.0F;
 		public int shulkerBladeDurationTicks = 300;
-		public double stoutToughnessModifier = 0.5D;
+		public double stoutToughnessModifier = 0.25D;
 		public double stoutArmorModifier = 0.5D;
 		public double stoutHealthModifier = 0.5D;
 		public double stupefyChanceMultiplier = .15;

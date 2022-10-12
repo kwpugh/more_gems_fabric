@@ -12,7 +12,7 @@ import java.util.UUID;
 
 public class ItemAttributeEvent
 {
-    static String uuidString = "4b677ac0-497a-11ed-b878-0242ac120002";
+    static UUID uuidString = UUID.fromString("4b677ac0-497a-11ed-b878-0242ac120002");
 
     public static void register()
     {
@@ -23,13 +23,13 @@ public class ItemAttributeEvent
                 if (i > 0)
                 {
                     EntityAttributeModifier modifierToughness =
-                            new EntityAttributeModifier(UUID.fromString(uuidString), "more-gems-stout-toughness",
+                            new EntityAttributeModifier(uuidString, "more-gems-stout-toughness",
                                     MoreGems.CONFIG.GENERAL.stoutToughnessModifier * i, EntityAttributeModifier.Operation.ADDITION);
                     EntityAttributeModifier modifierArmor =
-                            new EntityAttributeModifier(UUID.fromString(uuidString),"more-gems-stout-armor",
+                            new EntityAttributeModifier(uuidString,"more-gems-stout-armor",
                                     MoreGems.CONFIG.GENERAL.stoutArmorModifier * i, EntityAttributeModifier.Operation.ADDITION);
                     EntityAttributeModifier modifierHealth =
-                            new EntityAttributeModifier(UUID.fromString(uuidString),"more-gems-stout-health",
+                            new EntityAttributeModifier(uuidString,"more-gems-stout-health",
                                     MoreGems.CONFIG.GENERAL.stoutHealthModifier * i, EntityAttributeModifier.Operation.ADDITION);
 
                     attributeModifiers.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, modifierToughness);
@@ -44,13 +44,13 @@ public class ItemAttributeEvent
                 if (j > 0)
                 {
                     EntityAttributeModifier modifierAttackDamage =
-                            new EntityAttributeModifier(UUID.fromString(uuidString), "more-gems-might-attack",
+                            new EntityAttributeModifier(uuidString, "more-gems-might-attack",
                                     MoreGems.CONFIG.GENERAL.mightAttackDamageModifier * j, EntityAttributeModifier.Operation.ADDITION);
                     EntityAttributeModifier modifierKnockback =
-                            new EntityAttributeModifier(UUID.fromString(uuidString), "more-gems-might-knockback",
+                            new EntityAttributeModifier(uuidString, "more-gems-might-knockback",
                                     MoreGems.CONFIG.GENERAL.mightKnockbackModifier * j, EntityAttributeModifier.Operation.ADDITION);
                     EntityAttributeModifier modifierAttackSpeed =
-                            new EntityAttributeModifier(UUID.fromString(uuidString), "more-gems-might-attack-speed",
+                            new EntityAttributeModifier(uuidString, "more-gems-might-attack-speed",
                                     MoreGems.CONFIG.GENERAL.mightAttackSpeedModifier * j, EntityAttributeModifier.Operation.ADDITION);
 
                     attributeModifiers.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, modifierAttackDamage);
