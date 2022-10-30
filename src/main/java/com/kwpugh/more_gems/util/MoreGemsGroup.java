@@ -2,6 +2,7 @@ package com.kwpugh.more_gems.util;
 
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.BlockInit;
+import com.kwpugh.more_gems.init.ContainerInit;
 import com.kwpugh.more_gems.init.ItemInit;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -246,6 +247,8 @@ public class MoreGemsGroup
             entries.add(ItemInit.SPINEL_JUJU);
             entries.add(ItemInit.CARBONADO_JUJU);
             entries.add(ItemInit.MOISSANITE_JUJU);
+
+            entries.add(ContainerInit.GEMBAG);
 
             entries.add(ItemInit.CROWN);
             entries.add(ItemInit.CROWN_GEM);

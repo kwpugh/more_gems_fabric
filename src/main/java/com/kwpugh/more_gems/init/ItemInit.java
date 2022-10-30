@@ -3,7 +3,6 @@ package com.kwpugh.more_gems.init;
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.items.areatools.ModExcavator;
 import com.kwpugh.more_gems.items.areatools.ModHammer;
-import com.kwpugh.more_gems.items.areatools.ModHammerCrude;
 import com.kwpugh.more_gems.items.arrows.*;
 import com.kwpugh.more_gems.items.baseclasses.*;
 import com.kwpugh.more_gems.items.gembag.GemBase;
