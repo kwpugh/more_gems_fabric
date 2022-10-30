@@ -8,6 +8,7 @@ import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.item.*;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.SpecialCraftingRecipe;
+import net.minecraft.recipe.book.CraftingRecipeCategory;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
@@ -15,9 +16,9 @@ public class ToolRepair extends SpecialCraftingRecipe
 {
     ItemStack materialType = ItemStack.EMPTY;
 
-    public ToolRepair(Identifier identifier)
+    public ToolRepair(Identifier id, CraftingRecipeCategory category)
     {
-        super(identifier);
+        super(id, category);
     }
 
     @Override

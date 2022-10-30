@@ -35,9 +35,6 @@ public class GembagItem extends GemBase
 
     private NamedScreenHandlerFactory createScreenHandlerFactory(ItemStack stack)
     {
-//        return new SimpleNamedScreenHandlerFactory((syncId, inventory, player) ->
-//                new GembagScreenHandler(syncId, inventory, new GembagInventory(stack)), stack.getName());
-
         return new SimpleNamedScreenHandlerFactory((i, playerInventory, playerEntity) ->
                 NewGembagScreenHandler.createGeneric9x6(i, playerInventory, new GembagInventory(stack)), stack.getName());
     }

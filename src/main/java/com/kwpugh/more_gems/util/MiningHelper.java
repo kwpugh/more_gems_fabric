@@ -3,7 +3,7 @@ package com.kwpugh.more_gems.util;
 import com.kwpugh.more_gems.MoreGems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.OreBlock;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.RedstoneOreBlock;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -27,7 +27,7 @@ public class MiningHelper
             BlockState currentState = world.getBlockState(currentPos);
             Block currentBlock = currentState.getBlock();
 
-            if(currentBlock instanceof OreBlock || currentBlock instanceof RedstoneOreBlock)
+            if(currentBlock instanceof ExperienceDroppingBlock || currentBlock instanceof RedstoneOreBlock)
             {
                 if(savedBlocked.equals(currentBlock))
                 {

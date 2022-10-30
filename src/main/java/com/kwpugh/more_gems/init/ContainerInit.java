@@ -10,7 +10,7 @@ import net.minecraft.util.registry.Registry;
 public class ContainerInit
 {
 	public static ScreenHandlerType<GembagScreenHandler> GEMBAG_SCREEN_HANDLER;
-	public static final Item GEMBAG = new GembagItem(new Item.Settings().group(MoreGems.MORE_GEMS_GROUP).maxCount(1));
+	public static final Item GEMBAG = new GembagItem(new Item.Settings().maxCount(1));
 	
 	public static void registerContainer()
 	{
