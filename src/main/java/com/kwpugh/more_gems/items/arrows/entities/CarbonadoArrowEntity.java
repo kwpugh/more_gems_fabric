@@ -3,11 +3,6 @@ package com.kwpugh.more_gems.items.arrows.entities;
 import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.init.EntityInit;
 import com.kwpugh.more_gems.init.ItemInit;
-import com.kwpugh.more_gems.init.TagInit;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.GrassBlock;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -19,10 +14,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
-import net.minecraft.world.explosion.Explosion;
 
 public class CarbonadoArrowEntity extends PersistentProjectileEntity
 {
@@ -88,7 +81,7 @@ public class CarbonadoArrowEntity extends PersistentProjectileEntity
         if(MoreGems.CONFIG.GENERAL.carbonadoExplosion && MoreGems.CONFIG.GENERAL.carbonadoExplosionOnBlock)
         {
             boolean griefingAllowed = this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING);
-            this.world.createExplosion(this, x, y, z, MoreGems.CONFIG.GENERAL.carbonadoExplosionFactor, griefingAllowed ? Explosion.DestructionType.BREAK : Explosion.DestructionType.NONE);
+            this.world.createExplosion(this, x, y, z, MoreGems.CONFIG.GENERAL.carbonadoExplosionFactor, griefingAllowed ? World.ExplosionSourceType.TNT : World.ExplosionSourceType.NONE);
             this.discard();
         }
     }

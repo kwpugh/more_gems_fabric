@@ -27,7 +27,7 @@ public class MoreGemsGroup
         }
 
         @Override
-        protected void addItems(FeatureSet enabledFeatures, Entries entries)
+        protected void addItems(FeatureSet enabledFeatures, Entries entries, boolean hasPermission)
         {
             entries.add(BlockInit.CITRINE_ORE);
             entries.add(BlockInit.TOURMALINE_ORE);
