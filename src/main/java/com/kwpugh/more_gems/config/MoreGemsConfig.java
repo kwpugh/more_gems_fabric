@@ -42,6 +42,21 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 				+"\n"
 				+"\n"
 				+"******************************"
+				+"\nGem Arrow Effects"
+				+"\n******************************")
+		public boolean alexandritePowderSnow = true;
+		public boolean corundumCobwebs = true;
+		public boolean sapphireDarknessCloud = true;
+		public boolean spinelPoisonCloud = true;
+		public boolean carbonadoExplosion = true;
+		public boolean carbonadoExplosionOnBlock = true;
+		public boolean moissaniteFireCloud = true;
+		public boolean moissaniteFireCloudOnBlock = true;
+
+		@Comment("\n"
+				+"\n"
+				+"\n"
+				+"******************************"
 				+"\nGem Arrow Settings"
 				+"\n- note: amplifer levels start at 0"
 				+"\n******************************")
@@ -62,33 +77,27 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int alexandritePunchLevel = 1;
 		public int alexandriteSlownessAmplifier = 0;
 		public int alexandriteSlownessDuration = 300;
-		public boolean alexandritePowderSnow = true;
 		public float corundumExtraDamage = 2.25F;
 		public byte corundumPierceLevel = 1;
 		public int corundumPunchLevel = 1;
 		public int corundumBlindnessAmplifier = 0;
 		public int corundumBlindnessDuration = 300;
-		public boolean corundumCobwebs = true;
 		public float sapphireExtraDamage = 2.5F;
 		public byte sapphirePierceLevel = 1;
 		public int sapphirePunchLevel = 1;
 		public int sapphireDarknessAmplifier = 0;
 		public int sapphireDarknessDuration = 300;
-		public boolean sapphireDarknessCloud = true;
 		public float spinelExtraDamage = 2.75F;
 		public byte spinelPierceLevel = 1;
 		public int spinelPunchLevel = 1;
 		public int spinelPoisonAmplifier = 0;
 		public int spinelPoisonDuration = 300;
-		public boolean spinelPoisonCloud = true;
 		public float spinelArrowLootChance = .08F;
 		public float carbonadoExtraDamage = 3.0F;
 		public byte carbonadoPierceLevel = 1;
 		public int carbonadoPunchLevel = 2;
 		public int carbonadoSlownessAmplifier = 1;
 		public int carbonadoSlownessDuration = 300;
-		public boolean carbonadoExplosion = true;
-		public boolean carbonadoExplosionOnBlock = true;
 		public int carbonadoExplosionFactor = 2;
 		public float carbonadoArrowLootChance = .08F;
 		public float moissaniteExtraDamage = 4.0F;
@@ -96,8 +105,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int moissanitePunchLevel = 2;
 		public int moissaniteWitherAmplifier = 1;
 		public int moissaniteWitherDuration = 300;
-		public boolean moissaniteFireCloud = true;
-		public boolean moissaniteFireCloudOnBlock = true;
 		public float moissaniteArrowLootChance = .08F;
 
 		@Comment("\n"

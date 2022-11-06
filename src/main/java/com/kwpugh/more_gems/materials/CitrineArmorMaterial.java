@@ -15,9 +15,13 @@ public class CitrineArmorMaterial implements ArmorMaterial
     private static float toughness = MoreGems.CONFIG.GENERAL.citrineToughness;
     private static float knochback = MoreGems.CONFIG.GENERAL.citrineKnockbackResistance;
 
+    private static int citrineHead = MoreGems.CONFIG.GENERAL.citrineHeadProtection;
+    private static int citrineChest = MoreGems.CONFIG.GENERAL.citrineChestProtection;
+    private static int citrineLeggings = MoreGems.CONFIG.GENERAL.citrineLeggingsProtection;
+    private static int citrineBoots = MoreGems.CONFIG.GENERAL.citrineBootsProtection;
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 6, 2};
+    private static final int[] PROTECTION_AMOUNT = new int[]{citrineHead, citrineLeggings, citrineChest, citrineBoots};
 
     @Override
     public int getDurability(EquipmentSlot slot)
