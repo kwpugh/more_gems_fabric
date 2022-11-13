@@ -5,6 +5,7 @@ import com.kwpugh.more_gems.items.gembag.GembagItem;
 import com.kwpugh.more_gems.items.gembag.GembagScreenHandler;
 import net.minecraft.item.Item;
 import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.util.registry.Registries;
 import net.minecraft.util.registry.Registry;
 
 public class ContainerInit
@@ -14,8 +15,8 @@ public class ContainerInit
 	
 	public static void registerContainer()
 	{
-		GEMBAG_SCREEN_HANDLER = Registry.register(Registry.SCREEN_HANDLER, MoreGems.createID("gembag"), new ScreenHandlerType<>(GembagScreenHandler::new));
+		GEMBAG_SCREEN_HANDLER = Registry.register(Registries.SCREEN_HANDLER, MoreGems.createID("gembag"), new ScreenHandlerType<>(GembagScreenHandler::new));
 
-		Registry.register(Registry.ITEM, MoreGems.createID("gembag"), GEMBAG);
+		Registry.register(Registries.ITEM, MoreGems.createID("gembag"), GEMBAG);
 	}
 }

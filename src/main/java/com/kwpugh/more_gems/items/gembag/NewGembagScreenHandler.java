@@ -112,7 +112,7 @@ public class NewGembagScreenHandler extends ScreenHandler
     }
 
     @Override
-    public ItemStack transferSlot(PlayerEntity player, int index) {
+    public ItemStack quickMove(PlayerEntity player, int index) {
         ItemStack itemStack = ItemStack.EMPTY;
         Slot slot = (Slot)this.slots.get(index);
 

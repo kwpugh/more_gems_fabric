@@ -8,6 +8,7 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registries;
 import net.minecraft.util.registry.Registry;
 
 public class EnchantmentInit
@@ -40,29 +41,29 @@ public class EnchantmentInit
 
 	public static void registerEnchantments()
 	{
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "attracting"), ATTRACTING);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "benevolence"), BENEVOLENCE);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "blinking"), BLINKING);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "bound"), BOUND);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "climbing"), CLIMBING);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "creeperless"), CREEPERLESS);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "floating"), FLOATING);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "freeze_protection"), FREEZE_PROTECTION);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "gliding"), GLIDING);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "guiding"), GUIDING);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lava_view"), LAVA_VIEW);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lightning"), LIGHTNING);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mercy_kill"), MERCY_KILL);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "might"), MIGHT);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mining_helper"), MINING_HELPER);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "obsidianator"), OBSIDIANATOR);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "quickening"), QUICKENING);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "razor_sharpness"), RAZOR_SHARPNESS);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "shulker_blade"), SHULKER_BLADE);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stout"), STOUT);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stupefy"), STUPEFY);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "untouchable"), UNTOUCHABLE);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "wisdom"), WISDOM);
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "void_escape"), VOID_ESCAPE);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "attracting"), ATTRACTING);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "benevolence"), BENEVOLENCE);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "blinking"), BLINKING);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "bound"), BOUND);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "climbing"), CLIMBING);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "creeperless"), CREEPERLESS);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "floating"), FLOATING);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "freeze_protection"), FREEZE_PROTECTION);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "gliding"), GLIDING);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "guiding"), GUIDING);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lava_view"), LAVA_VIEW);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "lightning"), LIGHTNING);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mercy_kill"), MERCY_KILL);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "might"), MIGHT);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "mining_helper"), MINING_HELPER);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "obsidianator"), OBSIDIANATOR);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "quickening"), QUICKENING);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "razor_sharpness"), RAZOR_SHARPNESS);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "shulker_blade"), SHULKER_BLADE);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stout"), STOUT);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "stupefy"), STUPEFY);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "untouchable"), UNTOUCHABLE);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "wisdom"), WISDOM);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(MoreGems.MOD_ID, "void_escape"), VOID_ESCAPE);
 	}
 }

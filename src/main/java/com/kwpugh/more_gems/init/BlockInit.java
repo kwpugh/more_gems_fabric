@@ -8,6 +8,7 @@ import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registries;
 import net.minecraft.util.registry.Registry;
 
 public class BlockInit
@@ -44,68 +45,68 @@ public class BlockInit
 
 	public static void registerBlocks()
 	{
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "citrine_ore"), CITRINE_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "tourmaline_ore"), TOURMALINE_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "kunzite_ore"), KUNZITE_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "topaz_ore"), TOPAZ_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_ore"), ALEXANDRITE_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_ore"), CORUNDUM_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "sapphire_ore"), SAPPHIRE_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "spinel_ore"), SPINEL_ORE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "carbonado_ore"), CARBONADO_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "citrine_ore"), CITRINE_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "tourmaline_ore"), TOURMALINE_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "kunzite_ore"), KUNZITE_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "topaz_ore"), TOPAZ_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_ore"), ALEXANDRITE_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_ore"), CORUNDUM_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "sapphire_ore"), SAPPHIRE_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "spinel_ore"), SPINEL_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "carbonado_ore"), CARBONADO_ORE);
 
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "sapphire_ore_deepslate"), SAPPHIRE_ORE_DEEPSLATE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "spinel_ore_deepslate"), SPINEL_ORE_DEEPSLATE);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "carbonado_ore_deepslate"), CARBONADO_ORE_DEEPSLATE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "sapphire_ore_deepslate"), SAPPHIRE_ORE_DEEPSLATE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "spinel_ore_deepslate"), SPINEL_ORE_DEEPSLATE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "carbonado_ore_deepslate"), CARBONADO_ORE_DEEPSLATE);
 
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "kunzite_ore_nether"), KUNZITE_ORE_NETHER);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_ore_nether"), ALEXANDRITE_ORE_NETHER);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_ore_nether"), CORUNDUM_ORE_NETHER);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "moissanite_ore"), MOISSANITE_ORE);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "kunzite_ore_nether"), KUNZITE_ORE_NETHER);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_ore_nether"), ALEXANDRITE_ORE_NETHER);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_ore_nether"), CORUNDUM_ORE_NETHER);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "moissanite_ore"), MOISSANITE_ORE);
 
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "citrine_block"), CITRINE_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "tourmaline_block"), TOURMALINE_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "kunzite_block"), KUNZITE_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "topaz_block"), TOPAZ_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_block"), ALEXANDRITE_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_block"), CORUNDUM_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "sapphire_block"), SAPPHIRE_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "spinel_block"), SPINEL_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "carbonado_block"), CARBONADO_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier(MoreGems.MOD_ID, "moissanite_block"), MOISSANITE_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "citrine_block"), CITRINE_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "tourmaline_block"), TOURMALINE_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "kunzite_block"), KUNZITE_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "topaz_block"), TOPAZ_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "alexandrite_block"), ALEXANDRITE_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "corundum_block"), CORUNDUM_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "sapphire_block"), SAPPHIRE_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "spinel_block"), SPINEL_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "carbonado_block"), CARBONADO_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier(MoreGems.MOD_ID, "moissanite_block"), MOISSANITE_BLOCK);
 	}
 	
 	public static void registerBlockItems()
 	{
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_ore"), new BlockItem(CITRINE_ORE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_ore"), new BlockItem(TOURMALINE_ORE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_ore"), new BlockItem(KUNZITE_ORE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_ore"), new BlockItem(TOPAZ_ORE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_ore"), new BlockItem(CORUNDUM_ORE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_ore"), new BlockItem(SPINEL_ORE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_ore"), new BlockItem(CARBONADO_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_ore"), new BlockItem(CITRINE_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_ore"), new BlockItem(TOURMALINE_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_ore"), new BlockItem(KUNZITE_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_ore"), new BlockItem(TOPAZ_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_ore"), new BlockItem(CORUNDUM_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_ore"), new BlockItem(SPINEL_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_ore"), new BlockItem(CARBONADO_ORE, new Item.Settings()));
 
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_ore_deepslate"), new BlockItem(SAPPHIRE_ORE_DEEPSLATE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_ore_deepslate"), new BlockItem(SPINEL_ORE_DEEPSLATE, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_ore_deepslate"), new BlockItem(CARBONADO_ORE_DEEPSLATE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_ore_deepslate"), new BlockItem(SAPPHIRE_ORE_DEEPSLATE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_ore_deepslate"), new BlockItem(SPINEL_ORE_DEEPSLATE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_ore_deepslate"), new BlockItem(CARBONADO_ORE_DEEPSLATE, new Item.Settings()));
 
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_ore_nether"), new BlockItem(KUNZITE_ORE_NETHER, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_ore_nether"), new BlockItem(ALEXANDRITE_ORE_NETHER, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_ore_nether"), new BlockItem(CORUNDUM_ORE_NETHER, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_ore"), new BlockItem(MOISSANITE_ORE, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_ore_nether"), new BlockItem(KUNZITE_ORE_NETHER, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_ore_nether"), new BlockItem(ALEXANDRITE_ORE_NETHER, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_ore_nether"), new BlockItem(CORUNDUM_ORE_NETHER, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_ore"), new BlockItem(MOISSANITE_ORE, new Item.Settings()));
 
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_block"), new BlockItem(CITRINE_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_block"), new BlockItem(TOURMALINE_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_block"), new BlockItem(KUNZITE_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_block"), new BlockItem(TOPAZ_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_block"), new BlockItem(ALEXANDRITE_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_block"), new BlockItem(SPINEL_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_block"), new BlockItem(CARBONADO_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_block"), new BlockItem(MOISSANITE_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "citrine_block"), new BlockItem(CITRINE_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "tourmaline_block"), new BlockItem(TOURMALINE_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "kunzite_block"), new BlockItem(KUNZITE_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "topaz_block"), new BlockItem(TOPAZ_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "alexandrite_block"), new BlockItem(ALEXANDRITE_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "spinel_block"), new BlockItem(SPINEL_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "carbonado_block"), new BlockItem(CARBONADO_BLOCK, new Item.Settings()));
+		Registry.register(Registries.ITEM, new Identifier(MoreGems.MOD_ID, "moissanite_block"), new BlockItem(MOISSANITE_BLOCK, new Item.Settings()));
 	}
 	
 	public static void registerBlockEntities()

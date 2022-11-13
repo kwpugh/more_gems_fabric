@@ -7,6 +7,7 @@ import net.minecraft.tag.BiomeTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.util.registry.RegistryKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.placementmodifier.*;
 
@@ -18,20 +19,20 @@ public class OreBiomeModifications
     public static void addOres()
     {
         // Inject into Biomes using tags
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_citrine_overworld")));
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_tourmaline_overworld")));
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_kunzite_overworld")));
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_topaz_overworld")));
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_alexandrite_overworld")));
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_corundum_overworld")));
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_sapphire_overworld")));
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_spinel_overworld")));
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_citrine_overworld")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_tourmaline_overworld")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_kunzite_overworld")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_topaz_overworld")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_alexandrite_overworld")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_corundum_overworld")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_sapphire_overworld")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_spinel_overworld")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_carbonado_overworld")));
 
-        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_kunzite_nether")));
-        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_alexandrite_nether")));
-        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_corundum_nether")));
-        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MoreGems.MOD_ID, "ore_moissanite_nether")));
+        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_kunzite_nether")));
+        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_alexandrite_nether")));
+        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_corundum_nether")));
+        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE_WORLDGEN, new Identifier(MoreGems.MOD_ID, "ore_moissanite_nether")));
     }
 
     public static Predicate<BiomeSelectionContext> overworldSelector()

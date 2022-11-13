@@ -19,7 +19,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.Registries;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
@@ -138,7 +138,7 @@ public class TreasureBag extends Item
 
         // Get the default item string from config and cast to ItemStack
         Identifier id = Identifier.tryParse(MoreGems.CONFIG.GENERAL.defaultDrop);
-        ItemStack defaultStack = Registry.ITEM.get(id).getDefaultStack();
+        ItemStack defaultStack = Registries.ITEM.get(id).getDefaultStack();
 
         if (!world.isClient)
         {
@@ -146,7 +146,7 @@ public class TreasureBag extends Item
             for(int i = 0; i < 2; i++)
             {
                 // Grab a random item from json
-                treasure = Registry.ITEM.getEntryList(TagInit.TREASURE_BAG).flatMap((items) ->
+                treasure = Registries.ITEM.getEntryList(TagInit.TREASURE_BAG).flatMap((items) ->
                         items.getRandom(random)).map((itemEntry) ->   // what is an AbstractRandom?
                         (itemEntry.value()).getDefaultStack()).orElse(defaultStack);
 
