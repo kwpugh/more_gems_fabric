@@ -14,6 +14,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -22,7 +23,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
@@ -48,6 +48,18 @@ public class PlayerSpecialAbilities
 	static int blinkingAttackDistance = MoreGems.CONFIG.GENERAL.blinkingAttackSafeDistance;
 	static int blinkingEvadeMin = MoreGems.CONFIG.GENERAL.blinkingEvadeStarting;
 	static int blinkingEvadeMax = MoreGems.CONFIG.GENERAL.blinkingEvadeEnding;
+
+	//Increases the player's health amount to max on tick update, based on inputs
+	public static void giveHealing(PlayerEntity player, float amount)
+	{
+		if(player.age % 1200 == 0)
+		{
+			if(player.getHealth() < player.getMaxHealth())
+			{
+				player.heal(amount);
+			}
+		}
+	}
 
 	public static void stupefyEnemy(Entity target, int level)
 	{

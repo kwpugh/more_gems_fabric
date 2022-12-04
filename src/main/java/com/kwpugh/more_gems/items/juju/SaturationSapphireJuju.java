@@ -1,5 +1,6 @@
 package com.kwpugh.more_gems.items.juju;
 
+import com.kwpugh.more_gems.MoreGems;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -25,7 +26,10 @@ public class SaturationSapphireJuju extends BaseJujuItem
 		StatusEffectInstance effect2 = new StatusEffectInstance(StatusEffects.SATURATION, 8, 0, false, false);
 		LivingEntity player = (LivingEntity) entity;
 		{
-			player.addStatusEffect(effect2);
+			if(player.age % MoreGems.CONFIG.GENERAL.sapphireJujuTickDelay == 0)
+			{
+				player.addStatusEffect(effect2);
+			}
 		}
 	}
 	 

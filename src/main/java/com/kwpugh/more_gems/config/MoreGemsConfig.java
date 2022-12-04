@@ -124,6 +124,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public float jujuChance = .06F;
 		public boolean enableMoissaniteDocileHoglin = true;
 		public boolean enableJujuInEnderchest = true;
+		public int sapphireJujuTickDelay = 1200;
 
 		@Comment("\n"
 				+"\n"

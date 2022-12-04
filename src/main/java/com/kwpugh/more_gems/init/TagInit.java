@@ -3,9 +3,9 @@ package com.kwpugh.more_gems.init;
 import com.kwpugh.more_gems.MoreGems;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.tag.TagKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.RegistryKeys;
 
 public class TagInit
 {

@@ -4,8 +4,8 @@ import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.recipes.ToolRepair;
 import net.minecraft.recipe.SpecialRecipeSerializer;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registries;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 
 public class RecipeInit
 {

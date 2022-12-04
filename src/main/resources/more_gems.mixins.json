@@ -8,6 +8,7 @@
     "EnchantmentTargetMixin",
     "EntityMixinFireFreeze",
     "HoglinEntityMixin",
+
     "ItemMixinBlinking",
     "LivingEntityMixinBreathing",
     "LivingEntityMixinClimbing",

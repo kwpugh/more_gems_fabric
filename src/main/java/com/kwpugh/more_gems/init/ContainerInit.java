@@ -5,8 +5,8 @@ import com.kwpugh.more_gems.items.gembag.GembagItem;
 import com.kwpugh.more_gems.items.gembag.GembagScreenHandler;
 import net.minecraft.item.Item;
 import net.minecraft.screen.ScreenHandlerType;
-import net.minecraft.util.registry.Registries;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 
 public class ContainerInit
 {
